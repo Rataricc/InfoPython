@@ -1,0 +1,664 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es" class="translated-ltr">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="">
+	<meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+	<meta name="generator" content="Jekyll v3.8.6">
+	<title>Plantilla de blog. R</title>
+
+	<link rel="canonical" href="https://getbootstrap.com/docs/4.4/examples/blog/">
+
+	<!-- Bootstrap core CSS -->
+	<!-- CSS only -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link rel="stylesheet" href="static/css/style.css">
+
+	<link rel="apple-touch-icon" href="/docs/4.4/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+	<link rel="icon" href="/docs/4.4/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+	<link rel="icon" href="/docs/4.4/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+	<link rel="manifest" href="/docs/4.4/assets/img/favicons/manifest.json">
+	<link rel="mask-icon" href="/docs/4.4/assets/img/favicons/safari-pinned-tab.svg" color="#563d7c">
+	<link rel="icon" href="/docs/4.4/assets/img/favicons/favicon.ico">
+	<meta name="msapplication-config" content="/docs/4.4/assets/img/favicons/browserconfig.xml">
+	<meta name="theme-color" content="#563d7c">
+
+
+	<style>
+		.bd-placeholder-img {
+		        font-size: 1.125rem;
+		        text-anchor: middle;
+		        -webkit-user-select: none;
+		        -moz-user-select: none;
+		        -ms-user-select: none;
+		        user-select: none;
+		      }
+		
+		      @media (min-width: 768px) {
+		        .bd-placeholder-img-lg {
+		          font-size: 3.5rem;
+		        }
+		      }
+		
+	</style>
+
+	<!-- Custom styles for this template -->
+	<link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900" rel="stylesheet">
+	<!-- Custom styles for this template -->
+	<link href="blog.css" rel="stylesheet">
+	<link type="text/css" rel="stylesheet" charset="UTF-8" href="https://translate.googleapis.com/translate_static/css/translateelement.css">
+</head>
+<body>
+	<div class="container">
+		<header class="blog-header py-3">
+			{% block contenido %}
+				
+			{% endblock contenido %}
+		</header>
+		
+
+		<div class="jumbotron p-4 p-md-5 text-white rounded bg-dark">
+			<div class="col-md-6 px-0">
+				<h1 class="display-4 font-italic"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Introduccion a Python</font></font></h1>
+				<p class="lead my-3">
+					<font style="vertical-align: inherit;">
+						<font style="vertical-align: inherit;">Hablemos sobre el lenguaje y sus principales características, las cuales lo diferencian de otros. Haciéndolo un lenguaje muy atractivo para quienes comienzan a programar y permitiendo un amplio desarrollo de aplicaciones de manera muy sencilla.</font>
+					</font>
+				</p>
+				<p class="lead mb-0">
+					<a href="#" class="text-white font-weight-bold">
+						<font style="vertical-align: inherit;">
+							<font style="vertical-align: inherit;">Sigue leyendo...</font>
+						</font>
+					</a>
+				</p>
+			</div>
+		</div>
+
+		<div class="row mb-2">
+			<div class="col-md-6">
+				<div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+					<div class="col p-4 d-flex flex-column position-static">
+						<!--<strong class="d-inline-block mb-2 text-primary"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Mundo</font></font></strong>-->
+						<h3 class="mb-0"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Entorno de Desarrollo</font></font></h3>
+						<!--<div class="mb-1 text-muted"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">12 de noviembre</font></font></div> -->
+						<p class="card-text mb-auto">
+							<font style="vertical-align: inherit;">
+								<font style="vertical-align: inherit;">Primero comprueba si tu ordenador ejecuta la versión 32 bits de Windows o la de 64, en "Tipo de sistema" en la página de "Acerca de". Para llegar a esta página, intenta uno de estos métodos:</font>
+							</font>
+						</p>
+						<a href="#" class="stretched-link">
+							<font style="vertical-align: inherit;">
+								<font style="vertical-align: inherit;">sigue leyendo</font>
+							</font>
+						</a>
+					</div>
+					<!--<div class="col-auto d-none d-lg-block">
+          <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Marcador de posición: Miniatura"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+        </div> -->
+				</div>
+			</div>
+			<div class="col-md-6">
+				<div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+					<div class="col p-4 d-flex flex-column position-static">
+						<!--<strong class="d-inline-block mb-2 text-success"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Diseño</font></font></strong>-->
+						<h3 class="mb-0"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Iniciando a programar en Python</font></font></h3>
+						<!--<div class="mb-1 text-muted"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">11 de noviembre</font></font></div> -->
+						<p class="mb-auto">
+							<font style="vertical-align: inherit;">
+								<font style="vertical-align: inherit;"> Manejo de variables y tipos de datos: Son elementos que nos permiten guardar un dato para que pueda ser accesible fácilmente, manipulado y transformado a lo largo de un programa.</font>
+							</font>
+						</p>
+						<a href="#" class="stretched-link">
+							<font style="vertical-align: inherit;">
+								<font style="vertical-align: inherit;">sigue leyendo</font>
+							</font>
+						</a>
+					</div>
+					<!--<div class="col-auto d-none d-lg-block">
+          <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Marcador de posición: Miniatura"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+        </div> -->
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<main role="main" class="container">
+		<div class="row">
+			<div class="col-md-8 blog-main">
+				<h3 class="pb-4 mb-4 font-italic border-bottom"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+       			Un poco del contenido del Curso:
+      			</font></font></h3>
+
+				<div class="blog-post">
+					<h2 class="blog-post-title"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Manejo de Variables</font></font></h2>
+					<!--<p class="blog-post-meta"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">1 de enero de 2014 por </font></font><a href="#"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Marcos</font></font></a></p> -->
+
+					<p>
+						<font style="vertical-align: inherit;">
+							<font style="vertical-align: inherit;">Para definir una variable en Python, basta con nombrarla dentro del entorno y definir un valor ya que como dijimos anteriormente es un lenguaje completamente orientado a objetos, por lo que no es necesario declarar variables o el tipo antes de usarlas como en otros lenguajes. </font>
+							<font style="vertical-align: inherit;">
+								<ul><br>Ejemplo: nombre_variable = valor | por ejemplo: x = 10.</font>
+						</font>
+						</ul>
+					</p>
+
+					<hr>
+					<p>
+						<font style="vertical-align: inherit;">
+							<font style="vertical-align: inherit;">En los ejercicios que desarrollemos a lo largo del curso </font>
+						</font>
+						</a>
+						<font style="vertical-align: inherit;">
+							<font style="vertical-align: inherit;"> las variables serán la forma de identificar, </font>
+							<font style="vertical-align: inherit;">de forma sencilla, </font>
+							<font style="vertical-align: inherit;">un dato que se encuentra almacenado en la memoria de la computadora por lo que debemos darle nombre que sean significativos. </font>
+							<font style="vertical-align: inherit;">
+								<!--aca puede ir algo del blog-->
+							</font>
+							<font style="vertical-align: inherit;">
+								<!--aca tambien puede ir algo del blog-->
+							</font>
+						</font>
+					</p>
+					<blockquote>
+
+						<!--<p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Curabitur blandit tempus porttitor. </font></font><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Nullam quis risus eget urna mollis</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> ornare vel eu leo. </font><font style="vertical-align: inherit;">Nullam id dolor id nibh ultricies vehicula ut id elit.</font></font></p>
+        </blockquote>
+
+        <p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Etiam porta </font></font><em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">sem malesuada magna</font></font></em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> mollis euismod. </font><font style="vertical-align: inherit;">Cras mattis consectetur purus sit amet fermentum. </font><font style="vertical-align: inherit;">Aenean lacinia bibendum nulla sed consectetur.</font></font></p>-->
+
+						<h2><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Crear y darle valores a Variables</font></font></h2>
+						<p>
+							<font style="vertical-align: inherit;">
+								<font style="vertical-align: inherit;">1. Para crear y darle valores a 		variables utilizamos la operación de asignación (=).
+								</font>
+								<ul>
+									<font style="vertical-align: inherit;">El operador de asignación 		enlaza un nombre, en el lado izquierdo del operador, con un valor
+									 	en el lado derecho.<br><br>
+									</font>
+									<font style="vertical-align: inherit;">
+										<ul>
+											Por ejemplo: saludo = “¿Qué Onda?”
+											<ul>
+												pi = 3.1414159265358979323846…
+											</ul>
+										</ul>
+									</font>
+								</ul>
+								<font style="vertical-align: inherit;">2. Para definir nombres de 				variables hay que tener en cuenta las siguientes cuatro simples<br>
+									reglas:
+								</font>
+								<ul>
+									<font style="vertical-align: inherit;">
+										<ol type="a">
+											<li>El nombre de una variable puede empezar con una letra o un 		guión bajo, y aunque es permitido usar letras mayúsculas, 		por convención no lo hacemos.
+											</li>
+											<li>
+												Pueden contener letras , números y se puede usar el guión bajo (_) .
+											</li>
+											<li>
+												En el nombre de una variable se distingue si contienen mayúsculas o minúsculas (significa que Python es un lenguaje case sensitive ).
+											</li>
+											<li>
+												No se pueden utilizar palabras claves o reservadas de Python como nombres de variables. Por ejemplo: no puedes definir una variable con el nombre “elif”, pues esta palabra se usa en condicionales.
+											</li>
+										</ol>
+									</font>
+								</ul>
+							</font>
+						</p>
+						<h3><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Otros ejemplos de Palabras reservadas:</font></font></h3>
+						<!--<p>
+							<font style="vertical-align: inherit;">
+								<font style="vertical-align: inherit;">Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</font>
+							</font>
+						</p>
+						<pre><code>Example code block</code></pre>-->
+						<p>
+							<font style="vertical-align: inherit;">
+								<ul>
+									<img src="{% static 'img/parablog1.jpg' %}">
+								</ul>
+								<!--<font style="vertical-align: inherit;">Aenean lacinia bibendum nulla sed consectetur. </font>
+								<font style="vertical-align: inherit;">Etiam porta sem malesuada magna mollis euismod. </font>
+								<font style="vertical-align: inherit;">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa.</font>-->
+							</font><br>
+							<font style="vertical-align: inherit;">3. Para modificar el valor de una 		variable en Python, basta con asignarle un nuevo
+								valor en cualquier momento y lugar después de la definición.
+							</font><br><br>
+							<font style="vertical-align: inherit;">4. A una variable se le puede 			asignar un valor literal (número, string, booleano, none),
+								una expresión , una llamada a una función o una 
+								combinación de todos ellos.
+							</font><br><br>
+							<font style="vertical-align: inherit;">5. Se puede asignar un mismo valor a 	múltiples variables a la vez.<br><br>
+								<ul>
+									Por ejemplo: a = b = c = 1
+								</ul>
+							</font><br>
+							<font style="vertical-align: inherit;">6. En Python todo es un objeto . 		Entonces si asigno a la variable “a” el valor “1” ,
+								realmente la variable “a” hace referencia al objeto que representa al número entero
+								con valor “1” . Si ahora creamos una nueva variable “b” y le asignamos también
+								el valor “1” , la variable “b” estará haciendo referencia al mismo objeto que la
+								variable “a” .
+							</font><br><br>
+							<center>
+								<a href="#" class="stretched-link">
+									<font style="vertical-align: inherit;">
+										<font style="vertical-align: inherit;">sigue leyendo</font>
+									</font>
+								</a>
+							</center>
+						</p>
+						<hr>
+						<h3><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Estructuras de Control Condicionales</font></font></h3>
+						<ul>
+							<h4><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Introduccion</font></font></h4>
+							<div class="container">
+								<img src="{% static 'img/parablog2.jpg' %}" class="left">
+								<br><br><br><br><hr>
+									<p>
+										<font style="vertical-align: inherit;">
+											<font style="vertical-align: inherit;">
+												Si un programa sólo ejecutara instrucciones planas
+												unas tras otras no servirían de mucho.
+												Pues, el hecho que las acciones se ejecuten
+												secuencialmente implica que nunca se ejecutara más
+												de una acción al mismo tiempo. 
+											</font>
+											<p>
+												<font style="vertical-align: inherit;">
+													<font style="vertical-align: inherit;">Por suerte ahí 		es 	donde aparecen 	las estructuras de control, 	las cuales
+														van a permitir que el flujo del programa se adapte y sepa cómo actuar
+														ante determinadas situaciones e incluso repetir una tarea si es necesario.
+													</font>
+												</font>
+											</p>
+										</font>
+									</p>
+							</div>
+						</ul>
+						<hr>
+						<!--Se separo corregir despues el tema de imagenes; borrar despues-->
+						<!--Mover despues los textos con css para emperajar bien todo-->
+				</div> <!--agregue un div de mas para ver como quedaba en la imagen de arriba-->
+				<!-- /.blog-post -->
+				<br><br><br><br>
+				<div class="container">
+					<br><br>
+					<h3 class="blog-post-title"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Mas Ejemplos de Condicionales:</font></font></h3>
+					<br>
+					<center>
+						<img src="{% static 'img/parablog3.jpg' %}">
+					</center>
+					<br><hr>
+					<p>
+						<font style="vertical-align: inherit;">
+							<font style="vertical-align: inherit;">No todos los problemas pueden resolverse
+								empleando estructuras secuenciales.
+								Cuando hay que tomar una decisión
+								aparecen las estructuras condicionales.
+							</font>
+						</font>
+					</p>
+					<center>
+						<img src="{% static 'img/parablog4.jpg' %}">
+					</center>
+					<br><hr>
+					<p>
+						<font style="vertical-align: inherit;">
+							<font style="vertical-align: inherit;">
+								De hecho, en nuestra vida diaria se nos presentan situaciones donde debemos decidir. 
+								<ul>
+									<li>¿Elijo la carrera A o la carrera B?</li>
+									<li>¿Me pongo este pantalón?</li>
+									<li>Para ir al trabajo, ¿elijo el camino A o el camino B?</li>
+									<li>Hoy veremos una peli, ¿cuál la 1 o la 2?</li>
+								</ul>
+							</font>
+						</font>
+						<h3 class="blog-post-title"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">¿Comó Funciona?</font></font></h3>
+						<ul>
+							<br>
+							<font style="vertical-align: inherit;">
+								<font style="vertical-align: inherit;">
+									En las estructuras condicionales, se realiza una evluación de una condición y de acuerdo al resultado, el programa realiza una determinada acción. <br>
+									Las condiciones son especificadas utilizando expresiones lógicas.
+								</font>
+							</font>
+						</ul>
+					</p>
+					<center>
+						<a href="#" class="stretched-link">
+							<font style="vertical-align: inherit;">
+								<font style="vertical-align: inherit;">sigue leyendo</font>
+							</font>
+						</a>
+					</center>
+				</div>
+				<!--Poner la otra imagen que falta, tratar de ver como ocupar toda la pagina con lo escrito tambien, una ves termino la pagina home, ponerse a ver lo de las aplicaciones que tengo que implemnetar en; python-django-->
+				<div class="left">
+					<div class="blog-post">
+						<hr>
+						<br>
+						<h2 class="blog-post-title"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Estructuras de Control Repetitivas</font></font></h2>
+						<ul>
+							<h3 class="blog-post-title"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Introduccion</font></font></h3>
+							<br>
+							<img src="{% static 'img/parablog5.jpg' %}">
+							<br><br>
+							<ul>
+								<p>
+									<font style="vertical-align: inherit;">
+										<font style="vertical-align: inherit;">Durante el proceso de 		cración de programas, es muy común, encontrarse con que una 	operacion o conjunto de operaciones deben repetirse muchas 		veces.  
+										</font>
+									</font>
+								</p>
+								<blockquote>
+									<p>
+										<font style="vertical-align: inherit;">
+											<font style="vertical-align: inherit;">Para ello es importante	 conocer las estructuras que permiten repetir una o 		   varias acciones, un número determinado de veces.
+											</font>
+										</font>
+									</p>
+								</blockquote>
+								<p>
+									<font style="vertical-align: inherit;">
+										<font style="vertical-align: inherit;">Las estructuras que repiten	 una secuencia de instrucciones un número determinado de veces 	   se denominan estructuras repetitivas,iterativas o cíclicas.	
+										</font>
+									</font>
+								</p>
+								<p>
+									<font style="vertical-align: inherit;">
+										<font style="vertical-align: inherit;">Cada conjunto de 			instrucciones a ejecutar se denomina BUCLE.
+											Y cada repetición del bucle se llama ITERACIÓN. 
+										</font>
+									</font>
+								</p>
+							</ul>
+							<p>
+								<font style="vertical-align: inherit;">
+									<font style="vertical-align: inherit;">
+										Todo blucle tiene que llevar asociada una condición, que es la que va a determinar cuándo se repite el bucle y cuándo deja de repetirse. 
+									</font>
+								</font>
+							</p>
+							<hr>
+						</ul>
+					</div>
+				</div>
+				<!-- /.blog-post -->
+				<div class="left">
+					<div class="blog-post">
+						<h2 class="blog-post-title"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Antes de continuar veremos tipos de variables 			especiales que podríamos requerir para diseñar nuestros programas</font></font></h2>
+						<!--p class="blog-post-meta">
+							<font style="vertical-align: inherit;">
+								<font style="vertical-align: inherit;">14 de diciembre de 2013 por </font>
+							</font>
+							<a href="#">
+								<font style="vertical-align: inherit;">
+									<font style="vertical-align: inherit;">Chris</font>
+								</font>
+							</a>
+						</p>-->
+						<br>
+						<ul>
+							<h3 class="blog-post-title"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Contadores, Acumuladores y Banderas</font></font></h3>
+							<ul>
+								<p>
+									<font style="vertical-align: inherit;">
+										<font style="vertical-align: inherit;">En muchos programas se necesitan variables que cuenten cuántas veces ha ocurrido algo (contadores), que indiquen si simplemente ha ocurrido un evento (banderas) o que acumulen valores (acumuladores).</font>
+									</font>
+								</p>
+								<blockquote>
+									<p>
+										<font style="vertical-align: inherit;">
+											<font style="vertical-align: inherit;">Las situaciones pueden ser muy diversas, por lo que en este apartado simplemente se ofrecen unos ejemplos para entidades cómo utilizar estos recursos: 
+											</font>
+										</font>
+									</p>
+								</blockquote>
+								<br>
+								<ul>
+									<li>Contador :</li>
+									<p>
+										Los procesos repetitivos requiren contar los sucesos y acciones internas, una forma de hacerlo es mediante a un contador.
+										<br>
+										Un contador es una variable cuyo valor se incrementa o decrementa en una cantidad constante en cada repetición.
+									</p>
+									<li>Acumulador :</li>
+									<p>
+										Un acumulador o totalizador es una variable cuya función es almacenar cantidades resultantes de operaciones sucecivas.
+										<br>
+										Realiza la misma función que un contador con la diferencia de que el incremento o decremento es variable en el lugar de constante.
+									</p>
+									<li>Banderas :</li>
+									<p>
+										Una bandera es una variable que puede tomar uno de dos valores (verdadero o falso) a lo largo de la ejecucion del programa y permite comunicar información de una parte a otra del mismo.
+									</p>
+								</ul>
+							</ul>
+						</ul>
+						<center>
+							<a href="#" class="stretched-link">
+								<font style="vertical-align: inherit;">
+									<font style="vertical-align: inherit;">sigue leyendo</font>
+								</font>
+							</a>
+						</center>
+					</div>
+				</div>
+				<!-- /.blog-post -->
+
+				<!--<nav class="blog-pagination">
+					<a class="btn btn-outline-primary" href="#">
+						<font style="vertical-align: inherit;">
+							<font style="vertical-align: inherit;">Más viejo</font>
+						</font>
+					</a>
+					<a class="btn btn-outline-secondary disabled" href="#" tabindex="-1" aria-disabled="true">
+						<font style="vertical-align: inherit;">
+							<font style="vertical-align: inherit;">Más nuevo</font>
+						</font>
+					</a>
+				</nav>-->
+
+			</div>
+			<!-- /.blog-main -->
+
+			<aside class="col-md-4 blog-sidebar">
+				<div class="p-4 mb-3 bg-light rounded">
+					<h4 class="font-italic"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Acerca del Blog</font></font></h4>
+					<p class="mb-0">
+						<font style="vertical-align: inherit;">
+							<font style="vertical-align: inherit;">Para poder ver el contenido de los "Archivos" y seguir leyendo de forma adecuada el blog, se tendra que Registrar en el mismo, lo que esta en la pagina principal es solo una breve introduccion del inmenso contenido que tiene el curso.</font><br>
+						</font>
+					</p>
+				</div>
+
+				<div class="p-4 mb-3 bg-light rounded">
+					<h4 class="font-italic"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Nota</font></font></h4>
+					<p class="mb-0">
+						<font style="vertical-align: inherit;">
+							<font style="vertical-align: inherit;">Dicho contenido e informacion en el blog/curso es todo lo que aprendi o gran parte, del Informatorio Chaco, agredecimiento especial para los profesores.</font>
+						</font>
+					</p>
+				</div>
+
+				<div class="p-4">
+					<h4 class="font-italic"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Archivos</font></font></h4>
+					<ol class="list-unstyled mb-0">
+						<li>
+							<a href="#">
+								<font style="vertical-align: inherit;">
+									<font style="vertical-align: inherit;">Introduccion a Python</font>
+								</font>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<font style="vertical-align: inherit;">
+									<font style="vertical-align: inherit;">Entorno de Desarrollo</font>
+								</font>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<font style="vertical-align: inherit;">
+									<font style="vertical-align: inherit;">Manejo de Variables y tipos de datos</font>
+								</font>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<font style="vertical-align: inherit;">
+									<font style="vertical-align: inherit;">Manejo de Variables</font>
+								</font>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<font style="vertical-align: inherit;">
+									<font style="vertical-align: inherit;">Estructuras de Control condicionales</font>
+								</font>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<font style="vertical-align: inherit;">
+									<font style="vertical-align: inherit;">Estructuras de Control Repetitivas</font>
+								</font>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<font style="vertical-align: inherit;">
+									<font style="vertical-align: inherit;">Funciones</font>
+								</font>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<font style="vertical-align: inherit;">
+									<font style="vertical-align: inherit;">Listas</font>
+								</font>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<font style="vertical-align: inherit;">
+									<font style="vertical-align: inherit;">Tuplas</font>
+								</font>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<font style="vertical-align: inherit;">
+									<font style="vertical-align: inherit;">Diccionarios</font>
+								</font>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<font style="vertical-align: inherit;">
+									<font style="vertical-align: inherit;">Manejo de Errores</font>
+								</font>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<font style="vertical-align: inherit;">
+									<font style="vertical-align: inherit;">POO</font>
+								</font>
+							</a>
+						</li>
+					</ol>
+				</div>
+
+				<div class="p-4">
+					<h4 class="font-italic"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">En otra parte</font></font></h4>
+					<ol class="list-unstyled">
+						<li>
+							<a href="#">
+								<font style="vertical-align: inherit;">
+									<font style="vertical-align: inherit;">GitHub</font>
+								</font>
+							</a>
+						</li>
+						<!--<li>
+							<a href="#">
+								<font style="vertical-align: inherit;">
+									<font style="vertical-align: inherit;">Gorjeo</font>
+								</font>
+							</a>
+						</li>-->
+						<!--<li>
+							<a href="#">
+								<font style="vertical-align: inherit;">
+									<font style="vertical-align: inherit;">Facebook</font>
+								</font>
+							</a>
+						</li>-->
+					</ol>
+				</div>
+				<!--<div class="p-4">
+					<font style="vertical-align: inherit;">
+						<font style="vertical-align: inherit;">
+							<img src="{% static 'img/parablog6.jpg' %}">
+						</font>
+					</font>
+				</div>-->
+			</aside>
+			<!-- /.blog-sidebar -->
+
+		</div>
+		<!-- /.row -->
+
+	</main>
+	<!-- /.container -->
+	<hr>
+	<footer class="blog-footer">
+		<center>
+			<p>
+				<a href="#">
+					<font style="vertical-align: inherit;">
+						<font style="vertical-align: inherit;">Volver arriba</font>
+					</font>
+				</a>
+			</p>
+			<font style="vertical-align: inherit;">
+				<font style="vertical-align: inherit;">
+					<img src="{% static 'img/parablog6.jpg' %}">
+				</font>
+			</font>
+		</center>
+	</footer>
+
+
+	<div id="goog-gt-tt" class="skiptranslate" dir="ltr">
+		<div style="padding: 8px;">
+			<div>
+				<div class="logo"><img src="https://www.gstatic.com/images/branding/product/1x/translate_24dp.png" width="20" height="20" alt="Google Traductor de Google"></div>
+			</div>
+		</div>
+		<div class="top" style="padding: 8px; float: left; width: 100%;">
+			<h1 class="title gray">Texto original</h1></div>
+		<div class="middle" style="padding: 8px;">
+			<div class="original-text"></div>
+		</div>
+		<div class="bottom" style="padding: 8px;">
+			<div class="activity-links"><span class="activity-link">Sugiere una traducción mejor</span><span class="activity-link"></span></div>
+			<div class="started-activity-container">
+				<hr style="color: #CCC; background-color: #CCC; height: 1px; border: none;">
+				<div class="activity-root"></div>
+			</div>
+		</div>
+		<div class="status-message" style="display: none;"></div>
+	</div><iframe src="https://www.ciuvo.com/ciuvo/globalstorage?version=2.1.3" style="position: absolute; width: 1px; height: 1px; left: -9999px;"></iframe>
+	<div class="goog-te-spinner-pos">
+		<div class="goog-te-spinner-animation"><svg xmlns="http://www.w3.org/2000/svg" class="goog-te-spinner" width="96px" height="96px" viewBox="0 0 66 66"><circle class="goog-te-spinner-path" fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="30"></circle></svg></div>
+	</div>
+</body>
+</html>
