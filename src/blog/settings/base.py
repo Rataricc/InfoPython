@@ -9,8 +9,8 @@ https://docs.djangoproject.com/en/4.0/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.0/ref/settings/
 """
-
-from pathlib import Path
+from django.urls import reverse_lazy
+from pathlib     import Path
 import os
 import sys
 
@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 
 AUTH_USER_MODEL = 'usuarios.Usuario'
 
+LOGIN_REDIRECT_URL = reverse_lazy('principal')
 
 # Application definition
 

@@ -1,10 +1,21 @@
 {% extends "base/base.html" %}
 
 {% block contenido %}
-	
-	
-	
-	
-	<h1>hola soy un login re mil padre</h1>
-	
+	<center>
+		<h2>Iniciar Sesion</h2>
+	</center>
+	<form method="POST">{% csrf_token %}
+	  <div class="mb-3">
+	    <label for="exampleInputEmail1" class="form-label">Nombre de Usuario</label>
+	    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Ingrese nombre de usuario" id="username" name="username">
+	  </div>
+
+	  <div class="mb-3">
+	    <label for="exampleInputPassword1" class="form-label">Contraseña</label>
+	    <input type="password" class="form-control" id="password" name="password" placeholder="Ingrese contraseña">
+	  </div>
+	  <center>
+		<button type="submit" class="btn btn-primary">Iniciar Sesion</button>	
+	  </center>
+	</form>
 {% endblock contenido %}
