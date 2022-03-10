@@ -20,13 +20,29 @@
 			<a class="text-muted" href="#" aria-label="Búsqueda">
 				<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="mx-3" role="img" viewBox="0 0 24 24" focusable="false"><title>Search</title><circle cx="10.5" cy="10.5" r="7.5"></circle><path d="M21 21l-5.2-5.2"></path></svg>
 			</a>
-			<a class="btn btn-sm btn-outline-secondary" href="{% url 'login' %}">
-				<font style="vertical-align: inherit;">
-					<font style="vertical-align: inherit;">Iniciar Sesion</font>
-				</font>
-			</a>
+			{% if not user.is_authenticated %}
+				<a class="btn btn-sm btn-outline-secondary" href="{% url 'login' %}">
+					<font style="vertical-align: inherit;">
+						<font style="vertical-align: inherit;">Iniciar Sesion</font>
+					</font>
+				</a>
+			{% else %}
+				<a class="btn btn-sm btn-outline-secondary" href="{% url 'logout' %}">
+					<font style="vertical-align: inherit;">
+						<font style="vertical-align: inherit;">Cerrar Sesion</font>
+					</font>
+				</a>
+			{% endif %}
 		</div>
    	</div>
+   	<hr>
+   	{% if user.is_authenticated %}
+   		<div>
+   			<center>
+   				<h2>Bienvenido a Info-Python {{user}}</h2>
+   			</center>
+   		</div>
+   	{% endif %}
    	<hr>
    	<div class="nav-scroller py-1 mb-2">
 			<nav class="nav d-flex justify-content-between">
