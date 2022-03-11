@@ -3,9 +3,9 @@
 {% block contenido %}
 	<div class="row flex-nowrap justify-content-between align-items-center">
 		<div class="col-4 pt-1">
-			<a class="text-muted" href="#">
+			<a class="text-muted" href="{% url 'registro' %}">
 				<font style="vertical-align: inherit;">
-					<font style="vertical-align: inherit;">Register</font>
+					<font style="vertical-align: inherit;">Registrarse</font>
 				</font>
 			</a>
 		</div>
@@ -40,6 +40,12 @@
    		<div>
    			<center>
    				<h2>Bienvenido a Info-Python {{user}}</h2>
+   			</center>
+   		</div>
+   	{% else %}
+   		<div>
+   			<center>
+   				<h2>Bienvenido a Info-Python</h2>
    			</center>
    		</div>
    	{% endif %}
