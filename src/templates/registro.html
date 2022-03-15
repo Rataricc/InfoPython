@@ -1,6 +1,17 @@
 {% extends "base/base.html" %}
 
 {% block contenido %}
-	<h2>Este es el campo de registro</h2>	
+	<center>
+		<h2>Registrarse</h2>
+	</center>	
+
+	<form method="POST">{% csrf_token %}
+		{{form.as_p}}
+		<br>
+		<button type="submit" class="btn btn-success">Registrar</button>
+		<a class="btn btn-danger" href="{% url 'principal' %}">Cancelar</a>
+		<button type="reset" class="btn btn-secondary">Limpiar</button>
+		<hr>
+	</form>
 {% endblock contenido %}
 
