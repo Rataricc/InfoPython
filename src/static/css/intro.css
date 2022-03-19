@@ -1,0 +1,14 @@
+html {
+	font-family: 'Montserrat', sans-serif;
+}
+
+body {
+	margin: 0;
+	background-color: #efefef;
+}
+
+header {
+	background-color: #364552; 
+	color: white;
+	padding: 3rem 2rem;
+}
