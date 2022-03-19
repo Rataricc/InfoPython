@@ -6,4 +6,5 @@ app_name = "usuarios"
 urlpatterns = [
 	path('registro/', views.registro_de_usuario, name="registro"),
 	path('intro/', views.introduccion_a_python, name="intro"),
+	path('entorno/', views.entorno_de_desarrollo, name="entorno"),
 ]
