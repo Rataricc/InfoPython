@@ -30,3 +30,10 @@ def entorno_de_desarrollo(request):
 	template_name = "usuarios/entorno.html"
 	ctx = {}
 	return render(request, template_name, ctx)
+
+
+@login_required
+def variables_datos(request): 
+	template_name = "usuarios/variablesDatos.html"
+	ctx = {}
+	return render(request, template_name, ctx)
