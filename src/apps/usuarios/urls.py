@@ -8,4 +8,5 @@ urlpatterns = [
 	path('intro/', views.introduccion_a_python, name="intro"),
 	path('entorno/', views.entorno_de_desarrollo, name="entorno"),
 	path('variablesdatos/', views.variables_datos, name="variablesDatos"),
+	path('manejodevariables/', views.manejo_de_variables, name="manejo"),
 ]
