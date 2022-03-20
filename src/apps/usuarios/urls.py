@@ -14,4 +14,5 @@ urlpatterns = [
 	path('funciones/', views.funciones, name="funciones"),
 	path('listas/', views.listas, name="listas"),
 	path('tuplas/', views.tuplas, name="tuplas"),
+	path('diccionarios/', views.diccionarios, name="diccionarios"),
 ]

@@ -72,3 +72,9 @@ def tuplas(request):
 	template_name = "usuarios/tuplas.html"
 	ctx = {}
 	return render(request, template_name, ctx)
+
+@login_required
+def diccionarios(request):
+	template_name = "usuarios/diccionarios.html"
+	ctx = {}
+	return render(request, template_name, ctx)
