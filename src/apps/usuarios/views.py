@@ -78,3 +78,9 @@ def diccionarios(request):
 	template_name = "usuarios/diccionarios.html"
 	ctx = {}
 	return render(request, template_name, ctx)
+
+@login_required
+def manejo_de_errores(request): 
+	template_name = "usuarios/manejoErrores.html"
+	ctx = {}
+	return render(request, template_name, ctx)
