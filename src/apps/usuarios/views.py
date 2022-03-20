@@ -54,3 +54,9 @@ def repetitivas(request):
 	template_name = "usuarios/repetitivas.html"
 	ctx = {}
 	return render(request, template_name, ctx)
+
+@login_required
+def funciones(request): 
+	template_name = "usuarios/funciones.html"
+	ctx = {}
+	return render(request, template_name, ctx)
