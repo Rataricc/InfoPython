@@ -66,3 +66,9 @@ def listas(request):
 	template_name = "usuarios/listas.html"
 	ctx = {}
 	return render(request, template_name, ctx)
+
+@login_required
+def tuplas(request): 
+	template_name = "usuarios/tuplas.html"
+	ctx = {}
+	return render(request, template_name, ctx)

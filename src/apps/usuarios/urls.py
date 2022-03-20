@@ -13,4 +13,5 @@ urlpatterns = [
 	path('repetitivas/', views.repetitivas, name="repetitivas"),
 	path('funciones/', views.funciones, name="funciones"),
 	path('listas/', views.listas, name="listas"),
+	path('tuplas/', views.tuplas, name="tuplas"),
 ]
