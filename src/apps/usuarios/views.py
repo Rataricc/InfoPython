@@ -84,3 +84,9 @@ def manejo_de_errores(request):
 	template_name = "usuarios/manejoErrores.html"
 	ctx = {}
 	return render(request, template_name, ctx)
+
+@login_required
+def poo(request): 
+	template_name = "usuarios/poo.html"
+	ctx = {}
+	return render(request, template_name, ctx)
