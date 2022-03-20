@@ -31,16 +31,20 @@ def entorno_de_desarrollo(request):
 	ctx = {}
 	return render(request, template_name, ctx)
 
-
 @login_required
 def variables_datos(request): 
 	template_name = "usuarios/variablesDatos.html"
 	ctx = {}
 	return render(request, template_name, ctx)
 
-
 @login_required
 def manejo_de_variables(request): 
 	template_name = "usuarios/manejoDevariables.html"
+	ctx = {}
+	return render(request, template_name, ctx)
+
+@login_required
+def condicionales(request): 
+	template_name = "usuarios/condicionales.html"
 	ctx = {}
 	return render(request, template_name, ctx)
