@@ -12,4 +12,5 @@ urlpatterns = [
 	path('condicionales/', views.condicionales, name="condicionales"),
 	path('repetitivas/', views.repetitivas, name="repetitivas"),
 	path('funciones/', views.funciones, name="funciones"),
+	path('listas/', views.listas, name="listas"),
 ]
