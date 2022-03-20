@@ -10,4 +10,5 @@ urlpatterns = [
 	path('variablesdatos/', views.variables_datos, name="variablesDatos"),
 	path('manejodevariables/', views.manejo_de_variables, name="manejo"),
 	path('condicionales/', views.condicionales, name="condicionales"),
+	path('repetitivas/', views.repetitivas, name="repetitivas"),
 ]
