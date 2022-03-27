@@ -7,6 +7,7 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="../../static/css/entorno.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 <body>
 	<header>
@@ -14,10 +15,53 @@
 	</header>
 	<section>
 		<article class="post">
-			<h2>Como un susbtutilo de lo que quiero hablar</h2>
-			<p>Descripcion de lo que quiero seguir hablando</p>
+			<center>
+				<br>
+				<h2>INSTALACIÓN DE PYTHON 3 EN WINDOWS</h2>
+				<p>
+					Primero comprueba si tu ordenador ejecuta la versión 32 bits de Windows o la de 64, en <br>
+					"Tipo de sistema" en la página de "Acerca de". Para llegar a esta página, intenta uno de <br>
+					estos métodos:
+				</p>
+			</center>
+			<ul>
+				<li>
+					Presione la tecla de Windows y la tecla Pause/Break al mismo tiempo.
+				</li>
+				<li>
+					Abre el Panel de Control desde el menú de Windows, despúes accede a Sistema <br>
+					y Seguridad, luego a Sistema.
+				</li>
+				<li>
+					Presiona el botón de Windows, luego accede a Configuración > Sistema > Acerca de.
+				</li>
+			</ul>
+			<hr>
 			<!--aca va una imagen si quiero-->
-			<p>Otro parrafo si quiero seguir hablando</p>
+			<center>
+				<p>Puedes descargar Python para Windows desde el siguiente web</p>
+				<a class="btn btn-outline-primary" href="https://www.python.org/downloads/windows">Pagina oficial de Python</a>
+			</center>
+		</article>
+		<article class="post">
+			<h3>Paso 1</h3>
+			<p>
+				Hacé clic en el enlace "Latest Python 3 Release - Python x.x.x".
+			</p>
+			<h3>Paso 2</h3>
+			<p>
+				Si tu compu ejecuta la versión de <b>64 bits</b> de Windows, descarga <b>Windows x86-64 executable installer.</b><br>
+				De lo contrario, descarga <b>Windows x86 executable installer.</b> Después de descargar el instalador, deberías ejecutarlo <br>
+				(dándole doble click) y seguir las instrucciones.
+			</p>
+			<img src="{% static 'img/parablog13.jpg'%}" height="500px">
+			<br>
+			<h3>Muy importante para tener en cuenta</h3>
+			<p>
+				Durante la instalación, verás una ventena de "Setup".<br>
+				Asegúrate de marcar las casillas "<b>Add Python 3.x to PATH</b>" o "<b>Add Python to your environment variables</b>" <br>
+				y hacer click en "<b>Install Now</b>", como se muestra aquí (puede que se vea un poco diferente si estás instalando una versión diferente)
+			</p>
 		</article>
 	</section>
 </body>
