@@ -15,10 +15,93 @@
 	</header>
 	<section>
 		<article class="post">
-			<h2>Como un susbtutilo de lo que quiero hablar</h2>
-			<p>Descripcion de lo que quiero seguir hablando</p>
-			<!--aca va una imagen si quiero-->
-			<p>Otro parrafo si quiero seguir hablando</p>
+			<center>
+				<h2 style="color: #C66250;">Variables. Manejo de Variables</h2>
+				<p>
+					Las <b>variables</b> nos permiten guardar valores y reutilizarlos en distintos lugares del código, nos <br>
+					permite acceder fácilmente a un dato para ser <b>manipulado y transformado</b> a lo largo de un <br>
+					programa.
+				</p>
+				<p>
+					Para definir una variable en Python, basta con nombrarla dentro del entorno y definir un valor <br>
+					ya que como dijimos anteriormente es un lenguaje completamente orientado a objetos, por lo <br>
+					que no es necesario declarar variables o el tipo antes de usarlas como en otros lenguajes.
+				</p>
+				<p style="color: deeppink;">
+					nombre_varible = valor | Por ejemplo: x = 10
+				</p>
+				<p>
+					En los ejercicios que desarrollemos a lo largo del curso las <b>variables serán la foroma de <br>
+					identificar</b>, de forma sencilla, <b>un dato</b> que se encuentra almacenado en la memoria de la <br>
+					computadora por lo que debemos darle nombre que sean significativos.
+				</p>		
+			</center>
+		</article>
+		<article class="post">
+			<center>
+				<h3 style="color: cornflowerblue;">Manejo de Variables</h3>
+				<p>
+					<ol>
+						<li>
+							Para <b>crear</b> y darle <b>valores</b> a variables utilizamos la <b>operación de asignación (=).</b><br><br>
+							El operador de asignación enlaza un nombre, en el lado izquierdo del operador, con un <br>
+							valor en el lado derecho. <br>
+							<ul style="color: deeppink;">
+								Por ejemplo : 	Saludos = "¿Que onda?" <br>
+								pi = 3.1414159265358979323846…
+							</ul>
+						</li>
+						<li>
+							Para definir nombres de variables hay que tener en cuenta las siguientes cuatro simples <br>
+							reglas: 
+							<ol type="a">
+								<li>
+									El nombre de una variable puede empezar con una <b>letra</b> o un <b>guión bajo</b>, y <br>
+									aunque es permitido usar letras mayúsculas, por convención no lo hacemos.
+								</li>
+								<li>
+									Pueden contener <b>letras, números</b> y se puede usar el <b>guión bajo (_).</b>
+								</li>
+								<li>
+									En el nombre de una variable se disntingue si contiene mayúsculas o minúsculas <br>
+									(significa que Python es un lenguaje <b>case sensitive</b>).
+								</li>
+								<li>
+									No se pueden utilizar <b>palabras claves</b> o <b>reservadas</b> de Python como nombres <br>
+									de variables. Por ejemplo: no puedes definir una variable con el nombre "elif", pues <br>
+									esta palabra se usa en condicionales.
+								</li>
+							</ol>
+							<br>
+							<h3 style="color: cornflowerblue;">Otros ejemplos de Plabras reservadas:</h3><br>
+							<ul>
+								<img src="{% static 'img/parablog1.jpg'%}" height="200px">
+							</ul>
+						</li>
+						<li>
+							Para <b>modificar  el valor</b> de una variable en Python, basta con <b>asignarle un nuevo <br>
+							valor</b> en cualquier momento y lugar después de la definición.
+						</li>
+						<li>
+							A una variable se le puede asignar un <b>valor literal</b> (número, string, booleano, none), <br>
+							una <b>expresión</b>, una llamada a una <b>función</b> o una <b>combinación</b> de todos ellos.
+						</li>
+						<li>
+							Se puede asignar un mismo valor a múltiples variables a la vez. <br>
+							<ul style="color: deeppink;">
+								Por ejemplo : a = b = c = 1
+							</ul>
+						</li>
+						<li>
+							En Python <b>todo es un objeto.</b> Entonces si asigno a la <b>variable "a" el valor "1"</b>, <br>
+							realmente la <b>variable "a"</b> hace referencia al objeto que representa al número entero <br>
+							con <b>valor "1"</b>. Si ahora creamos una nueva <b>variable "b"</b> y le asignamos también <br>
+							el <b>valor "1"</b>, la <b>variable "b"</b> estará haciendo referencia al mismo objeto que la <br>
+							<b>variable "a"</b>.
+						</li>
+					</ol>
+				</p>
+			</center>
 		</article>
 	</section>
 </body>
