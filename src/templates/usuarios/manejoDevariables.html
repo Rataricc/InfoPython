@@ -8,6 +8,11 @@
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="../../static/css/manejoDevariables.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<style>
+		table, th, td {
+			border: 1px solid black;
+		}
+	</style>
 </head>
 <body>
 	<header>
@@ -101,7 +106,264 @@
 						</li>
 					</ol>
 				</p>
+				<p>
+					En definitiva, "a" y "b" hacen referencia al mismo objeto y, por lo tanto, están asociadas <br>
+					a la misma dirección de memoria.
+				</p>
+				<br>
+				<img src="{% static 'img/parablog37.jpg'%}">
+				<br>
+				<p>
+					En otros lenguajes "a" y "b" estarían asociadas a direcciones de memoria diferentes.
+				</p>
 			</center>
+		</article>
+		<article class="post">
+			<center>
+				<h3 style="color: cornflowerblue;">Operadores</h3>
+				<p>
+					Los <b>operadores</b> nos permiten manipular datos, sean variables, constantes, otras expresiones, <br>
+					objetos, atributos de objeto, entre otros, de manera que podamos: 
+				</p>
+				<ol type="a">
+					<li>
+						Transformarlos,
+					</li>
+					<li>
+						usarlos en decisiones para controlar el flujo de ejecución de un programa
+					</li>
+					<li>
+						formar valores para asignarlos a otros datos
+					</li>
+				</ol>
+				<p>
+					El tipo de datos involucrado en una expresión se relaciona con los operadores utilizados. Vamos <br>
+					con algunos de estos operdadores.
+				</p>
+			</center>
+		</article>
+		<article class="post">
+			<center>
+				<h3 style="color: cornflowerblue;">OPERADORES MATEMÁTICOS</h3>
+				<table style="width: 500px;">
+					<tr style="color: #19B7AD;">
+						<th>SUMA</th>
+						<th>RESTA</th>
+					</tr>
+					<tr>
+						<td>
+							>> 2 + 2 <br>
+							Resultado: 4
+						</td>
+						<td>
+							>> 50 - 10 <br>
+							Resultado: 40
+						</td>
+					</tr>
+					<tr style="color: #19B7AD;">
+						<th>DIVISIÓN</th>
+						<th>MULTIPLICACIÓN</th>
+					</tr>
+					<tr>
+						<td>
+							>> 25 / 3 <br>
+							Resultado: 8,333 <br>
+							Siempre retorna un punto flotante <br><br>
+							>> 25 // 5 <br>
+							Resultado: 5 <br>
+							Siempre retorna un número entero
+						</td>
+						<td>
+							>> 25 * 2 <br>
+							Resultado: 50
+						</td>
+					</tr>
+					<tr style="color: #19B7AD;">
+						<th>MÓDULO</th>
+						<th>POTENCIA</th>
+					</tr>
+					<tr>
+						<td>
+							>> 25 % 3 <br>
+							Resultado: 1 <br>
+							Retorna el resto de la división
+						</td>
+						<td>
+							>> 8 ** 2 <br>
+							Resultado: 64
+						</td>
+					</tr>
+				</table>
+				<br>
+				<h3 style="color: cornflowerblue;">OPERADORES DE COMPARACIÓN</h3>
+				<table>
+					<tr style="color: #19B7AD;">
+						<th>
+							> <br>
+							MAYOR QUE
+						</th>
+						<th>
+							>= <br>
+							MAYOR O IGUAL QUE
+						</th>
+					</tr>
+					<tr>
+						<td>
+							>> a > b <br>
+							Resultado: <b>True</b> si el operando de la izquierda es <br>
+							estrictamente mayor que el de la derecha; <b>False</b> en caso <br>
+							contrario.
+						</td>
+						<td>
+							>> a >= b <br>
+							Resultado: <b>True</b> si el operando de la izquierda es <br>
+							mayor o igual que el de la derecha; <b>False</b> en caso <br>
+							contrario.
+						</td>
+					</tr>
+					<tr style="color: #19B7AD;">
+						<th>
+							<
+							<br>
+							MAYOR QUE
+						</th>
+						<th>
+							<=
+							<br>
+							MENOR O IGUAL QUE
+						</th>
+					</tr>
+					<tr>
+						<td>
+							>> a < b <br>
+							Resultado: <b>True</b> si el operando de la izquierda es <br>
+							estrictamente menor que el de la derecha; <b>False</b> en caso <br>
+							contrario.
+						</td>
+						<td>
+							>> a <= b <br>
+							Resultado: <b>True</b> si el operando de la izquierda es <br>
+							menor o igual que el de la derecha; <b>False</b> en caso <br>
+							contrario.
+						</td>
+					</tr>
+					<tr style="color: #19B7AD;">
+						<th>
+							== <br>
+							IGUAL
+						</th>
+						<th>
+							!= <br>
+							DISTINTO
+						</th>
+					</tr>
+					<tr>
+						<td>
+							>> a == b <br>
+							Resultado: <b>True</b> si el operando de la izquierda es igual <br>
+							que el de la derecha; <b>False</b> en caso contrario.
+						</td>
+						<td>
+							>> a != b <br>
+							Resultado: <b>True</b> si los operandos son distintos; <br>
+							<b>False</b> en caso contrario.
+						</td>
+					</tr>
+				</table>
+				<br>
+				<h3 style="color: cornflowerblue;">OPERADORES LÓGICOS</h3>
+				<table>
+					<tr style="color: #19B7AD;">
+						<th>AND</th>
+						<th>OR</th>
+					</tr>
+					<tr>
+						<td>
+							>> a = true <br>
+							>> b = true <br>
+							>> x = a AND b <br>
+							<b>Resultado: True</b> <br>
+							Devuelve True solo si ambos valores son True, en cualquier <br>
+							otro caso es False.
+						</td>
+						<td>
+							>> a = true <br> 
+							>> b = true <br>
+							>> x = OR b <br>
+							<b>Resultado: True</b> <br>
+							>> a = true <br>
+							>> b = false <br>
+							>> x = a OR b <br>
+							<b>Resultado: True</b> <br>
+							Devuelve False solo si ambos valores son False. <br>
+							Devuelve True si uno de los valores es True.
+						</td>
+					</tr>
+					<tr style="color: #19B7AD;">
+						<th>NOT</th>
+					</tr>
+					<tr>
+						<td>
+							>> a = true <br>
+							>> x = NOT a <br>
+							<b>Resultado: False</b> <br>
+							Cambia el valor de verdad de la variable a la que se aplica la <br>
+							operación.
+						</td>
+					</tr>
+				</table>
+				<br>
+				<h3 style="color: cornflowerblue;">OPERACIONES CON CADENAS/STRINGS</h3>
+				<table>
+					<tr style="color: #19B7AD;">
+						<th>CONCATENACIÓN</th>
+						<th>MULTIPLICACIÓN</th>
+					</tr>
+					<tr>
+						<td>
+							>> 'Hola' + 'mundo' <br>
+							Resultado: Hola mundo <br>
+							Si tenemos dos cadenas o más entre comillas una al lado de la otra se <br>
+							concatenan automáticamente. <br>
+							>> 'Hola' 'mundo' <br>
+							Resultado: Hola mundo.
+						</td>
+						<td>
+							>> 3 * 'Hola' <br>
+							Resultado: HolaHolaHola
+						</td>
+					</tr>
+					<tr style="color: #19B7AD;">
+						<th>MEZCLA</th>
+					</tr>
+					<tr>
+						<td>
+							Se pueden mezclar las operaciones de concatenación y multiplicación <br>
+							>> 3 * 'Hola' + 'mundo' <br>
+							Resultado: HolaHolaHola mundo.
+						</td>
+					</tr>
+				</table>
+			</center>
+		</article>
+		<article class="post">
+			<br>
+			<center>
+				<h3 style="color: cornflowerblue;">Función type()</h3>
+				<p>
+					La función type() devuelve el tipo de objeto que recibe como argumento, podemos utilizarla <br>
+					para saber de qué tipo es una variable. <br>
+					Por ejemplo: <br>
+				</p>
+				<p style="color: rgb(226, 43, 220);">
+					>> nombre_variable = 'Hola mundo' <br>
+					>> type(nombre_variable) <br>
+					>> class 'str'>
+				</p>
+			</center>
+		</article>
+		<article class="post" >
+			<!--Sigue...-->
 		</article>
 	</section>
 </body>
