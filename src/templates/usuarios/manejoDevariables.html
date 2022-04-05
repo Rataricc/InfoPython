@@ -363,8 +363,129 @@
 			</center>
 		</article>
 		<article class="post" >
-			<!--Sigue...-->
+			<center>
+				<h3 style="color: #C66250;">Dato. Clasificación de Datos. Tipos de Datos</h3>
+				<br>
+				<h4 style="color: cornflowerblue;">Definición de Dato</h4>
+				<p>
+					Un dato es una representación simbólica (numéricas, alfabéticas, algorítmicas, etc.) de un <br>
+					atributo o cualidad de una entidad. Los datos aisladamente pueden no contener información <br>
+					humanamente relevante. Sólo cuando un conjunto de datos se examina conjuntamente a la luz <br>
+					de un enfoque, hipótesis o teoría se puede apreciar la información contenida en dichos datos y <br>
+					se puede utilizar en la realización de cálculos o toma de decisiones.
+				</p>
+				<p>
+					Un dato puede ser un caracter leído de un teclado, información almacenada en un disco, un <br>
+					número que se encuentra en la memoria central, etc.
+				</p>
+				<h4 style="color: cornflowerblue;">Clasificación de Datos</h4>
+				<p>
+					Los datos se pueden clasificar: 
+				</p>
+				<ol>
+					<li>
+						De acuerdo a, si varían o no durante la ejecución de un programa:
+						<ol type="a">
+							<li>
+								<b>Constantes:</b> Su valor no varía a lo largo de la ejecucíon de un programa.
+							</li>
+							<li>
+								<b>Variables:</b> Su valor varía a lo largo de la ejecución de un programa. <br>
+								<table>
+									<th>
+										En Python no existen constantes ni variables, tan sólo objetos con los <br>
+										que hacer modificaciones. <br>
+										Lo que mal-llamamos variables o (constantes) no son otra cosa que <br>
+										<b>"referencias" a objetos,</b> como etiquetas para poder identificarlos. <br><br>
+										<b>
+											Los objetos en Python pueden ser 'mutables' si puede <br>
+											modificarse solo algunas posiciones del dato o 'inmutables' si no <br>
+											pueden modificarse.
+										</b>
+									</th>
+								</table>
+							</li>
+						</ol>
+					</li>
+					<br>
+					<li>
+						De acuerdo a lo que representan pueden ser: 
+						<ol style="color: black;" type="a">
+							<li>Números</li>
+							<li>Cadenas o Strings</li>
+							<li>Booleanos o Lógicos</li>
+						</ol>
+					</li>
+				</ol>
+			</center>
 		</article>
+		<article class="post">
+			<center>
+				<h4 style="color: cornflowerblue;">Tipos de Datos</h4>
+				<p>
+					El tipo de un dato está definido por el conjunto de valores que puede tomar a lo largo de un <br>
+					programa.
+				</p>
+				<p>
+					En Python específicamente encontramos los siguientes tipos de Dato: <br>
+					<ul>
+						<img src="{% static 'img/parablog38.jpg'%}">
+					</ul>
+				</p>
+				<br>
+				<h4 style="color: cornflowerblue;">NÚMEROS</h4>
+				<p>
+					<b>Enteros:</b> Son números positivos o negativos que no tienen decimales. Estos números se <br>
+					conocen como de tipo 'int' (entero) o 'long' (entero largo para más precisión).
+				</p>
+				<p style="color: deeppink;">
+					Por ejemplo: x = 2 o z = -25
+				</p>
+				<p>
+					<b>Reales:</b> Son números de tipo decimal y en Python se conocen como de tipo 'float'
+				</p>
+				<p style="color: deeppink;">
+					Por ejemplo: x = 2.5 o z = -0.5
+				</p>
+				<p>
+					<b>Complejos:</b> Son números que tienen una parte real y una parte imaginaria, en Python se <br>
+					conocen como de tipo 'complex'.
+				</p>
+				<p style="color: deeppink;">
+					Por ejemplo: x = 2,1 + 6j
+				</p>
+				<br>
+				<h4>Ejemplo de Algoritmo simple con operacion matemática:</h4>
+				<ul>
+					<img src="{% static 'img/parablog39.jpg'%}">
+				</ul>
+				<br>
+				<h4 style="color: cornflowerblue;">CADENAS o STRINGS</h4>
+				<p>
+					Se conocen como de <b>tipo 'str'</b> texto encerrado entre comillas (simples o dobles). <br>
+					Las cadenas admiten operadores como la suma o la multiplicación.
+				</p>
+				<p style="color: deeppink;">
+					Por ejemplo: x = "Hola mundo" o x = 'Hola Mundo'
+				</p>
+				<h4  style="color: cornflowerblue;">BOOLEANOS</h4>
+				<p>
+					Puede tomar únicamente los valores de Verdadero o Falso. Se define usando el <b>tipo 'bool'</b>
+				</p>
+				<p style="color: deeppink;">
+					Por ejemplo: x = true o z = false
+				</p>
+				<h4 style="color: cornflowerblue;">CONJUNTOS</h4>
+				<p>
+					Es una colección de datos desordenada que no contiene elementos que se repiten. <br>
+					Se conoce como de <b>tipo 'set'</b>.
+				</p>
+				<p style="color: deeppink;">
+					Por ejemplo: conjunto = {'naranja', 1, 'c', 2.5, True, 'ciruela'}
+				</p>
+			</center>
+		</article>
+		<!--Modificar padding despues para que quede todo mas parejo y prolijo-->
 	</section>
 </body>
 </html>
