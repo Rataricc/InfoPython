@@ -7,6 +7,11 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="../../static/css/repetitivas.css">
+	<style>
+		table, th, td {
+			border: 1px solid black;
+		}
+	</style>
 </head>
 <body>
 	<header>
@@ -14,10 +19,116 @@
 	</header>
 	<section>
 		<article class="post">
-			<h2>Como un susbtutilo de lo que quiero hablar</h2>
-			<p>Descripcion de lo que quiero seguir hablando</p>
-			<!--aca va una imagen si quiero-->
-			<p>Otro parrafo si quiero seguir hablando</p>
+			<center>
+				<h2 style="color: #C66250;">Introducción</h2>
+				<ul>
+					<img src="{% static 'img/parablog5.jpg'%}">
+				</ul>
+				<p>
+					Durante el proceso de creación de programas, es muy común, encontrase con que una operación <br>
+					o conjunto de operaciones <strong>deben repetirse muchas veces.</strong>
+				</p>
+				<p>
+					Para ello es importante conocer las estrucutras que permiten <strong>repetir <br>
+					una o varias accione, un número determinado de veces.</strong>
+				</p>
+				<p>
+					Las estructuras que repiten una secuencia de instrucciones un número determinado de veces se <br>
+					denominan estructuras repetitivas, interativas o cíclicas. 
+				</p>
+				<p>
+					<strong>Cada conjunto de instrucciones a ejecutar se denomina BUCLE. <br>
+					Y cada repetición del bucle se llama ITERACIÓN.</strong>
+				</p>
+				<br>
+				<p>
+					Todo bucle tiene que llevar asociada una condición, que es la que va a determinar <strong>cuándo se <br>
+					repite el bucle</strong> y <strong>cuándo deja de repetirse.</strong>
+				</p>
+			</center>
+		</article>
+		<article class="post">
+			<center>
+				<h2 style="color: #C66250;">
+					Antes de continuar veremos tipos de variables especiales que <br>
+					podríamos requerir para diseñar nuestros programas
+				</h2>
+				<h3 style="color: cornflowerblue;">Contadores, Acumuladores y Banderas</h3>
+				<p>
+					En muchos programas se necesitan variables que <strong>cuenten cuántas veces ha <br>
+					ocurrido algo</strong> (contadores), que indiquen si simplemente <strong>ha ocurrido un <br>
+					evento</strong> (banderas) o que <strong>acumulen valores</strong> (acumuladores).
+				</p>
+				<p>
+					La situaciones pueden ser muy diversas, por lo que en este apartado simplemente se ofrecen <br>
+					unos ejemplos para que entiendas cómo utlizar estos recursos: 
+				</p>
+				<table style="width: 58%;">
+					<tr>
+						<td>
+							<ul>
+								<li>
+									<strong>Contador:</strong><br>
+									Los procesos repetitivos requieren contar los sucesos y acciones internas, una forma de <br>
+									hacerlo es mediante un contador. <br><br>
+									<strong style="color: blue;">
+										Un contador es una variable cuyo valor se incrementa o decrementa en una cantidad <br>
+										constante en cada repetición.
+									</strong>
+									<br><br>
+								</li>
+								<li>
+									<strong>Acumalador:</strong><br>
+									Un <strong>acumulador</strong> o totalizador es una variable cuya función es almacenar <br>
+									cantidades resultantes de opreciones sucesivas. <br><br>
+									<strong style="color: blue;">
+										Realizar la misma función que un contador con la diferencia de que el incremento o <br>
+										decremento es variable en lugar de constantes.
+									</strong>
+									<br><br>
+								</li>
+								<li>
+									<strong>Banderas:</strong><br>
+									Una <strong>bandera</strong>, es una variable que puede tomar uno de dos valores <br>
+									(verdadero o falso) a lo largo de la ejecución del programa y permite comunicar <br>
+									información de una parte a otra del mismo.
+								</li>
+							</ul>
+						</td>
+					</tr>
+				</table>
+			</center>
+		</article>
+		<article class="post">
+			<center>
+				<h3 style="color: cornflowerblue;">Sentencia While (mientras)</h3>
+				<p>
+					Un <strong>bucle while</strong> permite repetir la ejecución de un grupo de instrucciones mientras se cumpla <br>
+					una condición (es decir, mientras la condición tenga el valor True).
+				</p>
+				<p>
+					Queda en las manos del programador decidir el momento en que la <strong>condición cambie a False</strong> para <br>
+					hacer que el <strong>ciclo While finalice.</strong>
+				</p>
+				<p>
+					<strong>Características:</strong>
+					<ul>
+						<li>
+							No se conoce la cantidad de veces a iterar o repetir el conjunto de acciones.
+						</li>
+						<li>
+							El final del bucle está controlado con una condición.
+						</li>
+						<li>
+							El conjunto de acciones se ejecutan mientras la evolución de la condición devuelva un <br>
+							resultado verdadero.
+						</li>
+						<li>
+							El ciclo se puede ejecutar 0 o más veces.
+						</li>
+					</ul>
+				</p>
+			</center>
 		</article>
 	</section>
 </body>
