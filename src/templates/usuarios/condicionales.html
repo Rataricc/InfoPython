@@ -7,6 +7,11 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="../../static/css/condicionales.css">
+	<style>
+		table, th, td {
+			border: 1px solid black;
+		}
+	</style>
 </head>
 <body>
 	<header>
@@ -71,9 +76,224 @@
 					<strong>A partir de aquí te recomendamos ir probando las sentencias de ejemplo <br>
 					para que te sea más fácil comprobar su funcionamiento.</strong>
 				</p>
-				<!--Sigue... seguir modificando despues, ver tambien el tema del padding; y tambien su archivo css del mismo-->
+				<h4 style="color: cornflowerblue;">Condicional simple: Sentencia if (si)</h4>
+				<p>
+					La sentencia if se ejecuta siempre que la expresión que comprueba devuelve True: 
+				</p>
+				<table>
+					<tr>
+						<th>Código</th>
+					</tr>
+					<tr>
+						<td style="color: blue;">
+							<strong>if True: # equivale a if not False</strong> <br>
+							<ul style="color: rebeccapurple;">
+								<strong>print("Se cumple la condición")</strong> <br>
+								<strong>print("También se muestra este print")</strong>
+							</ul>
+						</td>
+					</tr>
+					<tr>
+						<th>Resultado</th>
+					</tr>
+					<tr>
+						<td>
+							Se cumple la condición <br>
+							También se muestra este print
+						</td>
+					</tr>
+				</table>
+				<p>
+					Puede ocurrir que necesites encadenar condicionales pues: 
+					<ul>
+						<li>Si se verifica una determinada condición, ejecutar una serie de instrucciones (bloque 1).</li>
+						<li>Si no, esto es, si la condición NO se verifica, ejecutar otra serie de instrucciones (bloque 2).</li>
+					</ul> 
+				</p>
+				<table style="width: 25%">
+					<tr>
+						<th>Código</th>
+					</tr>
+					<tr>
+						<td style="color: blue;">
+							<strong>a = 5</strong><br>
+							<strong style="color: #C66250;">if a == 2:</strong><br>
+							<ul style="color: indigo;">
+								<strong>print("a vale 2")</strong>
+							</ul>
+							<strong style="color: #C66250;">if a == 5:</strong> 
+							<ul style="color: indigo;">
+								<strong>print("a vale 5")</strong>
+							</ul>
+						</td>
+					</tr>
+					<tr>
+						<th>
+							Resultado
+						</th>
+					</tr>
+					<tr>
+						<td>
+							a vale 5
+						</td>
+					</tr>
+				</table>
+				<p>
+					O también anidar if dentro de if: 
+				</p>
+				<table style="width: 25%;">
+					<tr>
+						<th>Código</th>
+					</tr>
+					<tr>
+						<td>
+							<strong style="color: blue;">
+								a = 5 <br>
+								b = 10 <br>
+							</strong>
+							<strong style="color: #C66250;">if a == 5:</strong>
+							<ul>
+								<strong style="color: indigo;">
+									print("a vale ", a) <br>
+								</strong>
+									<strong style="color: #C66250;">
+										if b == 10:
+									</strong>
+								<ul style="color: indigo;">
+									<strong>print("y b vale ", b)</strong>
+								</ul>
+							</ul>
+						</td>
+					</tr>
+					<tr>
+						<th>Resultado</th>
+					</tr>
+					<tr>
+						<td>
+							a vale 5 <br>
+							y b vale 10
+						</td>
+					</tr>
+				</table>
+				<p>
+					Como condición podemos evaluar múltiples expresiones, siempre que ésta devuelvan True o <br>
+					False
+				</p>
+				<table>
+					<tr>
+						<th>Código</th>
+					</tr>
+					<tr>
+						<td style="color: #C66250;">
+							<strong>if a == 5 and b == 10:</strong>
+							<ul style="color: indigo;">
+								<strong>print("a vale 5 y b vale 10")</strong>
+							</ul>
+						</td>
+					</tr>
+					<tr>
+						<th>Resultado</th>
+					</tr>
+					<tr>
+						<td>
+							a vale 5 y b vale 10
+						</td>
+					</tr>
+				</table>
 			</center>
 		</article>
+		<article class="post">
+			<center>
+				<h4 style="color: cornflowerblue;">Condicional alternativo o doble: Sentencia else (sino)</h4>
+				<p>
+					Se encadena a un if para comprobar el caso contrario (en el que no se cumple la condición):
+				</p>
+				<table style="width: 25%;">
+					<tr>
+						<th>Código</th>
+					</tr>
+					<tr>
+						<td  style="color: blue;">
+							<strong>n = 11</strong> <br>
+							<strong style="color: #C66250;">if n % 2 == 0:</strong>
+							<ul style="color: indigo;">
+								<strong>print(n, "es un número par")</strong>
+							</ul>
+							<strong style="color: #C66250;">else:</strong> 
+							<ul style="color: indigo;">
+								<strong>print(n, "es número impar")</strong>
+							</ul>
+						</td>
+					</tr>
+					<tr>
+						<th>Resultado</th>
+					</tr>
+					<tr>
+						<td>
+							11 es un resultado impar 
+						</td>
+					</tr>
+				</table>
+			</center>
+		</article>
+		<article class="post">
+			<center>
+				<h4 style="color: cornflowerblue;">Condicional multiple: Sentencia elif (sino si)</h4>
+				<p>
+					Con frecuencia es necesario que existan más de dos elecciones posibles. <br>
+					Este problema se podría resolver por estructuras selectivas simples o alternativas, encadenadas. <br>
+					Pero si el número de alternativas es grande puede plantear serios problemas de escritura y de <br>
+					legibilidad. <br>
+					Por este motivo, en estos casos, se recomienda el uso de la estructura condicional alternativo <br>
+					múltiple que permite <strong>avaluar una variable que puede tomar de 1 a n valores</strong> y según ocurra uno <br>
+					de esos valores, se realizará <strong>una de las n acciones;</strong> es decir, que el programa seguirá sólo un <br>
+					determinado camino entre varios. <br>
+					En Python se encadena a un if u otro elif para comprobar múltiples condicionales, siempre que las <br>
+					anteriores no se ejecuten:
+				</p>
+				<table style="width: 40%;">
+					<tr>
+						<th>Código</th>
+					</tr>
+					<tr>
+						<td style="color: blue;">
+							<strong>nota = float(input("Ingresar una nota: "))</strong> <br>
+							<strong style="color: #C66250;">if nota >= 9:</strong>
+							<ul>
+								<strong style="color: indigo;">print("Sobresaliente")</strong>
+							</ul>
+							<strong style="color: #C66250;">elif nota >= 7:</strong>
+							<ul>
+								<strong style="color: indigo;">print("Notable")</strong>
+							</ul>
+							<strong style="color: #C66250;">elif nota >= 6:</strong>
+							<ul>
+								<strong style="color: indigo;">print("Bien")</strong>
+							</ul>
+							<strong style="color: #C66250;">elif nota >= 5:</strong>
+							<ul>
+								<strong style="color: indigo;">print("Suficiente")</strong>
+							</ul>
+							<strong style="color: #C66250;">else:</strong>
+							<ul>
+								<strong style="color: indigo;">print("Insuficiente")</strong>
+							</ul>
+						</td>
+					</tr>
+					<tr>
+						<th>Resultado</th>
+					</tr>
+					<tr>
+						<td>
+							Introduce una nota: 10 <br>
+							Sobresaliente
+						</td>
+					</tr>
+				</table>
+			</center>
+			<br>
+		</article>
+		<!--Sigue... seguir modificando despues, ver tambien el tema del padding; y tambien su archivo css del mismo-->
 	</section>
 </body>
 </html>
