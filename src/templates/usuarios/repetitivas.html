@@ -128,6 +128,310 @@
 						</li>
 					</ul>
 				</p>
+				<table>
+					<tr>
+						<th>Código</th>
+					</tr>
+					<tr>
+						<td>
+							Dado un número entero N calcular la suma de todos los números entre 1 y N. <br><br>
+							<strong style="color: forestgreen;">
+								cont = 0 <br>
+								suma = 0 <br>
+							</strong>
+							<strong style="color: blue;"> N = int(input("Ingrese tope maximo: "))</strong><br>
+							<strong>while cont <= N:</strong> 
+							<ul style="color: red;">
+								<strong>
+									suma = suma + cont <br>
+									cont = cont + 1 
+								</strong>
+							</ul>
+							<strong>print("La suma total es: ", suma)</strong>
+						</td>
+					</tr>
+					<tr>
+						<th>Resultado</th>
+					</tr>
+					<tr>
+						<td>
+							Ingresa N = 3 <br>
+							cont vale 0 <br>
+							cont vale 1 <br>
+							cont vale 2 <br>
+							cont vale 3 <br>
+						</td>
+						<td>
+							suma vale 0 <br>
+							suma vale 1 <br>
+							suma vale 3 <br>
+							suma vale 6 <br>
+							La suma total es 6
+						</td>
+					</tr>
+				</table>
+				<p>
+					Otra ventaja del blucle while es que el <strong>número de iteraciones no está definida</strong> antes de <br>
+					empezar el bucle, por ejemplo, porque los datos los proporciona el usuario.
+				</p>
+				<p>
+					Por ejemplo, el siguiente ejemplo pide un número positivo al usuario una y otra vez hasta que el <br>
+					usuario lo haga correctamente:
+				</p>
+				<table>
+					<tr>
+						<th>Código</th>
+					</tr>
+					<tr>
+						<td>
+							<strong style="color: blue;">numero = int(input("Escriba un numero positivo: "))</strong><br>
+							<strong>while numero < 0:</strong>
+							<ul style="color: red;">
+								<strong>print("¡ha escrito un número negativo! Inténtelo de nuevo")</strong><br>
+								<strong>numero = int(input("Escriba un numero positivo: "))</strong>
+							</ul>
+							<strong>print("Gracias por su colaboración")</strong>
+						</td>
+					</tr>
+					<tr>
+						<th>Resultado</th>
+					</tr>
+					<tr>
+						<td>
+							Escriba un número positivo: -4 <br>
+							¡ha escrito un número negativo! Inténtelo de nuevo <br>
+							Escriba un número positivo: -8 <br>
+							¡ha escrito un número negativo! Inténtelo de nuevo <br>
+							Escriba un número positivo: 9 <br>
+							Gracias por su colaboración
+						</td>
+					</tr>
+				</table>
+			</center>
+		</article>
+		<article class="post">
+			<center>
+				<h3 style="color: cornflowerblue;">Uso de else en While</h3>
+				<p>
+					Se encadena al While para ejecutar un bloque de código una vez la condición ya no devuelve <br>
+					True (normalmente al final):
+				</p>
+				<table>
+					<tr>
+						<th>Código</th>
+					</tr>
+					<tr>
+						<td>
+							<strong style="color: forestgreen;">c = 0</strong> <br>
+							<strong>while c <= 5:</strong>
+							<ul style="color: red;">
+								<strong>
+									c+=1 <br>
+									print("c vale", c)
+								</strong>
+							</ul>
+							<strong>else:</strong>
+							<ul style="color: red;">
+								<strong> print("Se ha completado toda la iteración y c vale", c)</strong>
+							</ul>
+						</td>
+					</tr>
+					<tr>
+						<th>Resultado</th>
+					</tr>
+					<tr>
+						<td>
+							c vale 1 <br>
+							c vale 2 <br>
+							c vale 3 <br>
+							c vale 4 <br>
+							c vale 5 <br>
+							c vale 6 <br>
+							Se ha completado toda la iteración y c vale 6
+						</td>
+					</tr>
+				</table>
+			</center>
+		</article>
+		<article class="psot">
+			<center>
+				<h3 style="color: cornflowerblue;">Sentencia for (para)</h3>
+				<ul>
+					<li>
+						Ahora <strong>SI se conoce la cantidad de veces a iterar</strong> o <strong>repetir</strong> el conjunto de acciones <br>
+					</li>
+					<li>
+						El <strong>final del bucle</strong> está controlado un contador (indica cantidad de iteraciones).
+					</li>
+					<li>
+						La <strong>variable contador</strong> que maneja el bucle se incrementa automáticamente de acuerdo <br>
+						al incremento indicado.
+					</li>
+					<li>
+						No necesita <strong>inicialización</strong>
+					</li>
+				</ul>
+				<p>
+					La sintaxis de un bucle for es la siguiente: 
+				</p>
+				<table>
+					<tr>
+						<th>Código</th>
+					</tr>
+					<tr>
+						<td>
+							<strong>for variable in elemento iterable (lista, cadena, range, etc.):</strong><br>
+							cuerpo del blucle
+						</td>
+					</tr>
+				</table>
+				<p>
+					El cuerpo del bucle se ejecuta tantas veces como elementos tenga la estructura <br>
+					iterable (elementos de una lista o de un range(), caracteres de una cadena, etc.).
+				</p>
+				<h3 style="color: cornflowerblue;">Utilizando tipos range()</h3>
+				<p>
+					Una de las ventajas de utilizar tipos <strong>range()</strong> es que el argumento del tipo <strong>range()</strong> controla el <br>
+					número de veces que se ejecuta el bucle. Sirve para generar una lista de números que podemos <br>
+					recorrer fácilmente, pero no ocupa memoria porque se interpreta sobre la marcha:
+				</p>
+				<table>
+					<tr>
+						<th>Código</th>
+					</tr>
+					<tr>
+						<td>
+							<strong style="color: red;">print(Comienzo)</strong> <br>
+							<strong>for i in range(3)</strong>
+							<ul>
+								<strong style="color: red;">print("Hola ", end="")</strong>
+							</ul>
+							<strong>print("Final")</strong>
+						</td>
+					</tr>
+					<tr>
+						<th>Resultado</th>
+					</tr>
+					<tr>
+						<td>
+							comienzo <br>
+							Hola Hola Hola <br>
+							Final
+						</td>
+					</tr>
+				</table>
+			</center>
+		</article>
+		<article class="post">
+			<center>
+				<h3>Control de Bucles</h3>
+				<h4 style="color: cornflowerblue;">Instrucción break</h4>
+				<p>
+					Se puede usar en bucles <strong>for</strong> y <strong>while</strong> y simplemente <strong>termina el bucle actual</strong> y sigue con la <br>
+					ejecución de la próxima instrucción, por ejemplo: 
+				</p>
+				<ol type="a">
+					<li>
+						Controlar fin de bucle
+						<br>
+						<table>
+							<tr>
+								<td>
+									while True:
+									<ul>
+										op = input("Ingrese cualquier palabra, que termine con FIN--> ") <br>
+										if op = 'FIN': <br>
+										break
+									</ul>
+									else:
+									<ul>
+										print(op)
+									</ul>
+									print("Terminó la ejecución con FIN")
+								</td>
+							</tr>
+						</table>
+					</li>
+					<br>
+					<li>
+						La sentencia break es usada también para terminar un ciclo aun <br>
+						cuando la evolución de la condición no devuelva False, <br><br>
+						<h4># Primer ejemplo</h4>
+						<table>
+							<tr>
+								<td>
+									for letra in "Python": 
+									<ul>
+										if letra == "h": <br>
+										break <br>
+										print("Letra actual :", letra)
+									</ul>
+								</td>
+							</tr>
+						</table>
+						<br>
+						<img src="{%static 'img/parablog40.jpg'%}">
+						<br><br>
+						<h4># Segundo ejemplo</h4>
+						<table>
+							<tr>
+								<td>
+									var = 10 <br>
+									while var > 0:
+									<ul>
+										if var == 5: <br>
+										break
+									</ul>
+									print("Valor actual de la variable :", var)
+								</td>
+							</tr>
+						</table>
+					</li>
+				</ol>
+				<h4 style="color: cornflowerblue;">Sentencia continue</h4>
+				<p>
+					Al aparecer un <strong>continue</strong> en Python, este regresa al comienzo del bucle, ignorando todos los <br>
+					estamentos que quedan en la iteración actual del bucle e inicia la siguiente iteración. Queda <br>
+					más claro con un ejemplo:  
+				</p>
+				<h4># Primer ejemplo</h4>
+				<table>
+					<tr>
+						<td>
+							for letra in "Python":
+							<ul>
+								if letra == "h":
+								<ul>
+									continue
+								</ul>
+								print("Letra actual :", letra)
+							</ul>
+						</td>
+					</tr>
+				</table>
+				<br><br>
+				<img src="{% static 'img/parablog41.jpg'%}">
+				<br><br>
+				<h4># Segundo ejemplo</h4>
+				<table>
+					<tr>
+						<td>
+							var = 10 <br>
+							while var > 0:
+							<ul>
+								var = var -1 <br>
+								if var == 5:
+								<ul>
+									continue
+								</ul>
+								print("Valor actual de la variable : ", var	)
+							</ul>
+						</td>
+					</tr>
+				</table>
+				<br><br>
+				<img src="{% static 'img/parablog42.jpg'%}">
+				<br><br>
 			</center>
 		</article>
 	</section>
