@@ -146,6 +146,65 @@
 					Al definir una función los valores que se reciben se denominan <strong>parámetros</strong>, pero durante la <br>
 					llamada los valores que se envían se denominan <strong>argumentos.</strong>
 				</p>
+				<img src="{% static 'img/parablog43.jpg'%}" height="200px">
+				<ul>
+					<li>
+						<strong style="color: cornflowerblue;">Por posicíon</strong><br>
+						Cuando se envían argumentos a una función, estos se reciben por orden en los páremetros definidos. <br>
+						La asociación de los parámetros y los valores pasados a la función se hace normalmente de izquierda a <br>
+						derecha: como, en el ejemplo anterior, la función sumar recibe el valor de la variable numero_1 y la suma <br>
+						con el valor que recibe en segundo lugar, numero_2. <br>
+						En este caso se dice que son <strong>argumentos por posición</strong>. 
+					</li>
+					<br>
+					<li>
+						<strong style="color: cornflowerblue;">Por nombre</strong><br>
+						Sin embargo también es posible modificar el orden de los parámetros si indicamos el nombre <br>
+						del parámetro al que asociar el valor a la hora de llamar la función: 
+						<ul>
+							sumar(numero_2 = 2, numero_1 = 3)
+						</ul>
+					</li>
+					<br>
+					<li>
+						<strong style="color: cornflowerblue;">Llamada sin argumentos</strong><br>
+						El número de valores que se pasan como parámetros al llamar a la función tiene que coincidir <br>
+						con el número de parámetros que la función acepta según la declaración de la función. <br>
+						Si al momento de llamar una función la cual tiene definidos unos parámetros no pasa los argumentos <br>
+						correctamente provocará una excepción <strong>TypeError</strong>. Por ejemplo:
+						<table>
+							<tr>
+								<th>Código</th>
+							</tr>
+							<tr>
+								<td>
+									Imprimir los valores pasados como parámetros. <br>
+									<strong style="color: red;">def</strong> mi_funcion(param1, param2):
+									<ul>
+										<strong>"""Esta función imprime los dos valores pasados como parámetros"""</strong><br>
+										<strong style="color: blue;">print</strong>(param1) <br>
+										<strong style="color: blue;">print</strong>(param2)
+									</ul>
+									mi_funcion(<strong style="color: green;">"Hola"</strong>)
+								</td>
+							</tr>
+							<tr>
+								<th>Resultado</th>
+							</tr>
+							<tr>
+								<td style="color: red;">
+									<strong>
+										Traceback (most recent call last):
+										<ul>
+											File "input>", line 5, in <module></module>
+										</ul>
+										TypeError: mi_funcion() missing 1 required positional argument: 'param2'
+									</strong>
+								</td>
+							</tr>
+						</table>
+					</li>
+				</ul>
 			</center>
 		</article>
 	</section>
