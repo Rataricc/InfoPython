@@ -204,8 +204,56 @@
 							</tr>
 						</table>
 					</li>
+					<br>
+					<li>
+						<strong style="color: cornflowerblue;">Parámetros por defecto</strong><br>
+						Para solucionar la excepción <strong>TypeError</strong> ejecutada al momento de la llamada a una función <br>
+						sin argumentos, entonces se puede asignar unos <strong>valores por defecto nulos</strong> a los párametros, <br>
+						de esa forma puede hacer una comprobación antes de ejecutar el código de la función:
+						<table>
+							<tr>
+								<th>Código</th>
+							</tr>
+							<tr>
+								<td>
+									Dado dos números calcular la resta de ambos números. Si al llamar a la función se pasa solo un parámetro <br>
+									imprimir un mensaje informando que se requieren dos números para realizar la operación. <br><br>
+									<strong style="color: red;">def</strong> resta(num1= <strong style="color: blueviolet;">None</strong>, num2= <strong style="color: blueviolet;">None</strong>):
+									<ul>
+										<strong style="color: green;">"""Esta función imprime la resta de los dos valores pasados como parámetros"""</strong><br>
+										<strong style="color: red;">if</strong> a == <strong style="color: blueviolet;">None </strong><strong style="color: red;">or</strong> b == <strong style="color: blueviolet;">None</strong>:
+										<ul>
+											<strong style="color: blue;">print</strong>(<strong style="color: green;">"Error, debes enviar dos números a la función"</strong>) <br>
+											<strong style="color: red;">return</strong>
+										</ul>
+										<strong style="color: red;">return</strong> a - b
+									</ul>
+									resta(<strong style="color: red;">30, 10</strong>) <br><br>
+									resta() <br><br>
+								</td>
+							</tr>
+							<tr>
+								<th>Resultado</th>
+							</tr>
+							<tr>
+								<td>
+									20 <br>
+									Error, debes enviar dos números a la función
+								</td>
+							</tr>
+						</table>
+						<br>
+						<p>
+							Como se puede ver en el código anterior, se indica el final de la función luego de la sentencia print, usando <br>
+							la sentencia return aunque no devuelva nada, ya que en este caso se utiliza para finalizar la ejecución de la <br>
+							llamada a la función y "devolver" el resultado que en este caso no está definido por lo que será el valor por <br>
+							defecto (None). <br>
+							Tener en cuenta que las declaraciones posteriores a las declaraciones de devolución no se ejecutan.
+						</p>
+					</li>
 				</ul>
 			</center>
+			<!--Sigue...-->
 		</article>
 	</section>
 </body>
