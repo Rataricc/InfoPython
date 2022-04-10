@@ -7,6 +7,11 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="../../static/css/funciones.css">
+	<style>
+		table, th, td {
+			border: 1px solid black;
+		}
+	</style>
 </head>
 <body>
 	<header>
@@ -14,10 +19,134 @@
 	</header>
 	<section>
 		<article class="post">
-			<h2>Como un susbtutilo de lo que quiero hablar</h2>
-			<p>Descripcion de lo que quiero seguir hablando</p>
-			<!--aca va una imagen si quiero-->
-			<p>Otro parrafo si quiero seguir hablando</p>
+			<center>
+				<h2 tyle="color: #C66250;">Introducción</h2>
+				<h3 style="color: cornflowerblue;">Funciones</h3>
+				<p>
+					Una <strong>función</strong> es un fragmento de código con un nombre asociado que <strong>realiza una serie de <br>
+					tareas y devuelve un valor.</strong> A los fragmentos de código que tienen un nombre asociado y no devuelven valores <br>
+					se les suele llamar <strong>procedimientos</strong>.
+				</p>
+				<p>
+					En Python no existen los procedimientos, ya que <strong>cuando el programador no especifica un valor de <br>
+					retorno la función devuelve el valor None (nada)</strong>, equivale al null en Java.
+				</p>
+				<p>
+					El uso de funciones es un componente muy importante del paradigma de la programación <br>
+					llamada estructurada, y tienen varias ventajas:
+					<ul>
+						<li>
+							<strong>Modularización:</strong> permite segmentar un programa complejo en una serie de partes o <br>
+							módulos más simples, facilitando así la programación y el depurado.
+						</li>
+						<li>
+							<strong>Reutilización:</strong> permite reutilizar un misma función en distintos programas.
+						</li>
+					</ul>
+				</p>
+			</center>
+		</article>
+		<article class="post">
+			<center>
+				<h3 style="color: cornflowerblue;">Sentencia def</h3>
+				<p>
+					La sentencia <strong>def</strong> es una definición de función usada para crear funciones definidas por el <br>
+					usuario.
+				</p>
+				<p>
+					Una <strong>definición de función</strong> es una sentencia ejecutable. Su ejecución enlaza el nombre de la <br>
+					función en el namespace local actual a un objeto función (un envoltorio alrededor del código ejecutable <br>
+					para la función). Este objeto función contiene una referencia al namespace local como el namespace global <br>
+					para ser usado cuando la función es llamda.
+				</p>
+				<p>
+					<strong>La definición de la función no ejecuta el cuerpo de la misma; esto es ejecutado solamente <br>
+					cuando la función  es llamada.</strong>
+				</p>
+				<p>
+					En Python las funciones se declaran de la siguiente forma:
+					<table>
+						<tr>
+							<td>
+								def mi_funcion(param1, param2): 
+								<ul>
+									print(param1, param2)
+								</ul>
+							</td>
+						</tr>
+					</table>
+				</p>
+				<p>
+					Es decir, la palabra clave <strong>def</strong> seguida del nombre de la función y entre paréntesis cero o más <br>
+					argumentos como entrada separados por comas, en otra línea, indentando y después de los dos puntos tendríamos las <br>
+					líneas del código que conforman el conjunto de instrucciones a ser ejecutadas por la función. <br>
+					También podemos encontrarnos con una cadena de texto como primera línea del cuerpo de la función, <br>
+					estas cadenas se conocen con el nombre de <strong>docstring</strong>(cadena de documentación) y sirven, <br>
+					como su nombre indica, a modo de documentación de la función. Hay herramientas que usan las docstrings para producir <br>
+					automáticamente documentación en línea o imprimible, o para permitirle al usuario que navegue el código en forma <br>
+					interactiva; es una buena práctica incluir docstrings en el código que uno escribe, por lo que se debe hacer un hábito <br>
+					de esto. 
+					<table>
+						<tr>
+							<td>
+								def mi_funcion(param1, param2):
+								<ul>
+									''''''Esta función imprime los dos valores pasados como parámetros'''''' <br>
+									print(param1) <br>
+									print(param2)
+								</ul>
+							</td>
+						</tr>
+					</table>
+				</p>
+				<p>
+					Como se mencionó anteriormente en la definición de la función lo único que hacemos es asociar <br>
+					un nombre al fragmento de código que conforma l función, de forma que podamos ejecutar dicho código <br>
+					más tarde referenciándolo por su nombre. Para llamar a la función (ejecutar su código) se escribiría: <br>
+					<ul>
+						mi_funcion("Hola", 2)
+					</ul>
+				</p>
+				<p>
+					Es decir, el nombre de la función a la que queremos llamar seguido de los valores que queramos pasar <br>
+					como parámetro entre paréntesis.
+					<table>
+						<tr>
+							<th>Código</th>
+						</tr>
+						<tr>
+							<td>
+								Imprimir los valores pasados como parámetros. <br><br>
+								<strong style="color: red;">def</strong> mi_funcion(param1, param2):
+								<ul>
+									<strong style="color: green;">"""Esta función imprime los dos valores pasados como parámetros"""</strong><br>
+									<strong style="color: blue;">print</strong>(param1) <br>
+									<strong style="color: blue;">print</strong>(param2)
+								</ul>
+								mi_funcion(<strong style="color: green;">"Hola"</strong>, <strong style="color: red;">2</strong> )
+							</td>
+						</tr>
+						<tr>
+							<th>Resultado</th>
+						</tr>
+						<tr>
+							<td>
+								Hola <br>
+								2
+							</td>
+						</tr>
+					</table>
+				</p>
+			</center>
+		</article>
+		<article class="post">
+			<center>
+				<h2>Argumentos y parámetros</h2>
+				<p>
+					Al definir una función los valores que se reciben se denominan <strong>parámetros</strong>, pero durante la <br>
+					llamada los valores que se envían se denominan <strong>argumentos.</strong>
+				</p>
+			</center>
 		</article>
 	</section>
 </body>
