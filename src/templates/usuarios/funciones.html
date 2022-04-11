@@ -250,10 +250,193 @@
 							defecto (None). <br>
 							Tener en cuenta que las declaraciones posteriores a las declaraciones de devolución no se ejecutan.
 						</p>
+						<p>
+							Los valores de un parámetro por defecto pueden ser de cualquier tipo, así que retomando el ejemplo de <br>
+							mi_funcion, podemos asignar diferentes valores por defecto a los parámetros: 
+							<table>
+								<tr>
+									<th>Código</th>
+								</tr>
+								<tr>
+									<td>
+										Imprimir los valores pasados como parámetro. <br>
+										<strong style="color: red;">def</strong> mi_funcion(param1 = <strong style="color: green;">"Hola"</strong>, param2 = <strong style="color: red;">0</strong>): 
+										<ul>
+											<strong style="color: green;">"""Esta función imprime los dos valores pasados como parámetros"""</strong> <br>
+											<strong style="color: blue;">print</strong>(param1) <br>
+											<strong style="color: blue;">print</strong>(param2)
+										</ul>
+										<br>
+										<strong>mi_funcion()</strong>
+									</td>
+								</tr>
+								<tr>
+									<th>Resultado</th>
+								</tr>
+								<tr>
+									<td>
+										Hola <br>
+										0
+									</td>
+								</tr>
+							</table>
+						</p>
+					</li>
+					<li>
+						<strong style="color: cornflowerblue;">Argumentos indeterminados</strong><br>
+						En alguna acasión no podremos determinar previamente cuantos elementos se necesita enviar <br>
+						a una función. En estos casos se puede utilizar los <strong>argumentos indeterminados</strong> por posición y <br>
+						por nombre.
+						<ul>
+							<li>
+								<strong style="color: cornflowerblue;">Por posición</strong><br>
+								Se debe crear una lista dinámica de argumentos, es decir, un tipo tupla, definiendo el <br>
+								parámetro con un asterisco, para recibir los parámetros indetermiandos por posición:
+								<table>
+									<tr>
+										<th>Código</th>
+									</tr>
+									<tr>
+										<td>
+											Imprimir los valores pasados como parámetro. <br><br>
+											<strong style="color: red;">def</strong> indeterminados(*args): 
+											<ul>
+												<strong style="color: green;">"""Esta función imprime los valores pasados como parámetro"""</strong> <br>
+												<strong style="color: red;">for</strong> arg <strong style="color: blue;">in</strong> args:
+												<ul>
+													<strong style="color: blue;">print</strong>(arg)
+												</ul>
+											</ul>
+											<br>
+											<strong>Indeterminados(<strong style="color: red;">5</strong>,<strong style="color: green;">"Hola"</strong>, [<strong style="color: red;">1, 2, 3, 4, 5</strong>] )</strong>
+										</td>
+									</tr>
+									<tr>
+										<th>Resultado</th>
+									</tr>
+									<tr>
+										<td>
+											5 <br>
+											Hola <br>
+											[1, 2, 3, 4, 5]
+										</td>
+									</tr>
+								</table>
+								Esta sintaxis funciona creando una tupla en la que se almacenan los valores de todos los parámetros <br>
+								extra pasados como argumento. Para el caso de que se llame a la función sin parámetros, la tupla estaría <br>
+								vacía, por lo tanto no se imprimiría nada. En la llamada a la función que se hace en el ejemplo se crea una <br>
+								tupla con los valores (5, "Hola", [1, 2, 3, 4, 5]).
+							</li>
+							<li>
+								<strong style="color: cornflowerblue;">Por nombre</strong><br>
+								Para recibir un número indeterminado de parámetros por nombre (clave-valor o en inglés Keyword args), <br>
+								se debe crear un diccionario dinámico de argumentos definiendo el parámetro con dos asteristicos. <br>
+								Las claves de este diccionario serían los nombres de los parámetros indicados al llamar a la función y <br>
+								los valores del diccionario, los valores asociados a estos parámetros: 
+								<table>
+									<tr>
+										<th>Código</th>
+									</tr>
+									<tr>
+										<td>
+											Imprimir los valores pasados como parámetro. <br><br>
+											<strong style="color: red;">def</strong> indeterminados(**kwargs):
+											<ul>
+												<strong style="color: green;">"""Esta función los valores pasados como parámetro"""</strong><br>
+												<strong style="color: blue;">print</strong>(kwargs)
+											</ul>
+											<br>
+											<strong>indetermiandos(n= <strong style="color: red;">5</strong>, c=<strong style="color: green;">"Hola"</strong>, l= [<strong style="color: red;">1, 2, 3, 4, 5</strong>] )</strong>
+										</td>
+									</tr>
+									<tr>
+										<th>Resultado</th>
+									</tr>
+									<tr>
+										<td>
+											{'n' : 5, 'c' : 'Hola', 'l' : [1, 2, 3, 4, 5]}
+										</td>
+									</tr>
+								</table>
+								Al recibirse como un diccionario, puede iterarlo y mostrar la clave y valor de cada argumento:
+								<table>
+									<tr>
+										<th>Código</th>
+									</tr>
+									<tr>
+										<td>
+											Imprimir los valores pasados como parámetro. <br><br>
+											<strong style="color: red;">def</strong> indetermianados(**kwargs):
+											<ul>
+												<strong style="color: green;">"""Esta función imprime los valores pasados como parámetros"""</strong><br><br>
+												<strong style="color: red;">for</strong> kwarg <strong style="color: blue;">in</strong> kwargs: 
+												<ul>
+													<strong style="color: blue;">print</strong>(kwarg, "=>", kwargs[kwarg])
+												</ul>
+											</ul>
+											<strong>indetermianados(n= <strong style="color: red;">5</strong>, c= <strong style="color: green;">"Hola"</strong>, l= [<strong style="color: red;">1, 2, 3, 4, 5</strong>] )</strong>
+										</td>
+									</tr>
+									<tr>
+										<th>Resultado</th>
+									</tr>
+									<tr>
+										<td>
+											n => 5 <br>
+											c => Hola <br>
+											l => [1, 2, 3, 4, 5]
+										</td>
+									</tr>
+								</table>
+							</li>
+							<li>
+								<strong style="color: cornflowerblue;">Por posición y nombre</strong><br>
+								Si requiere aceptar ambos tipos de parámetros simultáneamente en una función, entonces debe <br>
+								crear ambas colecciones dinámicas. Primero los argumentos indeterminados por valor y luego <br>
+								los cuales son por clave y valor:
+								<table>
+									<tr>
+										<th>Código</th>
+									</tr>
+									<tr>
+										<td>
+											Imprimir los valores pasados como parámetros por posición y nombre. <br><br>
+											<strong style="color: red;">def</strong> super_funcion(*args, **kwargs):
+											<ul>
+												<strong style="color: green;">"""Esta función imprime los valores pasados como parámetro por posición y nombre"""</strong><br><br>
+												<strong>total = 0</strong><br>
+												<strong style="color: red;">for</strong> arg <strong style="color: blue;">in</strong> args: 
+												<ul>
+													<strong>total += arg</strong>
+												</ul>
+												<strong style="color: blue;">print</strong>("Total", "=>", <strong>total</strong>) <br><br>
+												<strong style="color: red;">for</strong> kwarg <strong style="color: blue;">in</strong> kwargs:
+												<ul>
+													<strong style="color: blue;">print</strong>(kwarg, "=>", kwargs[kwarg])
+												</ul>
+												<br><br>
+												<strong>super_funcion(<strong style="color: red;">50, -1, 1.56, 10, 20, 300</strong>, c= <strong style="color: green;">"Hola"</strong>, n= <strong style="color: red;">3</strong> )</strong>
+											</ul>
+										</td>
+									</tr>
+									<tr>
+										<th>Resultado</th>
+									</tr>
+									<tr>
+										<td>
+											Total => 380.56 <br>
+											c => Hola <br>
+											n => 3 
+										</td>
+									</tr>
+								</table>
+								Los nombres <strong>args</strong> y <strong>kwargs</strong> no son obligatorios, pero se suelen utilizar por convención. <br>
+								Muchos frameworks y librerías los utilizan por lo que es buena práctica llamarlos así.
+							</li>
+						</ul>
 					</li>
 				</ul>
 			</center>
-			<!--Sigue...-->
 		</article>
 	</section>
 </body>
