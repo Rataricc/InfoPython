@@ -439,6 +439,104 @@
 				</ul>
 			</center>
 		</article>
+		<article class="post" >
+			<center>
+				<h2>Paso de argumentos por referencia y por valor</h2>
+				<p>
+					Si conoces algún lenguaje de programación te estarás preguntando si <strong>en Python al pasar <br>
+					una variable como argumento de una función estas se pasan por referencia o por valor.</strong>
+				</p>
+				<p>
+					En el <strong>paso por referencia</strong> lo que pasa como argumento es una <strong>referencia o puntero a la <br>
+					variable</strong>, es decir, la dirección de memoria en la que se encuentra el contenido de la variable, y no <br>
+					el contenido en sí. En el <strong>paso por valor</strong>, por el contrario, lo que se pasa como argumento es el <br>
+					valor que contenía la variable. 
+				</p>
+				<p>
+					Pero en resumen, <strong>la diferencia entre ambos es que en el <strong style="color: blue;">paso por valor</strong> los cambios que se <br>
+					hagan sobre el parámetro no se ven fuera de la función, dado que los argumentos de la función son variables locales a la función, que contienen <br>
+					los valores indicados por las variables que se pasaron como argumento.</strong> Es decir, en realidad lo que se le pasa a la función son copias de <br>
+					los valores y no las variables en sí.
+				</p>
+				<p>
+					<strong>
+						Si quisiéramos modificar el valor de uno de los argumentos y que estos cambios se reflejarán <br>
+						fuera de la función tendríamos que pasar el parámetro por referencia. 
+					</strong>
+				</p>
+				<p>
+					En C los argumentos de las funciones se pasar por valor, aunque se pueda simular el paso por referencia usando punteros. <br>
+					En Java también se usa paso por valor, aunque para las variables que son objetos lo que se hace es pasar por valor la <br>
+					referencia al objeto, por lo que en realidad parece paso por referencia.
+				</p>
+				<p>
+					En Python también se utiliza el paso por valor de referencias a objetos, como en Java, aunque en el caso de Python, a <br>
+					diferencia de Java, <strong>todo es un objeto</strong> (para ser exactos lo que ocurre en realidad es que al objeto se le <br> 
+					asigna otra etiqueta o nombre en el espeacio de nombres local de la función).
+				</p>
+				<p>
+					Sin embargo <strong>no todos los cambios que hagamos a los parámetros dentro de una función Python se reflejarán fuera de esta</strong>, <br>
+					ya que hay que tener en cuenta que en Python existen objetos inmutables, como las tuplas, por lo que si intentáramos modificar una tupla <br>
+					pasada como parámetro lo que ocurriría en realidad es que se crearía una nueva instancia, por lo que los cambios no se verían fuera de la función.
+				</p>
+				<p>
+					Veamos con este ejemplo que hace uso del método append de las listas. Un método no es más que una función que pertenece <br>
+					a un objeto, en este caso a una lista; y append, en concreto, sirve para añadir un elemento a una lista.
+				</p>
+				<br>
+				<table>
+					<tr>
+						<th>Código</th>
+					</tr>
+					<tr>
+						<td>
+							Modificar el valor de los elementos pasados como parámetro. <br><br>
+							<strong style="color: red;">def</strong> funcion(x, y): 
+							<ul>
+								<strong style="color: green;">"""Esta función actualiza los valores de los argumentos pasados como parámetros"""</strong><br><br>
+								<strong>
+									x = x + 3 <br>
+									y.append(23)
+								</strong> <br>
+								<strong style="color: blue;">print</strong>(x, y)
+							</ul>
+							<strong>x = <strong style="color: red;">22</strong></strong><br>
+							<strong>y = [<strong style="color: red;">22</strong>]</strong><br>
+							<strong>funcion(x, y)</strong><br>
+							<strong style="color: blue;">print</strong>(x, z) 
+							<br>
+						</td>
+					</tr>
+					<tr>
+						<th>Resultado</th>
+					</tr>
+					<tr>
+						<td>
+							25 [22, 23] <br>
+							22 [22, 23]
+						</td>
+					</tr>
+				</table>
+				<br><br>
+				<p>
+					En el desarrollo y ejecución de funciones tendremos que tener en cuenta que los tipos de datos <br>
+					inmutables conservarán su valor original (estos son los tipos simples de datos: String, Integer, <br> 
+					Float, Boolean, etc), sin embargo, los mutables que son estructuras de datos más "complejas"(como: <br>
+					dict, list, etc.) conservan los cambios hechos dentro de la función. Debido a esto podemos ver como <br>
+					en el ejemplo anterior la <strong>variable x</strong> no conserva los cambios una vez salimos de la <br>
+					función y la <strong>lista y</strong> si los conserva, porque las listas son mutables. <br><br>
+					En resumen:
+				</p>
+				<img src="{% static 'img/parablog44.jpg'%}">
+				<br><br>
+			</center>
+		</article>
+		<article class="post">
+			<center>
+				<h3 style="color: cornflowerblue;">Asignación de variables locales y globales</h3>
+			</center>
+		</article>
+		<!--Sigue...-->
 	</section>
 </body>
 </html>
