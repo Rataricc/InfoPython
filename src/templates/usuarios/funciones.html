@@ -534,6 +534,106 @@
 		<article class="post">
 			<center>
 				<h3 style="color: cornflowerblue;">Asignación de variables locales y globales</h3>
+				<p>
+					Todas las <strong>asignaciones de variables</strong> en la función almecenan el valor en la <strong>tabla de símbolos <br>
+					local;</strong> así mismo la referencia a variables primero mira la <strong>tabla de símbolos local</strong>, luego en la <br>
+					tabla de símbolos local de las funciones externas, luego la tabla de símbolos global, y finalmente la tabla de nombres <br>
+					predefinidos. Así, no se les puede asignar directamente un valor a las variables globales dentro de una función (a menos <br>
+					se las nombre en la sentencia global), aunque sí pueden ser referenciadas.
+				</p>
+				<img src="{% static 'img/parablog45.jpg'%}" alt="Info-Python-blog">
+				<br><br>
+				<p>
+					Los <strong>parámetros reales</strong> (argumentos) de una función se introducen en la tabla de símbolos local <br>
+					de la función llamada cuando esta es ejecutada; así, los argumentos son pasados por valor (donde el valor es siempre <br> 
+					una referencia a un objeto, no el valor del objeto).
+				</p>
+				<p>
+					Cuando una función llama a otra función, una nueva tabla de símbolos local es creada para esa llamada.
+				</p>
+				<p>
+					La definición de una función introduce el nombre de la función en la tabla de símbolos actual. <br>
+					El valor del nombre de la función tiene un tipo que es reconocido por el interprete como una función <br>
+					definida por el usuario. Este valor puede ser asignado a otro nombre que luego puede ser usado como una función. <br>
+					Esto sirve como un mecanismo general para renombrar.
+				</p>
+				<table>
+					<tr>
+						<th>Código</th>
+					</tr>
+					<tr>
+						<td>
+							Crear una función que actualice el valor de una variable inmutable. <br><br>
+							<strong>mi_variable_global_1 = <strong style="color: red;">20</strong></strong><br>
+							<strong>mi_variable_global_2 = <strong style="color: red;">20</strong></strong><br><br>
+							<strong style="color: red;">def</strong> <strong>funcion():</strong>
+							<ul>
+								<strong style="color: green;">"""Esta función actualiza el valor de una variable global de tipo inmutale"""</strong><br>
+								<strong style="color: red;">global</strong> <strong>mi_variable_global_1</strong><br>
+								<strong>mi_variable_global_1 = <strong style="color: red;">10</strong></strong><br>
+								<strong>mi_variable_global_2 = <strong style="color: red;">10</strong></strong>
+							</ul>
+							<br><br>
+							<strong>funcion()</strong><br>
+							<strong style="color: blue;">print</strong><strong>(mi_variable_global_1)</strong> <br>
+							<strong style="color: blue;">print</strong><strong>(mi_variable_global_2)</strong>
+							<br><br>
+						</td>
+					</tr>
+					<tr>
+						<th>Resultado</th>
+					</tr>
+					<tr>
+						<td>
+							10 <br>
+							20 
+						</td>
+					</tr>
+				</table>
+			</center>
+		</article>
+		<article class="post">
+			<center>
+				<h3 style="color: cornflowerblue;">Sentencia pass</h3>
+				<p>
+					Es una <strong>operación nula</strong>, lo que quiere decir que cuando es ejecutada nada sucede. Eso es útil <br>
+					como un contenedor cuando una sentencia es requerida sintácticamente, pero no necesita código que ser ejecutado, <br>
+					por ejemplo:
+				</p>
+				<table style="width: 46%;">
+					<tr>
+						<th>Código</th>
+					</tr>
+					<tr>
+						<td>
+							Ejemplo de utilización de la sentencia pass. <br><br>
+							<strong style="color: red;">def</strong> <strong>consultar_nombre_genero(genero):</strong>
+							<ul>
+								<strong style="color: green;">"""Es una función que no hace nada aun"""</strong><br>
+								<strong style="color: red;">pass</strong>
+							</ul>
+							<br>
+							<strong style="color: red;">class</strong> <strong>Persona():</strong>
+							<ul>
+								<strong style="color: green;">"""Es una clase sin métodos o atributos aun"""</strong><br>
+								<strong style="color: red;">pass</strong>
+							</ul>
+							<strong style="color: blue;">print</strong><strong>(<strong style="color: blue;">type</strong><strong>(consultar_nombre_genero)</strong>)</strong><br>
+							<strong>consultar_nombre_genero(<strong style="color: green;">"M"</strong>)</strong> <br>
+							<strong>persona1 = Persona</strong><br>
+							<strong style="color: blue;">print</strong><strong>(<strong style="color: blue;">type</strong><strong>(persona1)</strong>)</strong>
+						</td>
+					</tr>
+					<tr>
+						<th>Resultado</th>
+					</tr>
+					<tr>
+						<td>
+							class 'function'> <br>
+							class 'type'> 
+						</td>
+					</tr>
+				</table>
 			</center>
 		</article>
 		<!--Sigue...-->
