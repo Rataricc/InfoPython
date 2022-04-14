@@ -593,6 +593,7 @@
 			</center>
 		</article>
 		<article class="post">
+			<br>
 			<center>
 				<h3 style="color: cornflowerblue;">Sentencia pass</h3>
 				<p>
@@ -634,6 +635,121 @@
 						</td>
 					</tr>
 				</table>
+			</center>
+		</article>
+		<article class="post">
+			<br>
+			<center>
+				<h3 style="color: cornflowerblue;">Sentencia return</h3>
+				<p>
+					Las funciones pueden comunicarse con el exterior de las mismas, al proceso principal del programa <br>
+					usando la sentencia return. El proceso de comunicación con el exterior se hace devolviendo valores. <br>
+					A continuación, un ejemplo de función usando return:
+				</p>
+				<table>
+					<tr>
+						<th>Código</th>
+					</tr>
+					<tr>
+						<td>
+							Dado dos números calcular la suma de ambos números. <br><br>
+							<strong style="color: red;">def</strong> <strong>suma(x, y):</strong>
+							<ul>
+								<strong style="color: green;">"""Esta función imprime la suma de los dos valores pasados como parámetro"""</strong><br>
+								<strong style="color: red;">return</strong> <strong>x + y</strong>
+							</ul>
+							<strong style="color: blue;">print</strong> <strong>(suma(<strong style="color: red;">27</strong>, <strong style="color: red;">89</strong>))</strong>
+						</td>
+					</tr>
+					<tr>
+						<th>Resultado</th>
+					</tr>
+					<tr>
+						<td>
+							116
+						</td>
+					</tr>
+				</table>
+				<br>
+				<p>
+					Una característica interesante, es la posibilidad de devolver valores múltiples separados por <br>
+					comas:
+				</p>
+				<table style="width: 44%;">
+					<tr>
+						<th>Código</th>
+					</tr>
+					<tr>
+						<td>
+							Crear una función que retorne varios valores. <br><br>
+							<strong style="color: red;">def</strong> <strong>prueba():</strong>
+							<ul>
+								<strong style="color: green;">"""Esta función retorna varios valores"""</strong><br>
+								<strong style="color: red;">return</strong> <strong style="color: green;">"Hola"</strong>, <strong style="color: red;">20</strong>, <strong>[<strong style="color: red;">1, 2, 3</strong>]</strong>
+							</ul>
+							<strong style="color: blue;">print</strong> <strong>(prueba())</strong>
+						</td>
+					</tr>
+					<tr>
+						<th>Resultado</th>
+					</tr>
+					<tr>
+						<td>
+							('Hola', 20, [1, 2, 3])
+						</td>
+					</tr>
+				</table>
+				<p>
+					Sin embargo no se trata de que las funciones Python puedan devolver varios valores, lo que ocurre <br>
+					en realidad es que Python crea una tupla inmutable cuyos elementos son valores a retornar, y esta <br>
+					única variable es la que se devuelve.
+				</p>
+				<table>
+					<tr>
+						<th>Código</th>
+					</tr>
+					<tr>
+						<td>
+							Crear una función que retorne varios valores y asignarlo a distintas variables. <br><br>
+							<strong style="color: red;">def</strong> <strong>prueba():</strong>
+							<ul>
+								<strong style="color: green;">"""Esta función retorna varios valores"""</strong><br>
+								<strong style="color: red;">return</strong> <strong style="color: green;">"Hola"</strong>, <strong style="color: red;">20</strong>, <strong>[<strong style="color: red;">1, 2, 3</strong>]</strong>
+							</ul>
+							<strong style="color: blue;">print</strong><strong>(prueba())</strong><br>
+							<strong>x, y, z = prueba()</strong><br>
+							<strong style="color: blue;">print</strong><strong>(x)</strong><br>
+							<strong style="color: blue;">print</strong><strong>(y)</strong><br>
+							<strong style="color: blue;">print</strong><strong>(z)</strong>
+						</td>
+					</tr>
+					<tr>
+						<th>Resultado</th>
+					</tr>
+					<tr>
+						<td>
+							('Hola', 20, [1, 2, 3]) <br>
+							Hola <br>
+							20 <br>
+							[1, 2, 3]
+						</td>
+					</tr>
+				</table>
+				<br>
+				<p>
+					En el código anterior se muestra como asignar valores a distintas variables en base a la tupla <br>
+					inmutable que retorna la función.
+				</p>
+			</center>
+		</article>
+		<article class="post">
+			<center>
+				<h3 style="color: cornflowerblue;">Llamadas de retorno</h3>
+				<p>
+					En Python, es posible (al igual que en la gran mayoría de los lenguajes de programación), llamar a una función <br>
+					dentro de otra de forma fija y de la misma manera que se la llamaría desde fuera de dicha función.
+				</p>
+				<!--Sigue... una table de ejemplo-->
 			</center>
 		</article>
 		<!--Sigue...-->
