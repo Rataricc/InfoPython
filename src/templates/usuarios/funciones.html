@@ -749,7 +749,217 @@
 					En Python, es posible (al igual que en la gran mayoría de los lenguajes de programación), llamar a una función <br>
 					dentro de otra de forma fija y de la misma manera que se la llamaría desde fuera de dicha función.
 				</p>
-				<!--Sigue... una table de ejemplo-->
+				<table>
+					<tr>
+						<th>Código</th>
+					</tr>
+					<tr>
+						<td>
+							Crear una función que luego sea llamada desde otra función. <br><br>
+							<strong style="color: red;">def</strong> <strong>mensaje():</strong>
+							<ul>
+								<strong style="color: green;">"""Esta función retorna el mensaje 'Hola Mundo'"""</strong><br>
+								<strong style="color: red;">return</strong> <strong style="color: green;">"Hola Mundo"</strong>
+							</ul>
+							<strong style="color: red;">def</strong> <strong>saludar(nombre, saludo= <strong style="color: green;">"Hola"</strong>):</strong>
+							<ul>
+								<strong style="color: green;">"""Esta función imprime el mensaje 'Hola Mundo' y un mensaje personalizado"""</strong><br>
+								<strong style="color: blue;">print</strong> <strong>(mensaje())</strong><br>
+								<strong style="color: blue;">print</strong> <strong>(saludo, nombre)</strong>
+							</ul>
+						</td>
+					</tr>
+					<tr>
+						<th>Resultado</th>
+					</tr>
+					<tr>
+						<td>
+							Hola Mundo <br>
+							Hola Juan
+						</td>
+					</tr>
+				</table>
+				<br><br>
+				<p>
+					Sin embargo, es posible que se desee realizar dicha llamada, de manera dinámica, es decir, desconociendo <br>
+					el nombre de la función a la que se desea llamar. A este tipo de acciones, se las denomina llamadas de retorno.
+				</p>
+				<p>
+					Para conseguir llamar a una función de manera dinámica, Python dispone de dos funciones nativas: <strong>locals()</strong> <br>
+					y <strong>globals()</strong>.
+				</p>
+				<p>
+					Ambas funciones, retornan un diccionario. En el caso de locals(), este diccionario se compone de todos los elementos de ámbito <br>
+					local, mientras que el globals(), retorna lo propio pero a nivel global. 
+				</p>
+				<table>
+					<tr>
+						<th>Código</th>
+					</tr>
+					<tr>
+						<td>
+							Crear una función que luego sea llamada desde otra función. <br><br>
+							<strong style="color: red;">def</strong> <strong>mensaje():</strong>
+							<ul>
+								<strong style="color: green;">"""Esta función retorna el mensaje 'Hola Mundo' """</strong><br>
+								<strong style="color: red;">return</strong> <strong style="color: green;">"Hola Mundo"</strong>
+							</ul>
+							<strong style="color: red;">def</strong> <strong>llamada_de_retorno(funcion= <strong style="color: green;">""</strong>):</strong>
+							<ul>
+								<strong style="color: green;">"""Llamada de retorno a nivel global"""</strong><br>
+								<strong style="color: red;">return globals</strong> <strong>() [funcion]()</strong>
+							</ul>
+							<strong style="color: blue;">print</strong> <strong>(llamada_de_retorno(<strong style="color: green;">"mensaje"</strong>))</strong><br>
+							<strong>nombre_de_la_funcion = </strong> <strong style="color: green;">"mensaje"</strong><br>
+							<strong style="color: blue;">print</strong> (<strong style="color: red;">locals<strong>()[nombre_de_la_funcion]</strong></strong>)
+						</td>
+					</tr>
+					<tr>
+						<th>Resultado</th>
+					</tr>
+					<tr>
+						<td>
+							Hola Mundo <br>
+							function mensaje at 0x0000018E6FAFA2F0>
+						</td>
+					</tr>
+				</table>
+				<p>
+					Si se tienen que pasar argumentos en una llamada de retorno, se lo puede hacer normalmente:   
+				</p>
+				<table>
+					<tr>
+						<th>Código</th>
+					</tr>
+					<tr>
+						<td>
+							Crear una función que luego sea llamda desde otra función pasando parámetros entre estas. <br><br>
+							<strong style="color: red;">def</strong> <strong>mensaje(nombre):</strong>
+							<ul>
+								<strong style="color: green;">"""Esta función retorna un mensaje de saludo"""</strong><br>
+								<strong style="color: red;">return</strong> <strong style="color: green;">"Hola "</strong> + <strong>nombre</strong>
+							</ul>
+							<strong style="color: red;">def</strong> <strong>llamada_de_retorno(nombre, funcion= <strong style="color: green;">""</strong>):</strong>
+							<ul>
+								<strong style="color: green;">"""Llamada de retorno a nivel global"""</strong><br>
+								<strong style="color: red;">return globals</strong> <strong>()[funcion](nombre)</strong>
+							</ul>
+							<br><br>
+							<strong style="color: blue;">print</strong> <strong>(llamada_de_retorno( <strong style="color: green;">"Maria"</strong>, <strong style="color: green;">"Mensaje"</strong> ))</strong><br>
+							<strong>nombre_de_la_funcion =</strong> <strong style="color: green;">"mensaje"</strong><br>
+							<strong style="color: blue;">print</strong> <strong>( <strong style="color: red;">locals</strong> <strong>()[nombre_de_la_funcion](<strong style="color: green;">"Pedro"</strong>)</strong>)</strong>
+						</td>
+					</tr>
+					<tr>
+						<th>Resultado</th>
+					</tr>
+					<tr>
+						<td>
+							Hola Maria <br>
+							Hola Pedro
+						</td>
+					</tr>
+				</table>
+			</center>
+		</article>
+		<article class="post">
+			<center>
+				<br>
+				<h3 style="color: cornflowerblue;">Saber si una función existe y puede ser llamada</h3>
+				<p>
+					Durante una llamada de retorno, el nombre de la función, puede no ser el indicado.
+				</p>
+				<p>
+					Entonces, siempre que se debe realizar una llamda de retorno, es necesario comprobar que ésta <br>
+					exista y pueda se llamada.
+				</p>
+				<br>
+				<table>
+					<tr>
+						<th>Código</th>
+					</tr>
+					<tr>
+						<td>
+							Crear una función que luego sea llamada desde otra función validando la existencia de la función. <br><br>
+							<strong style="color: red;">def</strong> <strong>mensaje(nombre):</strong>
+							<ul>
+								<strong style="color: green;">"""Esta función retorna un mensaje de saludo"""</strong>
+								<strong style="color: red;">return</strong> <strong style="color: green;">"Hola"</strong> + <strong>nombre</strong>
+							</ul>
+							<strong style="color: red;">def</strong> <strong>llamada_de_retorno(nombre, funcion= <strong style="color: green;">""</strong>):</strong>
+							<ul>
+								<strong style="color: green;">"""Llamada de retorno a nivel global"""</strong>
+								<strong style="color: red;">if</strong> <strong>funcion</strong> <strong style="color: blue;">in</strong> <strong style="color: red;">globals</strong> <strong>():</strong>
+								<ul>
+									<strong style="color: red;">return globals</strong> <strong>()[funcion](nombre)</strong>
+								</ul>
+								<strong style="color: red;">else</strong> <strong>:</strong>
+								<ul>
+									<strong style="color: red;">return</strong> <strong style="color: green;">"La función no existe"</strong>
+								</ul>
+							</ul>
+							<br>
+							<strong style="color: blue;">print</strong> <strong>(llamada_de_retorno(<strong style="color: green;">"Maria"</strong>, <strong style="color: green;">"mensaje"</strong>))</strong>
+							<strong style="color: blue;">print</strong> <strong>(llamada_de_retorno(<strong style="color: green;">"Maria"</strong>, <strong style="color: green;">"saludo"</strong>))</strong>
+						</td>
+					</tr>
+					<tr>
+						<th>Resultado</th>
+					</tr>
+					<tr>
+						<td>
+							Hola Maria <br>
+							La función no existe
+						</td>
+					</tr>
+				</table>
+				<br>
+				<p>
+					El operador <strong>in</strong>, nos permitirá conocer si un elemento se encuentra dentro de una colección, <br>
+					mientras que la función callable() nos dejará saber si esa función puede ser llamada.
+				</p>
+				<table>
+					<tr>
+						<th>Código</th>
+					</tr>
+					<tr>
+						<td>
+							Crear una función que luego sea llamada desde otra función validando la existencia de la función. <br><br>
+							<strong style="color: red;">def</strong> <strong>mensaje(nombre):</strong>
+							<ul>
+								<strong style="color: green;">"""Esta función retorna un mensaje de saludo"""</strong><br>
+								<strong style="color: red;">return</strong> <strong style="color: green;">"Hola "</strong> + <strong>nombre</strong>
+							</ul>
+							<strong style="color: red;">def</strong> <strong>llamada_de_retorno(nombre, funcion= <strong style="color: green;">""</strong>):</strong>
+							<ul>
+								<strong style="color: green;">"""Llamada de retorno a nivel global"""</strong><br>
+								<strong style="color: red;">if</strong> <strong>funcion</strong> <strong style="color: blue;">in</strong> <strong style="color: red;">globals</strong><strong>():</strong>
+								<ul>
+									<strong style="color: red;">if callable</strong> <strong>( <strong style="color: red;">globals</strong>()[funcion]):</strong>
+									<ul>
+										<strong style="color: red;">return globals</strong> <strong>()[funcion](nombre)</strong>
+									</ul>
+								</ul>
+								<strong style="color: red;">else</strong> <strong>:</strong>
+								<ul>
+									<strong style="color: red;">return</strong> <strong style="color: green;">"La función no existe"</strong>
+								</ul>
+							</ul>
+							<br>
+							<strong style="color: blue;">print</strong> <strong>(llamada_de_retorno( <strong style="color: green;">"Maria"</strong>, <strong style="color: green;">"mensaje"</strong>))</strong>
+							<strong style="color: blue;">print</strong> <strong>(llamada_de_retorno( <strong style="color: green;">"Maria"</strong>, <strong style="color: green;">"saludo"</strong>))</strong>
+						</td>
+					</tr>
+					<tr>
+						<th>Resultado</th>
+					</tr>
+					<tr>
+						<td>
+							Hola Maria <br>
+							La función no existe
+						</td>
+					</tr>
+				</table>
 			</center>
 		</article>
 		<!--Sigue...-->
