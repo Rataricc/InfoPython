@@ -962,6 +962,82 @@
 				</table>
 			</center>
 		</article>
+		<article class="post">
+			<center>
+				<br>
+				<h3 style="color: cornflowerblue;">Llamadas recursivas</h3>
+				<p>
+					Se denomina <strong>llamada recursiva</strong> (o recursividad), a aquellas funciones que en su algoritmo, hacen <br>
+					referencia sí misma. Las llamadas recursivas suelen ser muy útiles en casos muy puntuales, pero debido a su gran <br>
+					factibilidad de caer en iteraciones infinitas, deben extremarse las medidas preventivas adecuadas y, solo utilizarse <br>
+					cuando sea estrictamente necesario y no exista una forma alternativa viable, que resuelva el problema evitando la recursividad. <br>
+					Python admite las llamadas recursivas, permitiendo a una función, llamarse a sí misma, de igual forma que lo hace cuando llama <br>
+					a otra función.
+				</p>
+				<br>
+				<table style="width: 40%;">
+					<tr>
+						<th>Código</th>
+					</tr>
+					<tr>
+						<td>
+							Crear una función que realice una llamada recursiva. <br><br>
+							<strong style="color: red;">def</strong> <strong>jugar(intento= <strong style="color: red;">1</strong>):</strong>
+							<ul>
+								<strong style="color: green;">"""Llamada de retorno a nivel global"""</strong><br>
+								<strong>respuesta = </strong><strong style="color: blue;">input</strong><strong>(<strong style="color: green;">"¿De qué color es una naranja?"</strong>)</strong><br>
+								<strong style="color: red;">if</strong> <strong>respuesta != </strong> <strong style="color: green;">"naranja"</strong><strong>:</strong>
+								<ul>
+									<strong style="color: red;">if</strong> <strong>intento < </strong> <strong style="color: red;">3</strong><strong>:</strong>
+									<ul>
+										<strong style="color: blue;">print</strong> <strong>(<strong style="color: green;">"Fallaste. Intenta de nuevo"</strong>)</strong><br>
+										<strong>intento +=</strong> <strong style="color: red;">1</strong><br>
+										<strong>jugar(intento)</strong>
+									</ul>
+									<strong style="color: red;">else</strong><strong>:</strong>
+									<ul>
+										<strong style="color: blue;">print</strong> <strong>(<strong style="color: green;">"Perdiste"</strong>)</strong>
+									</ul>
+								</ul>
+								<strong style="color: red;">else</strong><strong>:</strong>
+								<ul>
+									<strong style="color: blue;">print</strong> <strong>(<strong style="color: green;">"Ganaste"</strong>)</strong>
+								</ul>
+							</ul>
+							<br>
+							<strong>jugar()</strong>
+						</td>
+					</tr>
+					<tr>
+						<th>Resultado</th>
+					</tr>
+					<tr>
+						<td>
+							¿De qué color es una naranja? >? Azul <br>
+							Fallaste. Intenta de nuevo <br>
+							¿De qué color es una naranja? >? Verde <br> 
+							Fallaste. Intenta de nuevo <br>
+							¿De qué color es una naranja? >? naranja <br>
+							Ganaste
+						</td>
+					</tr>
+				</table>
+			</center>
+		</article>
+		<article class="post">
+			<center>
+				<br>
+				<h2 style="color: blue;">¿Para qué me sirven las funciones?</h2>
+				<p>
+					<strong>
+						Una función, puede tener cualquier tipo de algoritmo y cualquier cantidad de ellos y, utilizar cualquiera de las <br>
+						características vistas hasta ahora. No obstante, una buena práctica, indica que la finalidad de una función, debe <br>
+						ser realizar una única acción, reutilizable y por lo tanto, tan genérica como sea posible.
+					</strong>
+				</p>
+				<br><br>
+			</center>
+		</article>
 		<!--Sigue...-->
 	</section>
 </body>
