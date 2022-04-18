@@ -7,6 +7,12 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="../../static/css/listas.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<style>
+		table, th, td {
+			border: 1px solid black;
+		}
+	</style>
 </head>
 <body>
 	<header>
@@ -14,10 +20,29 @@
 	</header>
 	<section>
 		<article class="post">
-			<h2>Como un susbtutilo de lo que quiero hablar</h2>
-			<p>Descripcion de lo que quiero seguir hablando</p>
-			<!--aca va una imagen si quiero-->
-			<p>Otro parrafo si quiero seguir hablando</p>
+			<center>
+				<h2 style="color: #C66250;">Listas en Python</h2>
+				<p>
+					Las <strong>listas</strong> en Python son conjuntos de elementos ordenados y pueden estar conformados por <br>
+					elementos de distintos tipo (enteros, float, cadenas, funciones, otras listas, etc).
+				</p>
+				<p>
+					Las listas en Python son <strong>mutables</strong>, lo que significa que sus elementos pueden cambiar o reordenarse.
+				</p>
+				<img src="{% static 'img/parablog46.jpg'%}" alt="Info-Python-blog">
+				<br><br>
+				<p>
+					Las listas se delimitan por <strong>corchetes []</strong> y sus elementos se separan por comas.
+				</p>
+				<img src="{% static 'img/parablog47.jpg'%}" alt="Info-Python-blog" height="350px">
+				<br><br>
+			</center>
+		</article>
+		<article class="post">
+			<center>
+				<h3 style="color: cornflowerblue;">Los elementos de una lista pueden accederse mediante si índice.</h3>
+				<h3 style="color: cornflowerblue;">Ejemplos:</h3>
+			</center>
 		</article>
 	</section>
 </body>
