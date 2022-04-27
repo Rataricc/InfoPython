@@ -40,6 +40,95 @@
 					Si queremos crear una tupla con un solo elemento, se debe poner una coma al final sino Python lo va <br>
 					interpretar como el elemento en sí y no un elemento de una tupla
 				</p>
+				<p>
+					<strong>
+						>>> tupla = 5, <br>
+						>>> print(tupla) <br>
+						(5,) <br>
+						>>> otra_tupla = (3,) <br>
+						>>> print(otra_tupla) <br>
+						(3,) <br>
+						>>> cinco = 5 <br>
+						>>> print(cinco) <br>
+						5 <br>
+						>>> tres = (3) <br>
+						>>> print(tres) <br>
+						3
+					</strong>
+				</p>
+				<p>
+					Acceder a los elementos de una tupla al igual que en las lista, también lo hacemos por medio de <br>
+					sus índices.
+				</p>
+				<p>
+					<strong>
+						>>> dias = ("lunes", "martes", "miercoles", "jueves", "viernes", "sabado", "domingo") <br>
+						>>> print(dias[0]) <br>
+						lunes <br>
+						>>> print(dias[1]) <br>
+						martes <br>
+						>>> print(dias[2]) <br>
+						miercoles
+					</strong>
+				</p>
+				<p>
+					También podremos al igual que en las listas obtener los elementos con [:]
+				</p>
+				<p>
+					<strong>
+						>>> dias[2:4] <br>
+						("miercoles", "jueves")
+					</strong>
+				</p>
+				<p>
+					Varias de las funciones que vimos en listas como len(), min(), max() y sum() oir ejemplo, <br>
+					también funcionan en tuplas. 
+				</p>
+				<p>
+					<strong>
+						>>> numeros = (6,7,2) <br>
+						>>> longitud = len(numeros) <br>
+						>>> print(longitud) <br>
+						3 <br>
+						>>> minimo = min(numeros) <br>
+						>>> print(minimo) <br>
+						3 <br>
+						>>> maximo = max(numeros) <br>
+						>>> print(maximo) <br>
+						7
+					</strong>
+				</p>
+				<p>
+					También contamos con los métodos count() e index()
+				</p>
+				<p>
+					<strong>
+						>>> colores = ("azul", "verde", "rojo", "amarillo", "azul") <br>
+						>>> colores.count("azul") <br>
+						2 <br>
+						>>> colores.count("rojo") <br>
+						1 <br>
+						>>> colores.index("rojo")
+						3
+					</strong>
+				</p>
+				<p>
+					La principal diferencia que veremos frente a las listas será cuando tratemos de modificar algún <br>
+					elemento de la tupla.
+				</p>
+				<p>
+					<strong>
+						>>> tupla = ("a","b","c") <br>
+						>>> tupla[1] = "y" <br>
+						TypeError: 'tuple' object does not support item assignment
+					</strong>
+				</p>
+				<p>
+					Tratar de modificar algún valor nos producirá un error. Recordándonos que las tuplas no son <br>
+					mutables, no se pueden modificar. <br><br>
+					Tampoco contaremos con métodos como append(), insert() o sort() que si teníamos en las listas <br>
+					que sí podían ser modificadas.
+				</p>
 			</center>
 		</article>
 		<!--Sigue...-->
