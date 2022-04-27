@@ -131,6 +131,119 @@
 				</p>
 			</center>
 		</article>
+		<article class="post">
+			<center>
+				<h3 style="color: cornflowerblue;">Empaquetar y Desempaquetar Tuplas</h3>
+				<p>
+					Así como podemos asignar varios elementos en una tupla a una variable (empaquetar) <br><br>
+					<strong>
+						>>> tupla = 10, 20, 30
+					</strong><br><br>
+					También podemos desampaquetar una tupla en distintas variables <br><br>
+					<strong>
+						>>> x, y, z = tupla <br>
+						>>> print(x) <br>
+						10 <br>
+						>>> print(y) <br>
+						20 <br>
+						>>> print(z) <br>
+						30
+					</strong><br><br>
+					Para desampaquetar una tupla, la cantidad de variables tiene que ser la misma cantidad que <br>
+					elementos haya en la tupla de lo contrario nos dará error. <br>
+					como por ejemplo: <br><br>
+					<strong>
+						>>> x, y = ("a", "b"; "c") <br>
+						ValueError: too many values to unpack
+					</strong><br><br>
+					Podríamos usar tuplas por ejemplo para intercambiar valores entre variables, sin necesidad de <br>
+					usar una variable axuliar: <br>
+					por ejemplo se queremos el valor de una variable "a" y pasarla a una variable "b", y el contenido <br>
+					de "b" pasarlo a "a" <br><br>
+					usando una variable temporal se podría hacer: <br>
+					<strong>
+						>>> temp = a <br> 
+						>>> a = b <br>
+						>>> b = temp 
+					</strong>
+					Pero con tuplas podríamos crear una tupla con los valores (a, b) y desempaquetarlo en las <br>
+					variables "b" y "a" de la siguiente manera: <br><br>
+					<strong>
+						>>> b, a = (a, b)
+					</strong>
+				</p>
+			</center>
+		</article>
+		<article class="post">
+			<center>
+				<h3 style="color: cornflowerblue;">Tuplas como retorno de una función</h3>
+				<p>
+					Las funciones también pueden devolver múltiples valores en forma de tupla. <br><br>
+					Por ejemplo <br><br>
+					<strong>
+						def multiples_valores():
+						<ul>
+							return "Hola Mundo", 1, True, 25.6
+						</ul>
+						>>> resultado = multiples_valores() <br>
+						>>> a = resultado[0] <br>
+						>>> b = resultado[1] <br>
+						>>> c = resultado[2] <br>
+						>>> d = resultado[3] <br>
+						>>> print(a) <br>
+						>>> print(b) <br>
+						>>> print(c) <br>
+						>>> print(d) <br><br>
+						>>> x, y, w, z = multiples_valores() <br>
+						>>> print(x) <br>
+						>>> print(y) <br>
+						>>> print(w) <br>
+						>>> print(z)
+					</strong>
+				</p>
+			</center>
+			<p>
+				<ul>
+					Para que puedas verlo mejor: <br><br>
+					<ul>
+						<img src="{% static 'img/parablog87.jpg'%}" alt="Info-Python-blog" height="700px">
+					</ul>
+				</ul>
+			</p>
+			<center>
+				<p>
+					Crear listas a partir de Tuplas, y tuplas a partir de listas. <br><br>
+					con la función list() podemos crear listas a partir de tuplas. <br><br>
+					<strong>
+						>>> tupla = (2, 4, 6) <br>
+						>>> lista = list(tupla) <br>
+						>>> print(lista) <br>
+						[2, 4, 6]
+					</strong><br><br>
+					también poder usarla para crear listas a partir de una cadena de caracteres <br><br>
+					<strong>
+						>>> lista = list("hola mundo") <br>
+						>>> print(lista) <br>
+						['h', 'o', 'l', 'a', ' ', 'm', 'u', 'n', 'd', 'o']
+					</strong>
+				</p>
+				<p>
+					Similarmente podemos crear tuplas a partir de listas con tuple() <br><br>
+					<strong>
+						>>> lista = ["a", "b", "c"] <br>
+						>>> tupla = tuple(lista) <br>
+						>>> print(tupla) <br>
+						('a', 'b', 'c')
+					</strong>
+					también desde una cadena
+					<strong>
+						>>> tupla = tuple("hola") <br>
+						>>> print(tupla) <br>
+						('h', 'o', 'l', 'a')
+					</strong>
+				</p>
+			</center>			
+		</article>
 		<!--Sigue...-->
 	</section>
 </body>
