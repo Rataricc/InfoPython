@@ -135,6 +135,99 @@
 						</tr>
 					</table>
 				</ul>
+				<br>
+				<p>
+					Como vimos podemos acceder a un elemento por medio de su llave.
+				</p>
+				<ul>
+					<table>
+						<tr>
+							<td style="color: green;">
+								<strong>
+									>>> usuario["nombre"] <br>
+									juan
+								</strong>
+							</td>
+						</tr>
+					</table>
+				</ul>
+				<br>
+				<p>
+					pero en caso de tratar acceder con una clave no existente en el diccionario de un error.
+				</p>
+				<ul>
+					<table>
+						<tr>
+							<td style="color: green;">
+								<strong>
+									>>> usuario["color_favorito"] <br>
+									KeyError: 'color_favorito'
+								</strong>
+							</td>
+						</tr>
+					</table>
+				</ul>
+				<br>
+				<p>
+					para esto los diccionarios incluyen un <strong>método get()</strong>, en el que se la pasa la clave como <br>
+					parámetro y devuelve el elemento asociada a la clave o el valor <strong>None</strong> si la clave no se <br>
+					encuentra.
+				</p>
+				<ul>
+					<table>
+						<tr>
+							<td style="color: green;">
+								<strong>
+									>>> color = usuario.get("color_favorito") <br>
+									>>> print(color) <br>
+									None
+								</strong>
+							</td>
+						</tr>
+					</table>
+				</ul>
+				<br>
+				<p>
+					también podemos opcionalmente pasarle a <strong>get()</strong> en otro parámetro el elemento a devolver <br>
+					en lugar de <strong>None</strong> en caso de no encontrar la clave en el diccionario.
+				</p>
+				<ul>
+					<table>
+						<tr>
+							<td style="color: green;">
+								<strong>
+									>>> color = usuario.get("color_favorito", "no tiene color favorito") <br>
+									>>> print(color) <br>
+									'no tiene color favorito'
+								</strong>
+							</td>
+						</tr>
+					</table>
+				</ul>
+				<br>
+				<p>
+					No podemos obtener partes de un diccionario usando <strong>[:]</strong> como en las listas por que <strong>los
+					diccionarios no tienen los elementos ordenados.</strong><br><br>
+					Para <strong>recorrer un diccionario</strong> podemos hacerlo de varias maneras:
+				</p>
+				<ul>
+					<img src="{% static 'img/parablog91.jpg'%}" alt="Info-Python-blog" height="350px">
+				</ul>
+				<br>
+				<p>
+					pero también tenemos un método <strong>items()</strong> en los diccionarios, que nos devuelve una <br>
+					lista de tuplas que contienen el par clave:value.
+				</p>
+				<ul>
+					<img src="{% static 'img/parablog92.jpg'%}" alt="Info-Python-blog" height="300px">
+				</ul>
+				<br>
+				<p>
+					podemos usar esto para recorrer un diccionario de la siguiente manera:
+				</p>
+				<ul>
+					<img src="{% static 'img/parablog93.jpg'%}" alt="Info-Python-blog" height="350px">
+				</ul>
 			</ul>
 		</article>
 		<!--Sigue...-->
