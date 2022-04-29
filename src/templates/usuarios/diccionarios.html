@@ -7,6 +7,7 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="../../static/css/diccionarios.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 <body>
 	<header>
@@ -14,10 +15,33 @@
 	</header>
 	<section>
 		<article class="post">
-			<h2>Como un susbtutilo de lo que quiero hablar</h2>
-			<p>Descripcion de lo que quiero seguir hablando</p>
-			<!--aca va una imagen si quiero-->
-			<p>Otro parrafo si quiero seguir hablando</p>
+			<center>
+				<h2 style="color: #C66250;">Diccionarios en Python</h2>
+				<p>
+					En Python, un <strong>diccionario</strong> es una colección no ordena de valores que son accedidos <br>
+					a traves de keys (llaves o claves).
+				</p>
+			</center>
+			<br><br>
+			<ul>
+				<ul>
+					<img src="{% static 'img/parablog88.jpg'%}" class="left" alt="Info-Python-blog" height="400px">
+					<p>
+						Las keys o llaves deben ser únicas, si se asignan un valor a <br>
+						una llave ya existente, se reemplaza el valor anterior. 
+					</p>
+				</ul>
+				<p>
+					A diferencia de las listas o tuplas que se acceden a los elementos mediante el índice numérico. <br><br>
+					<strong>Los diccionarios son mutables</strong>, por lo tanto se pueden <strong>modificar, agregar o quitar</strong><br>
+					elementos. <br><br>
+					Para crear diccionarios <strong>encerramos</strong> los elementos y sus keys entre { }, los elementos <br>
+					tendría la estructura <strong>clave:valor</strong> y cada uno de los elementos deben estar separados <br>
+					por coma. <br><br>
+					Las keys/claves pueden ser de cualquier tipo inmutable, y los valores pueden ser de <br>
+					cualquier tipo.
+				</p>
+			</ul>
 		</article>
 	</section>
 </body>
