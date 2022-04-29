@@ -275,6 +275,39 @@
 					<strong><br><br>
 						>>> nombres = ["juan", "pedro", "jorge","maria", "analia", "sandra"]
 					</strong><br><br>
+					Pero queremos una lista que contenga esos nombres con la primer letra en mayúscula <br><br>
+					<strong>
+						nombre_inicial_mayuscula = [ ] <br>
+						>>> for nombre in nombres:
+						<ul>
+							>>> nombre_inicial_mayuscula.append(nombre.capitalize())
+						</ul>
+						>>> print(nombre_inicial_mayuscula)
+					</strong><br><br>
+					eso lo podríamos hacer así: <br>
+					<strong>
+						>>> nombre_inicial_mayuscula = [nombre.capitalize() for nombre in nombre] <br>
+						>>> print(nombre_inicial_mayuscula) 
+					</strong><br><br>
+					Supongamos una lista de números <br><br>
+					<strong>
+						numeros = [2, 5, 10]
+					</strong><br><br>
+					y queremos una lista con los triples de esos números <br><br>
+					<strong>
+						>>> trples = [x*3 for x in numeros] <br>
+						>>> print(triples)
+					</strong><br><br>
+					Podemos agregar condiciones, por ejemplo: <br><br>
+					Supongamos que queremos tener todos los números pares desde el 0 al 100 en una lista: <br><br>
+					<strong>
+						>>> pares = [x for x in range(0,101) if x %2 == 0]
+						>>> print(pares)
+					</strong><br><br>
+					En resumen, la sintaxis básica de una lista de compresión es <br><br>
+					<ul style="color: black;">
+						<strong>[ expression for elemento in iterable if condicion ]</strong>
+					</ul>
 				</p>
 			</center>
 		</article>
