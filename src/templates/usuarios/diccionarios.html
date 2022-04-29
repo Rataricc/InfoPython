@@ -8,6 +8,11 @@
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="../../static/css/diccionarios.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<style>
+		table, th, td {
+			border: 1px solid black;
+		}
+	</style>
 </head>
 <body>
 	<header>
@@ -39,10 +44,100 @@
 					tendría la estructura <strong>clave:valor</strong> y cada uno de los elementos deben estar separados <br>
 					por coma. <br><br>
 					Las keys/claves pueden ser de cualquier tipo inmutable, y los valores pueden ser de <br>
-					cualquier tipo.
+					cualquier tipo. <br><br>
+					Veamos algunos ejemplos: 
 				</p>
+				<ul>
+					<img src="{% static 'img/parablog89.jpg'%}" alt="Info-Python-blog" height="600px">
+				</ul>
+				<br>
+				<p>
+					Para acceder a los elementos utilizamos la clave del diccionario.
+				</p>
+				<ul>
+					<img src="{% static 'img/parablog90.jpg'%}" alt="Info-Python-blog" height="700px">
+				</ul>
+				<br>
+				<p>
+					Al igual que con lista, podemos declarar diccionarios vacíos de dos maneras.
+				</p>
+				<ul>
+					<table style="width: 20%;">
+						<tr>
+							<td>
+								<strong style="color: green;">>>> diccionario = { }</strong><br><br>
+								O podemos usar esta opción <br>
+								<strong style="color: green;">>>> diccionarios = dict()</strong>
+							</td>
+						</tr>
+					</table>
+				</ul>
+				<br>
+				<p>
+					Para modificar un valor, de manera similar a las listas pero en lugar de usar el índice <br>
+					usamos la clave.
+				</p>
+				<ul>
+					<table>
+						<tr>
+							<td style="color: green;">
+								<strong>
+									>>> usuario = {"nombre":"juan", "edad":23} <br>
+									>>> print(usuario) <br>
+									{'nombre':'juan', 'edad':23} <br>
+									>>> usuario["edad"] = 24 <br>
+									>>> print(usuario) <br>
+									{'nombre':'juan','edad':24}
+								</strong>
+							</td>
+						</tr>
+					</table>
+				</ul>
+				<br>
+				<p>
+					Para agregar claves a un diccionario existente, realizamos la acción similar a como <br>
+					modificamos el valor de una clave existente pero con la nueva clave
+				</p>
+				<ul>
+					<table>
+						<tr>
+							<td style="color: green;">
+								<strong>
+									>>> usuario["apellido"] = "Perez" <br>
+									>>> print(usuario) <br>
+									>>> {'nombre':'juan', 'edad':24, 'apellido':'Perez'}
+								</strong>
+							</td>
+						</tr>
+					</table>
+				</ul>
+				<br>
+				<p>
+					Otra manera de insertar elementos es usando el método setdefault(), al cual se le pasa <br>
+					la clave y el elemento a agregar. <br>
+					Pero solo se agregara el elemento si la llave no existía, si ya se encontraba en el diccionario <br>
+					no agrega el nuevo valor.
+				</p>
+				<ul>
+					<table>
+						<tr>
+							<td style="color: green;"> 
+								<strong>
+									>>> usuario = { "nombre":"Juan", "edad":23 } <br>
+									>>> usuario.setdefault("comida_favorita", "ninguna") <br>
+									>>> print(usuario) <br>
+									{'nombre': 'Juan', 'edad': 23, 'comida_favorita': 'ninguna'} <br>
+									>>> usuario.setdefault("nombre", "Cristobal") <br>
+									>>> print(usuario) <br>
+									{'nombre': 'Juan', 'edad': 23, 'comida_favorita': 'ninguna'}
+								</strong>
+							</td>
+						</tr>
+					</table>
+				</ul>
 			</ul>
 		</article>
+		<!--Sigue...-->
 	</section>
 </body>
 </html>
