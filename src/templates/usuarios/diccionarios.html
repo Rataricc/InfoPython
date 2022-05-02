@@ -253,7 +253,77 @@
 					<img src="{% static 'img/parablog96.jpg'%}" alt="Info-Python-blog" height="370px">
 				</ul>
 				<br>
+				<p>
+					A diferencia de la lista que podíamos usar el pop() sin pasarle un índice, aca <br>
+					obligatoriamente hay que pasarle la key. <br>
+					En caso de pasarle una clave o key que no esté presente en el diccionario obtendremos <br>
+					un error.
+				</p>
+				<ul>
+					<table>
+						<tr>
+							<td style="color: green;">
+								<strong>
+									>>> configuracion.pop("url") <br>
+									KeyError: 'url'
+								</strong>
+							</td>
+						</tr>
+					</table>
+				</ul>
+				<br>
+				<p>
+					pero podemos pasarle al método pop() un valor de retorno en caso que la llave no <br>
+					exista
+				</p>
+				<ul>
+					<img src="{% static 'img/parablog97.jpg'%}" alt="Info-Python-blog" height="370px">
+				</ul>
+				<br>
+				<p>
+					Si queremos borrar todos los elementos de un diccionario, o en otras palabras limpiar <br>
+					completamente un diccionario, podemos usar el método <strong>clear()</strong>
+				</p>
+				<ul>
+					<table>
+						<tr>
+							<td style="color: green;">
+								<strong>
+									>>> diccionario = {1:("a","b"),2:("c","d")} <br>
+									>>> print(diccionario) <br>
+									{1: ('a', 'b'), 2: ('c', 'd')} <br>
+									>>> diccionario.clear() <br>
+									>>> print(diccionario) <br>
+									{ }
+								</strong>
+							</td>
+						</tr>
+					</table>
+				</ul>
+				<br>
+				<p>
+					también podemos extender o actualizar un diccionario con los elementos de otro diccionario <br>
+					utilizando el método <strong>update().</strong> <br>
+					Si las claves del diccionario que pasamos como parámetro exiten, se van actualizar los valores <br>
+					de las keys repetidas. <br>
+					Si las claves no existen, se agregan los nuevos pares key:value 
+				</p>
+				<ul>
+					<img src="{% static 'img/parablog98.jpg'%}" alt="Info-Python-blog" height="400px">
+				</ul>
+				<br>
+				<p>
+					vemos como el elemento con clave "d", que existía previamente actualizó su valor del elemento <br>
+					con clave "d" del segundo diccionario. Y se agregaron el resto de claves que <br>
+					no existían previamente en el diccionario con sus respectivos valores del segundo diccionario.
+				</p>
 			</ul>
+		</article>
+		<br><br>
+		<article class="post">
+			<center>
+				<h3 style="color: cornflowerblue;">Funciones y métodos</h3>
+			</center>
 		</article>
 		<!--Sigue...-->
 	</section>
