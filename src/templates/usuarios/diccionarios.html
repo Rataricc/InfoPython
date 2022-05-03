@@ -31,6 +31,7 @@
 			<ul>
 				<ul>
 					<img src="{% static 'img/parablog88.jpg'%}" class="left" alt="Info-Python-blog" height="400px">
+					<br><br>
 					<p>
 						Las keys o llaves deben ser únicas, si se asignan un valor a <br>
 						una llave ya existente, se reemplaza el valor anterior. 
@@ -47,6 +48,7 @@
 					cualquier tipo. <br><br>
 					Veamos algunos ejemplos: 
 				</p>
+				<br><br>
 				<ul>
 					<img src="{% static 'img/parablog89.jpg'%}" alt="Info-Python-blog" height="600px">
 				</ul>
@@ -319,10 +321,104 @@
 				</p>
 			</ul>
 		</article>
-		<br><br>
+		
 		<article class="post">
 			<center>
 				<h3 style="color: cornflowerblue;">Funciones y métodos</h3>
+				<p>
+					Para saber la cantidad de elementos de un diccionario utilizamos <strong>len()</strong>
+				</p>
+				<ul>
+					<table>
+						<tr>
+							<td style="color: green;">
+								<strong>
+									>>> diccionario = {"hola":"hello", "chau":"bye", "cinco":"five", "manzana":"apple"} <br>
+									>>> len(diccionario) <br>
+									4
+								</strong>
+							</td>
+						</tr>
+					</table>
+				</ul>
+				<p>
+					para tener una lista con claves de un diccionario podemos usar el método <strong>keys()</strong>
+				</p>
+				<ul>
+					<table>
+						<tr>
+							<td style="color: green;">
+								<strong>
+									>>> diccionario.keys() <br>
+									dict_keys(['hola', 'chau', 'cinco', 'manzana'])
+								</strong>
+							</td>
+						</tr>
+					</table>
+				</ul>
+				<p>
+					para reibir una lista con los valores del diccionario tenemos el método <strong>values()</strong>
+				</p>
+				<ul>
+					<table>
+						<tr>
+							<td style="color: green;">
+								<strong>
+									>>> diccionario.values() <br>
+									dict_values(['hello', 'bye', 'five', 'apple'])
+								</strong>
+							</td>
+						</tr>
+					</table>
+				</ul>
+				<p>
+					podríamos usarlo por ejemplo para ver si un valor se encuentra en un diccionario
+				</p>
+				<ul>
+					<table>
+						<tr>
+							<td style="color: green;">
+								<strong>
+									>>> "hello" in diccionario.values() <br>
+									True
+								</strong>
+							</td>
+						</tr>
+					</table>
+				</ul>
+				<br>
+				<p>
+					Como vimos anteriormente, podemos recibir una lista con tuplas que contienen el par <strong>key:value</strong> con el método <strong>items()</strong>
+				</p>
+				<ul>
+					<table>
+						<tr>
+							<td style="color: green;">
+								<strong>
+									>>> diccionario.items() <br>
+									dict_items([('hola', 'hello'), ('chau', 'bye'), ('cinco', 'five'),('manzana', 'apple')])
+								</strong>
+							</td>
+						</tr>
+					</table>
+				</ul>
+				<p>
+					Como puedes observar los objetos devueltos por <strong>diccionario.keys(), diccionario.values() y diccionario.items()</strong> no son <br>
+					como las listas que hemos visto anteriormente, eso es por que realmente son <strong>views objects (vista de objetos)</strong>. <br>
+					Estos proporcionan una manera de ver dinámicamente los elementos del diccionario, esto significa que si el diccionario cambia en la vistas <br>
+					se verán reflejados esos cambios. 
+				</p>
+				<ul>
+					<img src="{% static 'img/parablog99.jpg'%}" alt="Info-Python-blog" height="450px">
+				</ul>
+				<br>
+				<p>
+					Si necesitamos listas podemos crearlas a partir de estas vistas con la función <strong>list()</strong>, o si <br>
+					necesitamos tuplas <strong>tuple()</strong>
+				</p>
+				<ul>
+					<img src="{% static 'img/parablog100.jpg'%}" alt="Info-Python-blog" height="450px">
+				</ul>
 			</center>
 		</article>
 		<!--Sigue...-->
