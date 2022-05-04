@@ -7,6 +7,12 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="../../static/css/manejoErrores.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<style>
+		table, th, td {
+			border: 1px solid black;
+		}
+	</style>
 </head>
 <body>
 	<header>
@@ -14,11 +20,131 @@
 	</header>
 	<section>
 		<article class="post">
-			<h2>Como un susbtutilo de lo que quiero hablar</h2>
-			<p>Descripcion de lo que quiero seguir hablando</p>
-			<!--aca va una imagen si quiero-->
-			<p>Otro parrafo si quiero seguir hablando</p>
+			<center>
+				<h2 style="color: #C66250;">Errores y excepciones</h2>
+				<p>
+					En algunas ocasiones nuestros programas pueden fallar ocasionando su detención.
+				</p>
+				<p>
+					Ya sea por <strong>errores de sintaxis o de lógica</strong>, tenemos que ser capaces de detectar esos <br>
+					momentos y tratarlos debidamente para prevenirlos.
+				</p>
+				<ul>
+					<img src="{% static 'img/parablog101.jpg'%}" alt="Info-Python-blog" height="400px">
+				</ul>
+			</center>
 		</article>
+		<hr>
+		<article class="post">
+			<center>
+				<h2 style="color: #C66250;">Errores</h2>
+				<p>
+					Los <strong>errores</strong> detienen la ejecución del programa y tienen varias causas. <br><br>
+					Para poder estudiarlos mejor vamos a provocar algunos intencionadamente.
+				</p>
+				<h3 style="color: cornflowerblue;">Errores de sintaxis</h3>
+				<p>
+					Indentificados con el código <strong style="color: red;">SyntaxError</strong>, son los que podemos apreciar repasando <br>
+					el código, por ejemplo al olvidarnos de cerrar un paréntesis:
+				</p>
+				<br>
+				<table style="width: 30%;">
+					<tr>
+						<th>
+							<strong>Código</strong>
+						</th>
+					</tr>
+					<tr>
+						<td>
+							print("Hola"
+						</td>
+					</tr>
+					<tr>
+						<th>
+							<strong>Resultado</strong>
+						</th>
+					</tr>
+					<tr>
+						<td>
+							File " ipython-input-1-8bc9f5174855>", line 1 
+							<ul>
+								print("Hola" 
+								<ul>
+									^ 
+								</ul>	
+							</ul>
+							SyntaxError: unexpected EOF while parsing
+						</td>
+					</tr>
+				</table>
+			</center>
+			<br>
+		</article>
+		<hr>
+		<article class="post">
+			<center>
+				<h3 style="color: cornflowerblue;">Errores de nombre</h3>
+				<p>
+					Se producen cuando el sistema interpreta que debe ejecutar alguna función, método... pero no <br>
+					lo encuentra definido. Devuelven el código <strong style="color: red;">NameError</strong>:
+				</p>
+				<br>
+				<table style="width: 30%;">
+					<tr>
+						<th>
+							<strong>Código</strong>
+						</th>
+					</tr>
+					<tr>
+						<td>
+							print("Hola")
+						</td>
+					</tr>
+					<tr>
+						<th>
+							<strong>Resultado</strong>
+						</th>
+					</tr>
+					<tr>
+						<td>
+							ipython-input-2-155163d628c2> in module>()
+							<ul>
+								----> 1 pint("Hola")
+							</ul>
+							NameError: name 'pint' is not defined
+						</td>
+					</tr>
+				</table>
+			</center>
+		</article>
+		<hr>
+		<article class="post">
+			<center>
+				<p>
+					La mayoría de errores sintácticos y de nombre los identifican los editores de código <br>
+					antes de la ejecución, pero existen otros tipos que pasan más desapercibidos.
+				</p>
+				<h3 style="color: cornflowerblue;">Errores semánticos</h3>
+				<p>
+					Estos errores son muy dificíles de identificar porque van ligados al sentido del funcionamiento y <br>
+					dependen de la situación. <strong>Algunas veces pueden ocurrir y otras no.</strong>
+				</p>
+			</center>
+			<ul>
+				<ul>
+					<img src="{% static 'img/parablog102.jpg'%}" class="left" alt="Info-Python-blog" height="400px">
+				</ul>
+				<br>
+				<p>	
+					<strong>
+						La mejor forma de prevenirlos es programando mucho <br>
+						y aprendiendo de tus propios fallos, la experencia <br>
+						es clave.
+					</strong>
+				</p>
+			</ul>
+		</article>
+		<!--Sigue...-->
 	</section>
 </body>
 </html>
