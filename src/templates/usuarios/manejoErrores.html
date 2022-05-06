@@ -97,7 +97,7 @@
 					</tr>
 					<tr>
 						<td>
-							print("Hola")
+							pint("Hola")
 						</td>
 					</tr>
 					<tr>
@@ -142,7 +142,331 @@
 						es clave.
 					</strong>
 				</p>
+				<br><br>
+				<p>
+					Veamos un par de ejemplos: <br>
+					<strong>Ejemplo pop() con lista vacía</strong><br>
+					Si intentamos sacar un elemento de una lista vacía, el programa dará fallo de tipo <strong style="color: red;">IndexError</strong>. <br>
+					Esta situación ocurre <strong>sólo durante la ejecución</strong> del programa, por lo que los editores no lo detectarán: <br>
+				</p>
+				<ul>
+					<table>
+						<tr>
+							<th>Código</th>
+						</tr>
+						<tr>
+							<td>
+								l = [] <br>
+								l.pop()
+							</td>
+						</tr>
+						<tr>
+							<th>Resultado</th>
+						</tr>
+						<tr>
+							<td>
+								ipython-input-6-9e6f3717293a> in module>() <br>
+								----> 1 l.pop() <br>
+								IndexError: pop from empty list
+							</td>
+						</tr>
+					</table>
+				</ul>
+				<br>
+				<p>
+					<strong style="color: black;">Ejemplo lectura de cadena y operación sin conversión a número</strong><br>
+					Cuando leemos un valor con la función <strong>input()</strong>, éste siempre se obtendrá como una cadena de <br>
+					caracteres. Si intentamos operarlo directamente con otros números tendremos un fallo <br>
+					<strong style="color: red;">TypeError</strong> que tampoco detectan los editores de código:
+				</p>
+				<ul>
+					<table>
+						<tr>
+							<th>Código</th>
+						</tr>
+						<tr>
+							<td>
+								n = input("Introduce un número: ") <br>
+								print("{}/{} = {}".format(n,m,n/m))
+							</td>
+						</tr>
+						<tr>
+							<th>Resultado</th>
+						</tr>
+						<tr>
+							<td>
+								Introduce un número: 4 <br><br>
+								---------------------------------------------------------------------- <br>
+								TypeError		Traceback (most recent call last) <br>
+								ipython-input-12-85bb893ab3e3> in module>() <br>
+								----> 1 print("{}/{} = {}".format(n,m,n/m)) <br><br>
+								TypeError: unsupported operand type(s) for /: 'str' and 'int'
+							</td>
+						</tr>
+					</table>
+				</ul>
+				<br>
+				<p>
+					Como ya sabemos este error se puede prevenir transformando la cadena a entero o flotante: <br>
+				</p>
+				<ul>
+					<table>
+						<tr>
+							<th>Código</th>
+						</tr>
+						<tr>
+							<td>
+								n = float(input("Introduce un número: ")) <br>
+								m = 4 <br>
+								print("{}/{} = {}".format(n,m,n/m)) 
+							</td>
+						</tr>
+						<tr>
+							<th>Resultado</th>
+						</tr>
+						<tr>
+							<td>
+								Introduce un número: 10 <br>
+								10.0/4 = 2.5
+							</td>
+						</tr>
+					</table>
+				</ul>
+				<br>
+				<p>
+					Sin embargo no siempre se puede prevenir, como cuando se introduce una cadena que no es un <br>
+					número:
+				</p>
+				<br>
+				<ul>
+					<table>
+						<tr>
+							<th>Código</th>
+						</tr>
+						<tr>
+							<td>
+								n = float(input("Introduce un número: ")) <br>
+								m = 4 <br>
+								print("{}/{} = {}".format(n,m,n/m))
+							</td>
+						</tr>
+						<tr>
+							<th>Resultado</th>
+						</tr>
+						<tr>
+							<td>
+								Introduce un número: aaa <br>
+								--------------------------------------------------------------------------- <br>
+								ValueError Traceback (most recent call last) <br>
+								ipython-input-14-c0e7fd4a26a9> in module>() <br>
+								----> 1 n = float(input("Introduce un número: "))
+								<ul>
+									2 m = 4 <br>
+									3 print("{}/{} = {}".format(n,m,n/m))
+								</ul>
+								ValueError: could not convert string to float: 'aaa' 
+							</td>
+						</tr>
+					</table>
+				</ul>
+				<br>
+				<p>
+					Como se puede observar, es difícil prevenir fallos que ni siquiera nos habíamos planteado que <br>
+					podían existir.
+				</p>
+				<br>
 			</ul>
+			<center>
+				<h3>Por suerte para esas situaciones existen las excpciones.</h3>
+			</center>
+		</article>
+		<article class="post">
+			<center>
+				<h2 style="color: #C66250;">Excepciones</h2>
+				<p>
+					Las <strong>excepciones</strong> son bloques de código que <strong>nos permiten continuar con la ejecución de un 
+					programa</strong> pese a que ocurra un error. <br><br>
+					Siguiendo con el ejemplo anterior, teníamos el caso en que leíamos un número por teclado, pero <br>
+					el usuario no introducía un número: <br><br>
+					<strong style="color: blueviolet;">Bloques try - except</strong> <br><br>
+					Para prevenir el fallo debemos poner el código propenso a errores en un <strong>bloque try</strong> y luego <br>
+					encadenar un bloque <strong>except</strong> para tratar la situación excepcional mostrando que ha ocurrido un <br>
+					fallo:
+				</p>
+				<br>
+				<table>
+					<tr>
+						<th>Código</th>
+					</tr>
+					<tr>
+						<td>
+							try:
+							<ul>
+								n = float(input("Introduce un número: ")) <br>
+								m = 4 <br>
+								print("{}/{} = {}".format(n,m,n/m))
+							</ul>
+							except:
+							<ul>
+								print("Ha ocurrido un error, introduce bien el número")
+							</ul>
+						</td>
+					</tr>
+					<tr>
+						<th>Resultado</th>
+					</tr>
+					<tr>
+						<td>
+							Introduce un número: aaa <br>
+							Ha ocurrido un error, introduce bien el número
+						</td>
+					</tr>
+				</table>
+				<p>
+					Como vemos esta forma nos permite controlar situaciones excepcionales que generalmente <br>
+					darían error y en su lugar mostrar un mensaje o ejecutar una pieza de código alternativo. <br><br>
+					Podemos aprovechar las excepciones para forzar al usuario a introducir un número haciendo uso <br>
+					de un <strong>bucle while</strong>, repitiendo la lectura por teclado hasta que lo hagan bien y entonces <br>
+					romper el bucle con un <strong>break:</strong>
+				</p>
+				<table>
+					<tr>
+						<th>Código</th>
+					</tr>
+					<tr>
+						<td>
+							while(True):
+							<ul>
+								try:
+								<ul>
+									n = float(input("Introduce un número: ")) <br>
+									m = 4 <br>
+									print("{}/{} = {}".format(n,m,n/m)) <br>
+									break # Importante romper la iteración si todo ha salido bien
+								</ul>
+								except: 
+								<ul>
+									print("Ha ocurrido un error, introduce bien el número")
+								</ul>
+							</ul>
+						</td>
+					</tr>
+					<tr>
+						<th>Resultado</th>
+					</tr>
+					<tr>
+						<td>
+							Introduce un número: aaa <br>
+							Ha ocurrido un error, introduce bien el número <br>
+							Introduce un número: sdsdsd <br>
+							Ha ocurrido un error, introduce bien el número <br>
+							Introduce un número: sdsdsd <br>
+							Ha ocurrido un error, introduce bien el número <br>
+							Introduce un número: sdsd <br>
+							Ha ocurrido un error, introduce bien el número <br>
+							Introduce un número: 10 <br>
+							10.0/4 = 2.5
+						</td>
+					</tr>
+				</table>
+				<br>
+				<p>
+					<strong style="color: blueviolet;">Bloque else</strong><br><br>
+					Es posible encadenar un <strong>bloque else</strong> después del <strong>except</strong> para comprobar el caso en que todo <br>
+					funcione correctamente (no se ejecuta la excepción). <br><br>
+					El <strong>bloque else</strong> es un buen momento para romper la iteración con break si todo  funciona <br>
+					correctamente:
+				</p>
+				<table>
+					<tr>
+						<th>Código</th>
+					</tr>
+					<tr>
+						<td>
+							while(True):
+							<ul>
+								try:
+								<ul>
+									n = float(input("Introduce un número: ")) <br>
+									m = 4 <br>
+									print("{}/{} = {}".format(n,m,n/m))
+								</ul>
+								except:
+								<ul>
+									print("Ha ocurrido un error, introduce bien el número")
+								</ul>
+								else: 
+								<ul>
+									print("Todo ha funcionado correctamente") <br>
+									break # Importante romper la iteración si todo ha salido bien
+								</ul>
+							</ul>
+						</td>
+					</tr>
+					<tr>
+						<th>Resultado</th>
+					</tr>
+					<tr>
+						<td>
+							Introduce un número: 10 <br>
+							10.0/4 = 2.5 <br>
+							Todo ha funcionado correctamente
+						</td>
+					</tr>
+				</table>
+				<br>
+				<p>
+					<strong style="color: blueviolet;">Bloque finally</strong><br><br>
+					Por último es posible utilizar un <strong>bloque finally</strong> que se ejecute al final del código, ocurra o no <br>
+					un error:
+				</p>
+				<br>
+				<table>
+					<tr>
+						<th>Código</th>
+					</tr>
+					<tr>
+						<td>
+							while(True):
+							<ul>
+								try:
+								<ul>
+									n = float(input("Introduce un número: ")) <br>
+									m = 4 <br>
+									print("{}/{} = {}".format(n,m,n/m))
+								</ul>
+								except: 
+								<ul>
+									print("Ha ocurrido un error, introduce bien el número")
+								</ul>
+								else: 
+								<ul>
+									print("Todo ha funcionado correctamente") <br>
+									break # Importante romper la iteración si todo ha salido bien
+								</ul>
+								finally: 
+								<ul>
+									print("Fin de la iteración") # Siempre se ejecuta
+								</ul>
+							</ul>
+						</td>
+					</tr>
+					<tr>
+						<th>Resultado</th>
+					</tr>
+					<tr>
+						<td>
+							Introduce un número: aaa
+							Ha ocurrido un error, introduce bien el número <br>
+							Fin de la iteración <br>
+							Introduce un número: 10 <br>
+							10.0/4 = 2.5 <br>
+							Todo ha funcionado correctamente <br>
+							Fin de la iteración
+						</td>
+					</tr>
+				</table>
+			</center>
 		</article>
 		<!--Sigue...-->
 	</section>
