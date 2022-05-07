@@ -288,7 +288,7 @@
 					programa</strong> pese a que ocurra un error. <br><br>
 					Siguiendo con el ejemplo anterior, teníamos el caso en que leíamos un número por teclado, pero <br>
 					el usuario no introducía un número: <br><br>
-					<strong style="color: blueviolet;">Bloques try - except</strong> <br><br>
+					<h3 style="color: blueviolet;">Bloques try - except</h3><br>
 					Para prevenir el fallo debemos poner el código propenso a errores en un <strong>bloque try</strong> y luego <br>
 					encadenar un bloque <strong>except</strong> para tratar la situación excepcional mostrando que ha ocurrido un <br>
 					fallo:
@@ -371,7 +371,7 @@
 				</table>
 				<br>
 				<p>
-					<strong style="color: blueviolet;">Bloque else</strong><br><br>
+					<h3 style="color: blueviolet;">Bloque else</h3><br>
 					Es posible encadenar un <strong>bloque else</strong> después del <strong>except</strong> para comprobar el caso en que todo <br>
 					funcione correctamente (no se ejecuta la excepción). <br><br>
 					El <strong>bloque else</strong> es un buen momento para romper la iteración con break si todo  funciona <br>
@@ -416,7 +416,7 @@
 				</table>
 				<br>
 				<p>
-					<strong style="color: blueviolet;">Bloque finally</strong><br><br>
+					<h3 style="color: blueviolet;">Bloque finally</h3><br>
 					Por último es posible utilizar un <strong>bloque finally</strong> que se ejecute al final del código, ocurra o no <br>
 					un error:
 				</p>
@@ -468,7 +468,138 @@
 				</table>
 			</center>
 		</article>
-		<!--Sigue...-->
+		<br>
+		<article class="post">
+			<center>
+				<h3 style="color: blueviolet;">Excepciones múltiples</h3>
+				<p>
+					Es una misma pieza de código pueden ocurrir muchos errores distintos y quizá nos interese <br>
+					actuar de forma diferente en cada caso. <br><br>
+					Para esas situaciones algo que podemos hacer es asignar una excepción a una variable. <br><br>
+					De esta forma es posible analizar el tipo de error que sucede gracias a su identificador:
+				</p>
+				<br>
+				<table>
+					<tr>
+						<th>Código</th>
+					</tr>
+					<tr>
+						<td>
+							try:
+							<ul>
+								n = input("Introduce un número: ") # no transformamos a número <br>
+								5/n
+							</ul>
+							except Exception as e: # guardamos la excepción como una variable e 
+							<ul>
+								print("Ha ocurrido un error =>", type(e).__name__)
+							</ul>
+						</td>
+					</tr>
+					<tr>
+						<th>Resultado</th>
+					</tr>
+					<tr>
+						<td>
+							Introduce un número: 10 <br>
+							Ha ocurrido un error => TypeError
+						</td>
+					</tr>
+				</table>
+				<br>
+				<p>
+					Gracias a los identificadores de errores podemos crear múltiples comprobaciones, siempre que <br>
+					dejamos en último lugar la excepción por defecto Excepción que engloba cualquier tipo de error <br>
+					(si la pusiéramos al principio las demás excepciones nunca se ejecutarán):
+				</p>
+				<br>
+				<table>
+					<tr>
+						<th>Código</th>
+					</tr>
+					<tr>
+						<td>
+							try:
+							<ul>
+								n = float(input("Introduce un número divisor: ")) <br>
+								5/n
+							</ul>
+							except TypeError:
+							<ul>
+								print("No se puede dividir el número entre una cadena")
+							</ul>
+							except ValueError:
+							<ul>
+								print("Debes introducir una cadena que sea un número")
+							</ul>
+							except ZeroDivisionError:
+							<ul>
+								print("No se puede dividir por cero, prueba otro número")
+							</ul>
+							except Exception as e:
+							<ul>
+								print("Ha ocurrido un error no previsto", type(e).__name__ )
+							</ul>
+						</td>
+					</tr>
+					<tr>
+						<th>Resultado</th>
+					</tr>
+					<tr>
+						<td>
+							Introduce un número divisor: 0 <br>
+							No se puede dividir por cero, prueba otro número
+						</td>
+					</tr>
+				</table>
+			</center>
+		</article>
+		<br>
+		<article class="post">
+			<center>
+				<h3 style="color: blueviolet;">Invocación de excepciones</h3>
+				<p>
+					En algunas ocasiones quizá nos interesa llamar un <strong>error manualmente</strong>, ya que un <strong>print</strong><br>
+					común no es muy elegante. Para ello existe una palabra reservada llamada <strong>raise</strong> con la cual <br>
+					podemos lanzar un error manual pasándole el identificador.} <br><br>
+					Luego simplemente podemos añadir un <strong>except</strong> para tratar esta excepción que hemos lanzado:
+				</p>
+				<table>
+					<tr>
+						<th>Código</th>
+					</tr>
+					<tr>
+						<td>
+							def mi_funcion(algo=None):
+							<ul>
+								tyr:
+								<ul>
+									if algo is None: 
+									<ul>
+										raise ValueError("Error! No se permite un valor nulo")
+									</ul>
+								</ul>
+								except ValueError:
+								<ul>
+									print("Error! No se permite un valor nulo (desde la excepción)")
+								</ul>
+							</ul>
+							<br>
+							mi_funcion()
+						</td>
+					</tr>
+					<tr>
+						<th>Resultado</th>
+					</tr>
+					<tr>
+						<td>
+							Error! No se permite un valor nulo (desde la excepción)
+						</td>
+					</tr>
+				</table>
+				<br><br>
+			</center>
+		</article>
 	</section>
 </body>
 </html>
