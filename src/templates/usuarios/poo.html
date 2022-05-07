@@ -7,6 +7,12 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="../../static/css/poo.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<style>
+		table, th, td {
+			border: 1px solid black;
+		}
+	</style>
 </head>
 <body>
 	<header>
@@ -14,10 +20,76 @@
 	</header>
 	<section>
 		<article class="post">
-			<h2>Como un susbtutilo de lo que quiero hablar</h2>
-			<p>Descripcion de lo que quiero seguir hablando</p>
-			<!--aca va una imagen si quiero-->
-			<p>Otro parrafo si quiero seguir hablando</p>
+			<center>
+				<h2 style="color: #C66250;">Paradigma de Programación Orientada a Objetos</h2>
+				<p>
+					Un <strong>paradigma</strong> es el resultado de un proceso social en el cual un grupo <br>
+					de personas desarrolla nuevas ideas y crea principios y prácticas alrededor de estas ideas.
+				</p>
+				<img src="{% static 'img/parablog103.jpg'%}" alt="Info-Python-blog" height="450px"><br>
+				<p>
+					En programación, se trata de un enfoque concreto de desarrollar y estructurar el desarrollo <br>
+					de programas en base a Objetos.
+				</p>
+			</center>
+		</article>
+		<article class="post">
+			<center>
+				<h3 style="color: cornflowerblue;">Clase</h3>
+				<p>
+					Una <strong>clase es un modelo que define las propiedades y comportamiento de un tipo de objeto <br>
+					concreto</strong>, en la instanciación se hace la lectura de estas definiciones y se crea un objeto a partir <br>
+					de ellas. Las clases son abstracciones que representan a un conjunto de objetos con un comportamiento e interfaz <br>
+					común. <br><br>
+					Una clase se compone de dos partes:
+					<ul>
+						<li><strong>Atributos>:</strong> esto es, los datos que se refieren al estado del objeto.</li>
+						<li><strong>Métodos:</strong> son funciones que pueden aplicarse a objetos.</li>
+					</ul>
+				</p>
+			</center>
+		</article>
+		<article class="post">
+			<center>
+				<h3 style="color: cornflowerblue;">Objeto</h3>
+				<p>
+					<strong>Entidad provista de un conjunto de propiedades o atributos (datos) y de comportamiento o <br>
+					funcionalidad (métodos),</strong> los mismos que consecuentemente reaccionan a eventos. Se corresponden <br>
+					con los objetos reales del mundo que nos rodea, o con objetos internos del sistema (del programa). <br>
+					En realidad, un objeto es una instancia de una clase, por lo que se pueden intercambiar los términos objeto o <br>
+					instancia. Un ejemplo de objeto podría ser un automóvil, en el que tendríamos atributos como la marca, el <br>
+					número de puertas o el color y métodos como arrancar y parar. O bien cualquier otra combinación de atributos y <br>
+					métodos según lo que fuera relevante para nuestro programa. <br><br>
+					Un objeto consta de:
+					<ul>
+						<li>
+							<strong>Tiempo de vida:</strong> La duración de un objeto en un programa siempre está limitada en el <br>
+							tiempo. La mayoría de los objetos son creados mediante un mecanismo denominado instanciación, <br>
+							y cuando dejan de existir se dice que son destruidos.
+						</li>
+						<li>
+							<strong>Estado:</strong> Todo objeto posee un estado, definido por sus atributos. Con él se definen las <br>
+							propiedades del objeto, y el estado en que se encuentra en un momento determinado de su exitencia.
+						</li>
+						<li>
+							<strong>Comportamiento:</strong> Todo objeto ha de presentar una interfaz, definida por sus métodos, <br>
+							para que el resto de objetos que componen los programas puedan interactuar con él.
+						</li>
+						<li>
+							<strong>Identidad:</strong> Propiedad del objeto que lo distingue de los demás. 
+						</li>
+					</ul>
+				</p>
+				<p>
+					<strong>
+						El equivalente de un objeto en el paradigma estructurado sería una variable. Así mismo la <br>
+						instanciación de objetos equivaldría a la declaración de variables, y el tiempo de vida de un <br>
+						objeto al ámbito* de una variable.
+					</strong><br><br>
+					*La zona del programa en la que una variable puede ser utilizada es lo que se conoce como su ámbito de <br>
+					una variable local está limitado al código de la función en la que está definida.
+				</p>
+			</center>
 		</article>
 	</section>
 </body>
