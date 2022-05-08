@@ -91,6 +91,65 @@
 				</p>
 			</center>
 		</article>
+		<article class="post">
+			<center>
+				<img src="{% static 'img/parablog104.jpg'%}" alt="Info-Python-blog" height="450px"><br><br>
+				<p>
+					Para modelar soluciones usuando Paradigma orientado a Objetos, comúnmente se utilizan los <br>
+					<strong>Diagramas de Clases</strong>, es uno de los diagramas includios en UML 2.5 clasificado dentro de los <br>
+					diagramas de estructura y, como tal, se utiliza para representar los elementos que componen un <br>
+					sistema de información desde un punto de vista estático. 
+				</p>
+				<br>
+				<img src="{% static 'img/parablog105.jpg'%}" alt="Info-Python-blog" height="450px">
+				<br><br>
+				<p>
+					En Python las clases se definen mediante la palabra clave <strong>class</strong> seguida del nombre de la clase, <br>
+					dos puntos (:) y a continuación, indentado, el cuerpo de la clase.
+				</p>
+				<br>
+				<table>
+					<tr>
+						<th>Código</th>
+					</tr>
+					<tr>
+						<td>
+							Definir la clase Persona con sus métodos y atributos. <br><br>
+							<strong style="color: orange;">class</strong> Persona:
+							<ul>
+								<strong style="color: orange;">def __init__</strong> (self, nombre, edad, genero, estatura, peso):
+								<ul>
+									<strong style="color: yellow;">self</strong>.nombre = nombre <br>
+									<strong style="color: yellow;">self</strong>.edad = edad <br>
+									<strong style="color: yellow;">self</strong>.genero = genero <br>
+									<strong style="color: yellow;">self</strong>.estatura = estatura <br>
+									<strong style="color: yellow;">self</strong>.peso = peso
+								</ul>
+								<strong style="color: orange;">def</strong> hablar(self):
+								<ul>
+									<strong style="color: blue;">print</strong>(<strong style="color: green;">"Hola soy {}"</strong>. format(<strong style="color: yellow;">self</strong>.nombre))
+								</ul>
+								<strong style="color: orange;">def</strong> correr(self):
+								<ul>
+									<strong style="color: blue;">print</strong>(<strong style="color: green;">"{} esta corriendo"</strong>. format(<strong style="color: yellow;">self</strong>.nombre))
+								</ul>
+								<strong style="color: orange;">def</strong> caminar(self):
+								<ul>
+									<strong style="color: blue;">print</strong>(<strong style="color: green;">"{} esta caminando"</strong>. format(<strong style="color: yellow;">self</strong>.nombre))
+								</ul>
+							</ul>
+						</td>
+					</tr>
+				</table>
+				<br>
+				<p>
+					El método <strong>__init__</strong>, con una doble barra baja al principio y al final del nombre, se ejecuta justo <br>
+					después de crear un nuevo objeto a partir de la clase, proceso que se conoce con el nombre de instanciación. El método <br>
+					<strong>__init__</strong> sirve, como sugiere su nombre, para realizar cualquier proceso de inicialización que se necesario <br>
+					como puede ser la asiganación de valores a atributos, cálculos, llamadas a otras funciones o procedimientos.
+				</p>
+			</center>
+		</article>
 	</section>
 </body>
 </html>
