@@ -148,6 +148,71 @@
 					<strong>__init__</strong> sirve, como sugiere su nombre, para realizar cualquier proceso de inicialización que se necesario <br>
 					como puede ser la asiganación de valores a atributos, cálculos, llamadas a otras funciones o procedimientos.
 				</p>
+				<p>
+					Como vemos el primer parámetro de <strong>__init__</strong> y del resto de métodos de la clase es siempre <strong>self</strong><br>
+					que sirve para referirse al objeto actual. <br>
+					Este mecanismo es necesario para poder acceder a los atributos y métodos del objeto diferenciando, <br>
+					por ejemplo, una variable local <strong>mi_var</strong> de un atributo del objeto <strong>self.mi_var.</strong>
+				</p>
+				<p>
+					Si volvemos al método <strong>__init__</strong> de nuestra clase Persona veremos véremos como se utiliza <strong>self</strong> para <br>
+					asignar al atributo nombre del objeto (<strong>self.nombre</strong>) el valor que el programador especifica para <br>
+					el párametro nombre. El parámetro nombre se destruya al final de la función, mientras que el atributo nombre se conserva <br>
+					(y puede ser accedido) mientras el objeto viva.
+				</p>
+				<p>
+					Para crear un objeto se escribiría el nombre de la clase seguido de cualquier parámetro que sea necesario <br>
+					entre paréntesis. Estos parámetros son los que se pasarán al método <strong>__init__</strong>, que como <br>
+					decíamos es el método que se llama al instanciar la clase.
+				</p>
+				<br>
+				<table>
+					<tr>
+						<th>Código</th>
+					</tr>
+					<tr>
+						<td>
+							Definir la clase Persona con sus métodos y atributos y crear objetos a partir de ella. <br><br>
+							<strong style="color: orange;">class</strong> Persona:
+							<ul>
+								<strong style="color: orange;">def __init__</strong>(self, nombre, edad, sexo, estatura, peso):
+								<ul>
+									<strong style="color: yellow;">self</strong>.nombre = nombre <br>
+									<strong style="color: yellow;">self</strong>.edad = edad <br>
+									<strong style="color: yellow;">self</strong>.sexo = sexo <br>
+									<strong style="color: yellow;">self</strong>.estatura = estatura <br>
+									<strong style="color: yellow;">self</strong>.peso = peso
+								</ul>
+								<strong style="color: orange;">def</strong> hablar(self):
+								<ul>
+									<strong style="color: blue;">print</strong>(<strong style="color: green;">"Hola soy {}"</strong>. format(<strong style="color: yellow;">self</strong>.nombre))
+								</ul>
+								<strong style="color: orange;">def</strong> correr(self):
+								<ul>
+									<strong style="color: blue;">print</strong>(<strong style="color: green;">"{} esta corriendo"</strong>. format(<strong style="color: yellow;">self</strong>.nombre))
+								</ul>
+								<strong style="color: orange;">def</strong> caminar(self):
+								<ul>
+									<strong style="color: blue;">print</strong>(<strong style="color: green;">"{} esta caminando"</strong>. format(<strong style="color: yellow;">self</strong>.nombre))
+								</ul>
+							</ul>
+							<br>
+							persona1 = <strong>Persona(<strong style="color: green;">"Juan"</strong>, <strong style="color: red;">23</strong>, <strong style="color: green;">"Masculino"</strong>, <strong style="color: red
+							;">170</strong>, <strong style="color: red;">90</strong>)</strong><br>
+							persona2 = <strong>Persona(<strong style="color: green;">"Maria"</strong>, <strong style="color: red;">25</strong>, <strong style="color: green;">"Femenino"</strong>, <strong style="color: red
+							;">160</strong>, <strong style="color: red;">70</strong>)</strong>
+						</td>
+					</tr>
+				</table>
+				<br>
+				<p>
+					En el ejemplo podemos ver que aunque la definición de la función indica claramente que <br>
+					precisa de seis parámetros (self, nombre, edad, sexo, estatura y peso), a la hora de crear un objeto <br>
+					de esta clase pasaremos solo cinco parámetros. Esto es así por que Python pasa el primer argumento <br>
+					(la referencia al objeto que se crea) automáticamente. <br><br>
+					Ahora que ya hemos creado nuestros objetos, podemos acceder a sus atributos y métodos <br>
+					mediante la sintaxis <strong>objeto.atributo</strong> y <strong>objeto.método():</strong>
+				</p>
 			</center>
 		</article>
 	</section>
