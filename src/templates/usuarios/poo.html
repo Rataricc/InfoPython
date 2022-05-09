@@ -213,6 +213,96 @@
 					Ahora que ya hemos creado nuestros objetos, podemos acceder a sus atributos y métodos <br>
 					mediante la sintaxis <strong>objeto.atributo</strong> y <strong>objeto.método():</strong>
 				</p>
+				<table>
+					<tr>
+						<th>Código</th>
+					</tr>
+					<tr>
+						<td>
+							Definir la clase Persona con sus métodos y atributos y crear un objeto y acceder a sus métodos y atributos. <br><br>
+							<strong style="color: orange;">class</strong> Persona:
+							<ul>
+								<strong style="color: orange;">def __init__</strong>(self, nombre, edad, sexo, estatura, peso):
+								<ul>
+									<strong style="color: yellow;">self</strong>.nombre = nombre <br>
+									<strong style="color: yellow;">self</strong>.edad = edad <br>
+									<strong style="color: yellow;">self</strong>.sexo = sexo <br>
+									<strong style="color: yellow;">self</strong>.estatura = estatura <br>
+									<strong style="color: yellow;">self</strong>.peso = peso
+								</ul>
+								<strong style="color: orange;">def</strong> hablar(self):
+								<ul>
+									<strong style="color: blue;">print</strong>(<strong style="color: green;">"Hola soy {}"</strong>. format(<strong style="color: yellow;">self</strong>.nombre))
+								</ul>
+								<strong style="color: orange;">def</strong> correr(self):
+								<ul>
+									<strong style="color: blue;">print</strong>(<strong style="color: green;">"{} esta corriendo"</strong>. format(<strong style="color: yellow;">self</strong>.nombre))
+								</ul>
+								<strong style="color: orange;">def</strong> caminar(self):
+								<ul>
+									<strong style="color: blue;">print</strong>(<strong style="color: green;">"{} esta caminando"</strong>. format(<strong style="color: yellow;">self</strong>.nombre))
+								</ul>
+							</ul>
+							<br>
+							persona1 = <strong>Persona(<strong style="color: green;">"Juan"</strong>, <strong style="color: red;">23</strong>, <strong style="color: green;">"Masculino"</strong>, <strong style="color: red
+							;">170</strong>, <strong style="color: red;">90</strong>)</strong><br>
+							persona2 = <strong>Persona(<strong style="color: green;">"Maria"</strong>, <strong style="color: red;">25</strong>, <strong style="color: green;">"Femenino"</strong>, <strong style="color: red
+							;">160</strong>, <strong style="color: red;">70</strong>)</strong><br><br>
+							<strong style="color: blue;">print</strong>(persona1.nombre) <br>
+							<strong style="color: blue;">print</strong>(persona1.edad) <br>
+							<strong style="color: blue;">print</strong>(persona1.sexo) <br>
+							<strong style="color: blue;">print</strong>(persona1.estatura) <br>
+							<strong style="color: blue;">print</strong>(persona1.peso) <br>
+							persona1.<strong>hablar()</strong><br>
+							persona1.<strong>correr()</strong><br>
+							persona1.<strong>caminar()</strong>
+						</td>
+					</tr>
+					<tr>
+						<th>Resultado</th>
+					</tr>
+					<tr>
+						<td>
+							Juan <br>
+							23 <br>
+							Masculino <br>
+							170 <br>
+							90 <br>
+							Hola soy Juan <br>
+							Juan está corriendo <br>
+							Juan está caminando
+						</td>
+					</tr>
+				</table>
+				<br>
+				<p>
+					<strong>Clase:</strong> Persona <br>
+					<strong>El objeto instanciado</strong> (creado a partir de esa clase): persona1
+				</p>
+				<table>
+					<tr>
+						<th>Atributos:</th>
+						<th>Métodos:</th>
+					</tr>
+					<tr>
+						<td>
+							<ul>
+								<li>nombre: "juan"</li>
+								<li>edad: 23</li>
+								<li>sexo:"Masculino"</li>
+								<li>estatura: 170</li>
+								<li>peso: 90</li>
+							</ul>
+						</td>
+						<td>
+							<ul>
+								<li>hablar()</li>
+								<li>correr()</li>
+								<li>caminar()</li>
+							</ul>
+						</td>
+					</tr>
+				</table>
 			</center>
 		</article>
 	</section>
