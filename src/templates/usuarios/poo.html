@@ -324,6 +324,343 @@
 				</p>
 			</center>
 		</article>
+		<br>
+		<hr>
+		<article class="post">
+			<center>
+				<h2 style="color: #C66250;">Herencia Simple</h2>
+				<p>
+					Supongamos que queremos modelar los instrumentos musicales de una banda, tendremos entonces una <br>
+					<strong>clase Guitarra, una clase Batería, una clase Bajo</strong>, etc. Cada una de estas clases <br>
+					tendrá una serie de atributos y métodos, pero ocurre que, por el hecho de ser instrumentos musicales, <br>
+					estas clases compartirán muchos de sus atributos y métodos; un ejemplo sería el método <strong>tocar().</strong><br>
+					Es más sencillo crear un tipo de objeto Instrumento con sus atributos y métodos comunes e indicar al programa que <br>
+					Guitarra, Batería y Bajo son tipos de instrumentos, haciendo que hereden de Instrumento.
+				</p>
+			</center>
+			<ul>
+				<ul>
+					<img src="{% static 'img/parablog107.jpg'%}" alt="Info-Python-blog" height="450px">
+				</ul>
+				<p>
+					Para indicar que una clase hereda de otra se coloca el nombre de la clase que se hereda entre paréntesis después <br>
+					del nombre de la clase:
+				</p>
+				<table>
+					<tr>
+						<th>Código</th>
+					</tr>
+					<tr>
+						<td>
+							Definir la clase Instrumento con sus métodos y atributos y crear clases que hereden <br>
+							de ella. <br><br>
+							<strong style="color: red;">class</strong> Instrumento: 
+							<ul>
+								<strong style="color: red;">def __init__</strong>(self, precio):
+								<ul>
+									<strong style="color: orange;">self</strong>.precio = precio
+								</ul>
+								<strong style="color: red;">def</strong> tocar(self):
+								<ul>
+									<strong style="color: blue;">print</strong>(<strong style="color: green;">"Estamos tocando música"</strong>)
+								</ul>
+								<strong style="color: red;">def</strong> precio(self):
+								<ul>
+									<strong style="color: blue;">print</strong>(<strong style="color: green;">"El precio de este instrumento es: $"</strong>, <strong style="color: orange;">self</strong>.precio)
+								</ul>
+							</ul>
+							<strong style="color: red;">class</strong> Bateria(Instrumento):
+							<ul>
+								<strong style="color: red;">pass</strong>
+							</ul>
+							<strong style="color: red;">class</strong> Guitarra(Instrumento):
+							<ul>
+								<strong style="color: red;">pass</strong>
+							</ul>
+						</td>
+					</tr>
+				</table>
+				<br>
+				<p>
+					Como Bateria y Guitarra heredan de Instrumento, ambos tienen un método <strong>tocar()</strong> y un método <br>
+					<strong>precio()</strong>, y se inicializan pasando un único parámetro, precio. Pero, ¿qué ocurriría si quisiéramos <br>
+					especificar un nuevo parámetro <strong>tipo_cuerda</strong> a la hora de crear un objeto Guitarra?; bastaría con escribir <br>
+					un nuevo método <strong>__init__</strong> para la clase Guitarra que se ejecutaría en lugar del <strong>__init__</strong> <br>
+					de Instrumento. Esto es lo que se conoce como sobreescribir métodos.
+				</p>
+				<p>
+					Ahora bien, puede ocurrir en algunos casos que necesitemos sobreescribir un método de la clase padre, pero que en ese <br>
+					método queramos ejecutar el método de la clase padre porque nuestro nuevo método no necesite más que agregar un par de <br>
+					instrucciones extra. En ese caso usamos la sintaxis <strong>SuperClase.metodo(self, args)</strong> para llamar al método <br>
+					de igual nombre de la clase padre. Por ejemplo, para llamar al método <strong>__init__</strong> de Instrumento desde Guitarra <br>
+					usaríamos <strong>Instrumento.__init__(self, precio).</strong>
+				</p>
+				<br>
+				<table>
+					<tr>
+						<th>Código</th>
+					</tr>
+					<tr>
+						<td>
+							Definir la clase Instrumento con sus métodos y atributos y crear clases que <br>
+							hereden de ella. <br><br>
+							<strong style="color: red;">class</strong> Instrumento: 
+							<ul>
+								<strong style="color: red;">def __init__</strong>(self, precio):
+								<ul>
+									<strong style="color: orange;">self</strong>.precio = precio
+								</ul>
+								<strong style="color: red;">def</strong> tocar(self):
+								<ul>
+									<strong style="color: blue;">print</strong>(<strong style="color: green;">"Estamos tocando música"</strong>)
+								</ul>
+								<strong style="color: red;">def</strong> precio(self):
+								<ul>
+									<strong style="color: blue;">print</strong>(<strong style="color: green;">"El precio de este instrumento es: $"</strong>, <strong style="color: orange;">self</strong>.precio)
+								</ul>
+							</ul>
+							<strong style="color: red;">class</strong> Bateria(Instrumento):
+							<ul>
+								<strong style="color: red;">pass</strong>
+							</ul>
+							<strong style="color: red;">class</strong> Guitarra(Instrumento):
+							<ul>
+								<strong style="color: red;">def __init__</strong>(self, tipo_cuerda, precio):
+								<ul>
+									<strong>Instrumento.</strong><strong style="color: red;">__init__</strong>(self, precio) <br>
+									<strong style="color: orange;">self</strong>.tipo_cuerda = tipo_cuerda
+								</ul>
+							</ul>
+						</td>
+					</tr>
+				</table>
+				<br>
+				<p>
+					Observe que en este caso si es necesario especificar el parámetro <strong>self.</strong>
+				</p>
+			</ul>
+		</article>
+		<article class="post">
+			<center>
+				<h2 style="color: #C66250;">Herencia múltiple</h2>
+				<p>
+					En Python, a diferencia de otros lenguajes como Java o C#, se permite la herencia múltiple, es decir, una clase <br>
+					puede heredar de varias clases a la vez. Por ejemplo, podríamos tener una clase Cocodrilo que heredara de la clase <br>
+					Terrestre, con métodos como <strong>caminar()</strong> y atributos como <strong>velocidad_caminar</strong> y de la clase <br>
+					Acuático, con métodos como <strong>nadar()</strong> y atributos como <strong>velocidad_nadar.</strong> Para indicar que una <br>
+					clase hereda de múltiples clases basta con enumerar las clases de las que se hereda separándolas por comas:
+				</p>
+				<br>
+				<table>
+					<tr>
+						<th>Código</th>
+					</tr>
+					<tr>
+						<td>
+							Definir diferentes clases con sus métodos y atributos, luego implementar herencia <br>
+							múltiple en una de ellas. <br><br>
+							<strong style="color: red;">class</strong> Terrestre:
+							<ul>
+								<strong style="color: red;">def __init__</strong>(self):
+								<ul>
+									<strong style="color: red;">pass</strong>
+								</ul>
+								<strong style="color: red;">def</strong> desplazar(self):
+								<ul>
+									<strong style="color: blue;">print</strong>(<strong style="color: green;">"El animal anda"</strong>)
+								</ul>
+							</ul>
+							<strong style="color: red;">class</strong> Acuatico:
+							<ul>
+								<strong style="color: red;">def __init__</strong>(self):
+								<ul>
+									<strong style="color: red;">pass</strong>
+								</ul>
+								<strong style="color: red;">def</strong> desplazar(self):
+								<ul>
+									<strong style="color: blue;">print</strong>(<strong style="color: green;">"El animal nada"</strong>)
+								</ul>
+							</ul>
+							<strong style="color: red;">class</strong> Cocodrilo(Terrestre, Acuatico):
+							<ul>
+								<strong style="color: red;">pass</strong>
+							</ul>
+						</td>
+					</tr>
+				</table>
+				<br>
+				<p>
+					En el caso de que alguna de las clases padre tuvieran métodos con el mismo nombre y número de parámetros las clases <br>
+					sobreescribirían la implementación de los métodos de las clases más a su derecha en la definición. <br>
+					En el siguiente ejemplo, como Terrestre se encuentra más a la izquierda, sería la definición de <strong>desplazar()</strong> <br>
+					de esta clase la que prevalecerá, y por lo tanto si llamamos al método desplazar de un objeto de tipo Cocodrilo lo que <br>
+					se imprimiría sería "El animal anda".
+				</p>
+				<br>
+				<table>
+					<tr>
+						<th>Código</th>
+					</tr>
+					<tr>
+						<td>
+							Definir diferentes clases con sus métodos y atributos, luego implementar herencia <br>
+							múltiple en una de ellas. <br><br>
+							<strong style="color: red;">class</strong> Terrestre:
+							<ul>
+								<strong style="color: red;">def __init__</strong>(self):
+								<ul>
+									<strong style="color: red;">pass</strong>
+								</ul>
+								<strong style="color: red;">def</strong> desplazar(self):
+								<ul>
+									<strong style="color: blue;">print</strong>(<strong style="color: green;">"El animal anda"</strong>)
+								</ul>
+							</ul>
+							<strong style="color: red;">class</strong> Acuatico:
+							<ul>
+								<strong style="color: red;">def __init__</strong>(self):
+								<ul>
+									<strong style="color: red;">pass</strong>
+								</ul>
+								<strong style="color: red;">def</strong> desplazar(self):
+								<ul>
+									<strong style="color: blue;">print</strong>(<strong style="color: green;">"El animal nada"</strong>)
+								</ul>
+							</ul>
+							<strong style="color: red;">class</strong> Cocodrilo(Terrestre, Acuatico):
+							<ul>
+								<strong style="color: red;">pass</strong>
+							</ul>
+							<br>
+							c = <strong>Cocodrilo()</strong> <br>
+							c<strong>.desplazar()</strong>
+						</td>
+					</tr>
+					<tr>
+						<th>Resultado</th>
+					</tr>
+					<tr>
+						<td>
+							El animal anda
+						</td>
+					</tr>
+				</table>
+				<br>
+				<p>
+					Lo mismo ocurre para el caso de constructor, en caso de que se requiera el uso de el constructor <br>
+					de alguna clase específica puede usarse la sintaxis anteriormente vista, <strong>SuperClase.metodo(self, args).</strong>
+				</p>
+				<br>
+				<table>
+					<tr>
+						<th>Código</th>
+					</tr>
+					<tr>
+						<td>
+							Definir diferentes clases con sus métodos y atributos, luego implementar herencia <br>
+							múltiple en una de ellas. <br><br>
+							<strong style="color: red;">class</strong> Terrestre:
+							<ul>
+								<strong style="color: red;">def __init__</strong>(self):
+								<ul>
+									<strong style="color: blue;">print</strong>(<strong style="color: green;">"Este es el constructor de la clase Terrestre"</strong>)
+								</ul>
+								<strong style="color: red;">def</strong> desplazar(self):
+								<ul>
+									<strong style="color: blue;">print</strong>(<strong style="color: green;">"El animal anda"</strong>)
+								</ul>
+							</ul>
+							<strong style="color: red">class</strong> Acuatico:
+							<ul>
+								<strong style="color: red;">def __init__</strong>(self):
+								<ul>
+									<strong style="color: blue;">print</strong>(<strong style="color: green;">"Este es el constructor de la clase Acuático"</strong>)
+								</ul>
+								<strong style="color: red;">def</strong> desplazar(self):
+								<ul>
+									<strong style="color: blue;">print</strong>(<strong style="color: green;">"El animal nada"</strong>)
+								</ul>
+							</ul>
+							<strong style="color: red;">class</strong> Cocodrilo(Terrestre, Acuatico):
+							<ul>
+								<strong style="color: red;">pass</strong>
+							</ul>
+							<br>
+							c = <strong>Cocodrilo()</strong>
+						</td>
+					</tr>
+					<tr>
+						<th>Resultado</th>
+					</tr>
+					<tr>
+						<td>
+							Este es el constructor de la clase Terrestre
+						</td>
+					</tr>
+				</table>
+				<br>
+				<table>
+					<tr>
+						<th>Código</th>
+					</tr>
+					<tr>
+						<td>
+							Definir diferentes clases con sus métodos y atributos, luego implementar herencia <br>
+							múltiple en una de ellas. <br><br>
+							<strong style="color: red;">class</strong> Terrestre:
+							<ul>
+								<strong style="color: red;">def __init__</strong>(self):
+								<ul>
+									<strong style="color: blue;">print</strong>(<strong style="color: green;">"Este es el constructor de la clase Terrestre"</strong>)
+								</ul>
+								<strong style="color: red;">def</strong> desplazar(self):
+								<ul>
+									<strong style="color: blue;">print</strong>(<strong style="color: green;">"El animal anda"</strong>)
+								</ul>
+							</ul>
+							<strong style="color: red">class</strong> Acuatico:
+							<ul>
+								<strong style="color: red;">def __init__</strong>(self):
+								<ul>
+									<strong style="color: blue;">print</strong>(<strong style="color: green;">"Este es el constructor de la clase Acuático"</strong>)
+								</ul>
+								<strong style="color: red;">def</strong> desplazar(self):
+								<ul>
+									<strong style="color: blue;">print</strong>(<strong style="color: green;">"El animal nada"</strong>)
+								</ul>
+							</ul>
+							<strong style="color: red;">class</strong> Cocodrilo(Terrestre, Acuatico):
+							<ul>
+								<strong style="color: red;">def __init__</strong>(self):
+								<ul>
+									<strong>Acuatico.</strong><strong style="color: red;">__init__</strong>(self)
+								</ul>
+							</ul>
+							<br>
+							c = <strong>Cocodrilo()</strong>
+						</td>
+					</tr>
+					<tr>
+						<th>Resultado</th>
+					</tr>
+					<tr>
+						<td>
+							Este es el cosntructor de la clase Acuático
+						</td>
+					</tr>
+				</table>
+				<br><br>
+				<p>
+					En el segundo ejemplo se define cual de los constructores de las superclases se va a utilizar, permitiéndonos especificar <br>
+					qué métodos usará de cada una de las clases padre sin importar quien esté más a su derecha en la definición de la clase.
+				</p>
+			</center>
+		</article>
+		<article class="post">
+			<center>
+				<h2 style="color: #C66250;">Herencia multinivel en Python</h2>
+			</center>
+		</article>
 	</section>
 </body>
 </html>
