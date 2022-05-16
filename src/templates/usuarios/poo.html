@@ -659,6 +659,61 @@
 		<article class="post">
 			<center>
 				<h2 style="color: #C66250;">Herencia multinivel en Python</h2>
+				<p>
+					Por otro lado, también podemos heredar de una clase derivada. Esto se llama herencia multinivel y puede ser de cualquier <br>
+					profundidad en Python. <br>
+					En la herencia multinivel, las características de la clase base y la clase derivada se heredan en la nueva clase derivada.
+				</p>
+				<br>
+				<table>
+					<tr>
+						<th>Código</th>
+					</tr>
+					<tr>
+						<td>
+							Definir diferentes clases con sus métodos y atributos, luego implementar herencia <br>
+							multinivel entre ellas. <br><br>
+							<strong style="color: red;">class</strong> Figura: 
+							<ul>
+								<strong style="color: red;">def __init__</strong>(self, area):
+								<ul>
+									<strong style="color: orange;">self</strong>.area = area
+								</ul>
+								<strong style="color: red;">def</strong> retornar_area(self):
+								<ul>
+									<strong style="color: blue;">print</strong>(<strong style="color: green;">"El área de la figura es: "</strong>, <strong style="color: orange;">self</strong>.area)
+								</ul>
+							</ul>
+							<strong style="color: red;">class</strong> Poligono(Figura):
+							<ul>
+								<strong style="color: red;">def __init__</strong>(self, lados, area):
+								<ul>
+									<strong>Figura.</strong><strong style="color: red;">__init__</strong>(self, area) <br>
+									<strong style="color: orange;">self</strong>.lados = lados
+								</ul>
+								<strong style="color: red;">def</strong> retornar_lados(self):
+								<ul>
+									<strong style="color: blue;">print</strong>(<strong style="color: green;">"Los lados del poligono son: "</strong>, <strong style="color: orange;">self</strong>.lados)
+								</ul>
+							</ul>
+							<strong style="color: red;">class</strong> Cuadrilatero(Poligono):
+							<ul>
+								<strong style="color: red;">def __init__</strong>(self, area):
+								<ul>
+									<strong>Poligono.</strong><strong style="color: red;">__init__</strong>(self, <strong style="color: red;">4</strong>, area)
+								</ul>
+							</ul>
+						</td>
+					</tr>
+				</table>
+				<br>
+				<p>
+					Aquí por ejemplo, <strong>Poligono</strong> se deriva de <strong>Figura</strong>, y <strong>Cuadrilatero</strong> se deriva de <br>
+					<strong>Poligono</strong> por lo que <strong>Cuadrilatero</strong> tendra los métodos y atributos tanto de las clase <strong>Poligono</strong><br>
+					como de la clase <strong>Figura</strong>. Si en la clase <strong>Poligono</strong> alguno de los métodos de <strong>Figura</strong> es redefinido <br>
+					<strong>Cuadrilatero</strong> heredara del método redfinido.
+				</p>
+				<br><br>
 			</center>
 		</article>
 	</section>
