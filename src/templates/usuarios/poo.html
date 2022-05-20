@@ -714,6 +714,60 @@
 					<strong>Cuadrilatero</strong> heredara del método redfinido.
 				</p>
 				<br><br>
+				<p>
+					<strong>
+						Nota: En el diseño de jerarquías de herencia no siempre es del todo fácil decidir cuándo una clase <br>
+						debe extender a otra. La regla práctica para decidir si una clase (S) puede ser definida como heredera <br>
+						de otra (T) es que debe cumplirse que "S es un T". Por ejemplo, Perro es una Animal, pero Vehiculo no es un Motor.
+					</strong>
+				</p>
+			</center>
+		</article>
+		<br><br>
+		<article class="post">
+			<center>
+				<h2 style="color: #C66250;">Método de resolución de orden en Python</h2>
+				<p>
+					Cada clase en Python se deriva de la clase <strong>object</strong>. Es el tipo más básico en Python. <br>
+					Así que técnicamente, todas las demás clases, ya sean integradas o definidas por el usuario, son clases <br>
+					derivadas y todos los objetos son instancias de la clase <strong>object</strong>.
+				</p>
+				<br>
+				<table>
+					<tr>
+						<th>Código</th>
+					</tr>
+					<tr>
+						<td>
+							Evaluar distintos tipos de datos para verificar que son instancias de la clase <br>
+							object. <br><br>
+							<strong style="color: blue;">print</strong>( <strong style="color: blue;">issubclass</strong>(<strong style="color: blue;">list</strong>,<strong style="color: blue;">object</strong>)) <br>
+							<strong style="color: blue;">print</strong>( <strong style="color: blue;">isinstance</strong>(<strong style="color: red;">5.5</strong>,<strong style="color: blue;">object</strong> )) <br>
+							<strong style="color: blue;">print</strong>( <strong style="color: blue;">isinstance</strong>(<strong style="color: green;">"Hola"</strong>,<strong style="color: blue;">object</strong> ))
+						</td>
+					</tr>
+					<tr>
+						<th>Resultado</th>
+					</tr>
+					<tr>
+						<td>
+							True <br>
+							True <br>
+							True
+						</td>
+					</tr>
+				</table>
+				<br>
+				<p>
+					En el escenario de herencia múltiple, cualquier atributo especificado se busca primero en la clase actual. <br>
+					Si no se encuentra, la búsqueda continúa en la clases primarias en profundidad, de izquierda a derecha, sin <br>
+					buscar la misma clase dos veces. <br>
+					Por lo tanto, en el ejemplo anterior de la clase <strong>Cuadrilatero</strong> el orden de búsqueda es <br>
+					<strong>[Cuadrilatero, Poligono, Figura, object]</strong>. Este orden también se denomina linealización de la clase <br>
+					<strong>Cuadrilatero</strong> y el conjunto de reglas que se utiliza para encontrar este orden se denomina: <br>
+					Orden de resolución de métodos, MRO por sus siglas en inglés (Method Resolution Orden). <br>
+					El MRO de una clase puede verse como el atributo <strong>__mro__</strong> o el método <strong>mro()</strong>. <br>
+					El primero devuelve una tupla mientras que el segundo devuelve una lista.
 			</center>
 		</article>
 	</section>
