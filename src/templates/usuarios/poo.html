@@ -768,7 +768,133 @@
 					Orden de resolución de métodos, MRO por sus siglas en inglés (Method Resolution Orden). <br>
 					El MRO de una clase puede verse como el atributo <strong>__mro__</strong> o el método <strong>mro()</strong>. <br>
 					El primero devuelve una tupla mientras que el segundo devuelve una lista.
+				</p>
+				<br>
 			</center>
+			<ul>
+				<ul>
+					<table>
+						<tr>
+							<th>Código</th>
+						</tr>
+						<tr>
+							<td>
+								Definir diferentes clases con sus métodos y atributos, luego implementar herencia multinivel entre ellas. <br> 
+								Luego imprimir el Orden de Resolución de métodos. <br><br>
+								<strong style="color: red;">class</strong> Figura: 
+								<br><br>
+								<ul>
+									<strong style="color: red;">def __init__</strong>(self, area):
+									<ul>
+										<strong style="color: orange;">self</strong>.area = area
+									</ul>
+									<br>
+									<strong style="color: red;">def</strong> retornar_area(self):
+									<ul>
+										<strong style="color: blue;">print</strong>(<strong style="color: green;">"El área de la figura es: "</strong>, <strong style="color: orange;">self</strong>.area)
+									</ul>
+								</ul>
+								<br>
+								<strong style="color: red;">class</strong> Poligono(Figura):
+								<br><br>
+								<ul>
+									<strong style="color: red;">def __init__</strong>(self, lados, area):
+									<ul>
+										<strong>Figura.</strong><strong style="color: red;">__init__</strong>(self, area) <br>
+										<strong style="color: orange;">self</strong>.lados = lados
+									</ul>
+									<br>
+									<strong style="color: red;">def</strong> retornar_lados(self):
+									<ul>
+										<strong style="color: blue;">print</strong>(<strong style="color: green;">"Los lados del poligono son: "</strong>, <strong style="color: orange;">self</strong>.lados)
+									</ul>
+								</ul>
+								<br>
+								<strong style="color: red;">class</strong> Cuadrilatero(Poligono):
+								<ul>
+									<strong style="color: red;">def __init__</strong>(self, area):
+									<ul>
+										<strong>Poligono.</strong><strong style="color: red;">__init__</strong>(self, <strong style="color: red;">4</strong>, area)
+									</ul>
+								</ul>
+								<br><br>
+								<strong style="color: blue;">print</strong>(<strong>Cuadrilatero.</strong><strong style="color: red;">__mro__</strong>) <br>
+								<strong style="color: blue;">print</strong>(<strong>Cuadrilatero.</strong>mro())
+							</td>
+						</tr>
+						<tr>
+							<th>Resultado</th>
+						</tr>
+						<tr>
+							<td>
+								(class '__main__.Cuadrilatero'>, class '__main__.Poligono'>, class <br>
+									'__main__.Figura'>, class 'object'>) <br>
+									[class '__main__.Cuadrilatero'>, class '__main__.Poligono'>, class <br>
+									'__main__.Figura'>, class 'object'>]
+							</td>
+						</tr>
+					</table>
+					<br><br>
+					<p>
+						Aquí hay un ejemplo de herencia múltiple un poco más complejo y su visualización junto con el MRO.
+					</p>
+					<br>
+					<center>
+						<table>
+							<tr>
+								<th>Código</th>
+							</tr>
+							<tr>
+								<td>
+									Definir diferentes clases con sus métodos y atributos, luego implementar herencia multinivel entre ellas. <br>
+									Luego imprimir el orden de resolución de métodos. <br><br>
+									<strong style="color: red;">class</strong> X:
+									<br><br>
+									<ul>
+										<strong style="color: red;">pass</strong>
+									</ul>
+									<br>
+									<strong style="color: red;">class</strong> Y:
+									<ul>
+										<strong style="color: red;">pass</strong>
+									</ul>
+									<br>
+									<strong style="color: red;">class</strong> Z:
+									<ul>
+										<strong style="color: red;">pass</strong>
+									</ul>
+									<br>
+									<strong style="color: red;">class</strong> A(X, Y):
+									<ul>
+										<strong style="color: red;">pass</strong>
+									</ul>
+									<br>
+									<strong style="color: red;">class</strong> B(Y, Z):
+									<ul>
+										<strong style="color: red;">pass</strong>
+									</ul>
+									<strong style="color: red;">class</strong> M(B, A, Z):
+									<ul>
+										<strong style="color: red;">pass</strong>
+									</ul>
+									<br><br>
+									<strong style="color: blue;">print</strong>(<strong>M.</strong>mro())
+								</td>
+							</tr>
+							<tr>
+								<th>Resultado</th>
+							</tr>
+							<tr>
+								<td>
+									[class '__main__.M'>, class '__main__.B'>, class '__main__.A'>, class <br>
+										'__main__.X'>, class '__main__.Y'>, class '__main__.Z'>, class <br>
+										'object'>]
+								</td>
+							</tr>
+						</table>
+					</center>
+				</ul>
+			</ul>
 		</article>
 	</section>
 </body>
