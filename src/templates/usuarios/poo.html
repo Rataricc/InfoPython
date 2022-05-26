@@ -1103,6 +1103,110 @@
 					se produzca de forma controlada. Para esto podemos escribir métodos cuyo único cometido sea este, métodos que normalmente, <br>
 					por convención, tienen nombres como getVariable y setVariable; de ahí que se conozcan también con el nombre de getters y setters.
 				</p>
+				<br>
+				<table>
+					<tr>
+						<th>Código</th>
+					</tr>
+					<tr>
+						<td>
+							Definir una clase con sus atributos privados y sus métodos getters y setters. <br><br>
+							<strong style="color: red;">class</strong> Fecha():
+							<ul>
+								<strong style="color: red;">def __init__</strong>(self):
+								<ul>
+									<strong style="color: orange;">self</strong>.__dia = <strong style="color: red;">1</strong>
+								</ul>
+								<br>
+								<strong style="color: red;">def</strong> getDia(self):
+								<ul>
+									<strong style="color: red;">return</strong> <strong style="color: orange;">self</strong>.__dia
+								</ul>
+								<br>
+								<strong style="color: red;">def</strong> setDia(self, dia):
+								<ul>
+									<strong style="color: red;">if</strong> dia > <strong style="color: red;">0</strong> <strong style="color: #1A91C2;">and</strong> dia < <strong style="color: red;">31</strong>:
+									<ul>
+										<strong style="color: orange;">self</strong>.__dia = dia
+									</ul>
+									<strong style="color: red;">else</strong>:
+									<ul>
+										<strong style="color: blue;">print</strong>(<strong style="color: green;">"Error"</strong>)
+									</ul>
+								</ul>
+							</ul>
+							<br><br>
+							mi_fecha = <strong>Fecha()</strong><br><br>
+							mi_fecha.setDia(<strong style="color: red;">33</strong>) <br><br>
+							mi_fecha.__dia= <strong style="color: red;">30</strong><br>
+							<strong style="color: blue;">print</strong>(mi_fecha.getDia())
+						</td>
+					</tr>
+					<tr>
+						<th>Resultado</th>
+					</tr>
+					<tr>
+						<td>
+							Error <br>
+							1
+						</td>
+					</tr>
+				</table>
+				<br><br>
+				<p>
+					Esto se podría simplificar mediante propiedades, que abstraen al usuario del hecho de que se está utilizando métodos accesores <br>
+					para obtener y modificar los valores del atributo:
+				</p>
+				<br>
+				<table>
+					<tr>
+						<th>Código</th>
+					</tr>
+					<tr>
+						<td>
+							Definir una clase con sus atributos privados y sus métodos getters y setters. <br><br>
+							<strong style="color: red;">class</strong> Fecha():
+							<ul>
+								<strong style="color: red;">def __init__</strong>(self):
+								<ul>
+									<strong style="color: orange;">self</strong>.__dia = <strong style="color: red;">1</strong>
+								</ul>
+								<br>
+								<strong style="color: red;">def</strong> getDia(self):
+								<ul>
+									<strong style="color: red;">return</strong> <strong style="color: orange;">self</strong>.__dia
+								</ul>
+								<br>
+								<strong style="color: red;">def</strong> setDia(self, dia):
+								<ul>
+									<strong style="color: red;">if</strong> dia > <strong style="color: red;">0</strong> <strong style="color: #1A91C2;">and</strong> dia < <strong style="color: red;">31</strong>:
+									<ul>
+										<strong style="color: orange;">self</strong>.__dia = dia
+									</ul>
+									<strong style="color: red;">else</strong>:
+									<ul>
+										<strong style="color: blue;">print</strong>(<strong style="color: green;">"Error"</strong>)
+									</ul>
+								</ul>
+								<br>
+								dia = <strong style="color: blue;">property</strong>(getDia, setDia)
+							</ul>
+							<br><br>
+							mi_fecha = <strong>Fecha()</strong><br><br>
+							mi_fecha.dia = <strong style="color: red;">30</strong><br><br>
+							<strong style="color: blue;">print</strong>(mi_fecha.dia)
+						</td>
+					</tr>
+					<tr>
+						<th>Resultado</th>
+					</tr>
+					<tr>
+						<td>
+							30
+						</td>
+					</tr>
+				</table>
+				<br><br>
 			</center>
 		</article>
 	</section>
