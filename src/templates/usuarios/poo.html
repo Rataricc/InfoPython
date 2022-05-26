@@ -965,6 +965,144 @@
 					En encapuslamiento nos permite definir niveles de privacidad para señalar qué métodos y atributos no deben utilizarse fuera <br>
 					de la clase y así evitar exponer excesivamente los detalles de la implementación de una clase o un objeto.
 				</p>
+				<p>
+					Esto se consigue en otros lenguajes de programación como Java utilizando modificadores de acceso que definen si cualquiera puede <br>
+					acceder a esa función o variable(public) o si está restringiendo el acceso a la propia clase (private).
+				</p>
+				<p>
+					En Python no existen los modificadores de acceso, y lo que se suele hacer es usar convenciones a la hora de nombrar métodos y atributos, <br>
+					de forma que se señala su carácter privado, para su exlcusión del espacio de nombres, o para indicar una función especial, normalmente <br>
+					asociada a funcionamiento estándar del lenguaje.
+				</p>
+				<ul>
+					<li>
+						<strong>_nombre:</strong> Los nombres que comienzan con un único guión bajo indican de forma débil un uso interno. <br>
+						Además, estos nombres no se incorporan en el espacio de nombres de un módulo al importarlo con "from...import *".
+					</li>
+					<li>
+						<strong>__nombre:</strong>Los nombres que empiezan por dos guiones bajos (y no termina también con dos guiones bajos) <br>
+						indican su uso privado en la clase.
+					</li>
+					<li>
+						<strong>__nombre__:</strong>Los nombres que comiezan y acaban con dos guiones bajos indican atributos "mágicos", de uso <br>
+						especial y que residen en espacios de nombres que puede manipular el usuario. Solamente deben usarse en la menera que se describe <br>
+						en la documentación de Python y debe evitarse la creación de nuevos atributos de este tipo. <br><br>
+						Algunos ejemplos  de nombres "singulares" de este tipo son: 
+						<ul>
+							<li>
+								<strong>__init__:</strong> Método de inicialización de objetos
+							</li>
+							<li>
+								<strong>__del__:</strong> Método de destrucción de objetos
+							</li>
+							<li>
+								<strong>__doc__:</strong> Cadena de documentación de módulos, clases...
+							</li>
+							<li>
+								<strong>__class__:</strong> nombre de la clase
+							</li>
+							<li>
+								<strong>__str__:</strong> Método que devuelve una descripción de la clase como cadena de texto
+							</li>
+							<li>
+								<strong>__repr__:</strong> Método que devuelve una representación de la clase como cadena de texto
+							</li>
+							<li>
+								<strong>__module__:</strong> Módulo al que pertence la clase
+							</li>
+						</ul>
+					</li>
+				</ul>
+				<br><br>
+				<p>
+					En el siguiente ejemplo sólo se imprimirá la cadena correspondiente al método <strong>publico(),</strong> mientras <br>
+					que al intentar llamar al método <strong>__privado()</strong> Python lanzará una excepción debido a que no existe, <br>
+					evidentemente existe pero no podemos ver porque es privado.
+				</p>
+				<br><br>
+				<table>
+					<tr>
+						<th>Código</th>
+					</tr>
+					<tr>
+						<td>
+							Definir una clase con métodos públicos y privados. <br><br>
+							<strong style="color: red;">class</strong> Ejemplo:
+							<ul>
+								<strong style="color: red;">def</strong> publico(self):
+								<ul>
+									<strong style="color: blue;">print</strong>(<strong style="color: green;">"Publico"</strong>)
+								</ul>
+								<strong style="color: red;">def</strong>__privado(self): 
+								<ul>
+									<strong style="color: blue;">print</strong>(<strong style="color: green;">"Privado"</strong>)
+								</ul>
+							</ul>
+							<br>
+							ej = <strong>Ejemplo</strong>() <br>
+							ej.publico() <br>
+							ej.__privado()
+						</td>
+					</tr>
+					<tr>
+						<th>Resultado</th>
+					</tr>
+					<tr>
+						<td>
+							Publico <br>
+							Traceback (most recent call last): <br>
+							File "input>", line 11, in module> <br>
+							AttributeError: 'Ejemplo' object has no attribute '__privado'
+						</td>
+					</tr>
+				</table>
+				<br><br>
+				<p>
+					Este mecanismo se basa en que los nombres que comienzen con un doble guión bajo se renombran para incluir <br>
+					el nombre de la clase (característica que se conoce con el nombre de name mangling). Esto implica que el <br>
+					método o atributo no es realmente privado, y podemos acceder a él mediante una pequeña trampa:
+				</p>
+				<br>
+				<table>
+					<tr>
+						<th>Código</th>
+					</tr>
+					<tr>
+						<td>
+							Definir una clase con métodos públicos y privados. <br><br>
+							<strong style="color: red;">class</strong> Ejemplo:
+							<ul>
+								<strong style="color: red;">def</strong> publico(self):
+								<ul>
+									<strong style="color: blue;">print</strong>(<strong style="color: green;">"Publico"</strong>)
+								</ul>
+								<strong style="color: red;">def</strong>__privado(self): 
+								<ul>
+									<strong style="color: blue;">print</strong>(<strong style="color: green;">"Privado"</strong>)
+								</ul>
+							</ul>
+							<br>
+							ej = <strong>Ejemplo</strong>() <br><br>
+							ej.publico() <br>
+							ej.<strong>_Ejemplo</strong>__privado()
+						</td>
+					</tr>
+					<tr>
+						<th>Resultado</th>
+					</tr>
+					<tr>
+						<td>
+							Publico <br>
+							Privado
+						</td>
+					</tr>
+				</table>
+				<br><br>
+				<p>
+					En ocasiones también puede suceder que queremos permitir el acceso a algún atributo de nuestro objeto, pero que este <br>
+					se produzca de forma controlada. Para esto podemos escribir métodos cuyo único cometido sea este, métodos que normalmente, <br>
+					por convención, tienen nombres como getVariable y setVariable; de ahí que se conozcan también con el nombre de getters y setters.
+				</p>
 			</center>
 		</article>
 	</section>
