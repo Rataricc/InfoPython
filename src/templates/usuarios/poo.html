@@ -1231,6 +1231,143 @@
 				</p>
 			</center>
 		</article>
+		<article class="post">
+			<center>
+				<h2 style="color: #C66250;">Sobrecarga de Métodos</h2>
+				<p>
+					La sobrecarga de métodos es también conocida por Overriding Methods, le permite sustituir un método proveniente de la Clase Base, <br>
+					en la Clase Derivada debe definir un método con la misma forma (es decir, mismo nombre de método y mismo número de párametros que <br> 
+					como está definido en la Clase Base).
+				</p>
+				<br>
+				<table>
+					<tr>
+						<th>
+							Código
+						</th>
+					</tr>
+					<tr>
+						<td>
+							Definir una clase con sus métodos y atributos implementando sobrecarga de métodos. <br><br>
+							<strong style="color: red;">class</strong> Persona():
+							<ul>
+								<strong style="color: red;">def__init__</strong>(self, cedula): 
+								<ul>
+									<strong style="color: orange;">self</strong>.cedula = cedula
+								</ul>
+								<br>
+								<strong style="color: red;">def</strong> mensaje(self):
+								<ul>
+									<strong style="color: blue;">print</strong>(<strong style="color: green;">"Mensaje desde la clase Persona"</strong>)
+								</ul>
+							</ul>
+							<br>
+							<strong style="color: red;">class</strong> Obrero(Persona):
+							<ul>
+								<strong style="color: red;">def__init__</strong>(self, cedula):
+								<ul>
+									<strong>Persona.</strong><strong style="color: red;">__init__</strong>(self, cedula)
+									<strong style="color: orange;">self</strong>.__especialista = <strong style="color: red;">1</strong>
+								</ul>
+								<br>
+								<strong style="color: red;">def</strong> mensanje(self):
+								<ul>
+									<strong style="color: blue;">print</strong>(<strong style="color: green;">"Mensaje desde la clase Obrero"</strong>)
+								</ul>
+							</ul>
+							<br><br>
+							obrero_planta = <strong>Obrero</strong>(<strong style="color: red;">12345</strong>) <br>
+							obrero_planta.mensaje() <br>
+						</td>
+					</tr>
+					<tr>
+						<th>
+							Resultado
+						</th>
+					</tr>
+					<tr>
+						<td>
+							Mensaje desde la clase Obrero
+						</td>
+					</tr>
+				</table>
+				<br><br>
+			</center>
+			<ul>
+				<ul>
+					<ul>
+						<p>
+							Lo que se logra definiendo el método <strong>mensaje()</strong> en la Clase Derivada <strong>(Obrero)</strong> se conoce como <br>
+							Método Overriding haciendo que cuando se crea el objeto (en este caso  <strong>obrero_planta</strong>) y se llame al método <br>
+							<strong>mensaje()</strong> este será tomado de la propia clase y no de la Clase Base <strong>Persona</strong>. <br>
+							Si comenta o borra el método <strong>mensaje()</strong> de la clase <strong>Obrero</strong> (Clase Derivada) y corre nuevamente <br>
+							el código, el método llamado será el <strong>mensaje()</strong> de la Clase Base <strong>Persona</strong>.
+						</p>
+					</ul>
+				</ul>
+			</ul>
+		</article>
+		<article class="post">
+			<center>
+				<h2 style="color: #C66250;">Sobrecarga de Operadores</h2>
+			</center>
+			<ul>
+				<ul>
+					<ul>
+						<ul>
+							<p>
+								La sobrecarga de operadores es también conocida por Overloading Operators, trata básicamente de lo mismo <br>
+								que la sobrecarga de métodos pero pertenece en esencia al ámbito de los operadores aritméticos, binarios, <br>
+								de comparación y lógicos.
+							</p>
+							<ul>
+								<table>
+									<tr>
+										<th>
+											Código
+										</th>
+									</tr>
+									<tr>
+										<td>
+											Definir una clase con sus métodos y atributos implementando sobrecarga de operadores. <br><br>
+											<strong style="color: red;">class</strong> Punto:
+											<ul>
+												<strong style="color: red;">def__init__</strong>(self, x = <strong style="color: red;">0</strong>, y = <strong style="color: red;">0</strong>):
+												<ul>
+													<strong style="color: orange;">self</strong>.x = x <br>
+													<strong style="color: orange;">self</strong>.y = y
+												</ul>
+												<br>
+												<strong style="color: red;">def__add__</strong>(self, other):
+												<ul>
+													x = <strong style="color: orange;">self</strong>.x + other.x <br>
+													y = <strong style="color: orange;">self</strong>.y + other.y <br>
+													<strong style="color: red;">return</strong> x, y
+												</ul>
+											</ul>
+											<br><br>
+											punto1 = <strong>Punto</strong>(<strong style="color: red;">4</strong>,<strong style="color: red;">6</strong>) <br>
+											punto2 = <strong>Punto</strong>(<strong style="color: red;">1</strong>,<strong style="color: red;">-2</strong>) <br><br>
+											<strong style="color: blue;">print</strong>(punto1 + punto2)
+										</td>
+									</tr>
+									<tr>
+										<th>
+											Resultado
+										</th>
+									</tr>
+									<tr>
+										<td>
+											(5, 4)
+										</td>
+									</tr>
+								</table>
+							</ul>
+						</ul>
+					</ul>
+				</ul>
+			</ul>
+		</article>
 	</section>
 </body>
 </html>
