@@ -6,7 +6,9 @@
 	</center>	
 
 	<form method="POST">{% csrf_token %}
-		{{form.as_p}}
+		<!--{{form.as_p}}-->
+		{% include "includes/_forms_errors.html" %}
+		{% include "includes/_forms.html" %}
 		<br>
 		<button type="submit" class="btn btn-success">Registrar</button>
 		<a class="btn btn-danger" href="{% url 'principal' %}">Cancelar</a>
