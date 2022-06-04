@@ -18,13 +18,21 @@ class UserForm(UserCreationForm):
 		model = Usuario
 		fields = ('nombre', 'apellido', 'nombre_de_usuario', 'email', 'fecha_de_nacimiento', 'localidad', 'password1', 'password2')
 	
-	def clean_nombre_de_usuario(self): 
+	def clean_nombre_de_usuario(self): # No funciona al parcer.
 		nombre_de_usuario = self.cleaned_data["nombre_de_usuario"]
 
 		if len(nombre_de_usuario) < 3: 
 			self.add_error("nombre_de_usuario", "La longitud del nombre de usuario debe de ser mayor a 3")
 
 		return nombre_de_usuario
+
+	def clean_nombre(self):    #Tampoco funciona.
+		nombre = self.cleaned_data["nombre"]
+
+		if len(nombre) < 3: 
+			self.add_error("nombre", "La longitud del nombre de usuario debe de ser mayor a 3")
+
+		return nombre
 	"""
 	def clean_password1(self): 
 		password1 = self.cleaned_data["password1"]
