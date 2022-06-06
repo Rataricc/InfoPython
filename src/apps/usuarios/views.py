@@ -8,6 +8,7 @@ from .forms import UserForm
 def registro_de_usuario(request): 
 	template_name = "usuarios/registro.html"
 	
+	form=UserForm()
 	if request.method == 'POST': 
 		form = UserForm(request.POST)
 		if form.is_valid(): 
@@ -15,7 +16,7 @@ def registro_de_usuario(request):
 			return redirect('principal') 
 	
 	ctx = {
-		'form':UserForm
+		'form':form
 	}
 	return render(request, template_name, ctx)
 
