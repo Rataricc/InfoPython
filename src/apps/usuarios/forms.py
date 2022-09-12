@@ -5,14 +5,30 @@ from .models import Usuario
 
 
 class UserForm(UserCreationForm): 
-	first_name = forms.CharField(widget=forms.TextInput(attrs={'class':'form-control'}))
-	last_name = forms.CharField(widget=forms.TextInput(attrs={'class':'form-control'}))
-	email = forms.EmailField(widget=forms.EmailInput(attrs={'class':'form-control'}))
-	fecha_de_nacimiento = forms.DateField(widget=forms.DateInput(attrs={'class':'form-control'}))
-	localidad = forms.CharField(widget=forms.TextInput(attrs={'class':'form-control'}))
-	username = forms.CharField(widget=forms.TextInput(attrs={'class':'form-control'}))
-	password1 = forms.CharField(widget=forms.PasswordInput(attrs={'class':'form-control'}))
-	password2 = forms.CharField(widget=forms.PasswordInput(attrs={'class':'form-control'}))
+	first_name = forms.CharField(label='Nombre', widget=forms.TextInput(attrs={
+		'class':'form-control', 
+		'placeholder': 'Introdusca el Nombre'}))
+	last_name = forms.CharField(label='Apellido', widget=forms.TextInput(attrs={
+		'class':'form-control',
+		'placeholder':'Introdusca el Apellido'}))
+	email = forms.EmailField(widget=forms.EmailInput(attrs={
+		'class':'form-control',
+		'placeholder':'Introdusca direccion de correo electronico'}))
+	fecha_de_nacimiento = forms.DateField(widget=forms.DateInput(attrs={
+		'class':'form-control',
+		'placeholder':'Introdusca su fecha de nacimiento'}))
+	localidad = forms.CharField(widget=forms.TextInput(attrs={
+		'class':'form-control',
+		'placeholder':'Ingrese su localidad'}))
+	username = forms.CharField(label='Nombre de Usuario', widget=forms.TextInput(attrs={
+		'class':'form-control',
+		'placeholder':'Nombre de Usuario'}))
+	password1 = forms.CharField(label='Contraseña', widget=forms.PasswordInput(attrs={
+		'class':'form-control',
+		'placeholder':'Cree una Contraseña'}))
+	password2 = forms.CharField(label='Confirmar Contraseña', widget=forms.PasswordInput(attrs={
+		'class':'form-control',
+		'placeholder':'Confirme su Contraseña'}))
 
 	class Meta: 
 		model = Usuario

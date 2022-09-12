@@ -14,9 +14,10 @@ def registro_de_usuario(request):
 		if form.is_valid(): 
 			form.save()
 			return redirect('principal') 
-	
+	titulo= 'Formulario de registro de Usuarios'
 	ctx = {
-		'form':form
+		'form':form, 
+		'titulo':titulo,
 	}
 	return render(request, template_name, ctx)
 

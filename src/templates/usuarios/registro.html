@@ -4,16 +4,42 @@
 	<center>
 		<h2>Registrarse</h2>
 	</center>	
-
-	<form method="POST">{% csrf_token %}
-		<!--{{form.as_p}}-->
-		{% include "includes/_forms_errors.html" %}
-		{% include "includes/_forms.html" %}
-		<br>
-		<button type="submit" class="btn btn-success">Registrar</button>
-		<a class="btn btn-danger" href="{% url 'principal' %}">Cancelar</a>
-		<button type="reset" class="btn btn-secondary">Limpiar</button>
-		<hr>
-	</form>
+	<div class="album py-5 bg-light">
+		<div class="container">
+			<!--En esta linea iba un div class "row" cambia de posicion el formulario y su pone hacia la izquierda-->
+			<!--Cambie por un left y tambien cambio el form de registro de users-->
+			<div class="left">
+				<div class="bd-example">
+					<div class="col">
+						<form method="POST">{% csrf_token %}
+							<div class="card card-primary">
+								<div class="card-header">
+									<h3 class="card-title">
+										<i class="fas fa-plus"></i>
+											<center style="color: rgb(60, 128, 0);">
+												{{titulo}}
+											</center>
+									</h3>
+								</div>
+								<div class="card-body">
+									<div class="form-group">
+										<!--{{form.as_p}}-->
+										{% include "includes/_forms_errors.html" with formulario=form %}
+										{% include "includes/_forms.html" with formulario=form %}
+										<br>
+										<center>
+											<button type="submit" class="btn btn-success">Registrar</button>
+											<a class="btn btn-danger" href="{% url 'principal' %}">Cancelar</a>
+											<button type="reset" class="btn btn-secondary">Limpiar</button>
+										</center>
+									</div>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 {% endblock contenido %}
 
