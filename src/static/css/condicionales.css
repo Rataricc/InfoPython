@@ -26,3 +26,9 @@ header h1 {
 .right {
 	float: right;
 }
+
+footer {
+	background-color: #364552;
+	padding: 3rem;
+	color: #efefef;
+}

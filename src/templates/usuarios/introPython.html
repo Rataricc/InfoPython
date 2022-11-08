@@ -7,6 +7,27 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="../../static/css/intro.css">
+	<style>
+		footer {
+			background-color: #364552;
+			padding: 3rem;
+			color: #efefef;
+		}
+		footer section {
+			float: right;
+		}
+		footer p {
+			margin: 0;
+		}
+		footer a {
+			transition: color 0.3s ease;
+			color: #efefef;
+			text-decoration: none;
+		}
+		footer a:hover {
+			color: cornflowerblue;
+		}
+	</style>
 </head>
 <body>
 	<header>
@@ -78,60 +99,68 @@
 			<img src="{% static 'img/parablog6.jpg'%}" height="300px">
 		</article>
 		<article class="post">
-			<br>
-			<h2>¿Qué ventajas nos ofrece Python como lenguaje interpretado?</h2>
-			<ul>
-				<li>Al ser interpretado no necesitamos compilar ahorrándonos mucho tiempo en el <br>desarrollo y prueba de una aplicación.</li>
-				<li>Nuestro código fuente puede ser ejecutado en culquier sistema operativo siempre <br>y cuando este disponga del intérprete (Windows,Linux, Mac, Android, Web).</li>
-			</ul>
-			<h3 style="color: #FF5733;">Multiparadigma</h3>
-			<p>
-				Python es un lenguaje que soporta más de un paradigma a la hora de programar.
-				<br><br>
-				Los paradigmas soportados son: 
+			<center>
+				<br>
+				<h2>¿Qué ventajas nos ofrece Python como lenguaje interpretado?</h2>
 				<ul>
-					<li>Imperativo</li>
-					<li>Funcional</li>
-					<li>Orientado a Objetos</li>
+					<li>Al ser interpretado no necesitamos compilar ahorrándonos mucho tiempo en el <br>desarrollo y prueba de una aplicación.</li>
+					<li>Nuestro código fuente puede ser ejecutado en culquier sistema operativo siempre <br>y cuando este disponga del intérprete (Windows,Linux, Mac, Android, Web).</li>
 				</ul>
-			</p>
-			<h3 style="color: #FF5733;">Multiplataforma</h3>
-			<p>
-				Su código fuente puede ser <b>interpretado</b> y <b>ejecutado</b> en <b>varios sistemas operativos</b> <br>eso quiere decir,
-				soporta diversas plataformas para ejecutar software escrito en Python.
-			</p>
-			<img src="{% static 'img/parablog11.jpg'%}">
-			<h3 style="color: #FF5733;">Tipado Dinámico</h3>
-			<p>
-				¡Sabés que significa? Que una <b>variable</b> puede tomar <b>diferentes valores</b> de <b>distintos <br>tipos</b> en diferentes momentos.
-			</p>
-			<p>
-				Las variables en Python son declaradas por su contenido y no por su contenedor, lo que <br>nos va a permitir cambiar el valor y tipo
-				de una variable durante la ejecución sin <br>necesidad de volver a declarar.  
-			</p>
-			<img src="{% static 'img/parablog12.jpg'%}" height="300">
-			<p>
-				Por Ejemplo, podemos escribir <b>a=0</b>, y atomáticamente Python determinará que la variable <b>a</b> es del tipo numérico, <br>
-				pero en el mismo programa y en caulquier momento podremos escribir, <b>a="Tipado Dinámico"</b> y la variable <br>
-				<b>a</b> pasará atomáticamente a ser del tipo string.
-			</p>
-			<h3 style="color: #FF5733;">Fuertemente Tipado</h3>
-			<p>
-				Ya que no se permiten violaciones de los tipos de datos, es decir, dado el valor de una <br>
-				variable de un tipo concreto, no se puede usar como si fuera de otro tipo distinto a <br>
-				menos que se haga una conversión. <br>
-				<b>Por ejemplo:</b><br>
-				Si asigno estos valores a las variables <b>x</b> e <b>y</b>:
-				<b>X = 2</b><br>
-				<b>Y = "5"</b><br>
-				Para poder sumarlos debo primero convertir explícitamente a la variable <b>y</b> en un entero. <br>
-				<b>R = X + int(Y)</b><br>
-			</p>
-			<p>
-				Una vez comprendidas las principales <b>CARACTERISTICAS</b> de Python, <br>
-				vamos ahora si a instalarlo y preparar nuestro entorno de trabajo.
-			</p>
+				<h3 style="color: #FF5733;">Multiparadigma</h3>
+				<p>
+					Python es un lenguaje que soporta más de un paradigma a la hora de programar.
+					<br><br>
+					Los paradigmas soportados son: 
+					<ul>
+						<li>Imperativo</li>
+						<li>Funcional</li>
+						<li>Orientado a Objetos</li>
+					</ul>
+				</p>
+				<h3 style="color: #FF5733;">Multiplataforma</h3>
+				<p>
+					Su código fuente puede ser <b>interpretado</b> y <b>ejecutado</b> en <b>varios sistemas operativos</b> <br>eso quiere decir,
+					soporta diversas plataformas para ejecutar software escrito en Python.
+				</p>
+				<img src="{% static 'img/parablog11.jpg'%}">
+				<h3 style="color: #FF5733;">Tipado Dinámico</h3>
+				<p>
+					¡Sabés que significa? Que una <b>variable</b> puede tomar <b>diferentes valores</b> de <b>distintos <br>tipos</b> en diferentes momentos.
+				</p>
+				<p>
+					Las variables en Python son declaradas por su contenido y no por su contenedor, lo que <br>nos va a permitir cambiar el valor y tipo
+					de una variable durante la ejecución sin <br>necesidad de volver a declarar.  
+				</p>
+				<img src="{% static 'img/parablog12.jpg'%}" height="300">
+				<p>
+					Por Ejemplo, podemos escribir <b>a=0</b>, y atomáticamente Python determinará que la variable <b>a</b> es del tipo numérico, <br>
+					pero en el mismo programa y en caulquier momento podremos escribir, <b>a="Tipado Dinámico"</b> y la variable <br>
+					<b>a</b> pasará atomáticamente a ser del tipo string.
+				</p>
+				<h3 style="color: #FF5733;">Fuertemente Tipado</h3>
+				<p>
+					Ya que no se permiten violaciones de los tipos de datos, es decir, dado el valor de una <br>
+					variable de un tipo concreto, no se puede usar como si fuera de otro tipo distinto a <br>
+					menos que se haga una conversión. <br>
+					<b>Por ejemplo:</b><br>
+					Si asigno estos valores a las variables <b>x</b> e <b>y</b>:
+					<b>X = 2</b><br>
+					<b>Y = "5"</b><br>
+					Para poder sumarlos debo primero convertir explícitamente a la variable <b>y</b> en un entero. <br>
+					<b>R = X + int(Y)</b><br>
+				</p>
+				<p>
+					Una vez comprendidas las principales <b>CARACTERISTICAS</b> de Python, <br>
+					vamos ahora si a instalarlo y preparar nuestro entorno de trabajo.
+				</p>
+
+			</center>
 		</article>
 	</section>
+	<footer>
+		<section>
+			<a href="#">Ir al comienzo</a>
+		</section>
+	</footer>
 </body>
 </html>
