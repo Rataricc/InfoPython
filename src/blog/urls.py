@@ -24,5 +24,5 @@ urlpatterns = [
     path('login/', auth_views.LoginView.as_view(template_name="login.html"), name="login"),
     path('logout/', auth_views.logout_then_login, name="logout"),
     path('Usuarios/', include('apps.usuarios.urls')),
-    path('autenticacion/', views.usuario_autenticado, name='auteticacion'),
+    path('autenticacion/', views.usuario_autenticado, name='autenticacion'),
 ]

@@ -20,9 +20,9 @@
                 <p class="lead">
                     Para poder tener acceso tendras que loguearte y si no estas logueado tendras que registrarte.
                 </p>
+                <a href="{% url 'login' %}" class="btn btn-info">Login</a>
+                <a href="{% url 'usuarios:registro' %}" class="btn btn-success">Registrarse</a>
                 <a href="{% url 'principal' %}" class="btn btn-primary">Volver al Inicio</a>
-                <a href="{% url 'login' %}" class="btn btn-primary">Login</a>
-                <a href="{% url 'usuarios:registro' %}" class="btn btn-primary">Registrarse</a>
             </div>
         </div>
     </body>

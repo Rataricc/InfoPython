@@ -28,73 +28,73 @@ def registro_de_usuario(request):
 	}
 	return render(request, template_name, ctx)
 
-@login_required
+@login_required(login_url='autenticacion')
 def introduccion_a_python(request): 
 	template_name = "usuarios/introPython.html"
 	ctx = {}
 	return render(request, template_name, ctx)
 
-@login_required
+@login_required(login_url='autenticacion')
 def entorno_de_desarrollo(request): 
 	template_name = "usuarios/entorno.html"
 	ctx = {}
 	return render(request, template_name, ctx)
 
-@login_required
+@login_required(login_url='autenticacion')
 def variables_datos(request): 
 	template_name = "usuarios/variablesDatos.html"
 	ctx = {}
 	return render(request, template_name, ctx)
 
-@login_required
+@login_required(login_url='autenticacion')
 def manejo_de_variables(request): 
 	template_name = "usuarios/manejoDevariables.html"
 	ctx = {}
 	return render(request, template_name, ctx)
 
-@login_required
+@login_required(login_url='autenticacion')
 def condicionales(request): 
 	template_name = "usuarios/condicionales.html"
 	ctx = {}
 	return render(request, template_name, ctx)
 
-@login_required
+@login_required(login_url='autenticacion')
 def repetitivas(request):
 	template_name = "usuarios/repetitivas.html"
 	ctx = {}
 	return render(request, template_name, ctx)
 
-@login_required
+@login_required(login_url='autenticacion')
 def funciones(request): 
 	template_name = "usuarios/funciones.html"
 	ctx = {}
 	return render(request, template_name, ctx)
 
-@login_required
+@login_required(login_url='autenticacion')
 def listas(request): 
 	template_name = "usuarios/listas.html"
 	ctx = {}
 	return render(request, template_name, ctx)
 
-@login_required
+@login_required(login_url='autenticacion')
 def tuplas(request): 
 	template_name = "usuarios/tuplas.html"
 	ctx = {}
 	return render(request, template_name, ctx)
 
-@login_required
+@login_required(login_url='autenticacion')
 def diccionarios(request):
 	template_name = "usuarios/diccionarios.html"
 	ctx = {}
 	return render(request, template_name, ctx)
 
-@login_required
+@login_required(login_url='autenticacion')
 def manejo_de_errores(request): 
 	template_name = "usuarios/manejoErrores.html"
 	ctx = {}
 	return render(request, template_name, ctx)
 
-@login_required
+@login_required(login_url='autenticacion')
 def poo(request): 
 	template_name = "usuarios/poo.html"
 	ctx = {}

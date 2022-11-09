@@ -31,10 +31,11 @@ ALLOWED_HOSTS = []
 
 AUTH_USER_MODEL = 'usuarios.Usuario'
 
+#LOGOUT_REDIRECT_URL =reverse_lazy('principal') # ver tema de redireccionamiento del user, al cerra sesion 'loogut' va a la pagina de 403
 
-LOGIN_URL = reverse_lazy('auteticacion') #'principal'
+#Para cuando me loguee me redirija al inicio en este caso 'principal'
 LOGIN_REDIRECT_URL = reverse_lazy('principal')
-
+LOGIN_URL = reverse_lazy('principal') #'principal'
 # Application definition
 
 # Aplicaciones que son propias de django.
