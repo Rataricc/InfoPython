@@ -1,8 +1,8 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
 from django.urls import reverse_lazy
-from .models import Usuario
 from .forms import UserForm
+from  django.contrib.auth import login, authenticate
 
 
 def registro_de_usuario(request): 
@@ -13,8 +13,15 @@ def registro_de_usuario(request):
 		form = UserForm(request.POST)
 		if form.is_valid(): 
 			form.save()
+			#autenticar al usuario y redirigirlo al inicio
+			username = form.cleaned_data['username']
+			password = form.cleaned_data['password1'] 
+			user = authenticate(username=username, password=password)
+			login(request, user)
 			return redirect('principal') 
+
 	titulo= 'Formulario de registro de Usuarios'
+
 	ctx = {
 		'form':form, 
 		'titulo':titulo,
