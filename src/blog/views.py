@@ -5,9 +5,7 @@ def inicio(request):
 	ctx = {}
 	return render(request, template_name, ctx)
 
-"""
-def registro_usuario(request): 
-	template_name = "registro.html"
+def usuario_autenticado(request):
+	template_name = 'autenticacion.html'
 	ctx = {}
 	return render(request, template_name, ctx)
-"""
