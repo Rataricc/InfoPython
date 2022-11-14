@@ -48,7 +48,8 @@ DJANGO_APPS = [
 ]
 # Aplicaciones que son creadas por mi en dicho sistema o software.
 LOCAL_APPS = [
-    'apps.usuarios'
+    'apps.usuarios',
+    'apps.preguntas',
 ]
 # Aplicaciones que son de terceros.
 THIRD_APPS = [

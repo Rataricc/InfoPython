@@ -25,4 +25,5 @@ urlpatterns = [
     path('logout/', auth_views.logout_then_login, name="logout"),
     path('Usuarios/', include('apps.usuarios.urls')),
     path('autenticacion/', views.usuario_autenticado, name='autenticacion'),
+    path('Preguntas/', include('apps.preguntas.urls')),
 ]
