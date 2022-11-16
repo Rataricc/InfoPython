@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Pregunta, ElegirRespuesta
+from .models import Pregunta, ElegirRespuesta, PreguntasRespondidas
 # Register your models here.
 
 
@@ -15,5 +15,12 @@ class PreguntaAdmin(admin.ModelAdmin):
     search_fields = ['texto', 'preguntas__texto']
 
 
+class PreguntasRespondidasAdmin(admin.ModelAdmin): 
+    list_display = ['id', 'pregunta', 'respuesta', 'correcta', 'puntaje_obtenido']
+
+    class Meta: 
+        model = PreguntasRespondidas
+
 admin.site.register(Pregunta, PreguntaAdmin)
 admin.site.register(ElegirRespuesta)
+admin.site.register(PreguntasRespondidas, PreguntasRespondidasAdmin)
