@@ -7,7 +7,6 @@ class Usuario(AbstractUser):
 	fecha_de_nacimiento = models.DateField(null=True, blank=True)
 	localidad = models.CharField(max_length = 255)
 	direccion_de_domicilio = models.CharField(max_length=40, null=True, blank=True) 
-	puntaje_total = models.DecimalField(verbose_name='Puntaje Total', default=0, decimal_places=2, max_digits=10, null=True, blank=True)
 
 	class Meta: 
 		db_table = 'usuario'

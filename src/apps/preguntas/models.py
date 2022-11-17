@@ -24,14 +24,31 @@ class ElegirRespuesta(models.Model):
 
     def __str__(self): 
         return self.texto
+        
+
+class QuizUsuario(models.Model): 
+    usuario = models.ForeignKey(Usuario, on_delete=models.CASCADE)
+    puntaje_total = models.DecimalField(verbose_name='Puntaje Total', default=0, decimal_places=2, max_digits=10)
+
+    class Meta: 
+        db_table = 'quizusuario'
+
+    def __str__(self): 
+        return self.usuario + '' + self.puntaje_total
 
 
 class PreguntasRespondidas(models.Model):
-    usuario = models.ForeignKey(Usuario, on_delete=models.CASCADE, null=True, blank=True)
+    usuario = models.ForeignKey(QuizUsuario, on_delete=models.CASCADE, null=True, blank=True)
     pregunta = models.ForeignKey(Pregunta, on_delete=models.CASCADE)
     respuesta = models.ForeignKey(ElegirRespuesta, on_delete=models.CASCADE, related_name='intentos')
     correcta = models.BooleanField(verbose_name='¿Es esta la respuesta correcta?', default=False, null=False)
     puntaje_obtenido = models.DecimalField(verbose_name='Puntaje Obtenido', default=0, decimal_places=2, max_digits=6)
+
+    class Meta: 
+        db_table = 'preguntasrespondidas'
+
+    def __str__(self): 
+        return self.usuario + '' + self.pregunta + '' + self.respuesta + '' + self.correcta + '' + self.puntaje_obtenido
 
 
 """
