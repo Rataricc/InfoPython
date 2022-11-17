@@ -1,7 +1,10 @@
 from django.db import models
+from apps.usuarios.models import Usuario
 
 # Create your models here.
 class Pregunta(models.Model): 
+
+    NUMERO_DE_RESPUESTAS_PERMITADAS = 1
     texto = models.TextField(verbose_name='Texto de la pregunta')
 
     class Meta: 
@@ -24,6 +27,7 @@ class ElegirRespuesta(models.Model):
 
 
 class PreguntasRespondidas(models.Model):
+    usuario = models.ForeignKey(Usuario, on_delete=models.CASCADE, null=True, blank=True)
     pregunta = models.ForeignKey(Pregunta, on_delete=models.CASCADE)
     respuesta = models.ForeignKey(ElegirRespuesta, on_delete=models.CASCADE, related_name='intentos')
     correcta = models.BooleanField(verbose_name='¿Es esta la respuesta correcta?', default=False, null=False)
