@@ -17,6 +17,8 @@ from django.contrib import admin
 from django.contrib.auth import views as auth_views
 from django.urls import path, include
 from . import views
+from django.conf.urls    import handler404
+from blog.views        import Error404View
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -27,3 +29,5 @@ urlpatterns = [
     path('autenticacion/', views.usuario_autenticado, name='autenticacion'),
     path('Preguntas/', include('apps.preguntas.urls')),
 ]
+
+handler404 = Error404View.as_view()
