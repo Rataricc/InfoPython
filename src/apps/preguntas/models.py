@@ -38,7 +38,7 @@ class QuizUsuario(models.Model):
 
 
 class PreguntasRespondidas(models.Model):
-    usuario = models.ForeignKey(QuizUsuario, on_delete=models.CASCADE, null=True, blank=True)
+    quizUser = models.ForeignKey(QuizUsuario, on_delete=models.CASCADE, null=True, blank=True)
     pregunta = models.ForeignKey(Pregunta, on_delete=models.CASCADE)
     respuesta = models.ForeignKey(ElegirRespuesta, on_delete=models.CASCADE, related_name='intentos')
     correcta = models.BooleanField(verbose_name='¿Es esta la respuesta correcta?', default=False, null=False)
