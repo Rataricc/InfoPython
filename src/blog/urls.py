@@ -28,6 +28,8 @@ urlpatterns = [
     path('Usuarios/', include('apps.usuarios.urls')),
     path('autenticacion/', views.usuario_autenticado, name='autenticacion'),
     path('Preguntas/', include('apps.preguntas.urls')),
+    # url de prueba
+    path('templateNuevo/', views.template_info_python, name='prueba'),  
 ]
 
 handler404 = Error404View.as_view()

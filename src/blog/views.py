@@ -13,3 +13,10 @@ def usuario_autenticado(request):
 
 class Error404View(TemplateView): 
     template_name = 'base/error404.html'
+
+# views de prueba: 
+
+def template_info_python(request): 
+	template_name= 'base/info-python.html'
+	ctx = {}
+	return render(request, template_name, ctx)
