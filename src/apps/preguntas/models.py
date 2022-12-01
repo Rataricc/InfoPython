@@ -56,6 +56,13 @@ class QuizUsuario(models.Model):
             pregunta_respondida.respuesta = respuesta_seleccionada
         pregunta_respondida.save()
 
+        self.actualizar_puntaje()
+
+    def actualizar_puntaje(self): 
+        puntaje_actualizado = self.intentos.filter(correcta=True).aggregate(models.Sum('puntaje_obtenido'))['puntaje_obtenido__sum']
+        self.puntaje_total = puntaje_actualizado
+        self.save()
+
     class Meta: 
         db_table = 'quizusuario'
 
