@@ -1,7 +1,7 @@
-from django.contrib import admin
-from .models import Pregunta, ElegirRespuesta, PreguntasRespondidas
-from apps.preguntas.forms import ElegirInlineFormset
-from apps.preguntas.models import QuizUsuario
+from django.contrib         import admin
+from .models                import Pregunta, ElegirRespuesta, PreguntasRespondidas
+from apps.preguntas.forms   import ElegirInlineFormset
+from apps.preguntas.models  import QuizUsuario
 # Register your models here.
 
 
