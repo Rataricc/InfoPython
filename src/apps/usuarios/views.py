@@ -36,7 +36,7 @@ def introduccion_a_python(request):
 
 @login_required(login_url='autenticacion')
 def entorno_de_desarrollo(request): 
-	template_name = "usuarios/entorno.html"
+	template_name = "usuarios/Entorno de Desarrollo/entornodesarrollo.html"
 	ctx = {}
 	return render(request, template_name, ctx)
 
