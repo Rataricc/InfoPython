@@ -30,25 +30,29 @@ def registro_de_usuario(request):
 
 @login_required(login_url='autenticacion')
 def introduccion_a_python(request): 
-	template_name = "usuarios/introPython.html"
+	template_name = "usuarios/Intro Python/intro-python.html"
+	#Anterior ruta --> "usuarios/introPython.html"
 	ctx = {}
 	return render(request, template_name, ctx)
 
 @login_required(login_url='autenticacion')
 def entorno_de_desarrollo(request): 
 	template_name = "usuarios/Entorno de Desarrollo/entornodesarrollo.html"
+	#Anterior ruta --> "usuarios/entorno.html"
 	ctx = {}
 	return render(request, template_name, ctx)
 
 @login_required(login_url='autenticacion')
 def variables_datos(request): 
-	template_name = "usuarios/variablesDatos.html"
+	template_name = "usuarios/Manejo de variables y tipos de datos/manejoDeVariablesYTiposDatos.html"
+	#Anterior ruta --> "usuarios/variablesDatos.html"
 	ctx = {}
 	return render(request, template_name, ctx)
 
 @login_required(login_url='autenticacion')
 def manejo_de_variables(request): 
-	template_name = "usuarios/manejoDevariables.html"
+	template_name = "usuarios/Manejo de variables/manejo-variables.html"
+	#Anterior ruta --> "usuarios/manejoDevariables.html"
 	ctx = {}
 	return render(request, template_name, ctx)
 

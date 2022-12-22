@@ -1,0 +1,236 @@
+{% load static %}
+<!DOCTYPE html>
+<html style="font-size: 16px;" lang="es">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="utf-8">
+	<meta name="keywords" content="Introducción a Python, Veamos sus principales características, Lenguajes compilados, Lenguajes Interpretados, ¿Qué ventajas nos ofrece Python como lenguaje interpretado?">
+	<meta name="description" content="">
+	<title>Introducción a Python</title>
+	<link rel="stylesheet" href="../../static/css/nicepage.css" media="screen">
+	<link rel="stylesheet" href="../../static/css/intro-python/intro-python.css" media="screen">
+	<script class="u-script" type="text/javascript" src="{% static 'js/jquery.js' %}" defer=""></script>
+	<script class="u-script" type="text/javascript" src="{% static 'js/nicepage.js' %}" defer=""></script>
+	<meta name="generator" content="Nicepage 5.0.7, nicepage.com">
+	<link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
+    <link rel="shortcut icon" href="../../static/img/ico/parablog6.jpg">
+
+	<script type="application/ld+json">
+		{
+				"@context": "http://schema.org",
+				"@type": "Organization",
+				"name": "",
+				"logo": "images/aInfo6.jpg"
+		}
+	</script>
+	<meta name="theme-color" content="#232b79">
+	<meta property="og:title" content="Introducción a Python">
+	<meta property="og:type" content="website">
+</head>
+<body class="u-body u-overlap u-overlap-transparent u-xl-mode" data-lang="es">
+	<header class="u-clearfix u-header u-sticky u-header" id="sec-a184">
+		<div class="u-clearfix u-sheet u-sheet-1">
+			<a href="#" class="u-active-black u-border-1 u-border-active-black u-border-grey-30 u-border-hover-black u-btn u-btn-round u-button-style u-hover-palette-4-base u-radius-12 u-text-active-white u-text-hover-white u-white u-btn-1">Más</a>
+			<nav class="u-menu u-menu-dropdown u-offcanvas u-menu-1" data-responsive-from="XXL">
+				<div class="menu-collapse" style="font-size: 1rem; letter-spacing: 0px;">
+					<a class="u-button-style u-custom-left-right-menu-spacing u-custom-padding-bottom u-custom-text-active-color u-custom-text-color u-custom-text-hover-color u-custom-top-bottom-menu-spacing u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="#">
+						<svg class="u-svg-link" viewBox="0 0 24 24"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#menu-hamburger"></use></svg>
+						<svg class="u-svg-content" version="1.1" id="menu-hamburger" viewBox="0 0 16 16" x="0px" y="0px" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g><rect y="1" width="16" height="2"></rect><rect y="7" width="16" height="2"></rect><rect y="13" width="16" height="2"></rect>
+                        </g></svg>
+					</a>
+				</div>
+				<div class="u-custom-menu u-nav-container">
+					<ul class="u-nav u-spacing-20 u-unstyled u-nav-1">
+						<li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-white u-text-body-alt-color u-text-hover-palette-4-base" href="Inicio.html" style="padding: 16px 28px;">Inicio</a>
+						</li>
+						<li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-white u-text-body-alt-color u-text-hover-palette-4-base" href="#" style="padding: 16px 28px;">Contacto</a>
+						</li>
+					</ul>
+				</div>
+				<div class="u-custom-menu u-nav-container-collapse">
+					<div class="u-black u-container-style u-inner-container-layout u-opacity u-opacity-95 u-sidenav">
+						<div class="u-inner-container-layout u-sidenav-overflow">
+							<div class="u-menu-close"></div>
+							<ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-2">
+								<li class="u-nav-item"><a class="u-button-style u-nav-link" href="Inicio.html" style="padding: 10px 20px;">Inicio</a>
+								</li>
+								<li class="u-nav-item"><a class="u-button-style u-nav-link" href="#" style="padding: 10px 20px;">Contacto</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="u-black u-menu-overlay u-opacity u-opacity-70"></div>
+				</div>
+			</nav>
+			<a href="https://nicepage.com" class="u-image u-logo u-image-1" data-image-width="782" data-image-height="383">
+				<img class="u-logo-image u-logo-image-1" src="{% static 'img/masimg/aInfo6.jpg'%}">
+			</a>
+		</div>
+	</header>
+	<section class="u-clearfix u-container-align-center-lg u-container-align-center-md u-container-align-center-xl u-image u-section-1" id="sec-393b" data-image-width="1782" data-image-height="1080">
+		<div class="u-clearfix u-sheet u-sheet-1">
+			<h1 class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-1" data-animation-name="customAnimationIn" data-animation-duration="1000">Introducción a Python</h1>
+			<h3 class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-2" data-animation-name="customAnimationIn" data-animation-duration="1000">¿Qué es Python?</h3>
+			<p class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-3" data-animation-name="customAnimationIn" data-animation-duration="1000"><b>Python es unos de los lenguajes de programación más requeridos en la industria mundial.</b>
+			</p>
+			<p class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-4" data-animation-name="customAnimationIn" data-animation-duration="1000" data-animation-direction="">Hablemos sobre el lenguaje y sus principales características las cuales lo diferencian de otros. Haciéndolo un lenguaje muy atractivo para quienes comienzan a programar y<br>permitiendo un amplio desarrollo de aplicaciones de manera muy sencilla.
+			</p>
+			<h2 class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-5" data-animation-name="customAnimationIn" data-animation-duration="1000">Veamos sus principales características</h2>
+			<h3 class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-6" data-animation-name="customAnimationIn" data-animation-duration="1000">Python es un lenguaje interpretado</h3>
+			<p class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-7" data-animation-name="customAnimationIn" data-animation-duration="1000">Normalmente los&nbsp;<span style="font-weight: 700;"> lenguajes de programación&nbsp;</span> se pueden agrupar en&nbsp;<span style="font-weight: 700;"> Interpretados y Compilados&nbsp;<span style="font-weight: 400;"> según la forma en la que son traducidos.</span>
+				</span>
+			</p>
+			<p class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-8" data-animation-name="customAnimationIn" data-animation-duration="1000">Cuando nosotros escribimos un código en realidad lo que estamos haciendo es&nbsp;<b>hablar<br>un lenguaje más fácil</b>&nbsp;de comprender para nosotros y que luego será&nbsp;<b>traducido a<br>lenguaje de máquina</b>&nbsp;que es lo que puede entender la compu.
+			</p>
+			<p class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-9" data-animation-name="customAnimationIn" data-animation-duration="1000">Entonces, de acuerdo a cómo se realiza esta&nbsp;<b>traducción</b>&nbsp;es lo que clasifica a los<br>lenguajes en Interpretados o Compilados:
+			</p>
+		</div>
+
+	</section>
+	<section class="u-clearfix u-image u-section-2" id="sec-d3bc" data-image-width="1782" data-image-height="1080">
+		<div class="u-clearfix u-sheet u-sheet-1">
+			<img class="u-align-center u-image u-image-default u-opacity u-opacity-90 u-image-1" src="{% static 'img/masimg/parablog7.jpg' %}" alt="" data-image-width="989" data-image-height="203" data-animation-name="customAnimationIn" data-animation-duration="3000">
+			<ul class="u-hover-feature u-text u-text-body-alt-color u-text-default u-text-1" data-animation-name="customAnimationIn" data-animation-duration="1000">
+				<li>
+					<span style="font-weight: 700;"> Compilados :&nbsp;</span>Tradúcen código máquina, creando un archivo traducido para una ejecución rápida.&nbsp;Rquieren que las instrucciones, sean traducidas, esto lo hace más eficiente.&nbsp;El procesador sólo entiende un lenguaje que se denomina "lenguaje máquina".
+				</li>
+				<li>
+					<span style="font-weight: 700;"> Interpretados :&nbsp;<span style="font-weight: 400;"></span>
+					</span>Las instrucciones se traducen una a una, cada vez que se ejecute el programa.&nbsp;Son tipicamente unas 10 veces más lentos que los programas compilados.&nbsp;Facilidad para lograr independencia de plataformas y menor tamaño de programa.
+				</li>
+			</ul>
+		</div>
+
+	</section>
+	<section class="u-clearfix u-image u-section-3" id="sec-0c82" data-image-width="1782" data-image-height="1080">
+		<div class="u-clearfix u-sheet u-sheet-1">
+			<div class="u-clearfix u-expanded-width u-gutter-0 u-layout-wrap u-layout-wrap-1">
+				<div class="u-gutter-0 u-layout">
+					<div class="u-layout-row">
+						<div class="u-container-style u-layout-cell u-size-20 u-layout-cell-1">
+							<div class="u-container-layout u-container-layout-1">
+								<h2 class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-1" data-animation-name="customAnimationIn" data-animation-duration="1000" data-animation-direction="">Lenguajes compilados</h2>
+								<p class="u-align-left u-hover-feature u-text u-text-body-alt-color u-text-2" data-animation-name="customAnimationIn" data-animation-duration="1000">Los&nbsp;<b>lenguajes compilados</b>&nbsp;son aquellos en los que el&nbsp;<b>código del<br>programador es traducido por completo</b>&nbsp;de una sola vez mediante<br>un proceso llamado&nbsp;<b>Compilador</b>&nbsp;para ser ejecutado por un<br>sistema predeterminado. Como por ejemplo:&nbsp;<b>Java y C++</b>.
+								</p>
+							</div>
+						</div>
+						<div class="u-align-center u-container-style u-effect-hover-zoom u-layout-cell u-size-20 u-layout-cell-2" data-image-width="402" data-image-height="508" data-animation-name="customAnimationIn" data-animation-duration="3000">
+							<div class="u-background-effect u-expanded">
+								<div class="u-background-effect-image u-expanded u-image u-image-1" data-image-width="402" data-image-height="508"></div>
+							</div>
+							<div class="u-container-layout u-valign-middle u-container-layout-2" src=""></div>
+						</div>
+						<div class="u-container-align-center u-container-style u-effect-hover-zoom u-layout-cell u-size-20 u-layout-cell-3" data-image-width="401" data-image-height="448" data-animation-name="customAnimationIn" data-animation-duration="3000">
+							<div class="u-background-effect u-expanded">
+								<div class="u-background-effect-image u-expanded u-image u-image-2" data-image-width="401" data-image-height="448"></div>
+							</div>
+							<div class="u-container-layout u-container-layout-3"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+	</section>
+	<section class="u-clearfix u-container-align-center u-image u-section-4" id="sec-4e36" data-image-width="1782" data-image-height="1080">
+		<div class="u-clearfix u-sheet u-sheet-1">
+			<div class="u-clearfix u-expanded-width u-gutter-0 u-layout-wrap u-layout-wrap-1">
+				<div class="u-gutter-0 u-layout">
+					<div class="u-layout-row">
+						<div class="u-container-style u-layout-cell u-size-20 u-layout-cell-1">
+							<div class="u-container-layout u-container-layout-1">
+								<h2 class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-1" data-animation-name="customAnimationIn" data-animation-duration="1000">Lenguajes Interpretados</h2>
+								<p class="u-align-left u-hover-feature u-text u-text-body-alt-color u-text-2" data-animation-name="customAnimationIn" data-animation-duration="1000">Los&nbsp;<b>lenguajes interpretados</b>&nbsp;son aquellos en los que el<br>código del programador es&nbsp;<b>traducido mediante<br>un intérprete</b>&nbsp;a medida que es necesario. Entre los más comunes encontramos&nbsp;<b>Python</b>, Ruby,<br>Javascript...
+								</p>
+							</div>
+						</div>
+						<div class="u-align-center u-container-style u-effect-hover-zoom u-layout-cell u-size-20 u-layout-cell-2" data-image-width="1200" data-image-height="675" data-animation-name="customAnimationIn" data-animation-duration="3000">
+							<div class="u-background-effect u-expanded">
+								<div class="u-background-effect-image u-expanded u-image u-image-1" data-image-width="1200" data-image-height="675"></div>
+							</div>
+							<div class="u-container-layout u-valign-middle u-container-layout-2" src=""></div>
+						</div>
+						<div class="u-container-align-center u-container-style u-effect-hover-zoom u-layout-cell u-size-20 u-layout-cell-3" data-image-width="1268" data-image-height="664" data-animation-name="customAnimationIn" data-animation-duration="3000">
+							<div class="u-background-effect u-expanded">
+								<div class="u-background-effect-image u-expanded u-image u-image-2" data-image-width="1268" data-image-height="664"></div>
+							</div>
+							<div class="u-container-layout u-container-layout-3"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+	</section>
+	<section class="u-clearfix u-image u-section-5" id="sec-e68f" data-image-width="1782" data-image-height="1080">
+		<div class="u-clearfix u-sheet u-sheet-1">
+			<h2 class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-1" data-animation-name="customAnimationIn" data-animation-duration="1000" data-animation-direction="">¿Qué ventajas nos ofrece Python como lenguaje interpretado?</h2>
+			<ul class="u-align-left u-hover-feature u-text u-text-body-alt-color u-text-default u-text-2" data-animation-name="customAnimationIn" data-animation-duration="1000">
+				<li>Al ser interpretado no necesitamos compilar, ahorrandonos mucho tiempo en el desarrollo y prueba de una aplicación.</li>
+				<li>Nuestro código fuente puede ser ejecutado en cualquier sistema operativo siempre y cuando este disponga del interprete, (Windows, Linux, Mac, Android, Web).</li>
+			</ul>
+			<h3 class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-3" data-animation-name="customAnimationIn" data-animation-duration="1000">Multiplataforma</h3>
+			<p class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-4" data-animation-name="customAnimationIn" data-animation-duration="1000">Su código fuente puede ser&nbsp;<span style="font-weight: 700;"> Interpretado&nbsp;<span style="font-weight: 400;"> y <span style="font-weight: 700;"> ejecutado<span style="font-weight: 400;"> en&nbsp;<span style="font-weight: 700;"> varios sistemas operativos<span style="font-weight: 400;"> eso quiere decir, soporta diversas plataformas para ejecutar software escrito en Python.&nbsp;</span>
+				</span>
+				</span>
+				</span>
+				</span>
+				</span>&nbsp;
+			</p>
+			<img class="u-align-center u-image u-image-contain u-image-default u-opacity u-opacity-80 u-image-1" src="{% static 'img/masimg/parablog11.jpg' %}" alt="" data-image-width="637" data-image-height="291" data-animation-name="customAnimationIn" data-animation-duration="3000">
+			<h3 class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-5" data-animation-name="customAnimationIn" data-animation-duration="1000">Tipado Dinámico</h3>
+			<p class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-6" data-animation-name="customAnimationIn" data-animation-duration="1000" data-animation-direction="">¡Sabés que significa? Que una&nbsp;<b>variable</b>&nbsp;puede tomar&nbsp;<b>diferentes valores</b>&nbsp;de&nbsp;<b>distintos<br>tipos</b>&nbsp;en diferentes momentos.
+			</p>
+			<p class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-7" data-animation-name="customAnimationIn" data-animation-duration="1000">Las variables en Python son declaradas por su contenido y no por su contenedor, lo que<br>nos va a permitir cambiar el valor y tipo de una variable durante la ejecución sin<br>necesidad de volver a declarar.
+			</p>
+			<img class="u-align-center u-image u-image-contain u-image-default u-opacity u-opacity-80 u-image-2" src="{% static 'img/masimg/parablog12.jpg' %}" alt="" data-image-width="542" data-image-height="249" data-animation-name="customAnimationIn" data-animation-duration="3000" data-animation-direction="">
+			<p class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-8" data-animation-name="customAnimationIn" data-animation-duration="1000">Por Ejemplo, podemos escribir&nbsp;<b>a=0</b>, y atomáticamente Python determinará que la variable&nbsp;<b>a</b>&nbsp;es del tipo numérico, pero en el mismo programa y en caulquier momento podremos escribir,&nbsp;<b>a="Tipado Dinámico"</b>&nbsp;y la variable&nbsp;<b>a</b>&nbsp;pasará atomáticamente a ser del tipo string.
+			</p>
+		</div>
+
+	</section>
+	<section class="u-clearfix u-image u-section-6" id="sec-cdba" data-image-width="1782" data-image-height="1080">
+		<div class="u-clearfix u-sheet u-sheet-1">
+			<h3 class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-1" data-animation-name="customAnimationIn" data-animation-duration="1000">Fuertemente Tipado</h3>
+			<p class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-2" data-animation-name="customAnimationIn" data-animation-duration="1000">Ya que no se permiten violaciones de los tipos de datos, es decir, dado el valor de una<br>variable de un tipo concreto, no se puede usar como si fuera de otro tipo distinto a<br>menos que se haga una conversión.<br><b>Por ejemplo:&nbsp;</b>Si asigno estos valores a las variables&nbsp;<b>x</b>&nbsp;e&nbsp;<b>y</b>:<br><b>X = 2</b>
+				<br><b>&nbsp; &nbsp; Y = "5"</b>
+				<br>Para poder sumarlos debo primero convertir explícitamente a la variable&nbsp;<b>y</b>&nbsp;en un entero.<br><b>R = X + int(Y)</b>
+				<br>
+			</p>
+			<p class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-3" data-animation-name="customAnimationIn" data-animation-duration="1000">Una vez comprendidas las principales&nbsp;<b>CARACTERISTICAS</b>&nbsp;de Python,<br>vamos ahora si a instalarlo y preparar nuestro entorno de trabajo.
+			</p>
+			<a href="https://nicepage.com/landing-page" class="u-border-none u-btn u-btn-round u-button-style u-hover-palette-4-base u-palette-2-base u-radius-2 u-btn-1" data-animation-name="customAnimationIn" data-animation-duration="1000"> Siguiente&nbsp;<span class="u-file-icon u-icon"><img src="{% static 'img/masimg/545682.png' %}" alt=""></span>&nbsp;
+        </a>
+			<a href="https://nicepage.online" class="u-border-none u-btn u-btn-round u-button-style u-hover-palette-4-base u-palette-2-base u-radius-2 u-btn-2" data-animation-name="customAnimationIn" data-animation-duration="3000" data-animation-direction=""><span class="u-file-icon u-icon"><img src="{% static 'img/masimg/545680.png' %}" alt=""></span>&nbsp;Anterior
+        </a>
+		</div>
+
+
+
+	</section>
+
+
+	<footer class="u-align-center u-clearfix u-footer u-grey-80 u-footer" id="sec-b796">
+		<div class="u-clearfix u-sheet u-sheet-1">
+			<p class="u-small-text u-text u-text-variant u-text-1">Sample text. Click to select the text box. Click again or double click to start editing the text.</p>
+		</div>
+	</footer>
+	<section class="u-backlink u-clearfix u-grey-80">
+		<a class="u-link" href="https://nicepage.com/website-templates" target="_blank">
+			<span>Website Templates</span>
+		</a>
+		<p class="u-text">
+			<span>created with</span>
+		</p>
+		<a class="u-link" href="" target="_blank">
+			<span>Website Builder Software</span>
+		</a>.
+	</section><span style="height: 64px; width: 64px; margin-left: 0px; margin-right: auto; margin-top: 0px; background-image: none; right: 20px; bottom: 20px; padding: 15px; box-shadow: 2px -2px 8px 0px rgba(128,128,128,1);" class="u-back-to-top u-icon u-icon-circle u-opacity u-opacity-85 u-white" data-href="#">
+        <svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 551.13 551.13"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-1d98"></use></svg>
+        <svg class="u-svg-content" enable-background="new 0 0 551.13 551.13" viewBox="0 0 551.13 551.13" xmlns="http://www.w3.org/2000/svg" id="svg-1d98"><path d="m275.565 189.451 223.897 223.897h51.668l-275.565-275.565-275.565 275.565h51.668z"></path></svg>
+    </span>
+
+</body>
+</html>

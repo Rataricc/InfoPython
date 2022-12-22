@@ -1,0 +1,230 @@
+{% load static %}
+<!DOCTYPE html>
+<html style="font-size: 16px;" lang="es">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="utf-8">
+	<meta name="keywords" content="Manejo de Variables y Tipos de Datos">
+	<meta name="description" content="">
+	<title>Variables y Tipos de Datos</title>
+	<link rel="stylesheet" href="../../static/css/nicepage.css" media="screen">
+	<link rel="stylesheet" href="../../static/css/manejo-de-variables-y-tipos-datos/manejo-de-variables-datos.css" media="screen">
+	<script class="u-script" type="text/javascript" src="{% static 'js/jquery.js' %}" defer=""></script>
+	<script class="u-script" type="text/javascript" src="{% static 'js/nicepage.js' %}" defer=""></script>
+	<meta name="generator" content="Nicepage 5.0.7, nicepage.com">
+	<link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
+    <link rel="shortcut icon" href="../../static/img/ico/parablog6.jpg">
+    
+	<script type="application/ld+json">
+		{
+				"@context": "http://schema.org",
+				"@type": "Organization",
+				"name": "",
+				"logo": "images/aInfo6.jpg"
+		}
+	</script>
+	<meta name="theme-color" content="#232b79">
+	<meta property="og:title" content="Variables y Tipos de Datos">
+	<meta property="og:type" content="website">
+</head>
+<body class="u-body u-overlap u-overlap-transparent u-xl-mode" data-lang="es">
+	<header class="u-clearfix u-header u-sticky u-header" id="sec-a184">
+		<div class="u-clearfix u-sheet u-sheet-1">
+			<a href="#" class="u-active-black u-border-1 u-border-active-black u-border-grey-30 u-border-hover-black u-btn u-btn-round u-button-style u-hover-palette-4-base u-radius-12 u-text-active-white u-text-hover-white u-white u-btn-1">Más</a>
+			<nav class="u-menu u-menu-dropdown u-offcanvas u-menu-1" data-responsive-from="XXL">
+				<div class="menu-collapse" style="font-size: 1rem; letter-spacing: 0px;">
+					<a class="u-button-style u-custom-left-right-menu-spacing u-custom-padding-bottom u-custom-text-active-color u-custom-text-color u-custom-text-hover-color u-custom-top-bottom-menu-spacing u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="#">
+						<svg class="u-svg-link" viewBox="0 0 24 24"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#menu-hamburger"></use></svg>
+						<svg class="u-svg-content" version="1.1" id="menu-hamburger" viewBox="0 0 16 16" x="0px" y="0px" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g><rect y="1" width="16" height="2"></rect><rect y="7" width="16" height="2"></rect><rect y="13" width="16" height="2"></rect>
+                        </g></svg>
+					</a>
+				</div>
+				<div class="u-custom-menu u-nav-container">
+					<ul class="u-nav u-spacing-20 u-unstyled u-nav-1">
+						<li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-white u-text-body-alt-color u-text-hover-palette-4-base" href="Inicio.html" style="padding: 16px 28px;">Inicio</a>
+						</li>
+						<li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-white u-text-body-alt-color u-text-hover-palette-4-base" href="#" style="padding: 16px 28px;">Contacto</a>
+						</li>
+					</ul>
+				</div>
+				<div class="u-custom-menu u-nav-container-collapse">
+					<div class="u-black u-container-style u-inner-container-layout u-opacity u-opacity-95 u-sidenav">
+						<div class="u-inner-container-layout u-sidenav-overflow">
+							<div class="u-menu-close"></div>
+							<ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-2">
+								<li class="u-nav-item"><a class="u-button-style u-nav-link" href="Inicio.html" style="padding: 10px 20px;">Inicio</a>
+								</li>
+								<li class="u-nav-item"><a class="u-button-style u-nav-link" href="#" style="padding: 10px 20px;">Contacto</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="u-black u-menu-overlay u-opacity u-opacity-70"></div>
+				</div>
+			</nav>
+			<a href="https://nicepage.com" class="u-image u-logo u-image-1" data-image-width="782" data-image-height="383">
+				<img class="u-logo-image u-logo-image-1" src="{% static 'img/masimg/aInfo6.jpg'%}">
+			</a>
+		</div>
+	</header>
+	<section class="u-clearfix u-image u-section-1" id="sec-3fae" data-image-width="1782" data-image-height="1080">
+		<div class="u-clearfix u-sheet u-sheet-1">
+			<h1 class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-1" data-animation-name="customAnimationIn" data-animation-duration="1000">Manejo de Variables y Tipos de Datos</h1>
+			<h2 class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-2" data-animation-name="customAnimationIn" data-animation-duration="1000">¿Qué es una&nbsp;<b>Variable</b>?
+            </h2>
+			<p class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-3" data-animation-name="customAnimationIn" data-animation-duration="1000">Son elementos que nos permiten guardar un dato<br>para que pueda ser accesible fácilmente, manipulado<br>y transformado a lo largo de un programa.
+			</p>
+			<h2 class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-4" data-animation-name="customAnimationIn" data-animation-duration="1000">Manejo de Variables en Python</h2>
+			<ul class="u-align-left u-hover-feature u-text u-text-body-alt-color u-text-default u-text-5" data-animation-name="customAnimationIn" data-animation-duration="1000">
+				<li>Para definir una variable en Python, basta con nombrarla y definir su valor.<br>
+				</li>
+				<li>Para modificar el valor de una variable en Python basta con asignarle un nuevo valor<br>despúes de definirla.<br>
+				</li>
+				<li>Se puede asignar a una variable un valor literal, una expresión, una llamada a una función<br>o una combinación de todos ellos.<br>
+				</li>
+				<li>Para crear y darle valores a nuevas variables utilizamos la operación de asignación (=).<br>
+				</li>
+			</ul>
+		</div>
+	</section>
+	<section class="u-clearfix u-image u-section-2" id="sec-f617" data-image-width="1782" data-image-height="1080">
+		<div class="u-clearfix u-sheet u-sheet-1">
+			<h2 class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-1" data-animation-name="customAnimationIn" data-animation-duration="1000">Nombres de Variables en Python</h2>
+			<ul class="u-align-left u-hover-feature u-text u-text-body-alt-color u-text-default u-text-2" data-animation-name="customAnimationIn" data-animation-duration="1000">
+				<li>Pueden empezar con una letra o un guión bajo, por convención no usamos mayúsculas.<br>
+				</li>
+				<li>Son "Case sensitive", es decir, distingue si contienen mayúsculas o minúsculas.<br>
+				</li>
+				<li>No se puede utilizar palabras claves o reservadas de Python como nombres de variables.<br>
+				</li>
+				<li>Pueden contener letras, números y se puede usar el guión bajo (_).<br>
+				</li>
+			</ul>
+			<h2 class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-3" data-animation-name="customAnimationIn" data-animation-duration="1000">Operadores en Python: (Matemáticos)</h2>
+			<p class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-4" data-animation-name="customAnimationIn" data-animation-duration="1000">Antes que nada, estaria bueno que&nbsp;<b>copien y prueben los códigos<br>de ejemplo</b>&nbsp;que veran acontinuacion.
+			</p>
+		</div>
+	</section>
+	<section class="u-clearfix u-image u-section-3" id="sec-efba" data-image-width="1782" data-image-height="1080">
+		<div class="u-clearfix u-sheet u-sheet-1">
+			<h3 class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-1" data-animation-name="customAnimationIn" data-animation-duration="1000">Suma</h3>
+			<img class="u-align-center u-image u-image-default u-opacity u-opacity-90 u-image-1" src="{% static 'img/parablog20.jpg' %}" alt="python suma" data-image-width="854" data-image-height="291" data-animation-name="customAnimationIn" data-animation-duration="3000" data-animation-direction="">
+			<h3 class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-2" data-animation-name="customAnimationIn" data-animation-duration="1000">Resta</h3>
+			<img class="u-image u-image-default u-opacity u-opacity-90 u-image-2" src="{% static 'img/parablog21.jpg' %}" alt="python resta" data-image-width="865" data-image-height="298" data-animation-name="customAnimationIn" data-animation-duration="3000" data-animation-direction="">
+		</div>
+	</section>
+	<section class="u-clearfix u-image u-section-4" id="sec-3d14" data-image-width="1782" data-image-height="1080">
+		<div class="u-clearfix u-sheet u-sheet-1">
+			<h3 class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-1" data-animation-name="customAnimationIn" data-animation-duration="1000">División</h3>
+			<img class="u-image u-image-default u-opacity u-opacity-90 u-image-1" src="{% static 'img/parablog22.jpg' %}" alt="python division" data-image-width="853" data-image-height="422" data-animation-name="customAnimationIn" data-animation-duration="3000">
+			<h3 class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-2" data-animation-name="customAnimationIn" data-animation-duration="1000">Multiplicación</h3>
+			<img class="u-image u-image-default u-opacity u-opacity-90 u-image-2" src="{% static 'img/parablog23.jpg' %}" alt="python multiplicacion" data-image-width="857" data-image-height="301" data-animation-name="customAnimationIn" data-animation-duration="3000">
+		</div>
+	</section>
+	<section class="u-clearfix u-image u-section-5" id="sec-bad0" data-image-width="1782" data-image-height="1080">
+		<div class="u-clearfix u-sheet u-sheet-1">
+			<h3 class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-1" data-animation-name="customAnimationIn" data-animation-duration="1000">Módulo</h3>
+			<img class="u-image u-image-default u-opacity u-opacity-90 u-image-1" src="{% static 'img/parablog24.jpg' %}" alt="python module" data-image-width="852" data-image-height="282" data-animation-name="customAnimationIn" data-animation-duration="3000">
+			<h3 class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-2" data-animation-name="customAnimationIn" data-animation-duration="1000">Potencia</h3>
+			<img class="u-image u-image-default u-opacity u-opacity-90 u-image-2" src="{% static 'img/parablog25.jpg' %}" alt="python potencias" data-image-width="852" data-image-height="282" data-animation-name="customAnimationIn" data-animation-duration="3000">
+		</div>
+	</section>
+	<section class="u-clearfix u-image u-section-6" id="sec-887e" data-image-width="1782" data-image-height="1080">
+		<div class="u-clearfix u-sheet u-sheet-1">
+			<h2 class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-1" data-animation-name="customAnimationIn" data-animation-duration="1000">Operadores en Python: (Lógicos)</h2>
+			<p class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-2" data-animation-name="customAnimationIn" data-animation-duration="1000">Se utiliza un operador lógico para tomar una decisión basada en múltiples condiciones.<br>Los operadores lógicos utilizados en Python son&nbsp;<b>and, or y not</b>.
+			</p>
+			<img class="u-align-center u-image u-image-default u-opacity u-opacity-90 u-image-1" src="{% static 'img/parablog26.jpg' %}" alt="operadores en python" data-image-width="863" data-image-height="689" data-animation-name="customAnimationIn" data-animation-duration="3000">
+			<h2 class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-3" data-animation-name="customAnimationIn" data-animation-duration="1000">Operadores en Python: (Strings)</h2>
+			<p class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-4" data-animation-name="customAnimationIn" data-animation-duration="1000">Las cadenas (o strings)&nbsp;<b>son un tipo de dato compuesto por secuencias de caracteres que representan texto</b>.<br>Estas cadenas de texto son de tipo str y se delimitan mediante el uso de&nbsp;<b>comillas simples o dobles</b>.
+			</p>
+			<img class="u-image u-image-default u-opacity u-opacity-90 u-image-2" src="{% static 'img/parablog27.jpg' %}" alt="operadores en python " data-image-width="860" data-image-height="552" data-animation-name="customAnimationIn" data-animation-duration="3000">
+		</div>
+	</section>
+	<section class="u-clearfix u-image u-section-7" id="sec-dd31" data-image-width="1782" data-image-height="1080">
+		<div class="u-clearfix u-sheet u-sheet-1">
+			<h2 class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-1" data-animation-name="customAnimationIn" data-animation-duration="3000">¿Qué es un Dato?</h2>
+			<p class="u-align-left u-hover-feature u-text u-text-body-alt-color u-text-default u-text-2" data-animation-name="customAnimationIn" data-animation-duration="3250" data-animation-delay="1000"><b>Es una representación simbólica</b>&nbsp;(numérica, alfabética, etc.) de un atributo<br>o cualidad de una entidad.
+			</p>
+			<p class="u-align-left u-hover-feature u-text u-text-body-alt-color u-text-default u-text-3" data-animation-name="customAnimationIn" data-animation-duration="3250">Los&nbsp;<b>datos</b>&nbsp;aisladamente pueden no contener información pero si los analizamos<br>en conjunto sirven para realizar cálculos o tomar decisiones.
+			</p>
+			<h2 class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-4" data-animation-name="customAnimationIn" data-animation-duration="3000">Datos en Python</h2>
+			<p class="u-align-left u-hover-feature u-text u-text-body-alt-color u-text-default u-text-5" data-animation-name="customAnimationIn" data-animation-duration="3250">En Python todos los datos son referencias a objetos (no son constantes ni variables),<br>son como etiquetas para poder identificarlos.
+			</p>
+			<p class="u-align-left u-hover-feature u-text u-text-body-alt-color u-text-default u-text-6" data-animation-name="customAnimationIn" data-animation-duration="3250">Los objetos en Python pueden ser 'mutables' si pueden modificarse algunas posiciones<br>del dato o 'inmutables' si no pueden modificarse.
+			</p>
+			<h2 class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-7" data-animation-name="customAnimationIn" data-animation-duration="3000">Tipos de Datos en Python</h2>
+			<p class="u-align-left u-hover-feature u-text u-text-body-alt-color u-text-default u-text-8" data-animation-name="customAnimationIn" data-animation-duration="3250">El tipo de un dato está definido por el conjunto de valores que pueden tomar a lo largo<br>de un programa.
+			</p>
+			<p class="u-align-left u-hover-feature u-text u-text-body-alt-color u-text-default u-text-9" data-animation-name="customAnimationIn" data-animation-duration="3250">Para ver los tipos de datos a continuación usaremos la&nbsp;<b>función type()</b>, que nos devuelve<br>el tipo de objeto que enviamos como argumento.
+			</p>
+		</div>
+	</section>
+	<section class="u-clearfix u-image u-section-8" id="sec-1a1a" data-image-width="1782" data-image-height="1080">
+		<div class="u-clearfix u-sheet u-sheet-1">
+			<h2 class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-1" data-animation-name="customAnimationIn" data-animation-duration="3000">Tipos de Datos en Python: (Números)</h2>
+			<h3 class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-2" data-animation-name="customAnimationIn" data-animation-duration="3250">Real<span style="font-size: 2.25rem;"></span>
+            </h3>
+			<img class="u-align-center u-image u-image-default u-opacity u-opacity-90 u-image-1" src="{% static 'img/parablog28.jpg' %}" alt="Tipos de datos en python numericos" data-image-width="893" data-image-height="294" data-animation-name="customAnimationIn" data-animation-duration="3250">
+			<h3 class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-3" data-animation-name="customAnimationIn" data-animation-duration="3250">Complejo</h3>
+			<img class="u-align-center u-image u-image-default u-opacity u-opacity-90 u-image-2" src="{% static 'img/parablog29.jpg' %}" alt="tipos de datos numericos (cmplejos)" data-image-width="887" data-image-height="275" data-animation-name="customAnimationIn" data-animation-duration="3250">
+		</div>
+	</section>
+	<section class="u-clearfix u-image u-section-9" id="sec-7d82" data-image-width="1782" data-image-height="1080">
+		<div class="u-clearfix u-sheet u-sheet-1">
+			<h3 class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-1" data-animation-name="customAnimationIn" data-animation-duration="3250">Cadena o String</h3>
+			<img class="u-image u-image-default u-opacity u-opacity-90 u-image-1" src="{% static 'img/parablog30.jpg' %}" alt="cadenas o strings en python" data-image-width="888" data-image-height="279" data-animation-name="customAnimationIn" data-animation-duration="3250">
+			<h3 class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-2" data-animation-name="customAnimationIn" data-animation-duration="3250">Booleano</h3>
+			<img class="u-image u-image-default u-opacity u-opacity-90 u-image-2" src="{% static 'img/parablog31.jpg' %}" alt="python booleanos" data-image-width="889" data-image-height="274" data-animation-name="customAnimationIn" data-animation-duration="3250">
+			<h3 class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-3" data-animation-name="customAnimationIn" data-animation-duration="3250">Conjunto</h3>
+			<img class="u-align-center u-image u-image-default u-opacity u-opacity-90 u-image-3" src="{% static 'img/parablog32.jpg' %}" alt="conjuntos en python" data-image-width="885" data-image-height="314" data-animation-name="customAnimationIn" data-animation-duration="3250">
+		</div>
+	</section>
+	<section class="u-clearfix u-image u-section-10" id="sec-db02" data-image-width="1782" data-image-height="1080">
+		<div class="u-clearfix u-sheet u-sheet-1">
+			<h3 class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-1" data-animation-name="customAnimationIn" data-animation-duration="3250">Listas</h3>
+			<img class="u-image u-image-default u-opacity u-opacity-90 u-image-1" src="{% static 'img/parablog33.jpg' %}" alt="Listas en Python" data-image-width="894" data-image-height="312" data-animation-name="customAnimationIn" data-animation-duration="3250">
+			<h3 class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-2" data-animation-name="customAnimationIn" data-animation-duration="3250">Tuplas</h3>
+			<img class="u-align-center u-image u-image-default u-opacity u-opacity-90 u-image-2" src="{% static 'img/parablog34.jpg' %}" alt="tuplas en python" data-image-width="901" data-image-height="454" data-animation-name="customAnimationIn" data-animation-duration="3250">
+		</div>
+	</section>
+	<section class="u-clearfix u-image u-section-11" id="sec-991c" data-image-width="1782" data-image-height="1080">
+		<div class="u-clearfix u-sheet u-sheet-1">
+			<h3 class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-1" data-animation-name="customAnimationIn" data-animation-duration="3250">Diccionario</h3>
+			<img class="u-image u-image-default u-opacity u-opacity-90 u-image-1" src="{% static 'img/parablog35.jpg' %}" alt="Diccionarios en python" data-image-width="899" data-image-height="450" data-animation-name="customAnimationIn" data-animation-duration="3250">
+			<h3 class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-2" data-animation-name="customAnimationIn" data-animation-duration="3250">None</h3>
+			<img class="u-align-center u-image u-image-default u-opacity u-opacity-90 u-image-2" src="{% static 'img/parablog36.jpg' %}" alt="python none" data-image-width="897" data-image-height="329" data-animation-name="customAnimationIn" data-animation-duration="3250" data-animation-direction="">
+			<p class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-3" data-animation-name="customAnimationIn" data-animation-duration="3250">Prueba los ejemplos en su equipo o computadora (como quiera llamarlo),<br>para ir practicando y agilizando un poco las cosas.
+			</p>
+			<p class="u-align-center u-hover-feature u-text u-text-default u-text-palette-4-base u-text-4" data-animation-name="customAnimationIn" data-animation-duration="3250"><b>Nota: en algunas imagenes (en los codigos) van a notar que hay puntos y comas (;)<br>al final de las instruciones. En Python no es necesario el punto y coma (;) vale aclarar. </b>
+			</p>
+			<a href="https://nicepage.com/k/exam-html-templates" class="u-border-none u-btn u-btn-round u-button-style u-hover-palette-4-base u-palette-2-base u-radius-2 u-btn-1" data-animation-name="customAnimationIn" data-animation-duration="3000">Siguiente&nbsp;<span class="u-icon u-text-black"><svg class="u-svg-content" viewBox="0 0 512 512" x="0px" y="0px" style="width: 1em; height: 1em;"><path d="M506.134,241.843c-0.006-0.006-0.011-0.013-0.018-0.019l-104.504-104c-7.829-7.791-20.492-7.762-28.285,0.068 c-7.792,7.829-7.762,20.492,0.067,28.284L443.558,236H20c-11.046,0-20,8.954-20,20c0,11.046,8.954,20,20,20h423.557 l-70.162,69.824c-7.829,7.792-7.859,20.455-0.067,28.284c7.793,7.831,20.457,7.858,28.285,0.068l104.504-104 c0.006-.006,0.011-.013,0.018-.019C513.968,262.339,513.943,249.635,506.134,241.843z"></path></svg><img></span>
+            </a>
+			<a href="https://nicepage.com/k/hospital-website-templates" class="u-border-none u-btn u-btn-round u-button-style u-hover-palette-4-base u-palette-2-base u-radius-2 u-btn-2" data-animation-name="customAnimationIn" data-animation-duration="3000"><span class="u-file-icon u-icon u-text-black"><img src="images/545680-1b62f7d1.png" alt=""></span>&nbsp;Anterior
+            </a>
+		</div>
+	</section>
+
+
+	<footer class="u-align-center u-clearfix u-footer u-grey-80 u-footer" id="sec-b796">
+		<div class="u-clearfix u-sheet u-sheet-1">
+			<p class="u-small-text u-text u-text-variant u-text-1">Sample text. Click to select the text box. Click again or double click to start editing the text.</p>
+		</div>
+	</footer>
+	<section class="u-backlink u-clearfix u-grey-80">
+		<a class="u-link" href="https://nicepage.com/website-templates" target="_blank">
+			<span>Website Templates</span>
+		</a>
+		<p class="u-text">
+			<span>created with</span>
+		</p>
+		<a class="u-link" href="" target="_blank">
+			<span>Website Builder Software</span>
+		</a>.
+	</section><span style="height: 64px; width: 64px; margin-left: 0px; margin-right: auto; margin-top: 0px; background-image: none; right: 20px; bottom: 20px; padding: 15px; box-shadow: 2px -2px 8px 0px rgba(128,128,128,1);" class="u-back-to-top u-icon u-icon-circle u-opacity u-opacity-85 u-white" data-href="#">
+        <svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 551.13 551.13"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-1d98"></use></svg>
+        <svg class="u-svg-content" enable-background="new 0 0 551.13 551.13" viewBox="0 0 551.13 551.13" xmlns="http://www.w3.org/2000/svg" id="svg-1d98"><path d="m275.565 189.451 223.897 223.897h51.668l-275.565-275.565-275.565 275.565h51.668z"></path></svg>
+    </span>
+
+</body>
+</html>
