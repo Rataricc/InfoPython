@@ -1,0 +1,479 @@
+{% load static %}
+<!DOCTYPE html>
+<html style="font-size: 16px;" lang="es">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="utf-8">
+	<meta name="keywords" content="Estructura de Control Repetitivas, Introducción">
+	<meta name="description" content="">
+	<title>Estructuras Repetitivas</title>
+	<link rel="stylesheet" href="../../static/css/nicepage01.css" media="screen">
+	<link rel="stylesheet" href="../../static/css/estructura-repetitivas/estructura-repetitivas.css" media="screen">
+	<script class="u-script" type="text/javascript" src="{% static 'js/jquery01.js' %}" defer=""></script>
+	<script class="u-script" type="text/javascript" src="{% static 'js/nicepage01.js' %}" defer=""></script>
+    <link rel="shortcut icon" href="../../static/img/ico/parablog6.jpg">
+	<meta name="generator" content="Nicepage 5.3.2, nicepage.com">
+	<link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
+
+
+
+
+
+
+
+
+
+	<script type="application/ld+json">
+		{
+				"@context": "http://schema.org",
+				"@type": "Organization",
+				"name": "",
+				"logo": "images/aInfo6.jpg"
+		}
+	</script>
+	<meta name="theme-color" content="#232b79">
+	<meta property="og:title" content="Estructuras Repetitivas">
+	<meta property="og:type" content="website">
+</head>
+<body class="u-body u-overlap u-xl-mode" data-lang="es">
+	<header class="u-clearfix u-header u-sticky u-header" id="sec-a184">
+		<div class="u-clearfix u-sheet u-sheet-1">
+			<a href="#" class="u-active-black u-border-1 u-border-active-black u-border-grey-30 u-border-hover-black u-btn u-btn-round u-button-style u-hover-palette-4-base u-radius-12 u-text-active-white u-text-hover-white u-white u-btn-1">Más</a>
+			<nav class="u-menu u-menu-dropdown u-offcanvas u-menu-1" data-responsive-from="XXL">
+				<div class="menu-collapse" style="font-size: 1rem; letter-spacing: 0px;">
+					<a class="u-button-style u-custom-left-right-menu-spacing u-custom-padding-bottom u-custom-text-active-color u-custom-text-color u-custom-text-hover-color u-custom-top-bottom-menu-spacing u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="#">
+						<svg class="u-svg-link" viewBox="0 0 24 24"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#menu-hamburger"></use></svg>
+						<svg class="u-svg-content" version="1.1" id="menu-hamburger" viewBox="0 0 16 16" x="0px" y="0px" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g><rect y="1" width="16" height="2"></rect><rect y="7" width="16" height="2"></rect><rect y="13" width="16" height="2"></rect>
+</g></svg>
+					</a>
+				</div>
+				<div class="u-custom-menu u-nav-container">
+					<ul class="u-nav u-spacing-20 u-unstyled u-nav-1">
+						<li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-white u-text-body-alt-color u-text-hover-palette-4-base" href="Inicio.html" style="padding: 16px 28px;">Inicio</a>
+						</li>
+						<li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-white u-text-body-alt-color u-text-hover-palette-4-base" href="#" style="padding: 16px 28px;">Contacto</a>
+						</li>
+					</ul>
+				</div>
+				<div class="u-custom-menu u-nav-container-collapse">
+					<div class="u-black u-container-style u-inner-container-layout u-opacity u-opacity-95 u-sidenav">
+						<div class="u-inner-container-layout u-sidenav-overflow">
+							<div class="u-menu-close"></div>
+							<ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-2">
+								<li class="u-nav-item"><a class="u-button-style u-nav-link" href="Inicio.html" style="padding: 10px 20px;">Inicio</a>
+								</li>
+								<li class="u-nav-item"><a class="u-button-style u-nav-link" href="#" style="padding: 10px 20px;">Contacto</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="u-black u-menu-overlay u-opacity u-opacity-70"></div>
+				</div>
+			</nav>
+			<a href="#" class="u-image u-logo u-image-1" data-image-width="782" data-image-height="383">
+				<img class="u-logo-image u-logo-image-1" src="{% static 'img/masimg/aInfo6.jpg'%}">
+			</a>
+		</div>
+	</header>
+	<section class="u-clearfix u-image u-section-1" id="sec-acdb" data-image-width="1782" data-image-height="1080">
+		<div class="u-clearfix u-sheet u-sheet-1">
+			<h1 class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-1" data-animation-name="customAnimationIn" data-animation-duration="1000">Estructura de Control Repetitivas</h1>
+			<h2 class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-2" data-animation-name="customAnimationIn" data-animation-duration="1000">Introducción</h2>
+			<img class="u-align-center u-image u-image-contain u-image-default u-opacity u-opacity-60 u-image-1" src="{% static 'img/parablog5.jpg' %}" alt="Estructura Repetitiva - Algoritmo - hierve el Agua" data-image-width="738" data-image-height="1042" data-animation-name="customAnimationIn" data-animation-duration="3000">
+			<p class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-3" data-animation-name="customAnimationIn" data-animation-duration="1000">Durante el proceso de creación de programas, es muy común, encontrase con que una operación<br>o conjunto de operaciones&nbsp;<span style="font-weight: 700;">deben repetirse muchas veces.</span>
+			</p>
+			<p class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-4" data-animation-name="customAnimationIn" data-animation-duration="1000">Para ello es importante conocer las estrucutras que permiten&nbsp;<span style="font-weight: 700;">repetir<br>una o varias accione, un número determinado de veces.
+          </span>
+			</p>
+			<p class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-5" data-animation-name="customAnimationIn" data-animation-duration="1000">Las estructuras que repiten una secuencia de instrucciones un número determinado de veces se<br>denominan estructuras repetitivas, interativas o cíclicas.
+			</p>
+			<p class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-6" data-animation-name="customAnimationIn" data-animation-duration="1000">Cada conjunto de instrucciones a ejecutar se denomina BUCLE.<br>Y cada repetición del bucle se llama ITERACIÓN.
+			</p>
+		</div>
+
+
+
+
+
+
+	</section>
+	<section class="u-clearfix u-image u-section-2" id="sec-d3d5" data-image-width="1782" data-image-height="1080">
+		<div class="u-clearfix u-sheet u-sheet-1">
+			<p class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-1" data-animation-name="customAnimationIn" data-animation-duration="1000">Todo bucle tiene que llevar asociada una condición, que es la que va a determinar&nbsp;<span style="font-weight: 700;">cuándo se<br>repite el bucle
+          </span>&nbsp;y&nbsp;<span style="font-weight: 700;">cuándo deja de repetirse.</span>
+			</p>
+			<h3 class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-2" data-animation-name="customAnimationIn" data-animation-duration="1000">Antes de continuar veremos tipos de variables especiales que<br>podríamos requerir para diseñar nuestros programas
+        </h3>
+			<h3 class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-3" data-animation-name="customAnimationIn" data-animation-duration="1000">Contadores, Acumuladores y Banderas</h3>
+			<p class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-4" data-animation-name="customAnimationIn" data-animation-duration="1000">En muchos programas se necesitan variables que&nbsp;<span style="font-weight: 700;">cuenten cuántas veces ha<br>ocurrido algo
+          </span>&nbsp;(contadores), que indiquen si simplemente&nbsp;<span style="font-weight: 700;">ha ocurrido un<br>evento
+          </span>&nbsp;(banderas) o que&nbsp;<span style="font-weight: 700;">acumulen valores</span>&nbsp;(acumuladores).
+			</p>
+			<p class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-5" data-animation-name="customAnimationIn" data-animation-duration="1000">La situaciones pueden ser muy diversas, por lo que en este apartado simplemente se ofrecen<br>unos ejemplos para que entiendas cómo utlizar estos recursos:
+			</p>
+			<div class="u-container-align-left u-container-style u-effect-wobble-left u-grey-90 u-group u-hover-box u-opacity u-opacity-90 u-group-1" data-animation-name="customAnimationIn" data-animation-duration="3000">
+				<div class="u-back-slide u-container-layout u-container-layout-1">
+					<h3 class="u-align-left u-hover-feature u-text u-text-default u-text-6" data-animation-name="customAnimationIn" data-animation-duration="3250"><span class="u-file-icon u-icon"><img src="images/1783356.png" alt=""></span>&nbsp; Contador:
+            </h3>
+					<p class="u-align-left u-hover-feature u-text u-text-default u-text-7" data-animation-name="customAnimationIn" data-animation-duration="3250">Los procesos repetitivos requieren contar los sucesos y acciones internas, una forma de hacerlo es mediante un contador.</p>
+					<p class="u-align-left u-hover-feature u-text u-text-default u-text-8" data-animation-name="customAnimationIn" data-animation-duration="3250">Un contador es una variable cuyo valor se incrementa o decrementa en una cantidad constante en cada repetición.</p>
+					<h3 class="u-align-left u-hover-feature u-text u-text-default u-text-9" data-animation-name="customAnimationIn" data-animation-duration="3250"><span class="u-file-icon u-icon"><img src="images/1783356.png" alt=""></span>&nbsp; Acumalador:
+            </h3>
+					<p class="u-align-left u-hover-feature u-text u-text-default u-text-10" data-animation-name="customAnimationIn" data-animation-duration="3250">Un&nbsp;<span style="font-weight: 700;">acumulador</span>&nbsp;o totalizador es una variable cuya función es almacenar<br>cantidades resultantes de opreciones sucesivas.
+					</p>
+					<p class="u-align-left u-hover-feature u-text u-text-default u-text-11" data-animation-name="customAnimationIn" data-animation-duration="3250">Realizar la misma función que un contador con la diferencia de que el incremento o<br>decremento es variable en lugar de constantes.
+					</p>
+					<h3 class="u-align-left u-hover-feature u-text u-text-default u-text-12" data-animation-name="customAnimationIn" data-animation-duration="3250"><span class="u-file-icon u-icon u-icon-3"><img src="images/1783356.png" alt=""></span>&nbsp; Banderas:
+            </h3>
+					<p class="u-align-left u-hover-feature u-text u-text-default u-text-13" data-animation-name="customAnimationIn" data-animation-duration="3250">Una<span style="font-weight: 700;">&nbsp;bandera</span>, es una variable que puede tomar uno de dos valores<br>(verdadero o falso) a lo largo de la ejecución del programa y permite comunicar<br>información de una parte a otra del mismo.
+					</p>
+				</div>
+				<div class="u-black u-container-layout u-opacity u-opacity-25 u-over-slide u-container-layout-2"></div>
+			</div>
+		</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+	</section>
+	<section class="u-clearfix u-image u-section-3" id="sec-63fb" data-image-width="1782" data-image-height="1080">
+		<div class="u-clearfix u-sheet u-sheet-1">
+			<h3 class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-1" data-animation-name="customAnimationIn" data-animation-duration="1000">Sentencia While (mientras)</h3>
+			<p class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-2" data-animation-name="customAnimationIn" data-animation-duration="1000">Un<span style="font-weight: 700;">&nbsp;bucle while</span>&nbsp;permite repetir la ejecución de un grupo de instrucciones mientras se cumpla<br>una condición (es decir, mientras la condición tenga el valor True).
+			</p>
+			<p class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-3" data-animation-name="customAnimationIn" data-animation-duration="1000">Queda en las manos del programador decidir el momento en que la&nbsp;<span style="font-weight: 700;">condición cambie a False</span>&nbsp;para<br>hacer que el&nbsp;<span style="font-weight: 700;">ciclo While finalice.</span>
+			</p>
+			<p class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-4" data-animation-name="customAnimationIn" data-animation-duration="1000">Características:</p>
+			<ul class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-5" data-animation-name="customAnimationIn" data-animation-duration="1000">
+				<li style="padding-left: 31px;">No se conoce la cantidad de veces a iterar o repetir el conjunto de acciones.<br>
+				</li>
+				<li style="padding-left: 31px;">El final del bucle está controlado con una condición.<br>
+				</li>
+				<li style="padding-left: 31px;">El conjunto de acciones se ejecutan mientras la evolución de la condición devuelva un<br>resultado verdadero.<br>
+				</li>
+				<li style="padding-left: 31px;">El ciclo se puede ejecutar 0 o más veces.<br>
+				</li>
+			</ul>
+			<div class="u-align-center u-clearfix u-gutter-0 u-layout-wrap u-layout-wrap-1">
+				<div class="u-layout">
+					<div class="u-layout-col">
+						<div class="u-size-30">
+							<div class="u-layout-row">
+								<div class="u-container-style u-effect-zoom u-hover-box u-layout-cell u-opacity u-opacity-90 u-palette-1-dark-2 u-size-60 u-layout-cell-1" data-animation-name="customAnimationIn" data-animation-duration="3000">
+									<div class="u-back-slide u-container-layout u-valign-bottom u-container-layout-1">
+										<h3 class="u-hover-feature u-text u-text-default u-text-6" data-animation-name="customAnimationIn" data-animation-duration="3250">Código</h3>
+										<p class="u-align-center u-hover-feature u-text u-text-default u-text-7" data-animation-name="customAnimationIn" data-animation-duration="3250">Dado un número entero N calcular la suma de todos los números entre 1 y N.</p>
+										<p class="u-align-left u-hover-feature u-text u-text-default u-text-8" data-animation-name="customAnimationIn" data-animation-duration="3250">cont = 0<br>suma = 0<br>N = int(input("Ingrese tope maximo: "))<br>while cont &lt;= N:<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;suma = suma + cont<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;cont = cont + 1<br>print("La suma total es: ", suma)<br>
+										</p>
+									</div>
+									<div class="u-black u-container-layout u-opacity u-opacity-25 u-over-slide u-container-layout-2"></div>
+								</div>
+							</div>
+						</div>
+						<div class="u-size-30">
+							<div class="u-layout-row">
+								<div class="u-container-style u-effect-flip-left u-grey-70 u-hover-box u-layout-cell u-opacity u-opacity-90 u-size-30 u-layout-cell-2" data-animation-name="customAnimationIn" data-animation-duration="3000">
+									<div class="u-back-slide u-container-layout u-container-layout-3">
+										<h3 class="u-hover-feature u-text u-text-default u-text-9" data-animation-name="customAnimationIn" data-animation-duration="3250">Resultado</h3>
+										<p class="u-align-center u-hover-feature u-text u-text-10" data-animation-name="customAnimationIn" data-animation-duration="3250">Ingresa N = 3<br>cont vale 0<br>cont vale 1<br>cont vale 2<br>cont vale 3<br>
+										</p>
+									</div>
+									<div class="u-black u-container-layout u-opacity u-opacity-25 u-over-slide u-container-layout-4"></div>
+								</div>
+								<div class="u-container-style u-effect-over-left u-grey-80 u-hover-box u-layout-cell u-opacity u-opacity-90 u-size-30 u-layout-cell-3" data-animation-name="flipIn" data-animation-duration="3000" data-animation-direction="X">
+									<div class="u-back-slide u-container-layout u-valign-bottom u-container-layout-5">
+										<p class="u-align-center u-hover-feature u-text u-text-default u-text-11" data-animation-name="customAnimationIn" data-animation-duration="3250">suma vale 0<br>suma vale 1<br>suma vale 3<br>suma vale 6<br>La suma total es 6<br>
+										</p>
+									</div>
+									<div class="u-black u-container-layout u-opacity u-opacity-25 u-over-slide u-container-layout-6"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+
+
+
+
+
+
+
+
+
+	</section>
+	<section class="u-clearfix u-image u-section-4" id="sec-b790" data-image-width="1782" data-image-height="1080">
+		<div class="u-clearfix u-sheet u-sheet-1">
+			<p class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-1" data-animation-name="customAnimationIn" data-animation-duration="1000">Otra ventaja del blucle while es que el&nbsp;número de iteraciones no está definida&nbsp;antes de<br>empezar el bucle, por ejemplo, porque los datos los proporciona el usuario.
+			</p>
+			<p class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-2" data-animation-name="customAnimationIn" data-animation-duration="1000">Por ejemplo, el siguiente ejemplo pide un número positivo al usuario una y otra vez hasta que el<br>usuario lo haga correctamente:
+			</p>
+			<div class="u-align-center u-clearfix u-layout-wrap u-layout-wrap-1">
+				<div class="u-layout">
+					<div class="u-layout-col">
+						<div class="u-size-30">
+							<div class="u-layout-row">
+								<div class="u-container-style u-effect-over-left u-grey-80 u-hover-box u-layout-cell u-opacity u-opacity-85 u-size-60 u-layout-cell-1" data-animation-name="customAnimationIn" data-animation-duration="3000">
+									<div class="u-back-slide u-container-layout u-valign-bottom u-container-layout-1">
+										<h3 class="u-hover-feature u-text u-text-default u-text-3" data-animation-name="customAnimationIn" data-animation-duration="3250">Código</h3>
+										<p class="u-hover-feature u-text u-text-default u-text-4" data-animation-name="customAnimationIn" data-animation-duration="3250">numero = int(input("Escriba un numero positivo: "))<br>while numero &lt; 0:<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; print("¡ha escrito un número negativo! Inténtelo de nuevo")<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; numero = int(input("Escriba un numero positivo: "))<br>print("Gracias por su colaboración")<br>
+										</p>
+									</div>
+									<div class="u-black u-container-layout u-opacity u-opacity-25 u-over-slide u-container-layout-2"></div>
+								</div>
+							</div>
+						</div>
+						<div class="u-size-30">
+							<div class="u-layout-row">
+								<div class="u-container-style u-effect-flip-left u-grey-90 u-hover-box u-layout-cell u-opacity u-opacity-85 u-size-60 u-layout-cell-2" data-animation-name="customAnimationIn" data-animation-duration="3000">
+									<div class="u-back-slide u-container-layout u-container-layout-3">
+										<h3 class="u-hover-feature u-text u-text-default u-text-5" data-animation-name="customAnimationIn" data-animation-duration="3250">Resultado</h3>
+										<p class="u-hover-feature u-text u-text-default u-text-6" data-animation-name="customAnimationIn" data-animation-duration="3250">Escriba un número positivo: -4<br>¡ha escrito un número negativo! Inténtelo de nuevo<br>Escriba un número positivo: -8<br>¡ha escrito un número negativo! Inténtelo de nuevo<br>Escriba un número positivo: 9<br>Gracias por su colaboración
+										</p>
+									</div>
+									<div class="u-black u-container-layout u-opacity u-opacity-25 u-over-slide u-container-layout-4"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<h3 class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-7" data-animation-name="customAnimationIn" data-animation-duration="1000">Uso de else en While</h3>
+			<p class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-8" data-animation-name="customAnimationIn" data-animation-duration="1000">Se encadena al While para ejecutar un bloque de código una vez la condición ya no devuelve<br>True (normalmente al final):
+			</p>
+			<div class="u-align-center u-clearfix u-layout-wrap u-layout-wrap-2">
+				<div class="u-layout">
+					<div class="u-layout-col">
+						<div class="u-size-30">
+							<div class="u-layout-row">
+								<div class="u-container-style u-effect-flip-left u-grey-80 u-hover-box u-layout-cell u-opacity u-opacity-85 u-size-60 u-layout-cell-3" data-animation-name="customAnimationIn" data-animation-duration="3000">
+									<div class="u-back-slide u-container-layout u-container-layout-5">
+										<h3 class="u-hover-feature u-text u-text-default u-text-9" data-animation-name="customAnimationIn" data-animation-duration="3250">Código</h3>
+										<p class="u-hover-feature u-text u-text-default u-text-10" data-animation-name="customAnimationIn" data-animation-duration="3250">c = 0<br>while c &lt;= 5:<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;c+=1<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;print("c vale", c)<br>else:<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;print("Se ha completado toda la iteración y c vale", c)
+										</p>
+									</div>
+									<div class="u-black u-container-layout u-opacity u-opacity-25 u-over-slide u-container-layout-6"></div>
+								</div>
+							</div>
+						</div>
+						<div class="u-size-30">
+							<div class="u-layout-row">
+								<div class="u-container-style u-effect-zoom u-grey-90 u-hover-box u-layout-cell u-opacity u-opacity-85 u-size-60 u-layout-cell-4" data-animation-name="customAnimationIn" data-animation-duration="3000">
+									<div class="u-back-slide u-container-layout u-valign-bottom u-container-layout-7">
+										<h3 class="u-hover-feature u-text u-text-default u-text-11" data-animation-name="customAnimationIn" data-animation-duration="3250">Resultado</h3>
+										<p class="u-hover-feature u-text u-text-default u-text-12" data-animation-name="customAnimationIn" data-animation-duration="3250">c vale 1<br>c vale 2<br>c vale 3<br>c vale 4<br>c vale 5<br>c vale 6<br>Se ha completado toda la iteración y c vale 6
+										</p>
+									</div>
+									<div class="u-black u-container-layout u-opacity u-opacity-25 u-over-slide u-container-layout-8"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+
+
+
+
+
+
+
+
+
+
+	</section>
+	<section class="u-clearfix u-image u-section-5" id="sec-b562" data-image-width="1782" data-image-height="1080">
+		<div class="u-clearfix u-sheet u-sheet-1">
+			<h3 class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-1" data-animation-name="customAnimationIn" data-animation-duration="1000">Sentencia for (para)</h3>
+			<ul class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-2" data-animation-name="customAnimationIn" data-animation-duration="1000">
+				<li style="padding-left: 24px;">Ahora&nbsp;SI se conoce la cantidad de veces a iterar&nbsp;o&nbsp;repetir&nbsp;el conjunto de acciones.<br>
+				</li>
+				<li style="padding-left: 24px;">El&nbsp;final del bucle&nbsp;está controlado un contador (indica cantidad de iteraciones).<br>
+				</li>
+				<li style="padding-left: 24px;">La&nbsp;variable contador&nbsp;que maneja el bucle se incrementa automáticamente de acuerdo<br>al incremento indicado.<br>
+				</li>
+				<li style="padding-left: 24px;">No necesita&nbsp;inicialización.<br>
+				</li>
+			</ul>
+			<p class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-3" data-animation-name="customAnimationIn" data-animation-duration="1000">La sintaxis de un bucle for es la siguiente:</p>
+			<div class="u-container-align-left u-container-style u-effect-zoom u-grey-80 u-group u-hover-box u-opacity u-opacity-85 u-group-1" data-animation-name="customAnimationIn" data-animation-duration="3000">
+				<div class="u-back-slide u-container-layout u-container-layout-1">
+					<h3 class="u-align-left u-hover-feature u-text u-text-default u-text-4" data-animation-name="customAnimationIn" data-animation-duration="3250">Código</h3>
+					<p class="u-align-left u-hover-feature u-text u-text-default u-text-5" data-animation-name="customAnimationIn" data-animation-duration="3250">for variable in elemento iterable (lista, cadena, range, etc.):</p>
+					<p class="u-align-left u-hover-feature u-text u-text-default u-text-6" data-animation-name="customAnimationIn" data-animation-duration="3250">cuerpo del blucle</p>
+				</div>
+				<div class="u-black u-container-layout u-opacity u-opacity-25 u-over-slide u-container-layout-2"></div>
+			</div>
+			<p class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-7" data-animation-name="customAnimationIn" data-animation-duration="1000">El cuerpo del bucle se ejecuta tantas veces como elementos tenga la estructura<br>iterable (elementos de una lista o de un range(), caracteres de una cadena, etc.).
+			</p>
+			<h3 class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-8" data-animation-name="customAnimationIn" data-animation-duration="1000">Utilizando tipos range()</h3>
+			<p class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-9" data-animation-name="customAnimationIn" data-animation-duration="1000">Una de las ventajas de utilizar tipos&nbsp;range()&nbsp;es que el argumento del tipo&nbsp;range()&nbsp;controla el<br>número de veces que se ejecuta el bucle. Sirve para generar una lista de números que podemos<br>recorrer fácilmente, pero no ocupa memoria porque se interpreta sobre la marcha:
+			</p>
+			<div class="u-align-center u-clearfix u-layout-wrap u-layout-wrap-1">
+				<div class="u-layout">
+					<div class="u-layout-col">
+						<div class="u-size-30">
+							<div class="u-layout-row">
+								<div class="u-container-style u-effect-over-left u-grey-80 u-hover-box u-layout-cell u-opacity u-opacity-85 u-size-60 u-layout-cell-1" data-animation-name="customAnimationIn" data-animation-duration="3000" data-animation-direction="">
+									<div class="u-back-slide u-container-layout u-container-layout-3">
+										<h3 class="u-hover-feature u-text u-text-default u-text-10" data-animation-name="customAnimationIn" data-animation-duration="3250">Código</h3>
+										<p class="u-align-left u-hover-feature u-text u-text-default u-text-11" data-animation-name="customAnimationIn" data-animation-duration="3250">print(Comienzo)<br>for i in range(3)<br>&nbsp; &nbsp; &nbsp; &nbsp; print("Hola ", end="")<br>print("Final")<br>
+										</p>
+									</div>
+									<div class="u-black u-container-layout u-opacity u-opacity-25 u-over-slide u-container-layout-4"></div>
+								</div>
+							</div>
+						</div>
+						<div class="u-size-30">
+							<div class="u-layout-row">
+								<div class="u-container-style u-effect-zoom u-grey-90 u-hover-box u-layout-cell u-opacity u-opacity-90 u-size-60 u-layout-cell-2" data-animation-name="customAnimationIn" data-animation-duration="3000">
+									<div class="u-back-slide u-container-layout u-container-layout-5">
+										<h3 class="u-hover-feature u-text u-text-default u-text-12" data-animation-name="customAnimationIn" data-animation-duration="3250">Resultado</h3>
+										<p class="u-hover-feature u-text u-text-default u-text-13" data-animation-name="customAnimationIn" data-animation-duration="3250">comienzo<br>Hola Hola Hola<br>Final
+										</p>
+									</div>
+									<div class="u-black u-container-layout u-opacity u-opacity-25 u-over-slide u-container-layout-6"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+	</section>
+	<section class="u-clearfix u-image u-section-6" id="sec-f505" data-image-width="1782" data-image-height="1080">
+		<div class="u-clearfix u-sheet u-sheet-1">
+			<h3 class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-1" data-animation-name="customAnimationIn" data-animation-duration="1000">Control de Bucles</h3>
+			<h3 class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-2" data-animation-name="customAnimationIn" data-animation-duration="1000">Instrucción break</h3>
+			<p class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-3" data-animation-name="customAnimationIn" data-animation-duration="1000">Se puede usar en bucles&nbsp;for&nbsp;y&nbsp;while&nbsp;y simplemente&nbsp;termina el bucle actual&nbsp;y sigue con la<br>ejecución de la próxima instrucción, por ejemplo:
+			</p>
+			<p class="u-align-left u-hover-feature u-text u-text-body-alt-color u-text-default u-text-4" data-animation-name="customAnimationIn" data-animation-duration="1000">a. Controlar fin de bucle</p>
+			<div class="u-container-align-left u-container-style u-effect-over-left u-grey-80 u-group u-hover-box u-opacity u-opacity-85 u-group-1" data-animation-name="customAnimationIn" data-animation-duration="3000">
+				<div class="u-back-slide u-container-layout u-valign-top u-container-layout-1">
+					<p class="u-align-left u-hover-feature u-text u-text-default u-text-5" data-animation-name="customAnimationIn" data-animation-duration="3250">while True:<br>&nbsp; &nbsp; &nbsp; &nbsp; op = input("Ingrese cualquier palabra, que termine con FIN--&gt; ")<br>&nbsp; &nbsp; &nbsp; &nbsp; if op = 'FIN':<br>&nbsp; &nbsp; &nbsp; &nbsp; break<br>else:<br>&nbsp; &nbsp; &nbsp; &nbsp; print(op)<br>print("Terminó la ejecución con FIN")<br>
+					</p>
+				</div>
+				<div class="u-black u-container-layout u-opacity u-opacity-25 u-over-slide u-container-layout-2"></div>
+			</div>
+			<p class="u-align-left u-hover-feature u-text u-text-body-alt-color u-text-default u-text-6" data-animation-name="customAnimationIn" data-animation-duration="1000">b. La sentencia break es usada también para terminar un ciclo aun<br>cuando la evolución de la condición no devuelva False,
+			</p>
+			<h3 class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-7" data-animation-name="customAnimationIn" data-animation-duration="1000"># Primer ejemplo</h3>
+			<div class="u-container-style u-effect-over-left u-grey-80 u-group u-hover-box u-opacity u-opacity-85 u-group-2" data-animation-name="customAnimationIn" data-animation-duration="3000">
+				<div class="u-back-slide u-container-layout u-container-layout-3">
+					<p class="u-align-left u-hover-feature u-text u-text-default u-text-8" data-animation-name="customAnimationIn" data-animation-duration="3250">for letra in "Python":<br>&nbsp; &nbsp; &nbsp; &nbsp;if letra == "h":<br>&nbsp; &nbsp; &nbsp; &nbsp;break<br>&nbsp; &nbsp; &nbsp; &nbsp;print("Letra actual :", letra)
+					</p>
+				</div>
+				<div class="u-black u-container-layout u-opacity u-opacity-25 u-over-slide u-container-layout-4"></div>
+			</div>
+			<img class="u-image u-image-default u-opacity u-opacity-70 u-image-1" src="{% static 'img/parablog40.jpg' %}" alt="bucle for, control break" data-image-width="331" data-image-height="234" data-animation-name="customAnimationIn" data-animation-duration="3000">
+		</div>
+
+
+
+
+
+
+
+
+	</section>
+	<section class="u-clearfix u-image u-section-7" id="sec-4fad" data-image-width="1782" data-image-height="1080">
+		<div class="u-clearfix u-sheet u-sheet-1">
+			<h3 class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-1" data-animation-name="customAnimationIn" data-animation-duration="1000"># Segundo ejemplo</h3>
+			<div class="u-container-align-left u-container-style u-effect-zoom u-grey-80 u-group u-hover-box u-opacity u-opacity-80 u-group-1" data-animation-name="customAnimationIn" data-animation-duration="3000">
+				<div class="u-back-slide u-container-layout u-container-layout-1">
+					<p class="u-hover-feature u-text u-text-default u-text-2" data-animation-name="customAnimationIn" data-animation-duration="3250">var = 10<br>while var &gt; 0:<br>&nbsp; &nbsp; &nbsp; &nbsp;if var == 5:<br>&nbsp; &nbsp; &nbsp; &nbsp;break<br>print("Valor actual de la variable :", var)<br>
+					</p>
+				</div>
+				<div class="u-black u-container-layout u-opacity u-opacity-25 u-over-slide u-container-layout-2"></div>
+			</div>
+			<h3 class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-3" data-animation-name="customAnimationIn" data-animation-duration="1000">Sentencia continue</h3>
+			<p class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-4" data-animation-name="customAnimationIn" data-animation-duration="1000">Al aparecer un&nbsp;continue&nbsp;en Python, este regresa al comienzo del bucle, ignorando todos los<br>estamentos que quedan en la iteración actual del bucle e inicia la siguiente iteración. Queda<br>más claro con un ejemplo:
+			</p>
+			<h3 class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-5" data-animation-name="customAnimationIn" data-animation-duration="1000"># Primer ejemplo</h3>
+			<div class="u-container-style u-effect-zoom u-grey-80 u-group u-hover-box u-opacity u-opacity-80 u-group-2" data-animation-name="customAnimationIn" data-animation-duration="3000">
+				<div class="u-back-slide u-container-layout u-container-layout-3">
+					<p class="u-hover-feature u-text u-text-default u-text-6" data-animation-name="customAnimationIn" data-animation-duration="3250">for letra in "Python":<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;if letra == "h":<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;continue<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;print("Letra actual :", letra)
+					</p>
+				</div>
+				<div class="u-black u-container-layout u-opacity u-opacity-25 u-over-slide u-container-layout-4"></div>
+			</div>
+			<img class="u-align-center u-image u-image-default u-opacity u-opacity-70 u-image-1" src="{% static 'img/parablog41.jpg' %}" alt="bucle for, sentencia continue" data-image-width="450" data-image-height="146" data-animation-name="flipIn" data-animation-duration="3000" data-animation-direction="X">
+		</div>
+
+
+
+
+
+
+	</section>
+	<section class="u-clearfix u-image u-section-8" id="sec-2f3d" data-image-width="1782" data-image-height="1080">
+		<div class="u-clearfix u-sheet u-sheet-1">
+			<h3 class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-1" data-animation-name="customAnimationIn" data-animation-duration="1000"># Segundo ejemplo</h3>
+			<div class="u-container-style u-effect-zoom u-grey-80 u-group u-hover-box u-opacity u-opacity-80 u-group-1" data-animation-name="customAnimationIn" data-animation-duration="3000">
+				<div class="u-back-slide u-container-layout u-container-layout-1">
+					<p class="u-hover-feature u-text u-text-default u-text-2" data-animation-name="customAnimationIn" data-animation-duration="3250">var = 10<br>while var &gt; 0:<br>&nbsp; &nbsp; &nbsp; &nbsp; var = var -1<br>&nbsp; &nbsp; &nbsp; &nbsp; if var == 5:<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;continue<br>print("Valor actual de la variable : ", var )<br>
+					</p>
+				</div>
+				<div class="u-black u-container-layout u-opacity u-opacity-25 u-over-slide u-container-layout-2"></div>
+			</div>
+			<img class="u-align-center u-image u-image-default u-opacity u-opacity-70 u-image-1" src="{% static 'img/parablog42.jpg' %}" alt="bucle for, sentencia continue" data-image-width="446" data-image-height="122" data-animation-name="bounceIn" data-animation-duration="3000" data-animation-direction="">
+			<a href="#" class="u-border-2 u-border-grey-75 u-btn u-btn-round u-button-style u-hover-palette-4-base u-palette-2-base u-radius-2 u-btn-1" data-animation-name="bounceIn" data-animation-duration="3000" data-animation-direction="">Siguiente&nbsp;<span class="u-icon u-text-black"><svg class="u-svg-content" viewBox="0 0 512 512" x="0px" y="0px" style="width: 1em; height: 1em;"><path d="M506.134,241.843c-0.006-0.006-0.011-0.013-0.018-0.019l-104.504-104c-7.829-7.791-20.492-7.762-28.285,0.068 c-7.792,7.829-7.762,20.492,0.067,28.284L443.558,236H20c-11.046,0-20,8.954-20,20c0,11.046,8.954,20,20,20h423.557 l-70.162,69.824c-7.829,7.792-7.859,20.455-0.067,28.284c7.793,7.831,20.457,7.858,28.285,0.068l104.504-104 c0.006-.006,0.011-.013,0.018-.019C513.968,262.339,513.943,249.635,506.134,241.843z"></path></svg><img></span>
+        </a>
+			<a href="#" class="u-border-2 u-border-grey-75 u-btn u-btn-round u-button-style u-hover-palette-4-base u-palette-2-base u-radius-2 u-btn-2" data-animation-name="bounceIn" data-animation-duration="3000" data-animation-direction=""><span class="u-file-icon u-icon"><img src="images/545680.png" alt=""></span>&nbsp;Anterior
+        </a>
+		</div>
+
+
+	</section>
+
+
+	<footer class="u-align-center u-clearfix u-footer u-grey-80 u-footer" id="sec-b796">
+		<div class="u-clearfix u-sheet u-sheet-1">
+			<p class="u-small-text u-text u-text-variant u-text-1">Sample text. Click to select the text box. Click again or double click to start editing the text.</p>
+		</div>
+	</footer>
+	<section class="u-backlink u-clearfix u-grey-80">
+		<a class="u-link" href="https://nicepage.com/website-templates" target="_blank">
+			<span>Website Templates</span>
+		</a>
+		<p class="u-text">
+			<span>created with</span>
+		</p>
+		<a class="u-link" href="" target="_blank">
+			<span>Website Builder Software</span>
+		</a>.
+	</section><span style="height: 64px; width: 64px; margin-left: 0px; margin-right: auto; margin-top: 0px; background-image: none; right: 20px; bottom: 20px; padding: 15px; box-shadow: 2px -2px 8px 0px rgba(128,128,128,1);" class="u-back-to-top u-icon u-icon-circle u-opacity u-opacity-85 u-white" data-href="#">
+        <svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 551.13 551.13"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-1d98"></use></svg>
+        <svg class="u-svg-content" enable-background="new 0 0 551.13 551.13" viewBox="0 0 551.13 551.13" xmlns="http://www.w3.org/2000/svg" id="svg-1d98"><path d="m275.565 189.451 223.897 223.897h51.668l-275.565-275.565-275.565 275.565h51.668z"></path></svg>
+    </span>
+
+</body>
+</html>

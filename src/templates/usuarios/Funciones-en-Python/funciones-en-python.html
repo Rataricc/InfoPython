@@ -1,0 +1,1112 @@
+{% load static %}
+<!DOCTYPE html>
+<html style="font-size: 16px;" lang="es">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="utf-8">
+	<meta name="keywords" content="Funciones, Introducción, Paso de argumentos por referencia y por valor">
+	<meta name="description" content="">
+	<title>Funciones en Python</title>
+	<link rel="stylesheet" href="../../static/css/nicepage01.css" media="screen">
+	<link rel="stylesheet" href="../../static/css/funciones-en-python/funciones-en-python.css" media="screen">
+	<script class="u-script" type="text/javascript" src="{% static 'js/jquery01.js' %}" defer=""></script>
+	<script class="u-script" type="text/javascript" src="{% static 'js/nicepage01.js' %}" defer=""></script>
+    <link rel="shortcut icon" href="../../static/img/ico/parablog6.jpg">
+	<meta name="generator" content="Nicepage 5.3.2, nicepage.com">
+	<link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<script type="application/ld+json">
+		{
+				"@context": "http://schema.org",
+				"@type": "Organization",
+				"name": "",
+				"logo": "images/aInfo6.jpg"
+		}
+	</script>
+	<meta name="theme-color" content="#232b79">
+	<meta property="og:title" content="Funciones en Python">
+	<meta property="og:type" content="website">
+</head>
+<body class="u-body u-overlap u-xl-mode" data-lang="es">
+	<header class="u-clearfix u-header u-sticky u-header" id="sec-a184">
+		<div class="u-clearfix u-sheet u-sheet-1">
+			<a href="#" class="u-active-black u-border-1 u-border-active-black u-border-grey-30 u-border-hover-black u-btn u-btn-round u-button-style u-hover-palette-4-base u-radius-12 u-text-active-white u-text-hover-white u-white u-btn-1">Más</a>
+			<nav class="u-menu u-menu-dropdown u-offcanvas u-menu-1" data-responsive-from="XXL">
+				<div class="menu-collapse" style="font-size: 1rem; letter-spacing: 0px;">
+					<a class="u-button-style u-custom-left-right-menu-spacing u-custom-padding-bottom u-custom-text-active-color u-custom-text-color u-custom-text-hover-color u-custom-top-bottom-menu-spacing u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="#">
+						<svg class="u-svg-link" viewBox="0 0 24 24"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#menu-hamburger"></use></svg>
+						<svg class="u-svg-content" version="1.1" id="menu-hamburger" viewBox="0 0 16 16" x="0px" y="0px" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g><rect y="1" width="16" height="2"></rect><rect y="7" width="16" height="2"></rect><rect y="13" width="16" height="2"></rect>
+</g></svg>
+					</a>
+				</div>
+				<div class="u-custom-menu u-nav-container">
+					<ul class="u-nav u-spacing-20 u-unstyled u-nav-1">
+						<li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-white u-text-body-alt-color u-text-hover-palette-4-base" href="Inicio.html" style="padding: 16px 28px;">Inicio</a>
+						</li>
+						<li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-white u-text-body-alt-color u-text-hover-palette-4-base" href="#" style="padding: 16px 28px;">Contacto</a>
+						</li>
+					</ul>
+				</div>
+				<div class="u-custom-menu u-nav-container-collapse">
+					<div class="u-black u-container-style u-inner-container-layout u-opacity u-opacity-95 u-sidenav">
+						<div class="u-inner-container-layout u-sidenav-overflow">
+							<div class="u-menu-close"></div>
+							<ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-2">
+								<li class="u-nav-item"><a class="u-button-style u-nav-link" href="Inicio.html" style="padding: 10px 20px;">Inicio</a>
+								</li>
+								<li class="u-nav-item"><a class="u-button-style u-nav-link" href="#" style="padding: 10px 20px;">Contacto</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="u-black u-menu-overlay u-opacity u-opacity-70"></div>
+				</div>
+			</nav>
+			<a href="#" class="u-image u-logo u-image-1" data-image-width="782" data-image-height="383">
+				<img class="u-logo-image u-logo-image-1" src="{% static 'img/masimg/aInfo6.jpg' %}">
+			</a>
+		</div>
+	</header>
+	<section class="u-clearfix u-image u-section-1" id="sec-0caf" data-image-width="1782" data-image-height="1080">
+		<div class="u-clearfix u-sheet u-sheet-1">
+			<h1 class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-1" data-animation-name="customAnimationIn" data-animation-duration="1000">Funciones</h1>
+			<h2 class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-2" data-animation-name="customAnimationIn" data-animation-duration="1000">Introducción</h2>
+			<p class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-3" data-animation-name="customAnimationIn" data-animation-duration="1000">Una&nbsp;<span style="font-weight: 700;">función&nbsp;</span>es un fragmento de código con un nombre asociado <span style="font-weight: 700;">que&nbsp;realiza una serie de<br>tareas y devuelve un valor
+          </span>.&nbsp;A los fragmentos de código que tienen un nombre asociado y no devuelven valores<br>se les suele llamar&nbsp;<span style="font-weight: 700;">procedimientos</span>.
+			</p>
+			<p class="u-align-left u-hover-feature u-text u-text-body-alt-color u-text-default u-text-4" data-animation-name="customAnimationIn" data-animation-duration="1000">En Python no existen los procedimientos, ya que&nbsp;<span style="font-weight: 700;">cuando el programador no especifica un valor de<br>retorno la función devuelve el valor None (nada)
+          </span>, equivale al null en Java.
+			</p>
+			<p class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-5" data-animation-name="customAnimationIn" data-animation-duration="1000">El uso de funciones es un componente muy importante del paradigma de la programación<br>llamada estructurada, y tienen varias ventajas:
+			</p>
+			<ul class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-6" data-animation-name="customAnimationIn" data-animation-duration="1000">
+				<li style="padding-left: 20px;">
+					<span style="font-weight: 700;">Modularización</span>:&nbsp;permite segmentar un programa complejo en una serie de partes o<br>módulos más simples, facilitando así la programación y el depurado.<br>
+				</li>
+				<li style="padding-left: 20px;">
+					<span style="font-weight: 700;">Reutilización</span>:&nbsp;permite reutilizar un misma función en distintos programas.
+				</li>
+			</ul>
+		</div>
+
+
+
+
+
+
+	</section>
+	<section class="u-clearfix u-image u-section-2" id="sec-2285" data-image-width="1782" data-image-height="1080">
+		<div class="u-clearfix u-sheet u-sheet-1">
+			<h3 class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-1" data-animation-name="customAnimationIn" data-animation-duration="1000">Sentencia <span class="u-text-palette-4-base">def</span>
+        </h3>
+			<p class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-2" data-animation-name="customAnimationIn" data-animation-duration="1000">La sentencia&nbsp;<span style="font-weight: 700;">def&nbsp;</span>es una definición de función usada para crear funciones definidas por el<br>usuario.
+			</p>
+			<p class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-3" data-animation-name="customAnimationIn" data-animation-duration="1000">Una&nbsp;<span style="font-weight: 700;">definición de función</span>&nbsp;es una sentencia ejecutable. Su ejecución enlaza el nombre de la<br>función en el namespace local actual a un objeto función (un envoltorio alrededor del código ejecutable<br>para la función). Este objeto función contiene una referencia al namespace local como el namespace global<br>para ser usado cuando la función es llamda.
+			</p>
+			<p class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-4" data-animation-name="customAnimationIn" data-animation-duration="1000">La definición de la función no ejecuta el cuerpo de la misma; esto es ejecutado solamente<br>cuando la función es llamada.
+			</p>
+			<p class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-5" data-animation-name="customAnimationIn" data-animation-duration="1000">En Python las funciones se declaran de la siguiente forma:</p>
+			<div class="u-container-style u-effect-over-left u-grey-90 u-group u-hover-box u-opacity u-opacity-80 u-group-1" data-animation-name="customAnimationIn" data-animation-duration="3000" data-animation-direction="">
+				<div class="u-back-slide u-container-layout u-valign-top u-container-layout-1">
+					<p class="u-hover-feature u-text u-text-default u-text-6" data-animation-name="customAnimationIn" data-animation-duration="3250">def mi_funcion(param1, param2):<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; print(param1, param2)
+					</p>
+				</div>
+				<div class="u-black u-container-layout u-opacity u-opacity-25 u-over-slide u-container-layout-2"></div>
+			</div>
+			<p class="u-align-left u-hover-feature u-text u-text-body-alt-color u-text-default u-text-7" data-animation-name="customAnimationIn" data-animation-duration="1000">Es decir, la palabra clave&nbsp;<span style="font-weight: 700;">def</span>&nbsp;seguida del nombre de la función y entre paréntesis cero o más<br>argumentos como entrada separados por comas, en otra línea, indentando y después de los dos puntos tendríamos las<br>líneas del código que conforman el conjunto de instrucciones a ser ejecutadas por la función.<br>También podemos encontrarnos con una cadena de texto como primera línea del cuerpo de la función,<br>estas cadenas se conocen con el nombre de&nbsp;<span style="font-weight: 700;">docstring</span>(cadena de documentación) y sirven,<br>como su nombre indica, a modo de documentación de la función. Hay herramientas que usan las docstrings para producir<br>automáticamente documentación en línea o imprimible, o para permitirle al usuario que navegue el código en forma<br>interactiva; es una buena práctica incluir docstrings en el código que uno escribe, por lo que se debe hacer un hábito<br>de esto.
+			</p>
+		</div>
+
+
+
+
+
+
+
+	</section>
+	<section class="u-clearfix u-image u-section-3" id="sec-cfef" data-image-width="1782" data-image-height="1080">
+		<div class="u-clearfix u-sheet u-sheet-1">
+			<div class="u-container-style u-effect-over-left u-grey-90 u-group u-hover-box u-opacity u-opacity-85 u-group-1" data-animation-name="customAnimationIn" data-animation-duration="3000">
+				<div class="u-back-slide u-container-layout u-container-layout-1">
+					<p class="u-hover-feature u-text u-text-default u-text-1" data-animation-name="customAnimationIn" data-animation-duration="3250">def mi_funcion(param1, param2):<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ''''''Esta función imprime los dos valores pasados como parámetros''''''<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; print(param1)<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; print(param2)
+					</p>
+				</div>
+				<div class="u-black u-container-layout u-opacity u-opacity-25 u-over-slide u-container-layout-2"></div>
+			</div>
+			<p class="u-hover-feature u-text u-text-body-alt-color u-text-default u-text-2" data-animation-name="customAnimationIn" data-animation-duration="1000">Como se mencionó anteriormente en la definición de la función lo único que hacemos es asociar<br>un nombre al fragmento de código que conforma la función, de forma que podamos ejecutar dicho código<br>más tarde referenciándolo por su nombre. Para llamar a la función (ejecutar su código) se escribiría:
+			</p>
+			<div class="u-container-style u-effect-over-left u-grey-90 u-group u-hover-box u-opacity u-opacity-85 u-group-2" data-animation-name="customAnimationIn" data-animation-duration="3000">
+				<div class="u-back-slide u-container-layout u-container-layout-3">
+					<p class="u-hover-feature u-text u-text-default u-text-3" data-animation-name="customAnimationIn" data-animation-duration="3250">mi_funcion("Hola", 2)</p>
+				</div>
+				<div class="u-black u-container-layout u-opacity u-opacity-25 u-over-slide u-container-layout-4"></div>
+			</div>
+			<p class="u-hover-feature u-text u-text-body-alt-color u-text-default u-text-4" data-animation-name="customAnimationIn" data-animation-duration="1000">Es decir, el nombre de la función a la que queremos llamar seguido de los valores que queramos pasar<br>como parámetro entre paréntesis.
+			</p>
+			<div class="u-clearfix u-layout-wrap u-layout-wrap-1">
+				<div class="u-layout">
+					<div class="u-layout-col">
+						<div class="u-size-30">
+							<div class="u-layout-row">
+								<div class="u-container-align-left u-container-style u-effect-over-left u-grey-80 u-hover-box u-layout-cell u-opacity u-opacity-85 u-size-60 u-layout-cell-1" data-animation-name="customAnimationIn" data-animation-duration="3000">
+									<div class="u-back-slide u-container-layout u-container-layout-5">
+										<h3 class="u-align-left u-hover-feature u-text u-text-default u-text-5" data-animation-name="customAnimationIn" data-animation-duration="3250">Código</h3>
+										<p class="u-align-left u-hover-feature u-text u-text-default u-text-6" data-animation-name="customAnimationIn" data-animation-duration="3250">Imprimir los valores pasados como parámetros.</p>
+										<p class="u-align-left u-hover-feature u-text u-text-7" data-animation-name="customAnimationIn" data-animation-duration="3250">def&nbsp;mi_funcion(param1, param2):<br>&nbsp; &nbsp; &nbsp; &nbsp;"""Esta función imprime los dos valores pasados como&nbsp; parámetros"""<br>&nbsp; &nbsp; &nbsp; &nbsp;print(param1)<br>&nbsp; &nbsp; &nbsp; &nbsp;print(param2)<br>mi_funcion("Hola",&nbsp;2&nbsp;)<br>
+										</p>
+									</div>
+									<div class="u-black u-container-layout u-opacity u-opacity-25 u-over-slide u-container-layout-6"></div>
+								</div>
+							</div>
+						</div>
+						<div class="u-size-30">
+							<div class="u-layout-row">
+								<div class="u-container-style u-effect-wobble-left u-grey-90 u-hover-box u-layout-cell u-opacity u-opacity-85 u-size-60 u-layout-cell-2" data-animation-name="customAnimationIn" data-animation-duration="3250">
+									<div class="u-back-slide u-container-layout u-container-layout-7">
+										<h3 class="u-hover-feature u-text u-text-default u-text-8" data-animation-name="flipIn" data-animation-duration="3250" data-animation-direction="X">Resultado</h3>
+										<p class="u-align-left u-hover-feature u-text u-text-default u-text-9" data-animation-name="bounceIn" data-animation-duration="3250" data-animation-direction="">Hola<br>2
+										</p>
+									</div>
+									<div class="u-black u-container-layout u-opacity u-opacity-25 u-over-slide u-container-layout-8"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+
+
+
+
+
+
+
+	</section>
+	<section class="u-clearfix u-image u-section-4" id="sec-797e" data-image-width="1782" data-image-height="1080">
+		<div class="u-clearfix u-sheet u-sheet-1">
+			<h3 class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-1" data-animation-name="customAnimationIn" data-animation-duration="1000">Argumentos y parámetros</h3>
+			<p class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-2" data-animation-name="customAnimationIn" data-animation-duration="1000">Al definir una función los valores que se reciben se denominan&nbsp;<span style="font-weight: 700;">parámetros</span>, pero durante la<br>llamada los valores que se envían se denominan&nbsp;<span style="font-weight: 700;">argumentos</span>.
+			</p>
+			<img class="u-align-center u-image u-image-default u-opacity u-opacity-70 u-image-1" src="{% static 'img/parablog43.jpg' %}" alt="funciones python" data-image-width="450" data-image-height="183" data-animation-name="pulse" data-animation-duration="3250" data-animation-direction="">
+			<h3 class="u-align-left u-hover-feature u-text u-text-body-alt-color u-text-default u-text-3" data-animation-name="customAnimationIn" data-animation-duration="1000"><span class="u-file-icon u-icon"><img src="{% static 'img/1783356.png' %}" alt=""></span>&nbsp; Por posicíon
+        </h3>
+			<p class="u-align-left u-hover-feature u-text u-text-body-alt-color u-text-default u-text-4" data-animation-name="customAnimationIn" data-animation-duration="1000">Cuando se envían argumentos a una función, estos se reciben por orden en los páremetros definidos.<br>La asociación de los parámetros y los valores pasados a la función se hace normalmente de izquierda a<br>derecha: como, en el ejemplo anterior, la función sumar recibe el valor de la variable numero_1 y la suma<br>con el valor que recibe en segundo lugar, numero_2.<br>En este caso se dice que son&nbsp;<span style="font-weight: 700;">argumentos por posición</span>.
+			</p>
+			<h3 class="u-align-left u-hover-feature u-text u-text-body-alt-color u-text-default u-text-5" data-animation-name="customAnimationIn" data-animation-duration="1000"><span class="u-file-icon u-icon"><img src="{% static 'img/1783356.png' %}" alt=""></span>&nbsp; Por nombre
+        </h3>
+			<p class="u-align-left u-hover-feature u-text u-text-body-alt-color u-text-default u-text-6" data-animation-name="customAnimationIn" data-animation-duration="1000">Sin embargo también es posible modificar el orden de los parámetros si indicamos el nombre<br>del parámetro al que asociar el valor a la hora de llamar la función:<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;sumar(numero_2 = 2, numero_1 = 3)
+			</p>
+			<h3 class="u-align-left u-hover-feature u-text u-text-body-alt-color u-text-default u-text-7" data-animation-name="customAnimationIn" data-animation-duration="1000"><span class="u-file-icon u-icon u-icon-3"><img src="{% static 'img/1783356.png' %}" alt=""></span>&nbsp; Llamada sin argumentos
+        </h3>
+			<p class="u-align-left u-hover-feature u-text u-text-body-alt-color u-text-default u-text-8" data-animation-name="customAnimationIn" data-animation-duration="1000">El número de valores que se pasan como parámetros al llamar a la función tiene que coincidir<br>con el número de parámetros que la función acepta según la declaración de la función.<br>Si al momento de llamar una función la cual tiene definidos unos parámetros no pasa los argumentos<br>correctamente provocará una excepción&nbsp;<span style="font-weight: 700;">TypeError</span>. Por ejemplo:
+			</p>
+			<div class="u-clearfix u-layout-wrap u-layout-wrap-1">
+				<div class="u-layout">
+					<div class="u-layout-col">
+						<div class="u-size-30">
+							<div class="u-layout-row">
+								<div class="u-container-style u-effect-over-left u-grey-80 u-hover-box u-layout-cell u-opacity u-opacity-80 u-shape-rectangle u-size-60 u-layout-cell-1" data-animation-name="pulse" data-animation-duration="3000" data-animation-direction="">
+									<div class="u-back-slide u-container-layout u-container-layout-1">
+										<h4 class="u-hover-feature u-text u-text-default u-text-9" data-animation-name="customAnimationIn" data-animation-duration="3250" data-animation-direction="">Código</h4>
+										<p class="u-hover-feature u-text u-text-default u-text-10" data-animation-name="customAnimationIn" data-animation-duration="3250">Imprimir los valores pasados como parámetros.</p>
+										<p class="u-hover-feature u-text u-text-11" data-animation-name="customAnimationIn" data-animation-duration="3250">def&nbsp;mi_funcion(param1, param2):<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;"""Esta función imprime los dos valores pasados como parámetros"""<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;print(param1)<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;print(param2)<br>mi_funcion("Hola")<br>
+										</p>
+									</div>
+									<div class="u-black u-container-layout u-opacity u-opacity-25 u-over-slide u-container-layout-2"></div>
+								</div>
+							</div>
+						</div>
+						<div class="u-size-30">
+							<div class="u-layout-row">
+								<div class="u-container-style u-effect-wobble-left u-grey-90 u-hover-box u-layout-cell u-opacity u-opacity-80 u-size-60 u-layout-cell-2" data-animation-name="customAnimationIn" data-animation-duration="3000" data-animation-direction="">
+									<div class="u-back-slide u-container-layout u-container-layout-3">
+										<h4 class="u-hover-feature u-text u-text-default u-text-12" data-animation-name="flipIn" data-animation-duration="3250" data-animation-direction="X">Resultado</h4>
+										<p class="u-hover-feature u-text u-text-13" data-animation-name="bounceIn" data-animation-duration="3250" data-animation-direction="">Traceback (most recent call last):<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;File "input&gt;", line 5, in<br>TypeError: mi_funcion() missing 1 required positional argument: param2'
+										</p>
+									</div>
+									<div class="u-black u-container-layout u-opacity u-opacity-25 u-over-slide u-container-layout-4"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<h3 class="u-align-left u-hover-feature u-text u-text-body-alt-color u-text-default u-text-14" data-animation-name="customAnimationIn" data-animation-duration="1000"><span class="u-file-icon u-icon"><img src="{% static 'img/1783356.png' %}" alt=""></span>&nbsp; Parámetros por defecto
+        </h3>
+			<p class="u-align-left u-hover-feature u-text u-text-body-alt-color u-text-default u-text-15" data-animation-name="customAnimationIn" data-animation-duration="1000">Para solucionar la excepción&nbsp;<span style="font-weight: 700;">TypeError</span>&nbsp;ejecutada al momento de la llamada a una función<br>sin argumentos, entonces se puede asignar unos&nbsp;<span style="font-weight: 700;">valores por defecto nulos</span>&nbsp;a los párametros,<br>de esa forma puede hacer una comprobación antes de ejecutar el código de la función:
+			</p>
+		</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	</section>
+	<section class="u-clearfix u-image u-section-5" id="sec-7e03" data-image-width="1782" data-image-height="1080">
+		<div class="u-clearfix u-sheet u-sheet-1">
+			<div class="u-clearfix u-layout-wrap u-layout-wrap-1">
+				<div class="u-layout">
+					<div class="u-layout-col">
+						<div class="u-size-30">
+							<div class="u-layout-row">
+								<div class="u-container-style u-effect-zoom u-grey-80 u-hover-box u-layout-cell u-opacity u-opacity-85 u-size-60 u-layout-cell-1" data-animation-name="flipIn" data-animation-duration="3000" data-animation-direction="X">
+									<div class="u-back-slide u-container-layout u-valign-bottom u-container-layout-1">
+										<h3 class="u-hover-feature u-text u-text-default u-text-1" data-animation-name="customAnimationIn" data-animation-duration="3250">Código</h3>
+										<p class="u-hover-feature u-text u-text-default u-text-2" data-animation-name="customAnimationIn" data-animation-duration="3250">Dado dos números calcular la resta de ambos números. Si al llamar a la función se pasa solo un parámetro<br>imprimir un mensaje informando que se requieren dos números para realizar la operación.
+										</p>
+										<p class="u-hover-feature u-text u-text-3" data-animation-name="customAnimationIn" data-animation-duration="3250">def&nbsp;resta(num1=&nbsp;None, num2=&nbsp;None):<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; """Esta función imprime la resta de los dos valores pasados como parámetros"""<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if&nbsp;a ==&nbsp;None&nbsp;or&nbsp;b ==&nbsp;None:<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; print("Error, debes enviar dos números a la función")<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; return<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; return a - b&nbsp;<br>resta(30, 10)<br>resta()<br>
+										</p>
+									</div>
+									<div class="u-black u-container-layout u-opacity u-opacity-25 u-over-slide u-container-layout-2"></div>
+								</div>
+							</div>
+						</div>
+						<div class="u-size-30">
+							<div class="u-layout-row">
+								<div class="u-container-style u-effect-flip-left u-grey-90 u-hover-box u-layout-cell u-opacity u-opacity-85 u-size-60 u-layout-cell-2" data-animation-name="customAnimationIn" data-animation-duration="3000" data-animation-direction="">
+									<div class="u-back-slide u-container-layout u-container-layout-3">
+										<h3 class="u-hover-feature u-text u-text-default u-text-4" data-animation-name="pulse" data-animation-duration="3250" data-animation-direction="">Resultado</h3>
+										<p class="u-hover-feature u-text u-text-default u-text-5" data-animation-name="customAnimationIn" data-animation-duration="3250" data-animation-direction="">20<br>Error, debes enviar dos números a la función
+										</p>
+									</div>
+									<div class="u-black u-container-layout u-opacity u-opacity-25 u-over-slide u-container-layout-4"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<p class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-6" data-animation-name="customAnimationIn" data-animation-duration="1000">Como se puede ver en el código anterior, se indica el final de la función luego de la sentencia print, usando<br>la sentencia return aunque no devuelva nada, ya que en este caso se utiliza para finalizar la ejecución de la<br>llamada a la función y "devolver" el resultado que en este caso no está definido por lo que será el valor por<br>defecto (None).
+			</p>
+			<p class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-7" data-animation-name="customAnimationIn" data-animation-duration="1000">Tener en cuenta que las declaraciones posteriores a las declaraciones de devolución no se ejecutan.</p>
+			<p class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-8" data-animation-name="customAnimationIn" data-animation-duration="1000">Los valores de un parámetro por defecto pueden ser de cualquier tipo, así que retomando el ejemplo de<br>mi_funcion, podemos asignar diferentes valores por defecto a los parámetros:
+			</p>
+			<div class="u-clearfix u-layout-wrap u-layout-wrap-2">
+				<div class="u-layout">
+					<div class="u-layout-col">
+						<div class="u-size-30">
+							<div class="u-layout-row">
+								<div class="u-container-style u-effect-fade u-grey-80 u-hover-box u-layout-cell u-opacity u-opacity-85 u-size-60 u-layout-cell-3" data-animation-name="customAnimationIn" data-animation-duration="3000">
+									<div class="u-back-slide u-container-layout u-container-layout-5">
+										<h4 class="u-hover-feature u-text u-text-default u-text-9" data-animation-name="customAnimationIn" data-animation-duration="3250">Código</h4>
+										<p class="u-hover-feature u-text u-text-default u-text-10" data-animation-name="flipIn" data-animation-duration="3250" data-animation-direction="X">Imprimir los valores pasados como parámetro.</p>
+										<p class="u-hover-feature u-text u-text-default u-text-11" data-animation-name="customAnimationIn" data-animation-duration="3250">def&nbsp;mi_funcion(param1 =&nbsp;"Hola", param2 =&nbsp;0):<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;"""Esta función imprime los dos valores pasados como parámetros"""<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; print(param1)<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; print(param2)<br>mi_funcion()<br>
+										</p>
+									</div>
+									<div class="u-black u-container-layout u-opacity u-opacity-25 u-over-slide u-container-layout-6"></div>
+								</div>
+							</div>
+						</div>
+						<div class="u-size-30">
+							<div class="u-layout-row">
+								<div class="u-container-style u-effect-fade u-grey-90 u-hover-box u-layout-cell u-opacity u-opacity-80 u-size-60 u-layout-cell-4" data-animation-name="customAnimationIn" data-animation-duration="3000">
+									<div class="u-back-slide u-container-layout u-container-layout-7">
+										<h4 class="u-hover-feature u-text u-text-default u-text-12" data-animation-name="bounceIn" data-animation-duration="3250" data-animation-direction="">Resultado</h4>
+										<p class="u-hover-feature u-text u-text-default u-text-13" data-animation-name="customAnimationIn" data-animation-duration="3250" data-animation-direction="">Hola<br>0
+										</p>
+									</div>
+									<div class="u-black u-container-layout u-opacity u-opacity-25 u-over-slide u-container-layout-8"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+	</section>
+	<section class="u-clearfix u-image u-section-6" id="sec-0e4d" data-image-width="1782" data-image-height="1080">
+		<div class="u-clearfix u-sheet u-sheet-1">
+			<h3 class="u-hover-feature u-text u-text-body-alt-color u-text-default u-text-1" data-animation-name="customAnimationIn" data-animation-duration="1000"><span class="u-file-icon u-icon"><img src="{% static 'img/1783356.png' %}" alt=""></span>&nbsp; Argumentos indeterminados
+        </h3>
+			<p class="u-hover-feature u-text u-text-body-alt-color u-text-default u-text-2" data-animation-name="customAnimationIn" data-animation-duration="1000">En alguna acasión no podremos determinar previamente cuantos elementos se necesita enviar<br>a una función. En estos casos se puede utilizar los<span style="font-weight: 700;">&nbsp;argumentos indeterminados</span>&nbsp;por posición y<br>por nombre.
+			</p>
+			<h4 class="u-hover-feature u-text u-text-body-alt-color u-text-default u-text-3" data-animation-name="customAnimationIn" data-animation-duration="1000"><span class="u-file-icon u-icon"><img src="{% static 'img/1783406.png' %}" alt=""></span>&nbsp; Por posición
+        </h4>
+			<p class="u-hover-feature u-text u-text-body-alt-color u-text-default u-text-4" data-animation-name="customAnimationIn" data-animation-duration="1000">Se debe crear una lista dinámica de argumentos, es decir, un tipo tupla, definiendo el<br>parámetro con un asterisco, para recibir los parámetros indetermiandos por posición:
+			</p>
+			<div class="u-clearfix u-layout-wrap u-layout-wrap-1">
+				<div class="u-layout">
+					<div class="u-layout-col">
+						<div class="u-size-30">
+							<div class="u-layout-row">
+								<div class="u-container-style u-grey-80 u-layout-cell u-opacity u-opacity-85 u-size-60 u-layout-cell-1" data-animation-name="pulse" data-animation-duration="3000" data-animation-direction="">
+									<div class="u-container-layout u-valign-bottom u-container-layout-1">
+										<h4 class="u-hover-feature u-text u-text-default u-text-5" data-animation-name="customAnimationIn" data-animation-duration="3250">Código</h4>
+										<p class="u-hover-feature u-text u-text-default u-text-6" data-animation-name="customAnimationIn" data-animation-duration="3250">Imprimir los valores pasados como parámetro.</p>
+										<p class="u-hover-feature u-text u-text-default u-text-7" data-animation-name="customAnimationIn" data-animation-duration="3250">def&nbsp;indeterminados(*args):<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;"""Esta función imprime los valores pasados como parámetro"""<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;for&nbsp;arg&nbsp;in&nbsp;args:<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;print(arg)<br>Indeterminados(5,"Hola", [1, 2, 3, 4, 5] )<br>
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="u-size-30">
+							<div class="u-layout-row">
+								<div class="u-container-style u-grey-90 u-layout-cell u-opacity u-opacity-80 u-size-60 u-layout-cell-2" data-animation-name="flipIn" data-animation-duration="3000" data-animation-direction="X">
+									<div class="u-container-layout u-valign-bottom u-container-layout-2">
+										<h4 class="u-hover-feature u-text u-text-default u-text-8" data-animation-name="customAnimationIn" data-animation-duration="3250">Resultado</h4>
+										<p class="u-hover-feature u-text u-text-default u-text-9" data-animation-name="customAnimationIn" data-animation-duration="3250">5<br>Hola<br>[1, 2, 3, 4, 5]
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<p class="u-hover-feature u-text u-text-body-alt-color u-text-default u-text-10" data-animation-name="customAnimationIn" data-animation-duration="1000">Esta sintaxis funciona creando una tupla en la que se almacenan los valores de todos los parámetros<br>extra pasados como argumento. Para el caso de que se llame a la función sin parámetros, la tupla estaría vacía, por lo tanto no se imprimiría nada. En la llamada a la función que se hace en el ejemplo se crea una tupla con los valores (5, "Hola", [1, 2, 3, 4, 5]).
+			</p>
+			<h4 class="u-hover-feature u-text u-text-body-alt-color u-text-default u-text-11" data-animation-name="customAnimationIn" data-animation-duration="1000"><span class="u-file-icon u-icon"><img src="{% static 'img/1783406.png' %}" alt=""></span>&nbsp; Por nombre
+        </h4>
+			<p class="u-hover-feature u-text u-text-body-alt-color u-text-default u-text-12" data-animation-name="customAnimationIn" data-animation-duration="1000">Para recibir un número indeterminado de parámetros por nombre (clave-valor o en inglés Keyword args), se debe crear un diccionario dinámico de argumentos definiendo el parámetro con dos asteristicos.<br>Las claves de este diccionario serían los nombres de los parámetros indicados al llamar a la función y<br>los valores del diccionario, los valores asociados a estos parámetros:
+			</p>
+			<div class="u-clearfix u-layout-wrap u-layout-wrap-2">
+				<div class="u-layout">
+					<div class="u-layout-col">
+						<div class="u-size-30">
+							<div class="u-layout-row">
+								<div class="u-container-style u-grey-80 u-layout-cell u-opacity u-opacity-80 u-size-60 u-layout-cell-3" data-animation-name="flipIn" data-animation-duration="3000" data-animation-direction="X">
+									<div class="u-container-layout u-valign-bottom u-container-layout-3">
+										<h4 class="u-hover-feature u-text u-text-default u-text-13" data-animation-name="customAnimationIn" data-animation-duration="3250">Código</h4>
+										<p class="u-hover-feature u-text u-text-default u-text-14" data-animation-name="customAnimationIn" data-animation-duration="3250">Imprimir los valores pasados como parámetro.</p>
+										<p class="u-hover-feature u-text u-text-default u-text-15" data-animation-name="customAnimationIn" data-animation-duration="3250">def&nbsp;indeterminados(**kwargs):<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; """Esta función los valores pasados como parámetro"""<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; print(kwargs)<br>indetermiandos(n=&nbsp;5, c="Hola", l= [1, 2, 3, 4, 5] )<br>
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="u-size-30">
+							<div class="u-layout-row">
+								<div class="u-container-style u-grey-90 u-layout-cell u-opacity u-opacity-80 u-size-60 u-layout-cell-4" data-animation-name="bounceIn" data-animation-duration="3000" data-animation-direction="">
+									<div class="u-container-layout u-container-layout-4">
+										<h4 class="u-hover-feature u-text u-text-default u-text-16" data-animation-name="customAnimationIn" data-animation-duration="3250" data-animation-direction="">Resultado</h4>
+										<p class="u-hover-feature u-text u-text-default u-text-17" data-animation-name="customAnimationIn" data-animation-duration="3250">{'n' : 5, 'c' : 'Hola', 'l' : [1, 2, 3, 4, 5]}</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<p class="u-hover-feature u-text u-text-body-alt-color u-text-default u-text-18" data-animation-name="customAnimationIn" data-animation-duration="1000">Al recibirse como un diccionario, puede iterarlo y mostrar la clave y valor de cada argumento:</p>
+		</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	</section>
+	<section class="u-clearfix u-image u-section-7" id="sec-2f6b" data-image-width="1782" data-image-height="1080">
+		<div class="u-clearfix u-sheet u-sheet-1">
+			<div class="u-clearfix u-layout-wrap u-layout-wrap-1">
+				<div class="u-layout">
+					<div class="u-layout-col">
+						<div class="u-size-30">
+							<div class="u-layout-row">
+								<div class="u-container-style u-grey-80 u-layout-cell u-opacity u-opacity-80 u-size-60 u-layout-cell-1" data-animation-name="flipIn" data-animation-duration="3000" data-animation-direction="X">
+									<div class="u-container-layout u-valign-bottom u-container-layout-1">
+										<h4 class="u-hover-feature u-text u-text-default u-text-1" data-animation-name="customAnimationIn" data-animation-duration="3250">Código</h4>
+										<p class="u-hover-feature u-text u-text-default u-text-2" data-animation-name="customAnimationIn" data-animation-duration="3250">Imprimir los valores pasados como parámetro.</p>
+										<p class="u-hover-feature u-text u-text-default u-text-3" data-animation-name="customAnimationIn" data-animation-duration="3250">def&nbsp;indetermianados(**kwargs):<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; """Esta función imprime los valores pasados como parámetros"""<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; for&nbsp;kwarg&nbsp;in&nbsp;kwargs:<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;print(kwarg, "=&gt;", kwargs[kwarg])<br>indetermianados(n=&nbsp;5, c=&nbsp;"Hola", l= [1, 2, 3, 4, 5] )<br>
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="u-size-30">
+							<div class="u-layout-row">
+								<div class="u-container-style u-grey-90 u-layout-cell u-opacity u-opacity-80 u-size-60 u-layout-cell-2" data-animation-name="bounceIn" data-animation-duration="3250" data-animation-direction="">
+									<div class="u-container-layout u-valign-bottom u-container-layout-2">
+										<h4 class="u-hover-feature u-text u-text-default u-text-4" data-animation-name="customAnimationIn" data-animation-duration="3250" data-animation-direction="">Resultado</h4>
+										<p class="u-hover-feature u-text u-text-default u-text-5" data-animation-name="customAnimationIn" data-animation-duration="3250">n =&gt; 5<br>c =&gt; Hola<br>l =&gt; [1, 2, 3, 4, 5]
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<h4 class="u-hover-feature u-text u-text-body-alt-color u-text-default u-text-6" data-animation-name="customAnimationIn" data-animation-duration="1000"><span class="u-file-icon u-icon"><img src="{% static 'img/1783406.png' %}" alt=""></span>&nbsp; Por posición y nombre
+        </h4>
+			<p class="u-hover-feature u-text u-text-body-alt-color u-text-default u-text-7" data-animation-name="customAnimationIn" data-animation-duration="1000">Si requiere aceptar ambos tipos de parámetros simultáneamente en una función, entonces debe<br>crear ambas colecciones dinámicas. Primero los argumentos indeterminados por valor y luego<br>los cuales son por clave y valor:
+			</p>
+			<div class="u-clearfix u-layout-wrap u-layout-wrap-2">
+				<div class="u-layout">
+					<div class="u-layout-col">
+						<div class="u-size-30">
+							<div class="u-layout-row">
+								<div class="u-container-style u-grey-80 u-layout-cell u-opacity u-opacity-85 u-size-60 u-layout-cell-3" data-animation-name="bounceIn" data-animation-duration="3250" data-animation-direction="">
+									<div class="u-container-layout u-container-layout-3">
+										<h4 class="u-hover-feature u-text u-text-default u-text-8" data-animation-name="customAnimationIn" data-animation-duration="3250">Código</h4>
+										<p class="u-hover-feature u-text u-text-default u-text-9" data-animation-name="customAnimationIn" data-animation-duration="3250">Imprimir los valores pasados como parámetros por posición y nombre.</p>
+										<p class="u-hover-feature u-text u-text-default u-text-10" data-animation-name="customAnimationIn" data-animation-duration="3250">def&nbsp;super_funcion(*args, **kwargs):<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; """Esta función imprime los valores pasados como parámetro por posición y nombre"""<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; total = 0<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; for&nbsp;arg&nbsp;in&nbsp;args:<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;total += arg<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; print("Total", "=&gt;",&nbsp;total)<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;for&nbsp;kwarg&nbsp;in&nbsp;kwargs:<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;print(kwarg, "=&gt;", kwargs[kwarg])<br>super_funcion(50, -1, 1.56, 10, 20, 300, c=&nbsp;"Hola", n=&nbsp;3&nbsp;)<br>
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="u-size-30">
+							<div class="u-layout-row">
+								<div class="u-container-style u-grey-90 u-layout-cell u-opacity u-opacity-80 u-size-60 u-layout-cell-4" data-animation-name="flipIn" data-animation-duration="3000" data-animation-direction="X">
+									<div class="u-container-layout u-valign-bottom u-container-layout-4">
+										<h4 class="u-hover-feature u-text u-text-default u-text-11" data-animation-name="customAnimationIn" data-animation-duration="3250">Resultado</h4>
+										<p class="u-hover-feature u-text u-text-default u-text-12" data-animation-name="customAnimationIn" data-animation-duration="3250">Total =&gt; 380.56<br>c =&gt; Hola<br>n =&gt; 3
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<p class="u-hover-feature u-text u-text-body-alt-color u-text-default u-text-13" data-animation-name="customAnimationIn" data-animation-duration="1000">Los nombres&nbsp;<span style="font-weight: 700;">args&nbsp;</span>y<span style="font-weight: 700;">&nbsp;kwargs</span>&nbsp;no son obligatorios, pero se suelen utilizar por convención.<br>Muchos frameworks y librerías los utilizan por lo que es buena práctica llamarlos así.
+			</p>
+		</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+	</section>
+	<section class="u-clearfix u-image u-section-8" id="sec-f7d8" data-image-width="1782" data-image-height="1080">
+		<div class="u-clearfix u-sheet u-sheet-1">
+			<h2 class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-1" data-animation-name="customAnimationIn" data-animation-duration="1000">Paso de argumentos por referencia y por valor</h2>
+			<p class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-2" data-animation-name="customAnimationIn" data-animation-duration="1000">Si conoces algún lenguaje de programación te estarás preguntando si&nbsp;<span style="font-weight: 700;">en Python al pasar<br>una variable como argumento de una función estas se pasan por referencia o por valor.
+          </span>
+			</p>
+			<p class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-3" data-animation-name="customAnimationIn" data-animation-duration="1000">En el&nbsp;<span style="font-weight: 700;">paso por referencia</span>&nbsp;lo que pasa como argumento es una&nbsp;<span style="font-weight: 700;">referencia o puntero a la<br>variable
+          </span>, es decir, la dirección de memoria en la que se encuentra el contenido de la variable, y no<br>el contenido en sí. En el&nbsp;<span style="font-weight: 700;">paso por valor</span>, por el contrario, lo que se pasa como argumento es el<br>valor que contenía la variable.
+			</p>
+			<p class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-4" data-animation-name="customAnimationIn" data-animation-duration="1000">Pero en resumen,&nbsp;<span style="font-weight: 700;">la diferencia entre ambos es que en el&nbsp;paso por valor&nbsp;los cambios que se hagan sobre el parámetro no se ven fuera de la función, dado que los argumentos de la función son variables locales a la función, que contienen los valores indicados por las variables que se pasaron como argumento</span>.&nbsp;Es decir, en realidad lo que se le pasa a la función son copias de los valores y no las variables en sí.
+			</p>
+			<p class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-5" data-animation-name="customAnimationIn" data-animation-duration="1000">Si quisiéramos modificar el valor de uno de los argumentos y que estos cambios se reflejarán<br>fuera de la función tendríamos que pasar el parámetro por referencia.
+			</p>
+			<p class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-6" data-animation-name="customAnimationIn" data-animation-duration="1000">En C los argumentos de las funciones se pasar por valor, aunque se pueda simular el paso por referencia usando punteros. En Java también se usa paso por valor, aunque para las variables que son objetos lo que se hace es pasar por valor la referencia al objeto, por lo que en realidad parece paso por referencia.</p>
+			<p class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-7" data-animation-name="customAnimationIn" data-animation-duration="1000">En Python también se utiliza el paso por valor de referencias a objetos, como en Java, <span style="font-weight: 700;">aunque en el caso de Python, a<br>diferencia de Java
+          </span>,&nbsp;<span style="font-weight: 700;">todo es un objeto&nbsp;</span>(para ser exactos lo que ocurre en realidad es que al objeto se le<br>asigna otra etiqueta o nombre en el espeacio de nombres local de la función).
+			</p>
+			<p class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-8" data-animation-name="customAnimationIn" data-animation-duration="1000">Sin embargo<span style="font-weight: 700;">&nbsp;no todos los cambios que hagamos a los parámetros dentro de una función Python se reflejarán fuera de esta</span>, ya que hay que tener en cuenta que en Python existen objetos inmutables, como las tuplas, por lo que si intentáramos modificar una tupla pasada como parámetro lo que ocurriría en realidad es que se crearía una nueva instancia, por lo que los cambios no se verían fuera de la función.
+			</p>
+			<p class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-9" data-animation-name="customAnimationIn" data-animation-duration="1000">Veamos con este ejemplo que hace uso del método append de las listas. Un método no es más que una función que pertenece a un objeto, en este caso a una lista; y append, en concreto, sirve para añadir un elemento a una lista.</p>
+		</div>
+
+
+
+
+
+
+
+
+
+	</section>
+	<section class="u-clearfix u-image u-section-9" id="sec-cc42" data-image-width="1782" data-image-height="1080">
+		<div class="u-clearfix u-sheet u-sheet-1">
+			<div class="u-clearfix u-layout-wrap u-layout-wrap-1">
+				<div class="u-layout">
+					<div class="u-layout-col">
+						<div class="u-size-30">
+							<div class="u-layout-row">
+								<div class="u-container-style u-grey-80 u-layout-cell u-opacity u-opacity-85 u-size-60 u-layout-cell-1" data-animation-name="flipIn" data-animation-duration="3000" data-animation-direction="X">
+									<div class="u-container-layout u-valign-bottom u-container-layout-1">
+										<h4 class="u-hover-feature u-text u-text-default u-text-1" data-animation-name="customAnimationIn" data-animation-duration="3250">Código</h4>
+										<p class="u-hover-feature u-text u-text-default u-text-2" data-animation-name="customAnimationIn" data-animation-duration="3250">Modificar el valor de los elementos pasados como parámetro.</p>
+										<p class="u-hover-feature u-text u-text-default u-text-3" data-animation-name="customAnimationIn" data-animation-duration="3250">def&nbsp;funcion(x, y):<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; """Esta función actualiza los valores de los argumentos pasados como parámetros"""<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; x = x + 3<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; y.append(23)<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; print(x, y)<br>x =&nbsp;22<br>y = [22]<br>funcion(x, y)<br>print(x, z)<br>
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="u-size-30">
+							<div class="u-layout-row">
+								<div class="u-container-style u-grey-90 u-layout-cell u-opacity u-opacity-80 u-size-60 u-layout-cell-2" data-animation-name="bounceIn" data-animation-duration="3000" data-animation-direction="">
+									<div class="u-container-layout u-valign-top u-container-layout-2">
+										<h4 class="u-hover-feature u-text u-text-default u-text-4" data-animation-name="customAnimationIn" data-animation-duration="3250">Resultado</h4>
+										<p class="u-hover-feature u-text u-text-default u-text-5" data-animation-name="customAnimationIn" data-animation-duration="3250">25 [22, 23]<br>22 [22, 23]
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<p class="u-hover-feature u-text u-text-body-alt-color u-text-default u-text-6" data-animation-name="customAnimationIn" data-animation-duration="1000">En el desarrollo y ejecución de funciones tendremos que tener en cuenta que los tipos de datos<br>inmutables conservarán su valor original (estos son los tipos simples de datos: String, Integer,<br>Float, Boolean, etc), sin embargo, los mutables que son estructuras de datos más "complejas"(como:<br>dict, list, etc.) conservan los cambios hechos dentro de la función. Debido a esto podemos ver como<br>en el ejemplo anterior la&nbsp;<span style="font-weight: 700;">variable x</span>&nbsp;no conserva los cambios una vez salimos de la<br>función y <span style="font-weight: 700;">la&nbsp;lista y</span>&nbsp;si los conserva, porque las listas son mutables.
+			</p>
+			<p class="u-hover-feature u-text u-text-body-alt-color u-text-default u-text-7" data-animation-name="customAnimationIn" data-animation-duration="1000">En resumen:</p>
+			<img class="u-align-center u-image u-image-default u-opacity u-opacity-80 u-image-1" src="{% static 'img/parablog44.jpg' %}" alt="paso por valor y paso por referencia python" data-image-width="513" data-image-height="156" data-animation-name="customAnimationIn" data-animation-duration="3250" data-animation-direction="">
+		</div>
+
+
+
+
+
+
+
+	</section>
+	<section class="u-clearfix u-image u-section-10" id="sec-9dc8" data-image-width="1782" data-image-height="1080">
+		<div class="u-clearfix u-sheet u-sheet-1">
+			<h3 class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-1" data-animation-name="customAnimationIn" data-animation-duration="1000">Asignación de variables locales y globales</h3>
+			<p class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-2" data-animation-name="customAnimationIn" data-animation-duration="1000">Todas las&nbsp;<span style="font-weight: 700;">asignaciones de variables&nbsp;</span>en la función almecenan el valor en la&nbsp;<span style="font-weight: 700;">tabla de símbolos</span>
+				<br>
+				<span style="font-weight: 700;">local</span>;&nbsp;así mismo la referencia a variables primero mira la&nbsp;<span style="font-weight: 700;">tabla de símbolos local</span>, luego en la<br>tabla de símbolos local de las funciones externas, luego la tabla de símbolos global, y finalmente la tabla de nombres<br>predefinidos. Así, no se les puede asignar directamente un valor a las variables globales dentro de una función (a menos<br>se las nombra en la sentencia global), aunque sí pueden ser referenciadas.
+			</p>
+			<img class="u-align-center u-image u-image-default u-opacity u-opacity-80 u-image-1" src="{% static 'img/parablog45.jpg' %}" alt="Tabla de simbolos" data-image-width="623" data-image-height="243" data-animation-name="customAnimationIn" data-animation-duration="3250" data-animation-direction="">
+			<p class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-3" data-animation-name="customAnimationIn" data-animation-duration="1000">Los&nbsp;<span style="font-weight: 700;">parámetros reales</span>&nbsp;(argumentos) de una función se introducen en la tabla de símbolos local<br>de la función llamada cuando esta es ejecutada; así, los argumentos son pasados por valor (donde el valor es siempre<br>una referencia a un objeto, no el valor del objeto).
+			</p>
+			<p class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-4" data-animation-name="customAnimationIn" data-animation-duration="1000">Cuando una función llama a otra función, una nueva tabla de símbolos local es creada para esa llamada.</p>
+			<p class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-5" data-animation-name="customAnimationIn" data-animation-duration="1000">La definición de una función introduce el nombre de la función en la tabla de símbolos actual.<br>El valor del nombre de la función tiene un tipo que es reconocido por el interprete como una función<br>definida por el usuario. Este valor puede ser asignado a otro nombre que luego puede ser usado como una función.<br>Esto sirve como un mecanismo general para renombrar.
+			</p>
+			<div class="u-clearfix u-layout-wrap u-layout-wrap-1">
+				<div class="u-layout">
+					<div class="u-layout-col">
+						<div class="u-size-30">
+							<div class="u-layout-row">
+								<div class="u-container-style u-grey-80 u-layout-cell u-opacity u-opacity-85 u-size-60 u-layout-cell-1" data-animation-name="bounceIn" data-animation-duration="3000" data-animation-direction="">
+									<div class="u-container-layout u-valign-bottom u-container-layout-1">
+										<h4 class="u-hover-feature u-text u-text-default u-text-6" data-animation-name="customAnimationIn" data-animation-duration="3250">Código</h4>
+										<p class="u-hover-feature u-text u-text-default u-text-7" data-animation-name="customAnimationIn" data-animation-duration="3250">Crear una función que actualice el valor de una variable inmutable.</p>
+										<p class="u-hover-feature u-text u-text-default u-text-8" data-animation-name="customAnimationIn" data-animation-duration="3250">mi_variable_global_1 =&nbsp;20<br>mi_variable_global_2 =&nbsp;20<br>
+											<br>def&nbsp;funcion():<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; """Esta función actualiza el valor de una variable global de tipo inmutale"""<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; global&nbsp;mi_variable_global_1<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; mi_variable_global_1 =&nbsp;10<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; mi_variable_global_2 =&nbsp;10<br>funcion()<br>print(mi_variable_global_1)<br>print(mi_variable_global_2)<br>
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="u-size-30">
+							<div class="u-layout-row">
+								<div class="u-container-style u-grey-90 u-layout-cell u-opacity u-opacity-80 u-size-60 u-layout-cell-2" data-animation-name="flipIn" data-animation-duration="3000" data-animation-direction="X">
+									<div class="u-container-layout u-container-layout-2">
+										<h4 class="u-hover-feature u-text u-text-default u-text-9" data-animation-name="customAnimationIn" data-animation-duration="3250">Resultado</h4>
+										<p class="u-hover-feature u-text u-text-default u-text-10" data-animation-name="customAnimationIn" data-animation-duration="3250" data-animation-direction="">10<br>20
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+
+
+
+
+
+
+
+
+	</section>
+	<section class="u-clearfix u-image u-section-11" id="sec-1a22" data-image-width="1782" data-image-height="1080">
+		<div class="u-clearfix u-sheet u-sheet-1">
+			<h3 class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-1" data-animation-name="customAnimationIn" data-animation-duration="1000">Sentencia pass</h3>
+			<p class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-2" data-animation-name="customAnimationIn" data-animation-duration="1000">Es una&nbsp;<span style="font-weight: 700;">operación nula</span>, lo que quiere decir que cuando es ejecutada nada sucede. Eso es útil<br>como un contenedor cuando una sentencia es requerida sintácticamente, pero no necesita código que ser ejecutado,<br>por ejemplo:
+			</p>
+			<div class="u-clearfix u-layout-wrap u-layout-wrap-1">
+				<div class="u-layout">
+					<div class="u-layout-col">
+						<div class="u-size-30">
+							<div class="u-layout-row">
+								<div class="u-container-style u-grey-80 u-layout-cell u-opacity u-opacity-85 u-size-60 u-layout-cell-1" data-animation-name="flipIn" data-animation-duration="3000" data-animation-direction="X">
+									<div class="u-container-layout u-valign-bottom u-container-layout-1">
+										<h4 class="u-align-left u-hover-feature u-text u-text-default u-text-3" data-animation-name="customAnimationIn" data-animation-duration="3250">Código</h4>
+										<p class="u-align-left u-hover-feature u-text u-text-default u-text-4" data-animation-name="customAnimationIn" data-animation-duration="3250">Ejemplo de utilización de la sentencia pass.</p>
+										<p class="u-align-left u-hover-feature u-text u-text-default u-text-5" data-animation-name="customAnimationIn" data-animation-duration="3250">def&nbsp;consultar_nombre_genero(genero):<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; """Es una función que no hace nada aun"""<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; pass<br>
+											<br>class&nbsp;Persona():<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;"""Es una clase sin métodos o atributos aun"""<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;pass<br>
+											<br>print(type(consultar_nombre_genero))<br>consultar_nombre_genero("M")<br>persona1 = Persona<br>print(type(persona1))<br>
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="u-size-30">
+							<div class="u-layout-row">
+								<div class="u-container-style u-grey-90 u-layout-cell u-opacity u-opacity-80 u-size-60 u-layout-cell-2" data-animation-name="flipIn" data-animation-duration="3000" data-animation-direction="X">
+									<div class="u-container-layout u-container-layout-2">
+										<h4 class="u-hover-feature u-text u-text-default u-text-6" data-animation-name="customAnimationIn" data-animation-duration="3250">Resultado</h4>
+										<p class="u-hover-feature u-text u-text-default u-text-7" data-animation-name="customAnimationIn" data-animation-duration="3250">class 'function'&gt;<br>class 'type'&gt;
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+
+
+
+
+
+	</section>
+	<section class="u-clearfix u-image u-section-12" id="sec-da62" data-image-width="1782" data-image-height="1080">
+		<div class="u-clearfix u-sheet u-sheet-1">
+			<h3 class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-1" data-animation-name="customAnimationIn" data-animation-duration="1000">Sentencia return</h3>
+			<p class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-2" data-animation-name="customAnimationIn" data-animation-duration="1000">Las funciones pueden comunicarse con el exterior de las mismas, al proceso principal del programa<br>usando la sentencia return. El proceso de comunicación con el exterior se hace devolviendo valores.<br>A continuación, un ejemplo de función usando return:
+			</p>
+			<div class="u-clearfix u-layout-wrap u-layout-wrap-1">
+				<div class="u-layout">
+					<div class="u-layout-col">
+						<div class="u-size-30">
+							<div class="u-layout-row">
+								<div class="u-container-style u-grey-80 u-layout-cell u-opacity u-opacity-85 u-size-60 u-layout-cell-1" data-animation-name="bounceIn" data-animation-duration="3000" data-animation-direction="">
+									<div class="u-container-layout u-valign-bottom u-container-layout-1">
+										<h4 class="u-hover-feature u-text u-text-default u-text-3" data-animation-name="customAnimationIn" data-animation-duration="3250">Código</h4>
+										<p class="u-hover-feature u-text u-text-default u-text-4" data-animation-name="customAnimationIn" data-animation-duration="3250">Dado dos números calcular la suma de ambos números.</p>
+										<p class="u-hover-feature u-text u-text-default u-text-5" data-animation-name="customAnimationIn" data-animation-duration="3250">def&nbsp;suma(x, y):<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;"""Esta función imprime la suma de los dos valores pasados como parámetro"""<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;return&nbsp;x + y<br>print&nbsp;(suma(27,&nbsp;89))<br>
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="u-size-30">
+							<div class="u-layout-row">
+								<div class="u-container-style u-grey-90 u-layout-cell u-opacity u-opacity-80 u-size-60 u-layout-cell-2" data-animation-name="flipIn" data-animation-duration="3000" data-animation-direction="X">
+									<div class="u-container-layout u-container-layout-2">
+										<h4 class="u-hover-feature u-text u-text-default u-text-6" data-animation-name="customAnimationIn" data-animation-duration="3250">Resultado</h4>
+										<p class="u-hover-feature u-text u-text-default u-text-7" data-animation-name="customAnimationIn" data-animation-duration="3250">116</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<p class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-8" data-animation-name="customAnimationIn" data-animation-duration="1000">Una característica interesante, es la posibilidad de devolver valores múltiples separados por<br>comas:
+			</p>
+			<div class="u-clearfix u-layout-wrap u-layout-wrap-2">
+				<div class="u-layout">
+					<div class="u-layout-col">
+						<div class="u-size-30">
+							<div class="u-layout-row">
+								<div class="u-container-style u-grey-80 u-layout-cell u-opacity u-opacity-85 u-size-60 u-layout-cell-3" data-animation-name="bounceIn" data-animation-duration="3000" data-animation-direction="" data-animation-delay="0">
+									<div class="u-container-layout u-valign-bottom u-container-layout-3">
+										<h4 class="u-hover-feature u-text u-text-default u-text-9" data-animation-name="customAnimationIn" data-animation-duration="3250" data-animation-delay="0">Código</h4>
+										<p class="u-hover-feature u-text u-text-default u-text-10" data-animation-name="customAnimationIn" data-animation-duration="3250" data-animation-delay="0">Crear una función que retorne varios valores.</p>
+										<p class="u-hover-feature u-text u-text-default u-text-11" data-animation-name="customAnimationIn" data-animation-duration="3250" data-animation-delay="0">def&nbsp;prueba():<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; """Esta función retorna varios valores"""<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; return&nbsp;"Hola",&nbsp;20,&nbsp;[1, 2, 3]<br>print&nbsp;(prueba())<br>
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="u-size-30">
+							<div class="u-layout-row">
+								<div class="u-container-style u-grey-90 u-layout-cell u-opacity u-opacity-80 u-size-60 u-layout-cell-4" data-animation-name="flipIn" data-animation-duration="3000" data-animation-direction="X" data-animation-delay="0">
+									<div class="u-container-layout u-container-layout-4">
+										<h4 class="u-hover-feature u-text u-text-default u-text-12" data-animation-name="customAnimationIn" data-animation-duration="3250" data-animation-delay="0">Resultado</h4>
+										<p class="u-hover-feature u-text u-text-default u-text-13" data-animation-name="customAnimationIn" data-animation-duration="3250" data-animation-delay="0">('Hola', 20, [1, 2, 3])</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<p class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-14" data-animation-name="customAnimationIn" data-animation-duration="1000">Sin embargo no se trata de que las funciones Python puedan devolver varios valores, lo que ocurre<br>en realidad es que Python crea una tupla inmutable cuyos elementos son valores a retornar, y esta<br>única variable es la que se devuelve.
+			</p>
+		</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	</section>
+	<section class="u-clearfix u-image u-section-13" id="sec-8bbf" data-image-width="1782" data-image-height="1080">
+		<div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+			<div class="u-clearfix u-layout-wrap u-layout-wrap-1">
+				<div class="u-layout">
+					<div class="u-layout-col">
+						<div class="u-size-30">
+							<div class="u-layout-row">
+								<div class="u-container-style u-grey-80 u-layout-cell u-opacity u-opacity-80 u-size-60 u-layout-cell-1" data-animation-name="flipIn" data-animation-duration="3000" data-animation-direction="X">
+									<div class="u-container-layout u-container-layout-1">
+										<h4 class="u-hover-feature u-text u-text-default u-text-1" data-animation-name="customAnimationIn" data-animation-duration="3250">Código</h4>
+										<p class="u-hover-feature u-text u-text-default u-text-2" data-animation-name="customAnimationIn" data-animation-duration="3250">Crear una función que retorne varios valores y asignarlo a distintas variables.</p>
+										<p class="u-hover-feature u-text u-text-default u-text-3" data-animation-name="customAnimationIn" data-animation-duration="3250">def&nbsp;prueba():<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; """Esta función retorna varios valores"""<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; return&nbsp;"Hola",&nbsp;20,&nbsp;[1, 2, 3]<br>print(prueba())<br>x, y, z = prueba()<br>print(x)<br>print(y)<br>print(z)<br>
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="u-size-30">
+							<div class="u-layout-row">
+								<div class="u-container-style u-grey-90 u-layout-cell u-opacity u-opacity-80 u-size-60 u-layout-cell-2" data-animation-name="bounceIn" data-animation-duration="3000" data-animation-direction="">
+									<div class="u-container-layout u-valign-bottom u-container-layout-2">
+										<h4 class="u-hover-feature u-text u-text-default u-text-4" data-animation-name="customAnimationIn" data-animation-duration="3250">Resultado</h4>
+										<p class="u-hover-feature u-text u-text-default u-text-5" data-animation-name="customAnimationIn" data-animation-duration="3250" data-animation-direction="">('Hola', 20, [1, 2, 3])<br>Hola<br>20<br>[1, 2, 3]
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<p class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-6" data-animation-name="customAnimationIn" data-animation-duration="1000">En el código anterior se muestra como asignar valores a distintas variables en base a la tupla<br>inmutable que retorna la función.
+			</p>
+		</div>
+
+
+
+
+
+
+	</section>
+	<section class="u-clearfix u-image u-section-14" id="sec-645a" data-image-width="1782" data-image-height="1080">
+		<div class="u-clearfix u-sheet u-sheet-1">
+			<h3 class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-1" data-animation-name="customAnimationIn" data-animation-duration="1000">Llamadas de retorno</h3>
+			<p class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-2" data-animation-name="customAnimationIn" data-animation-duration="1000">En Python, es posible (al igual que en la gran mayoría de los lenguajes de programación), llamar a una función<br>dentro de otra de forma fija y de la misma manera que se la llamaría desde fuera de dicha función.
+			</p>
+			<div class="u-clearfix u-layout-wrap u-layout-wrap-1">
+				<div class="u-layout">
+					<div class="u-layout-col">
+						<div class="u-size-30">
+							<div class="u-layout-row">
+								<div class="u-container-style u-grey-80 u-layout-cell u-opacity u-opacity-85 u-size-60 u-layout-cell-1" data-animation-name="flipIn" data-animation-duration="3000" data-animation-direction="X">
+									<div class="u-container-layout u-valign-bottom u-container-layout-1">
+										<h4 class="u-hover-feature u-text u-text-default u-text-3" data-animation-name="customAnimationIn" data-animation-duration="3250">Código</h4>
+										<p class="u-hover-feature u-text u-text-default u-text-4" data-animation-name="customAnimationIn" data-animation-duration="3250">Crear una función que luego sea llamada desde otra función.</p>
+										<p class="u-hover-feature u-text u-text-default u-text-5" data-animation-name="customAnimationIn" data-animation-duration="3250">def&nbsp;mensaje():<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;"""Esta función retorna el mensaje 'Hola Mundo'"""<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;return&nbsp;"Hola Mundo"<br>def&nbsp;saludar(nombre, saludo=&nbsp;"Hola"):<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;"""Esta función imprime el mensaje 'Hola Mundo' y un mensaje personalizado"""<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;print&nbsp;(mensaje())<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;print&nbsp;(saludo, nombre)<br>
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="u-size-30">
+							<div class="u-layout-row">
+								<div class="u-container-style u-grey-90 u-layout-cell u-opacity u-opacity-80 u-size-60 u-layout-cell-2" data-animation-name="bounceIn" data-animation-duration="3000" data-animation-direction="">
+									<div class="u-container-layout u-container-layout-2">
+										<h4 class="u-hover-feature u-text u-text-default u-text-6" data-animation-name="customAnimationIn" data-animation-duration="3250">Resultado</h4>
+										<p class="u-hover-feature u-text u-text-default u-text-7" data-animation-name="customAnimationIn" data-animation-duration="3250">Hola Mundo<br>Hola Juan
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<p class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-8" data-animation-name="customAnimationIn" data-animation-duration="1000">Sin embargo, es posible que se desee realizar dicha llamada, de manera dinámica, es decir, desconociendo<br>el nombre de la función a la que se desea llamar. A este tipo de acciones, se las denomina llamadas de retorno.
+			</p>
+			<p class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-9" data-animation-name="customAnimationIn" data-animation-duration="1000">Para conseguir llamar a una función de manera dinámica, Python dispone de dos funciones nativas:<span style="font-weight: 700;">&nbsp;locals()</span>
+				<br>y&nbsp;<span style="font-weight: 700;">globals().</span>
+			</p>
+			<p class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-10" data-animation-name="customAnimationIn" data-animation-duration="1000">Ambas funciones, retornan un diccionario. En el caso de locals(), este diccionario se compone de todos los elementos de ámbito local, mientras que el globals(), retorna lo propio pero a nivel global.</p>
+			<div class="u-clearfix u-layout-wrap u-layout-wrap-2">
+				<div class="u-layout">
+					<div class="u-layout-col">
+						<div class="u-size-30">
+							<div class="u-layout-row">
+								<div class="u-container-style u-grey-80 u-layout-cell u-opacity u-opacity-80 u-size-60 u-layout-cell-3" data-animation-name="flipIn" data-animation-duration="3000" data-animation-direction="X">
+									<div class="u-container-layout u-valign-bottom u-container-layout-3">
+										<h4 class="u-hover-feature u-text u-text-default u-text-11" data-animation-name="customAnimationIn" data-animation-duration="3250">Código</h4>
+										<p class="u-hover-feature u-text u-text-default u-text-12" data-animation-name="customAnimationIn" data-animation-duration="3250">Crear una función que luego sea llamada desde otra función.</p>
+										<p class="u-hover-feature u-text u-text-default u-text-13" data-animation-name="customAnimationIn" data-animation-duration="3250">def&nbsp;mensaje():<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; """Esta función retorna el mensaje 'Hola Mundo' """<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; return&nbsp;"Hola Mundo"<br>def&nbsp;llamada_de_retorno(funcion=&nbsp;""):<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; """Llamada de retorno a nivel global"""<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; return globals&nbsp;() [funcion]()<br>print&nbsp;(llamada_de_retorno("mensaje"))<br>nombre_de_la_funcion =&nbsp;"mensaje"<br>print&nbsp;(locals()[nombre_de_la_funcion])<br>
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="u-size-30">
+							<div class="u-layout-row">
+								<div class="u-container-style u-grey-90 u-layout-cell u-opacity u-opacity-80 u-size-60 u-layout-cell-4" data-animation-name="bounceIn" data-animation-duration="3000" data-animation-direction="">
+									<div class="u-container-layout u-container-layout-4">
+										<h4 class="u-hover-feature u-text u-text-default u-text-14" data-animation-name="customAnimationIn" data-animation-duration="3250">Resultado</h4>
+										<p class="u-hover-feature u-text u-text-default u-text-15" data-animation-name="customAnimationIn" data-animation-duration="3250">Hola Mundo<br>function mensaje at 0x0000018E6FAFA2F0&gt;
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<p class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-16" data-animation-name="customAnimationIn" data-animation-duration="1000">Si se tienen que pasar argumentos en una llamada de retorno, se lo puede hacer normalmente:</p>
+			<div class="u-clearfix u-layout-wrap u-layout-wrap-3">
+				<div class="u-layout">
+					<div class="u-layout-col">
+						<div class="u-size-30">
+							<div class="u-layout-row">
+								<div class="u-container-style u-grey-80 u-layout-cell u-opacity u-opacity-85 u-size-60 u-layout-cell-5" data-animation-name="flipIn" data-animation-duration="3000" data-animation-direction="X">
+									<div class="u-container-layout u-valign-bottom u-container-layout-5">
+										<h4 class="u-hover-feature u-text u-text-default u-text-17" data-animation-name="customAnimationIn" data-animation-duration="3250">Código</h4>
+										<p class="u-hover-feature u-text u-text-default u-text-18" data-animation-name="customAnimationIn" data-animation-duration="3250">Crear una función que luego sea llamda desde otra función pasando parámetros entre estas.</p>
+										<p class="u-hover-feature u-text u-text-default u-text-19" data-animation-name="customAnimationIn" data-animation-duration="3250">def&nbsp;mensaje(nombre):<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;"""Esta función retorna un mensaje de saludo"""<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;return&nbsp;"Hola "&nbsp;+&nbsp;nombre<br>def&nbsp;llamada_de_retorno(nombre, funcion=&nbsp;""):<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; """Llamada de retorno a nivel global"""<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; return globals&nbsp;()[funcion](nombre)<br>
+											<br>print&nbsp;(llamada_de_retorno(&nbsp;"Maria",&nbsp;"Mensaje"&nbsp;))<br>nombre_de_la_funcion =&nbsp;"mensaje"<br>print&nbsp;(&nbsp;locals&nbsp;()[nombre_de_la_funcion]("Pedro"))<br>
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="u-size-30">
+							<div class="u-layout-row">
+								<div class="u-container-style u-grey-90 u-layout-cell u-opacity u-opacity-80 u-size-60 u-layout-cell-6" data-animation-name="bounceIn" data-animation-duration="3000" data-animation-direction="">
+									<div class="u-container-layout u-container-layout-6">
+										<h4 class="u-hover-feature u-text u-text-default u-text-20" data-animation-name="customAnimationIn" data-animation-duration="3250">Resultado</h4>
+										<p class="u-hover-feature u-text u-text-default u-text-21" data-animation-name="customAnimationIn" data-animation-direction="" data-animation-duration="3250">Hola Maria<br>Hola Pedro
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	</section>
+	<section class="u-clearfix u-image u-section-15" id="sec-7fe6" data-image-width="1782" data-image-height="1080">
+		<div class="u-clearfix u-sheet u-sheet-1">
+			<h3 class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-1" data-animation-name="customAnimationIn" data-animation-duration="1000">Saber si una función existe y puede ser llamada</h3>
+			<p class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-2" data-animation-name="customAnimationIn" data-animation-duration="1000">Durante una llamada de retorno, el nombre de la función, puede no ser el indicado.</p>
+			<p class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-3" data-animation-name="customAnimationIn" data-animation-duration="1000">Entonces, siempre que se debe realizar una llamda de retorno, es necesario comprobar que ésta<br>exista y pueda se llamada.
+			</p>
+			<div class="u-clearfix u-layout-wrap u-layout-wrap-1">
+				<div class="u-layout">
+					<div class="u-layout-col">
+						<div class="u-size-30">
+							<div class="u-layout-row">
+								<div class="u-container-style u-grey-80 u-layout-cell u-opacity u-opacity-80 u-size-60 u-layout-cell-1" data-animation-name="bounceIn" data-animation-duration="3000" data-animation-direction="">
+									<div class="u-container-layout u-valign-bottom u-container-layout-1">
+										<h4 class="u-hover-feature u-text u-text-default u-text-4" data-animation-name="customAnimationIn" data-animation-duration="3250">Código</h4>
+										<p class="u-hover-feature u-text u-text-default u-text-5" data-animation-name="customAnimationIn" data-animation-duration="3250">Crear una función que luego sea llamada desde otra función validando la existencia de la función.</p>
+										<p class="u-hover-feature u-text u-text-default u-text-6" data-animation-name="customAnimationIn" data-animation-duration="3250">def&nbsp;mensaje(nombre):<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; """Esta función retorna un mensaje de saludo"""&nbsp;return&nbsp;"Hola"&nbsp;+&nbsp;nombre<br>def&nbsp;llamada_de_retorno(nombre, funcion=&nbsp;""):<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; """Llamada de retorno a nivel global"""&nbsp;<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if&nbsp;funcion&nbsp;in&nbsp;globals&nbsp;():<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; return globals&nbsp;()[funcion](nombre)<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;else&nbsp;:<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; return&nbsp;"La función no existe"<br>print&nbsp;(llamada_de_retorno("Maria",&nbsp;"mensaje"))&nbsp;print&nbsp;(llamada_de_retorno("Maria",&nbsp;"saludo"))<br>
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="u-size-30">
+							<div class="u-layout-row">
+								<div class="u-container-style u-grey-90 u-layout-cell u-opacity u-opacity-80 u-size-60 u-layout-cell-2" data-animation-name="flipIn" data-animation-duration="3000" data-animation-direction="X">
+									<div class="u-container-layout u-container-layout-2">
+										<h4 class="u-hover-feature u-text u-text-default u-text-7" data-animation-name="customAnimationIn" data-animation-duration="3250">Resultado</h4>
+										<p class="u-hover-feature u-text u-text-default u-text-8" data-animation-name="customAnimationIn" data-animation-direction="" data-animation-duration="3250">Hola Maria<br>La función no existe
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<p class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-9" data-animation-name="customAnimationIn" data-animation-duration="1000">El operador&nbsp;<span style="font-weight: 700;">in</span>, nos permitirá conocer si un elemento se encuentra dentro de una colección,<br>mientras que la función callable() nos dejará saber si esa función puede ser llamada.
+			</p>
+			<div class="u-clearfix u-layout-wrap u-layout-wrap-2">
+				<div class="u-layout">
+					<div class="u-layout-col">
+						<div class="u-size-30">
+							<div class="u-layout-row">
+								<div class="u-container-style u-grey-80 u-layout-cell u-opacity u-opacity-85 u-size-60 u-layout-cell-3" data-animation-name="flipIn" data-animation-duration="3000" data-animation-direction="X">
+									<div class="u-container-layout u-valign-bottom u-container-layout-3">
+										<h4 class="u-hover-feature u-text u-text-default u-text-10" data-animation-name="customAnimationIn" data-animation-duration="3250">Código</h4>
+										<p class="u-hover-feature u-text u-text-default u-text-11" data-animation-name="customAnimationIn" data-animation-duration="3250">Crear una función que luego sea llamada desde otra función validando la existencia de la función.</p>
+										<p class="u-hover-feature u-text u-text-default u-text-12" data-animation-name="customAnimationIn" data-animation-duration="3250">def&nbsp;mensaje(nombre):<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;"""Esta función retorna un mensaje de saludo"""<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;return&nbsp;"Hola "&nbsp;+&nbsp;nombre<br>def&nbsp;llamada_de_retorno(nombre, funcion=&nbsp;""):<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;"""Llamada de retorno a nivel global"""<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;if&nbsp;funcion&nbsp;in&nbsp;globals():<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if callable&nbsp;(&nbsp;globals()[funcion]):<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; return globals&nbsp;()[funcion](nombre)<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;else:<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; return&nbsp;"La función no existe"<br>print&nbsp;(llamada_de_retorno(&nbsp;"Maria",&nbsp;"mensaje"))&nbsp;print&nbsp;(llamada_de_retorno(&nbsp;"Maria",&nbsp;"saludo"))<br>
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="u-size-30">
+							<div class="u-layout-row">
+								<div class="u-container-style u-grey-90 u-layout-cell u-opacity u-opacity-80 u-size-60 u-layout-cell-4" data-animation-name="bounceIn" data-animation-duration="3000" data-animation-direction="">
+									<div class="u-container-layout u-container-layout-4">
+										<h4 class="u-hover-feature u-text u-text-default u-text-13" data-animation-name="customAnimationIn" data-animation-duration="3250" data-animation-direction="">Resultado</h4>
+										<p class="u-hover-feature u-text u-text-default u-text-14" data-animation-name="customAnimationIn" data-animation-duration="3250">Hola Maria<br>La función no existe
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	</section>
+	<section class="u-clearfix u-image u-section-16" id="sec-95c2" data-image-width="1782" data-image-height="1080">
+		<div class="u-clearfix u-sheet u-sheet-1">
+			<h3 class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-1" data-animation-name="customAnimationIn" data-animation-duration="1000">Llamadas recursivas</h3>
+			<p class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-2" data-animation-name="customAnimationIn" data-animation-duration="1000">Se denomina&nbsp;<span style="font-weight: 700;">llamada recursiva</span>&nbsp;(o recursividad), a aquellas funciones que en su algoritmo, hacen<br>referencia sí misma. Las llamadas recursivas suelen ser muy útiles en casos muy puntuales, pero debido a su gran<br>factibilidad de caer en iteraciones infinitas, deben extremarse las medidas preventivas adecuadas y, solo utilizarse<br>cuando sea estrictamente necesario y no exista una forma alternativa viable, que resuelva el problema evitando la recursividad. Python admite las llamadas recursivas, permitiendo a una función, llamarse a sí misma, de igual forma que lo hace cuando llama a otra función.
+			</p>
+			<div class="u-clearfix u-layout-wrap u-layout-wrap-1">
+				<div class="u-layout">
+					<div class="u-layout-col">
+						<div class="u-size-30">
+							<div class="u-layout-row">
+								<div class="u-container-style u-grey-80 u-layout-cell u-opacity u-opacity-85 u-size-60 u-layout-cell-1" data-animation-name="flipIn" data-animation-duration="3000" data-animation-direction="X">
+									<div class="u-container-layout u-valign-bottom u-container-layout-1">
+										<h4 class="u-hover-feature u-text u-text-default u-text-3" data-animation-name="customAnimationIn" data-animation-duration="3250">Código</h4>
+										<p class="u-hover-feature u-text u-text-default u-text-4" data-animation-name="customAnimationIn" data-animation-duration="3250">Crear una función que realice una llamada recursiva.</p>
+										<p class="u-hover-feature u-text u-text-default u-text-5" data-animation-name="customAnimationIn" data-animation-duration="3250">def&nbsp;jugar(intento=&nbsp;1):<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; """Llamada de retorno a nivel global"""<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; respuesta =&nbsp;input("¿De qué color es una naranja?")<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if&nbsp;respuesta !=&nbsp;"naranja":<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;if&nbsp;intento &lt;&nbsp;3:<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; print&nbsp;("Fallaste. Intenta de nuevo")<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; intento +=&nbsp;1<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;jugar(intento)<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;else:<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; print&nbsp;("Perdiste")<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; else:<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;print&nbsp;("Ganaste")<br>
+											<br>jugar()<br>
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="u-size-30">
+							<div class="u-layout-row">
+								<div class="u-container-style u-grey-90 u-layout-cell u-opacity u-opacity-80 u-size-60 u-layout-cell-2" data-animation-name="bounceIn" data-animation-duration="3000" data-animation-direction="">
+									<div class="u-container-layout u-valign-bottom u-container-layout-2">
+										<h4 class="u-hover-feature u-text u-text-default u-text-6" data-animation-name="customAnimationIn" data-animation-duration="3250">Resultado</h4>
+										<p class="u-hover-feature u-text u-text-default u-text-7" data-animation-name="customAnimationIn" data-animation-duration="3250">¿De qué color es una naranja? &gt;? Azul<br>Fallaste. Intenta de nuevo<br>¿De qué color es una naranja? &gt;? Verde<br>Fallaste. Intenta de nuevo<br>¿De qué color es una naranja? &gt;? naranja<br>Ganaste
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<h3 class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-8" data-animation-name="customAnimationIn" data-animation-duration="1000">¿Para qué me sirven las funciones?</h3>
+			<p class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-9" data-animation-name="customAnimationIn" data-animation-duration="1000">Una función, puede tener cualquier tipo de algoritmo y cualquier cantidad de ellos y, utilizar cualquiera de las<br>características vistas hasta ahora. No obstante, una buena práctica, indica que la finalidad de una función, debe<br>ser realizar una única acción, reutilizable y por lo tanto, tan genérica como sea posible.
+			</p>
+			<a href="#" class="u-border-none u-btn u-btn-round u-button-style u-hover-palette-4-base u-palette-2-base u-radius-2 u-btn-1" data-animation-name="customAnimationIn" data-animation-duration="3250"><span class="u-file-icon u-icon"><img src="{% static 'img/545680.png' %}" alt=""></span>&nbsp;Anterior 
+        </a>
+			<a href="#" class="u-border-none u-btn u-btn-round u-button-style u-hover-palette-4-base u-palette-2-base u-radius-2 u-btn-2" data-animation-name="customAnimationIn" data-animation-duration="3250">Siguiente&nbsp;<span class="u-icon u-text-black"><svg class="u-svg-content" viewBox="0 0 512 512" x="0px" y="0px" style="width: 1em; height: 1em;"><path d="M506.134,241.843c-0.006-0.006-0.011-0.013-0.018-0.019l-104.504-104c-7.829-7.791-20.492-7.762-28.285,0.068 c-7.792,7.829-7.762,20.492,0.067,28.284L443.558,236H20c-11.046,0-20,8.954-20,20c0,11.046,8.954,20,20,20h423.557 l-70.162,69.824c-7.829,7.792-7.859,20.455-0.067,28.284c7.793,7.831,20.457,7.858,28.285,0.068l104.504-104 c0.006-.006,0.011-.013,0.018-.019C513.968,262.339,513.943,249.635,506.134,241.843z"></path></svg><img></span>
+        </a>
+		</div>
+
+
+
+
+
+
+
+
+
+	</section>
+
+
+	<footer class="u-align-center u-clearfix u-footer u-grey-80 u-footer" id="sec-b796">
+		<div class="u-clearfix u-sheet u-sheet-1">
+			<p class="u-small-text u-text u-text-variant u-text-1">Sample text. Click to select the text box. Click again or double click to start editing the text.</p>
+		</div>
+	</footer>
+	<section class="u-backlink u-clearfix u-grey-80">
+		<a class="u-link" href="https://nicepage.com/website-templates" target="_blank">
+			<span>Website Templates</span>
+		</a>
+		<p class="u-text">
+			<span>created with</span>
+		</p>
+		<a class="u-link" href="" target="_blank">
+			<span>Website Builder Software</span>
+		</a>.
+	</section><span style="height: 64px; width: 64px; margin-left: 0px; margin-right: auto; margin-top: 0px; background-image: none; right: 20px; bottom: 20px; padding: 15px; box-shadow: 2px -2px 8px 0px rgba(128,128,128,1);" class="u-back-to-top u-icon u-icon-circle u-opacity u-opacity-85 u-white" data-href="#">
+        <svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 551.13 551.13"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-1d98"></use></svg>
+        <svg class="u-svg-content" enable-background="new 0 0 551.13 551.13" viewBox="0 0 551.13 551.13" xmlns="http://www.w3.org/2000/svg" id="svg-1d98"><path d="m275.565 189.451 223.897 223.897h51.668l-275.565-275.565-275.565 275.565h51.668z"></path></svg>
+    </span>
+
+</body>
+</html>

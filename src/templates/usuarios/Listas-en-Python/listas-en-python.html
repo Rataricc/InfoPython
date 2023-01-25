@@ -1,0 +1,1923 @@
+{% load static %}
+<!DOCTYPE html>
+<html style="font-size: 16px;" lang="es">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="utf-8">
+	<meta name="keywords" content="Listas en Python, Lista =[elemento...], Una lista en otra lista">
+	<meta name="description" content="">
+	<title>Listas en Python</title>
+	<link rel="stylesheet" href="../../static/css/nicepage01.css" media="screen">
+	<link rel="stylesheet" href="../../static/css/listas-en-python/listas-en-python.css" media="screen">
+	<script class="u-script" type="text/javascript" src="{% static 'js/jquery01.js' %}" defer=""></script>
+	<script class="u-script" type="text/javascript" src="{% static 'js/nicepage01.js' %}" defer=""></script>
+    <link rel="shortcut icon" href="../../static/img/ico/parablog6.jpg">
+	<meta name="generator" content="Nicepage 5.3.2, nicepage.com">
+	<link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<script type="application/ld+json">
+		{
+				"@context": "http://schema.org",
+				"@type": "Organization",
+				"name": "",
+				"logo": "images/aInfo6.jpg"
+		}
+	</script>
+	<meta name="theme-color" content="#232b79">
+	<meta property="og:title" content="Listas en Python">
+	<meta property="og:type" content="website">
+</head>
+<body class="u-body u-overlap u-xl-mode" data-lang="es">
+	<header class="u-clearfix u-header u-sticky u-header" id="sec-a184">
+		<div class="u-clearfix u-sheet u-sheet-1">
+			<a href="#" class="u-active-black u-border-1 u-border-active-black u-border-grey-30 u-border-hover-black u-btn u-btn-round u-button-style u-hover-palette-4-base u-radius-12 u-text-active-white u-text-hover-white u-white u-btn-1">Más</a>
+			<nav class="u-menu u-menu-dropdown u-offcanvas u-menu-1" data-responsive-from="XXL">
+				<div class="menu-collapse" style="font-size: 1rem; letter-spacing: 0px;">
+					<a class="u-button-style u-custom-left-right-menu-spacing u-custom-padding-bottom u-custom-text-active-color u-custom-text-color u-custom-text-hover-color u-custom-top-bottom-menu-spacing u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="#">
+						<svg class="u-svg-link" viewBox="0 0 24 24"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#menu-hamburger"></use></svg>
+						<svg class="u-svg-content" version="1.1" id="menu-hamburger" viewBox="0 0 16 16" x="0px" y="0px" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g><rect y="1" width="16" height="2"></rect><rect y="7" width="16" height="2"></rect><rect y="13" width="16" height="2"></rect>
+</g></svg>
+					</a>
+				</div>
+				<div class="u-custom-menu u-nav-container">
+					<ul class="u-nav u-spacing-20 u-unstyled u-nav-1">
+						<li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-white u-text-body-alt-color u-text-hover-palette-4-base" href="Inicio.html" style="padding: 16px 28px;">Inicio</a>
+						</li>
+						<li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-white u-text-body-alt-color u-text-hover-palette-4-base" href="#" style="padding: 16px 28px;">Contacto</a>
+						</li>
+					</ul>
+				</div>
+				<div class="u-custom-menu u-nav-container-collapse">
+					<div class="u-black u-container-style u-inner-container-layout u-opacity u-opacity-95 u-sidenav">
+						<div class="u-inner-container-layout u-sidenav-overflow">
+							<div class="u-menu-close"></div>
+							<ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-2">
+								<li class="u-nav-item"><a class="u-button-style u-nav-link" href="Inicio.html" style="padding: 10px 20px;">Inicio</a>
+								</li>
+								<li class="u-nav-item"><a class="u-button-style u-nav-link" href="#" style="padding: 10px 20px;">Contacto</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="u-black u-menu-overlay u-opacity u-opacity-70"></div>
+				</div>
+			</nav>
+			<a href="https://nicepage.com" class="u-image u-logo u-image-1" data-image-width="782" data-image-height="383">
+				<img class="u-logo-image u-logo-image-1" src="{% static 'img/masimg/aInfo6.jpg' %}">
+			</a>
+		</div>
+	</header>
+	<section class="u-clearfix u-image u-section-1" id="sec-c0f5" data-image-width="1782" data-image-height="1080">
+		<div class="u-clearfix u-sheet u-sheet-1">
+			<h1 class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-1" data-animation-name="customAnimationIn" data-animation-duration="1000">Listas en Python</h1>
+			<p class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-2" data-animation-name="customAnimationIn" data-animation-duration="1000">Las&nbsp;<span style="font-weight: 700;">listas</span>&nbsp;en Python son conjuntos de elementos ordenados y pueden estar conformados por<br>elementos de distintos tipo (enteros, float, cadenas, funciones, otras listas, etc).
+			</p>
+			<p class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-3" data-animation-name="customAnimationIn" data-animation-duration="1000">Las listas en Python son<span style="font-weight: 700;">&nbsp;mutables</span>, lo que significa que sus elementos pueden cambiar o reordenarse.
+			</p>
+			<img class="u-align-center u-image u-image-default u-opacity u-opacity-80 u-preserve-proportions u-image-1" src="{% static 'img/parablog46.jpg' %}" alt="Listas en python" data-image-width="249" data-image-height="192" data-animation-name="customAnimationIn" data-animation-duration="3250">
+			<p class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-4" data-animation-name="customAnimationIn" data-animation-duration="1000">Las listas se delimitan por<span style="font-weight: 700;">&nbsp;corchetes []</span>&nbsp;y sus elementos se separan por comas.
+			</p>
+			<img class="u-align-center u-image u-image-default u-opacity u-opacity-80 u-image-2" src="{% static 'img/parablog47.jpg' %}" alt="Listas" data-image-width="1115" data-image-height="525" data-animation-name="customAnimationIn" data-animation-duration="3250">
+		</div>
+
+
+
+
+	</section>
+	<section class="u-clearfix u-image u-section-2" id="sec-3e72" data-image-width="1782" data-image-height="1080">
+		<div class="u-clearfix u-sheet u-sheet-1">
+			<h3 class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-1" data-animation-name="customAnimationIn" data-animation-duration="1000">Los elementos de una lista pueden accederse mediante su índice.</h3>
+			<h3 class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-2" data-animation-name="customAnimationIn" data-animation-duration="1000">Ejemplos:</h3>
+			<div class="u-clearfix u-expanded-width u-gutter-16 u-layout-wrap u-layout-wrap-1">
+				<div class="u-layout">
+					<div class="u-layout-col">
+						<div class="u-size-30">
+							<div class="u-layout-row">
+								<div class="u-container-style u-effect-hover-zoom u-layout-cell u-left-cell u-size-32 u-layout-cell-1" src="" data-image-width="962" data-image-height="662" data-animation-name="customAnimationIn" data-animation-duration="3250">
+									<div class="u-background-effect u-expanded">
+										<div class="u-background-effect-image u-expanded u-image u-image-1" data-image-width="962" data-image-height="662"></div>
+									</div>
+									<div class="u-background-effect u-expanded">
+										<div class="u-background-effect-image u-expanded u-image u-image-1" data-image-width="962" data-image-height="662"></div>
+									</div>
+									<div class="u-container-layout u-valign-middle u-container-layout-1"></div>
+								</div>
+								<div class="u-align-left u-container-style u-layout-cell u-right-cell u-size-28 u-layout-cell-2">
+									<div class="u-container-layout u-container-layout-2">
+										<h2 class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-3" data-animation-name="customAnimationIn" data-animation-duration="3000" data-animation-direction="">Lista =[elemento...]</h2>
+										<p class="u-hover-feature u-text u-text-body-alt-color u-text-4" data-animation-name="customAnimationIn" data-animation-duration="3000" data-animation-direction="">Dependiendo de cuantos elementos contenga una lista, siempre el primer elemento su indice va a hacer el numero "0".</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="u-size-30">
+							<div class="u-layout-row">
+								<div class="u-align-left u-container-style u-layout-cell u-left-cell u-size-27 u-layout-cell-3">
+									<div class="u-container-layout u-container-layout-3">
+										<h2 class="u-hover-feature u-text u-text-body-alt-color u-text-5" data-animation-name="customAnimationIn" data-animation-duration="3000">Una lista en otra lista</h2>
+										<p class="u-hover-feature u-text u-text-body-alt-color u-text-6" data-animation-name="customAnimationIn" data-animation-duration="3000">También puede contener otras listas dentro</p>
+									</div>
+								</div>
+								<div class="u-container-style u-effect-hover-zoom u-layout-cell u-right-cell u-size-33 u-layout-cell-4" src="" data-image-width="946" data-image-height="688" data-animation-name="customAnimationIn" data-animation-duration="3250">
+									<div class="u-background-effect u-expanded">
+										<div class="u-background-effect-image u-expanded u-image u-image-3" data-image-width="946" data-image-height="688"></div>
+									</div>
+									<div class="u-container-layout u-valign-middle u-container-layout-4"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<p class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-7" data-animation-name="customAnimationIn" data-animation-duration="1000">Una lista puede estar vacia:</p>
+			<img class="u-image u-image-default u-opacity u-opacity-85 u-image-4" src="{% static 'img/parablog50.jpg' %}" alt="lista vacia python" data-image-width="946" data-image-height="690" data-animation-name="flipIn" data-animation-duration="3250" data-animation-direction="X">
+			<p class="u-align-left u-hover-feature u-text u-text-body-alt-color u-text-default u-text-8" data-animation-name="customAnimationIn" data-animation-duration="1000">Para crear una lista podremos hacerlo encerrando los elementos entre corchetes y<br>separados por comas:
+			</p>
+			<img class="u-image u-image-default u-opacity u-opacity-85 u-image-5" src="{% static 'img/parablog51.jpg' %}" alt="crear una lista en python" data-image-width="939" data-image-height="667" data-animation-name="bounceIn" data-animation-duration="3250" data-animation-direction="">
+		</div>
+
+
+
+
+
+
+
+
+	</section>
+	<section class="u-clearfix u-image u-section-3" id="sec-06d6" data-image-width="1782" data-image-height="1080">
+		<div class="u-clearfix u-sheet u-sheet-1">
+			<p class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-1" data-animation-name="customAnimationIn" data-animation-duration="1000">Podemos crear listas vacías de dos formas:</p>
+			<img class="u-align-center u-image u-image-default u-opacity u-opacity-80 u-image-1" src="{% static 'img/parablog52.jpg' %}" alt="crear una lista vacia python" data-image-width="947" data-image-height="665" data-animation-name="customAnimationIn" data-animation-duration="3250" data-animation-direction="">
+			<div data-interval="5000" data-u-ride="carousel" class="u-border-8 u-border-black u-carousel u-expanded-width u-slider u-slider-1" id="carousel-740c">
+				<ol class="u-absolute-hcenter u-carousel-indicators u-carousel-indicators-1">
+					<li data-u-target="#carousel-740c" class="u-active u-active-black u-white" data-u-slide-to="0"></li>
+					<li data-u-target="#carousel-740c" class="u-active-black u-white" data-u-slide-to="1"></li>
+					<li data-u-target="#carousel-740c" class="u-active-black u-white" data-u-slide-to="2"></li>
+					<li data-u-target="#carousel-740c" class="u-active-black u-white" data-u-slide-to="3"></li>
+				</ol>
+				<div class="u-carousel-inner" role="listbox">
+					<div class="u-active u-carousel-item u-container-style u-slide">
+						<div class="u-container-layout u-valign-top u-container-layout-1">
+							<img class="u-image u-image-default u-opacity u-opacity-80 u-image-2" src="{% static 'img/parablog53.jpg' %}" alt="funcion len() python listas" data-image-width="946" data-image-height="666" data-animation-name="customAnimationIn" data-animation-duration="3250" data-animation-direction="X">
+							<h3 class="u-hover-feature u-text u-text-body-alt-color u-text-default u-text-2" data-animation-name="customAnimationIn" data-animation-duration="3000">Si queremos conocer la cantidad de elementos en una lista podemos utilizar la función len() </h3>
+						</div>
+					</div>
+					<div class="u-carousel-item u-container-style u-slide">
+						<div class="u-container-layout u-valign-top u-container-layout-2">
+							<img class="u-align-left u-image u-image-default u-opacity u-opacity-90 u-image-3" src="{% static 'img/parablog54.jpg' %}" alt="acceder a elementos de una lista" data-image-width="945" data-image-height="651" data-animation-name="customAnimationIn" data-animation-duration="3250">
+							<h3 class="u-hover-feature u-text u-text-body-alt-color u-text-default u-text-3" data-animation-name="customAnimationIn" data-animation-duration="3000">Podemos acceder a los distintos elementos de la lista por medio de su índice. </h3>
+						</div>
+					</div>
+					<div class="u-carousel-item u-container-style u-slide">
+						<div class="u-container-layout u-valign-top u-container-layout-3">
+							<img class="u-expanded-width u-image u-image-default u-image-4" src="{% static 'img/parablog55.jpg' %}" alt="indices de las listas" data-image-width="951" data-image-height="437" data-animation-name="customAnimationIn" data-animation-duration="3250">
+							<h3 class="u-hover-feature u-text u-text-body-alt-color u-text-default u-text-4" data-animation-name="customAnimationIn" data-animation-duration="3000">Los índices de las listas comienzan en 0 (cero). Por eso el índice 0 para acceder al primer elemento, el índice 1 para el segundo y así sucesivamente. También podemos usar de índices enteros negativos. Correspondiendo el -1 al último elemento, el -2 al anteúltimo y así sucesivamente.</h3>
+						</div>
+						<style data-mode="XL">
+							.u-block-null-20 {
+							  padding-top: 30px;
+							  padding-bottom: 30px;
+							  padding-left: 50px;
+							  padding-right: 50px;
+							}
+							.u-block-null-21 {
+							  height: 486px;
+							  margin-top: 0;
+							  margin-bottom: 0;
+							}
+							.u-block-null-22 {
+							  --animation-custom_in-translate_x: 0px;
+							  --animation-custom_in-translate_y: 0px;
+							  --animation-custom_in-opacity: 0;
+							  --animation-custom_in-rotate: 0deg;
+							  --animation-custom_in-scale: 1;
+							  transition-duration: 0.5s;
+							  transform: scale(1.1) translateX(0px) translateY(0px);
+							  box-shadow: 0 0 rgba(0,0,0,0) rgba(var(---r),var(---g),var(---b),0);
+							  text-shadow: 0 rgba(0,0,0,0) rgba(0,0,0,0) rgba(var(---r),var(---g),var(---b),0);
+							  margin-top: 47px;
+							  margin-left: 0;
+							  margin-right: 0;
+							  margin-bottom: 0;
+							}
+						</style>
+						<style data-mode="LG">
+							@media (max-width: 1199px) {
+							  .u-block-null-20 {
+							    padding-top: 30px;
+							    padding-bottom: 30px;
+							    padding-left: 50px;
+							    padding-right: 50px;
+							  }
+							  .u-block-null-21 {
+							    height: 486px;
+							    margin-top: 0;
+							    margin-bottom: 0;
+							  }
+							  .u-block-null-22 {
+							    box-shadow: 0 0 rgba(0,0,0,0) rgba(var(---r),var(---g),var(---b),0);
+							    text-shadow: 0 rgba(0,0,0,0) rgba(0,0,0,0) rgba(var(---r),var(---g),var(---b),0);
+							    --animation-custom_in-translate_x: 0px;
+							    --animation-custom_in-translate_y: 0px;
+							    --animation-custom_in-opacity: 0;
+							    --animation-custom_in-rotate: 0deg;
+							    --animation-custom_in-scale: 1;
+							    transition-duration: 0.5s;
+							    transform: scale(1.1) translateX(0px) translateY(0px);
+							    margin-top: 47px;
+							    margin-left: 0;
+							    margin-right: 0;
+							    margin-bottom: 0;
+							  }
+							}
+						</style>
+						<style data-mode="MD">
+							@media (max-width: 991px) {
+							  .u-block-null-20 {
+							    padding-top: 30px;
+							    padding-bottom: 30px;
+							    padding-left: 30px;
+							    padding-right: 30px;
+							  }
+							  .u-block-null-21 {
+							    height: 486px;
+							    margin-top: 0;
+							    margin-bottom: 0;
+							  }
+							  .u-block-null-22 {
+							    box-shadow: 0 0 rgba(0,0,0,0) rgba(var(---r),var(---g),var(---b),0);
+							    text-shadow: 0 rgba(0,0,0,0) rgba(0,0,0,0) rgba(var(---r),var(---g),var(---b),0);
+							    --animation-custom_in-translate_x: 0px;
+							    --animation-custom_in-translate_y: 0px;
+							    --animation-custom_in-opacity: 0;
+							    --animation-custom_in-rotate: 0deg;
+							    --animation-custom_in-scale: 1;
+							    transition-duration: 0.5s;
+							    transform: scale(1.1) translateX(0px) translateY(0px);
+							    margin-top: 47px;
+							    margin-left: 0;
+							    margin-right: 0;
+							    margin-bottom: 0;
+							  }
+							}
+						</style>
+						<style data-mode="SM">
+							@media (max-width: 767px) {
+							  .u-block-null-20 {
+							    padding-top: 30px;
+							    padding-bottom: 30px;
+							    padding-left: 10px;
+							    padding-right: 10px;
+							  }
+							  .u-block-null-21 {
+							    height: 486px;
+							    margin-top: 0;
+							    margin-bottom: 0;
+							  }
+							  .u-block-null-22 {
+							    box-shadow: 0 0 rgba(0,0,0,0) rgba(var(---r),var(---g),var(---b),0);
+							    text-shadow: 0 rgba(0,0,0,0) rgba(0,0,0,0) rgba(var(---r),var(---g),var(---b),0);
+							    --animation-custom_in-translate_x: 0px;
+							    --animation-custom_in-translate_y: 0px;
+							    --animation-custom_in-opacity: 0;
+							    --animation-custom_in-rotate: 0deg;
+							    --animation-custom_in-scale: 1;
+							    transition-duration: 0.5s;
+							    transform: scale(1.1) translateX(0px) translateY(0px);
+							    margin-top: 47px;
+							    margin-left: 0;
+							    margin-right: 0;
+							    margin-bottom: 0;
+							  }
+							}
+						</style>
+						<style data-mode="XS">
+							@media (max-width: 575px) {
+							  .u-block-null-20 {
+							    padding-top: 30px;
+							    padding-bottom: 30px;
+							    padding-left: 10px;
+							    padding-right: 10px;
+							  }
+							  .u-block-null-21 {
+							    height: 486px;
+							    margin-top: 0;
+							    margin-bottom: 0;
+							  }
+							  .u-block-null-22 {
+							    box-shadow: 0 0 rgba(0,0,0,0) rgba(var(---r),var(---g),var(---b),0);
+							    text-shadow: 0 rgba(0,0,0,0) rgba(0,0,0,0) rgba(var(---r),var(---g),var(---b),0);
+							    --animation-custom_in-translate_x: 0px;
+							    --animation-custom_in-translate_y: 0px;
+							    --animation-custom_in-opacity: 0;
+							    --animation-custom_in-rotate: 0deg;
+							    --animation-custom_in-scale: 1;
+							    transition-duration: 0.5s;
+							    transform: scale(1.1) translateX(0px) translateY(0px);
+							    margin-top: 47px;
+							    margin-left: 0;
+							    margin-right: 0;
+							    margin-bottom: 0;
+							  }
+							}
+						</style>
+					</div>
+					<div class="u-border-black u-carousel-item u-container-style u-slide">
+						<div class="u-container-layout u-container-layout-4">
+							<img class="u-expanded-width u-image u-image-default u-image-5" src="{% static 'img/parablog56.jpg' %}" alt="Listas anidadas" data-image-width="948" data-image-height="492" data-animation-name="customAnimationIn" data-animation-duration="3250">
+							<h3 class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-5" data-animation-name="customAnimationIn" data-animation-duration="3000">Una lista anidada se considera como un solo elemento, independientemente de cuántos elementos contenga.</h3>
+						</div>
+						<style data-mode="XL">
+							.u-block-null-24 {
+							  padding-top: 30px;
+							  padding-bottom: 30px;
+							  padding-left: 50px;
+							  padding-right: 50px;
+							}
+							.u-block-null-25 {
+							  height: 535px;
+							  margin-top: 0;
+							  margin-bottom: 0;
+							}
+							.u-block-null-26 {
+							  margin-top: 30px;
+							  margin-bottom: 0;
+							  --animation-custom_in-translate_x: 0px;
+							  --animation-custom_in-translate_y: 0px;
+							  --animation-custom_in-opacity: 0;
+							  --animation-custom_in-rotate: 0deg;
+							  --animation-custom_in-scale: 1;
+							  transition-duration: 0.5s;
+							  transform: scale(1.1) translateX(0px) translateY(0px);
+							  box-shadow: 0 0 rgba(0,0,0,0) rgba(var(---r),var(---g),var(---b),0);
+							  text-shadow: 0 rgba(0,0,0,0) rgba(0,0,0,0) rgba(var(---r),var(---g),var(---b),0);
+							}
+						</style>
+						<style data-mode="LG">
+							@media (max-width: 1199px) {
+							  .u-block-null-24 {
+							    padding-top: 30px;
+							    padding-bottom: 30px;
+							    padding-left: 50px;
+							    padding-right: 50px;
+							  }
+							  .u-block-null-25 {
+							    height: 535px;
+							    margin-top: 0;
+							    margin-bottom: 0;
+							  }
+							  .u-block-null-26 {
+							    box-shadow: 0 0 rgba(0,0,0,0) rgba(var(---r),var(---g),var(---b),0);
+							    text-shadow: 0 rgba(0,0,0,0) rgba(0,0,0,0) rgba(var(---r),var(---g),var(---b),0);
+							    margin-top: 30px;
+							    margin-bottom: 0;
+							    --animation-custom_in-translate_x: 0px;
+							    --animation-custom_in-translate_y: 0px;
+							    --animation-custom_in-opacity: 0;
+							    --animation-custom_in-rotate: 0deg;
+							    --animation-custom_in-scale: 1;
+							    transition-duration: 0.5s;
+							    transform: scale(1.1) translateX(0px) translateY(0px);
+							  }
+							}
+						</style>
+						<style data-mode="MD">
+							@media (max-width: 991px) {
+							  .u-block-null-24 {
+							    padding-top: 30px;
+							    padding-bottom: 30px;
+							    padding-left: 30px;
+							    padding-right: 30px;
+							  }
+							  .u-block-null-25 {
+							    height: 535px;
+							    margin-top: 0;
+							    margin-bottom: 0;
+							  }
+							  .u-block-null-26 {
+							    box-shadow: 0 0 rgba(0,0,0,0) rgba(var(---r),var(---g),var(---b),0);
+							    text-shadow: 0 rgba(0,0,0,0) rgba(0,0,0,0) rgba(var(---r),var(---g),var(---b),0);
+							    margin-top: 30px;
+							    margin-bottom: 0;
+							    --animation-custom_in-translate_x: 0px;
+							    --animation-custom_in-translate_y: 0px;
+							    --animation-custom_in-opacity: 0;
+							    --animation-custom_in-rotate: 0deg;
+							    --animation-custom_in-scale: 1;
+							    transition-duration: 0.5s;
+							    transform: scale(1.1) translateX(0px) translateY(0px);
+							  }
+							}
+						</style>
+						<style data-mode="SM">
+							@media (max-width: 767px) {
+							  .u-block-null-24 {
+							    padding-top: 30px;
+							    padding-bottom: 30px;
+							    padding-left: 10px;
+							    padding-right: 10px;
+							  }
+							  .u-block-null-25 {
+							    height: 535px;
+							    margin-top: 0;
+							    margin-bottom: 0;
+							  }
+							  .u-block-null-26 {
+							    box-shadow: 0 0 rgba(0,0,0,0) rgba(var(---r),var(---g),var(---b),0);
+							    text-shadow: 0 rgba(0,0,0,0) rgba(0,0,0,0) rgba(var(---r),var(---g),var(---b),0);
+							    margin-top: 30px;
+							    margin-bottom: 0;
+							    --animation-custom_in-translate_x: 0px;
+							    --animation-custom_in-translate_y: 0px;
+							    --animation-custom_in-opacity: 0;
+							    --animation-custom_in-rotate: 0deg;
+							    --animation-custom_in-scale: 1;
+							    transition-duration: 0.5s;
+							    transform: scale(1.1) translateX(0px) translateY(0px);
+							  }
+							}
+						</style>
+						<style data-mode="XS">
+							@media (max-width: 575px) {
+							  .u-block-null-24 {
+							    padding-top: 30px;
+							    padding-bottom: 30px;
+							    padding-left: 10px;
+							    padding-right: 10px;
+							  }
+							  .u-block-null-25 {
+							    height: 535px;
+							    margin-top: 0;
+							    margin-bottom: 0;
+							  }
+							  .u-block-null-26 {
+							    box-shadow: 0 0 rgba(0,0,0,0) rgba(var(---r),var(---g),var(---b),0);
+							    text-shadow: 0 rgba(0,0,0,0) rgba(0,0,0,0) rgba(var(---r),var(---g),var(---b),0);
+							    margin-top: 30px;
+							    margin-bottom: 0;
+							    --animation-custom_in-translate_x: 0px;
+							    --animation-custom_in-translate_y: 0px;
+							    --animation-custom_in-opacity: 0;
+							    --animation-custom_in-rotate: 0deg;
+							    --animation-custom_in-scale: 1;
+							    transition-duration: 0.5s;
+							    transform: scale(1.1) translateX(0px) translateY(0px);
+							  }
+							}
+						</style>
+					</div>
+				</div>
+				<a class="u-absolute-vcenter u-carousel-control u-carousel-control-prev u-spacing-5 u-text-body-alt-color u-text-hover-palette-4-dark-1 u-carousel-control-1" href="#carousel-740c" role="button" data-u-slide="prev">
+					<span aria-hidden="true">
+              <svg viewBox="0 0 477.175 477.175"><path d="M145.188,238.575l215.5-215.5c5.3-5.3,5.3-13.8,0-19.1s-13.8-5.3-19.1,0l-225.1,225.1c-5.3,5.3-5.3,13.8,0,19.1l225.1,225
+                    c2.6,2.6,6.1,4,9.5,4s6.9-1.3,9.5-4c5.3-5.3,5.3-13.8,0-19.1L145.188,238.575z"></path></svg>
+            </span>
+					<span class="sr-only">Previous</span>
+				</a>
+				<a class="u-absolute-vcenter u-carousel-control u-carousel-control-next u-spacing-5 u-text-body-alt-color u-text-hover-palette-4-dark-1 u-carousel-control-2" href="#carousel-740c" role="button" data-u-slide="next">
+					<span aria-hidden="true">
+              <svg viewBox="0 0 477.175 477.175"><path d="M360.731,229.075l-225.1-225.1c-5.3-5.3-13.8-5.3-19.1,0s-5.3,13.8,0,19.1l215.5,215.5l-215.5,215.5
+                    c-5.3,5.3-5.3,13.8,0,19.1c2.6,2.6,6.1,4,9.5,4c3.4,0,6.9-1.3,9.5-4l225.1-225.1C365.931,242.875,365.931,234.275,360.731,229.075z"></path></svg>
+            </span>
+					<span class="sr-only">Next</span>
+				</a>
+			</div>
+		</div>
+
+
+
+
+
+
+	</section>
+	<section class="u-clearfix u-image u-section-4" id="sec-e895" data-image-width="1782" data-image-height="1080">
+		<div class="u-clearfix u-sheet u-sheet-1">
+			<h3 class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-1" data-animation-name="customAnimationIn" data-animation-duration="1000">Modificar Elementos</h3>
+			<p class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-2" data-animation-name="customAnimationIn" data-animation-duration="1000">Se puede modificar cualquier elemento de la lista haciendo referencia a su posición y<br>asignándole el nuevo elemento.
+			</p>
+			<img class="u-image u-image-default u-opacity u-opacity-90 u-image-1" src="{% static 'img/parablog57.jpg' %}" alt="Modificar elementos de una lista en python" data-image-width="959" data-image-height="633" data-animation-name="customAnimationIn" data-animation-duration="3250" data-animation-direction="">
+			<h3 class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-3" data-animation-name="customAnimationIn" data-animation-duration="1000">Recorrer una lista </h3>
+			<p class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-4" data-animation-name="customAnimationIn" data-animation-duration="1000">Puedes leer los elementos de la lista utilizando un ciclo for utilizando range():</p>
+			<img class="u-align-left u-image u-image-default u-opacity u-opacity-85 u-image-2" src="{% static 'img/parablog58.jpg' %}" alt="Recorrer los elementos de una lista" data-image-width="945" data-image-height="461" data-animation-name="customAnimationIn" data-animation-duration="3250">
+			<p class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-5" data-animation-name="customAnimationIn" data-animation-duration="1000">Pero Python también nos permite recorrer listas de la siguiente manera:</p>
+			<img class="u-align-right u-image u-image-default u-opacity u-opacity-85 u-image-3" src="{% static 'img/parablog59.jpg' %}" alt="otra manera de recorrer listas en python" data-image-width="944" data-image-height="453" data-animation-name="flipIn" data-animation-duration="3250" data-animation-direction="X">
+		</div>
+
+
+
+
+
+	</section>
+	<section class="u-clearfix u-container-align-center u-image u-section-5" id="sec-1e0e" data-image-width="1782" data-image-height="1080">
+		<div class="u-clearfix u-sheet u-sheet-1">
+			<h3 class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-1" data-animation-name="customAnimationIn" data-animation-duration="1000">Agregar elementos en una lista</h3>
+			<div data-interval="5000" data-u-ride="carousel" class="u-border-8 u-border-black u-carousel u-expanded-width u-slider u-slider-1" id="carousel-9391">
+				<ol class="u-absolute-hcenter u-carousel-indicators u-carousel-indicators-1">
+					<li data-u-target="#carousel-9391" class="u-active u-white" data-u-slide-to="0"></li>
+					<li data-u-target="#carousel-9391" class="u-active-grey-10 u-grey-30" data-u-slide-to="1"></li>
+					<li data-u-target="#carousel-9391" class="u-active-grey-10 u-grey-30" data-u-slide-to="2"></li>
+					<li data-u-target="#carousel-9391" class="u-active-grey-10 u-grey-30" data-u-slide-to="3"></li>
+				</ol>
+				<div class="u-carousel-inner" role="listbox">
+					<div class="u-active u-carousel-item u-container-style u-slide">
+						<div class="u-container-layout u-valign-top u-container-layout-1">
+							<img class="u-expanded-width u-image u-image-default u-image-1" src="{% static 'img/parablog60.jpg' %}" alt="Agregar elementos a una lista utilizando append()" data-image-width="942" data-image-height="433" data-animation-name="customAnimationIn" data-animation-duration="3250">
+							<h3 class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-2" data-animation-name="customAnimationIn" data-animation-duration="3000">&nbsp;Podemos agregar un elemento a la lista utilizando append()<br>Como vemos el elemento que pasamos entre paréntesis en append() se agregó al final<br>de la lista.<br>
+                </h3>
+						</div>
+						<style data-mode="XL">
+							.u-block-null-8 {
+							  padding-top: 30px;
+							  padding-bottom: 30px;
+							  padding-left: 50px;
+							  padding-right: 50px;
+							}
+							.u-block-null-9 {
+							  height: 470px;
+							  margin-top: 0;
+							  margin-bottom: 0;
+							  box-shadow: 2px -2px 8px 0px rgba(128,128,128,1);
+							  --animation-custom_in-translate_x: -200px;
+							  --animation-custom_in-translate_y: 0px;
+							  --animation-custom_in-opacity: 0;
+							  --animation-custom_in-rotate: 0deg;
+							  --animation-custom_in-scale: 1;
+							}
+							.u-block-null-10 {
+							  font-weight: 700;
+							  --animation-custom_in-scale: 0.3;
+							  transition-duration: 0.5s;
+							  transform: scale(1.1) translateX(0px) translateY(0px);
+							  box-shadow: 0 0 rgba(0,0,0,0) rgba(var(---r),var(---g),var(---b),0);
+							  text-shadow: 0 rgba(0,0,0,0) rgba(0,0,0,0) rgba(var(---r),var(---g),var(---b),0);
+							  margin-top: 30px;
+							  margin-left: 0;
+							  margin-right: 0;
+							  margin-bottom: 0;
+							}
+						</style>
+						<style data-mode="LG">
+							@media (max-width: 1199px) {
+							  .u-block-null-8 {
+							    padding-top: 30px;
+							    padding-bottom: 30px;
+							    padding-left: 50px;
+							    padding-right: 50px;
+							  }
+							  .u-block-null-9 {
+							    box-shadow: 2px -2px 8px 0px rgba(128,128,128,1);
+							    height: 470px;
+							    margin-top: 0;
+							    margin-bottom: 0;
+							    --animation-custom_in-translate_x: -200px;
+							    --animation-custom_in-translate_y: 0px;
+							    --animation-custom_in-opacity: 0;
+							    --animation-custom_in-rotate: 0deg;
+							    --animation-custom_in-scale: 1;
+							  }
+							  .u-block-null-10 {
+							    box-shadow: 0 0 rgba(0,0,0,0) rgba(var(---r),var(---g),var(---b),0);
+							    text-shadow: 0 rgba(0,0,0,0) rgba(0,0,0,0) rgba(var(---r),var(---g),var(---b),0);
+							    font-weight: 700;
+							    --animation-custom_in-scale: 0.3;
+							    transition-duration: 0.5s;
+							    transform: scale(1.1) translateX(0px) translateY(0px);
+							    margin-top: 30px;
+							    margin-left: 0;
+							    margin-right: 0;
+							    margin-bottom: 0;
+							  }
+							}
+						</style>
+						<style data-mode="MD">
+							@media (max-width: 991px) {
+							  .u-block-null-8 {
+							    padding-top: 30px;
+							    padding-bottom: 30px;
+							    padding-left: 30px;
+							    padding-right: 30px;
+							  }
+							  .u-block-null-9 {
+							    box-shadow: 2px -2px 8px 0px rgba(128,128,128,1);
+							    height: 470px;
+							    margin-top: 0;
+							    margin-bottom: 0;
+							    --animation-custom_in-translate_x: -200px;
+							    --animation-custom_in-translate_y: 0px;
+							    --animation-custom_in-opacity: 0;
+							    --animation-custom_in-rotate: 0deg;
+							    --animation-custom_in-scale: 1;
+							  }
+							  .u-block-null-10 {
+							    box-shadow: 0 0 rgba(0,0,0,0) rgba(var(---r),var(---g),var(---b),0);
+							    text-shadow: 0 rgba(0,0,0,0) rgba(0,0,0,0) rgba(var(---r),var(---g),var(---b),0);
+							    font-weight: 700;
+							    --animation-custom_in-scale: 0.3;
+							    transition-duration: 0.5s;
+							    transform: scale(1.1) translateX(0px) translateY(0px);
+							    margin-top: 30px;
+							    margin-left: 0;
+							    margin-right: 0;
+							    margin-bottom: 0;
+							  }
+							}
+						</style>
+						<style data-mode="SM">
+							@media (max-width: 767px) {
+							  .u-block-null-8 {
+							    padding-top: 30px;
+							    padding-bottom: 30px;
+							    padding-left: 10px;
+							    padding-right: 10px;
+							  }
+							  .u-block-null-9 {
+							    box-shadow: 2px -2px 8px 0px rgba(128,128,128,1);
+							    height: 470px;
+							    margin-top: 0;
+							    margin-bottom: 0;
+							    --animation-custom_in-translate_x: -200px;
+							    --animation-custom_in-translate_y: 0px;
+							    --animation-custom_in-opacity: 0;
+							    --animation-custom_in-rotate: 0deg;
+							    --animation-custom_in-scale: 1;
+							  }
+							  .u-block-null-10 {
+							    box-shadow: 0 0 rgba(0,0,0,0) rgba(var(---r),var(---g),var(---b),0);
+							    text-shadow: 0 rgba(0,0,0,0) rgba(0,0,0,0) rgba(var(---r),var(---g),var(---b),0);
+							    font-weight: 700;
+							    --animation-custom_in-scale: 0.3;
+							    transition-duration: 0.5s;
+							    transform: scale(1.1) translateX(0px) translateY(0px);
+							    margin-top: 30px;
+							    margin-left: 0;
+							    margin-right: 0;
+							    margin-bottom: 0;
+							  }
+							}
+						</style>
+						<style data-mode="XS">
+							@media (max-width: 575px) {
+							  .u-block-null-8 {
+							    padding-top: 30px;
+							    padding-bottom: 30px;
+							    padding-left: 10px;
+							    padding-right: 10px;
+							  }
+							  .u-block-null-9 {
+							    box-shadow: 2px -2px 8px 0px rgba(128,128,128,1);
+							    height: 470px;
+							    margin-top: 0;
+							    margin-bottom: 0;
+							    --animation-custom_in-translate_x: -200px;
+							    --animation-custom_in-translate_y: 0px;
+							    --animation-custom_in-opacity: 0;
+							    --animation-custom_in-rotate: 0deg;
+							    --animation-custom_in-scale: 1;
+							  }
+							  .u-block-null-10 {
+							    box-shadow: 0 0 rgba(0,0,0,0) rgba(var(---r),var(---g),var(---b),0);
+							    text-shadow: 0 rgba(0,0,0,0) rgba(0,0,0,0) rgba(var(---r),var(---g),var(---b),0);
+							    font-weight: 700;
+							    --animation-custom_in-scale: 0.3;
+							    transition-duration: 0.5s;
+							    transform: scale(1.1) translateX(0px) translateY(0px);
+							    margin-top: 30px;
+							    margin-left: 0;
+							    margin-right: 0;
+							    margin-bottom: 0;
+							  }
+							}
+						</style>
+					</div>
+					<div class="u-border-black u-carousel-item u-container-style u-slide">
+						<div class="u-container-layout u-container-layout-2">
+							<img class="u-expanded-width u-image u-image-default u-image-2" src="{% static 'img/parablog61.jpg' %}" alt="Otra forma de agregar elementos con insert()" data-image-width="946" data-image-height="463" data-animation-name="customAnimationIn" data-animation-duration="3250">
+							<h3 class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-3" data-animation-name="customAnimationIn" data-animation-duration="3000">Otra forma de insertar elementos es con insert(), que aparte de indicarle el elemento que queremos insertar le indicamos el índice.</h3>
+						</div>
+					</div>
+					<div class="u-carousel-item u-container-style u-slide">
+						<div class="u-container-layout u-container-layout-3">
+							<img class="u-expanded-width u-image u-image-default u-image-3" src="{% static 'img/parablog62.jpg' %}" alt="Agregar elementos de otra lista con extend()" data-image-width="945" data-image-height="448" data-animation-name="customAnimationIn" data-animation-duration="3250">
+							<h3 class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-4" data-animation-name="customAnimationIn" data-animation-duration="3000">Podemos agregar todos los elementos de otra lista al final con el método extend(). Vemos como&nbsp;una_lista&nbsp;se extendió con los elementos de&nbsp;otra_lista&nbsp;y&nbsp;otra_lista&nbsp;no se ve afectada.<br>
+                </h3>
+						</div>
+						<style data-mode="XL">
+							.u-block-null-19 {
+							  padding-top: 30px;
+							  padding-bottom: 30px;
+							  padding-left: 50px;
+							  padding-right: 50px;
+							}
+							.u-block-null-20 {
+							  height: 488px;
+							  margin-top: 0;
+							  margin-bottom: 0;
+							}
+							.u-block-null-21 {
+							  font-weight: 700;
+							  --animation-custom_in-translate_x: 0px;
+							  --animation-custom_in-translate_y: 0px;
+							  --animation-custom_in-opacity: 0;
+							  --animation-custom_in-rotate: 0deg;
+							  --animation-custom_in-scale: 0.3;
+							  transition-duration: 0.5s;
+							  transform: scale(1.1) translateX(0px) translateY(0px);
+							  box-shadow: 0 0 rgba(0,0,0,0) rgba(var(---r),var(---g),var(---b),0);
+							  text-shadow: 0 rgba(0,0,0,0) rgba(0,0,0,0) rgba(var(---r),var(---g),var(---b),0);
+							  margin-top: 30px;
+							  margin-left: 0;
+							  margin-right: 0;
+							  margin-bottom: 0;
+							}
+						</style>
+						<style data-mode="LG">
+							@media (max-width: 1199px) {
+							  .u-block-null-19 {
+							    padding-top: 30px;
+							    padding-bottom: 30px;
+							    padding-left: 50px;
+							    padding-right: 50px;
+							  }
+							  .u-block-null-20 {
+							    height: 488px;
+							    margin-top: 0;
+							    margin-bottom: 0;
+							  }
+							  .u-block-null-21 {
+							    box-shadow: 0 0 rgba(0,0,0,0) rgba(var(---r),var(---g),var(---b),0);
+							    text-shadow: 0 rgba(0,0,0,0) rgba(0,0,0,0) rgba(var(---r),var(---g),var(---b),0);
+							    font-weight: 700;
+							    --animation-custom_in-translate_x: 0px;
+							    --animation-custom_in-translate_y: 0px;
+							    --animation-custom_in-opacity: 0;
+							    --animation-custom_in-rotate: 0deg;
+							    --animation-custom_in-scale: 0.3;
+							    transition-duration: 0.5s;
+							    transform: scale(1.1) translateX(0px) translateY(0px);
+							    margin-top: 30px;
+							    margin-left: 0;
+							    margin-right: 0;
+							    margin-bottom: 0;
+							  }
+							}
+						</style>
+						<style data-mode="MD">
+							@media (max-width: 991px) {
+							  .u-block-null-19 {
+							    padding-top: 30px;
+							    padding-bottom: 30px;
+							    padding-left: 30px;
+							    padding-right: 30px;
+							  }
+							  .u-block-null-20 {
+							    height: 488px;
+							    margin-top: 0;
+							    margin-bottom: 0;
+							  }
+							  .u-block-null-21 {
+							    box-shadow: 0 0 rgba(0,0,0,0) rgba(var(---r),var(---g),var(---b),0);
+							    text-shadow: 0 rgba(0,0,0,0) rgba(0,0,0,0) rgba(var(---r),var(---g),var(---b),0);
+							    font-weight: 700;
+							    --animation-custom_in-translate_x: 0px;
+							    --animation-custom_in-translate_y: 0px;
+							    --animation-custom_in-opacity: 0;
+							    --animation-custom_in-rotate: 0deg;
+							    --animation-custom_in-scale: 0.3;
+							    transition-duration: 0.5s;
+							    transform: scale(1.1) translateX(0px) translateY(0px);
+							    margin-top: 30px;
+							    margin-left: 0;
+							    margin-right: 0;
+							    margin-bottom: 0;
+							  }
+							}
+						</style>
+						<style data-mode="SM">
+							@media (max-width: 767px) {
+							  .u-block-null-19 {
+							    padding-top: 30px;
+							    padding-bottom: 30px;
+							    padding-left: 10px;
+							    padding-right: 10px;
+							  }
+							  .u-block-null-20 {
+							    height: 488px;
+							    margin-top: 0;
+							    margin-bottom: 0;
+							  }
+							  .u-block-null-21 {
+							    box-shadow: 0 0 rgba(0,0,0,0) rgba(var(---r),var(---g),var(---b),0);
+							    text-shadow: 0 rgba(0,0,0,0) rgba(0,0,0,0) rgba(var(---r),var(---g),var(---b),0);
+							    font-weight: 700;
+							    --animation-custom_in-translate_x: 0px;
+							    --animation-custom_in-translate_y: 0px;
+							    --animation-custom_in-opacity: 0;
+							    --animation-custom_in-rotate: 0deg;
+							    --animation-custom_in-scale: 0.3;
+							    transition-duration: 0.5s;
+							    transform: scale(1.1) translateX(0px) translateY(0px);
+							    margin-top: 30px;
+							    margin-left: 0;
+							    margin-right: 0;
+							    margin-bottom: 0;
+							  }
+							}
+						</style>
+						<style data-mode="XS">
+							@media (max-width: 575px) {
+							  .u-block-null-19 {
+							    padding-top: 30px;
+							    padding-bottom: 30px;
+							    padding-left: 10px;
+							    padding-right: 10px;
+							  }
+							  .u-block-null-20 {
+							    height: 488px;
+							    margin-top: 0;
+							    margin-bottom: 0;
+							  }
+							  .u-block-null-21 {
+							    box-shadow: 0 0 rgba(0,0,0,0) rgba(var(---r),var(---g),var(---b),0);
+							    text-shadow: 0 rgba(0,0,0,0) rgba(0,0,0,0) rgba(var(---r),var(---g),var(---b),0);
+							    font-weight: 700;
+							    --animation-custom_in-translate_x: 0px;
+							    --animation-custom_in-translate_y: 0px;
+							    --animation-custom_in-opacity: 0;
+							    --animation-custom_in-rotate: 0deg;
+							    --animation-custom_in-scale: 0.3;
+							    transition-duration: 0.5s;
+							    transform: scale(1.1) translateX(0px) translateY(0px);
+							    margin-top: 30px;
+							    margin-left: 0;
+							    margin-right: 0;
+							    margin-bottom: 0;
+							  }
+							}
+						</style>
+					</div>
+					<div class="u-carousel-item u-container-style u-slide">
+						<div class="u-container-layout u-container-layout-4">
+							<h3 class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-5" data-animation-name="customAnimationIn" data-animation-duration="3000">Prueben los siguientes códigos</h3>
+							<img class="u-expanded-width u-image u-image-default u-image-4" src="{% static 'img/parablog631.jpg' %}" alt="diferencia entre append y extend" data-image-width="845" data-image-height="257" data-animation-name="customAnimationIn" data-animation-duration="3250">
+							<h3 class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-6" data-animation-name="customAnimationIn" data-animation-duration="3000">¿Cúal es la diferencia entre append y extend?</h3>
+						</div>
+						<style data-mode="XL">
+							.u-block-null-23 {
+							  padding-top: 30px;
+							  padding-bottom: 30px;
+							  padding-left: 50px;
+							  padding-right: 50px;
+							}
+							.u-block-null-24 {
+							  --animation-custom_in-translate_x: 0px;
+							  --animation-custom_in-translate_y: 0px;
+							  --animation-custom_in-opacity: 0;
+							  --animation-custom_in-rotate: 0deg;
+							  --animation-custom_in-scale: 0.3;
+							  transition-duration: 0.5s;
+							  transform: scale(1.1) translateX(0px) translateY(0px);
+							  box-shadow: 0 0 rgba(0,0,0,0) rgba(var(---r),var(---g),var(---b),0);
+							  text-shadow: 0 rgba(0,0,0,0) rgba(0,0,0,0) rgba(var(---r),var(---g),var(---b),0);
+							  margin-top: 36px;
+							  margin-left: auto;
+							  margin-right: auto;
+							  margin-bottom: 0;
+							}
+							.u-block-null-25 {
+							  height: 334px;
+							  margin-top: 36px;
+							  margin-bottom: 0;
+							}
+						</style>
+						<style data-mode="LG">
+							@media (max-width: 1199px) {
+							  .u-block-null-23 {
+							    padding-top: 30px;
+							    padding-bottom: 30px;
+							    padding-left: 50px;
+							    padding-right: 50px;
+							  }
+							  .u-block-null-24 {
+							    box-shadow: 0 0 rgba(0,0,0,0) rgba(var(---r),var(---g),var(---b),0);
+							    text-shadow: 0 rgba(0,0,0,0) rgba(0,0,0,0) rgba(var(---r),var(---g),var(---b),0);
+							    --animation-custom_in-translate_x: 0px;
+							    --animation-custom_in-translate_y: 0px;
+							    --animation-custom_in-opacity: 0;
+							    --animation-custom_in-rotate: 0deg;
+							    --animation-custom_in-scale: 0.3;
+							    transition-duration: 0.5s;
+							    transform: scale(1.1) translateX(0px) translateY(0px);
+							    margin-top: 36px;
+							    margin-left: auto;
+							    margin-right: auto;
+							    margin-bottom: 0;
+							  }
+							  .u-block-null-25 {
+							    height: 334px;
+							    margin-top: 36px;
+							    margin-bottom: 0;
+							  }
+							}
+						</style>
+						<style data-mode="MD">
+							@media (max-width: 991px) {
+							  .u-block-null-23 {
+							    padding-top: 30px;
+							    padding-bottom: 30px;
+							    padding-left: 30px;
+							    padding-right: 30px;
+							  }
+							  .u-block-null-24 {
+							    box-shadow: 0 0 rgba(0,0,0,0) rgba(var(---r),var(---g),var(---b),0);
+							    text-shadow: 0 rgba(0,0,0,0) rgba(0,0,0,0) rgba(var(---r),var(---g),var(---b),0);
+							    --animation-custom_in-translate_x: 0px;
+							    --animation-custom_in-translate_y: 0px;
+							    --animation-custom_in-opacity: 0;
+							    --animation-custom_in-rotate: 0deg;
+							    --animation-custom_in-scale: 0.3;
+							    transition-duration: 0.5s;
+							    transform: scale(1.1) translateX(0px) translateY(0px);
+							    margin-top: 36px;
+							    margin-left: auto;
+							    margin-right: auto;
+							    margin-bottom: 0;
+							  }
+							  .u-block-null-25 {
+							    height: 334px;
+							    margin-top: 36px;
+							    margin-bottom: 0;
+							  }
+							}
+						</style>
+						<style data-mode="SM">
+							@media (max-width: 767px) {
+							  .u-block-null-23 {
+							    padding-top: 30px;
+							    padding-bottom: 30px;
+							    padding-left: 10px;
+							    padding-right: 10px;
+							  }
+							  .u-block-null-24 {
+							    box-shadow: 0 0 rgba(0,0,0,0) rgba(var(---r),var(---g),var(---b),0);
+							    text-shadow: 0 rgba(0,0,0,0) rgba(0,0,0,0) rgba(var(---r),var(---g),var(---b),0);
+							    --animation-custom_in-translate_x: 0px;
+							    --animation-custom_in-translate_y: 0px;
+							    --animation-custom_in-opacity: 0;
+							    --animation-custom_in-rotate: 0deg;
+							    --animation-custom_in-scale: 0.3;
+							    transition-duration: 0.5s;
+							    transform: scale(1.1) translateX(0px) translateY(0px);
+							    margin-top: 36px;
+							    margin-left: auto;
+							    margin-right: auto;
+							    margin-bottom: 0;
+							  }
+							  .u-block-null-25 {
+							    height: 334px;
+							    margin-top: 36px;
+							    margin-bottom: 0;
+							  }
+							}
+						</style>
+						<style data-mode="XS">
+							@media (max-width: 575px) {
+							  .u-block-null-23 {
+							    padding-top: 30px;
+							    padding-bottom: 30px;
+							    padding-left: 10px;
+							    padding-right: 10px;
+							  }
+							  .u-block-null-24 {
+							    box-shadow: 0 0 rgba(0,0,0,0) rgba(var(---r),var(---g),var(---b),0);
+							    text-shadow: 0 rgba(0,0,0,0) rgba(0,0,0,0) rgba(var(---r),var(---g),var(---b),0);
+							    --animation-custom_in-translate_x: 0px;
+							    --animation-custom_in-translate_y: 0px;
+							    --animation-custom_in-opacity: 0;
+							    --animation-custom_in-rotate: 0deg;
+							    --animation-custom_in-scale: 0.3;
+							    transition-duration: 0.5s;
+							    transform: scale(1.1) translateX(0px) translateY(0px);
+							    margin-top: 36px;
+							    margin-left: auto;
+							    margin-right: auto;
+							    margin-bottom: 0;
+							  }
+							  .u-block-null-25 {
+							    height: 334px;
+							    margin-top: 36px;
+							    margin-bottom: 0;
+							  }
+							}
+						</style>
+					</div>
+				</div>
+				<a class="u-absolute-vcenter u-carousel-control u-carousel-control-prev u-spacing-5 u-text-body-alt-color u-text-hover-palette-4-base u-carousel-control-1" href="#carousel-9391" role="button" data-u-slide="prev">
+					<span aria-hidden="true">
+              <svg viewBox="0 0 477.175 477.175"><path d="M145.188,238.575l215.5-215.5c5.3-5.3,5.3-13.8,0-19.1s-13.8-5.3-19.1,0l-225.1,225.1c-5.3,5.3-5.3,13.8,0,19.1l225.1,225
+                    c2.6,2.6,6.1,4,9.5,4s6.9-1.3,9.5-4c5.3-5.3,5.3-13.8,0-19.1L145.188,238.575z"></path></svg>
+            </span>
+					<span class="sr-only">Previous</span>
+				</a>
+				<a class="u-absolute-vcenter u-carousel-control u-carousel-control-next u-spacing-5 u-text-body-alt-color u-text-hover-palette-4-base u-carousel-control-2" href="#carousel-9391" role="button" data-u-slide="next">
+					<span aria-hidden="true">
+              <svg viewBox="0 0 477.175 477.175"><path d="M360.731,229.075l-225.1-225.1c-5.3-5.3-13.8-5.3-19.1,0s-5.3,13.8,0,19.1l215.5,215.5l-215.5,215.5
+                    c-5.3,5.3-5.3,13.8,0,19.1c2.6,2.6,6.1,4,9.5,4c3.4,0,6.9-1.3,9.5-4l225.1-225.1C365.931,242.875,365.931,234.275,360.731,229.075z"></path></svg>
+            </span>
+					<span class="sr-only">Next</span>
+				</a>
+			</div>
+		</div>
+
+
+
+
+
+
+
+	</section>
+	<section class="u-clearfix u-image u-section-6" id="sec-a5de" data-image-width="1782" data-image-height="1080">
+		<div class="u-clearfix u-sheet u-sheet-1">
+			<h3 class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-1" data-animation-name="customAnimationIn" data-animation-duration="1000">Obtener sublistas (slicing)</h3>
+			<p class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-2" data-animation-name="customAnimationIn" data-animation-duration="1000">Se puede obtener sublistas a partir de una lista usando [:] de esta manera:</p>
+			<img class="u-align-center u-image u-image-default u-opacity u-opacity-85 u-image-1" src="{% static 'img/parablog64.jpg' %}" alt="obtener sublistas" data-image-width="949" data-image-height="392" data-animation-name="customAnimationIn" data-animation-duration="3250">
+			<p class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-3" data-animation-name="customAnimationIn" data-animation-duration="1000">El primer número indica el índice del primer elemento, y el segundo en donde<br>detenerse y dejar de tomar elementos.
+			</p>
+			<img class="u-align-center u-image u-image-default u-opacity u-opacity-85 u-image-2" src="{% static 'img/parablog65.jpg' %}" alt="[] indicadores en las sublistas" data-image-width="948" data-image-height="452" data-animation-name="flipIn" data-animation-duration="3250" data-animation-direction="X">
+			<p class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-4" data-animation-name="customAnimationIn" data-animation-duration="1000">Si se decide omitir el primer número, se comenzará desde el inicio.</p>
+			<img class="u-image u-image-default u-opacity u-opacity-85 u-image-3" src="{% static 'img/parablog66.jpg' %}" alt="sublistas python" data-image-width="949" data-image-height="390" data-animation-name="customAnimationIn" data-animation-duration="3250" data-animation-direction="">
+			<p class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-5" data-animation-name="customAnimationIn" data-animation-duration="1000">mi_lista[:4] es igual a hacer mi_lista[0:4]</p>
+		</div>
+
+
+
+
+
+	</section>
+	<section class="u-clearfix u-image u-section-7" id="sec-0023" data-image-width="1782" data-image-height="1080">
+		<div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+			<p class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-1" data-animation-name="customAnimationIn" data-animation-duration="1000">Si se elimina el segundo número se tomarán elementos hasta el final.</p>
+			<img class="u-image u-image-default u-opacity u-opacity-85 u-image-1" src="{% static 'img/parablog67.jpg' %}" alt="python sublistas" data-image-width="946" data-image-height="446" data-animation-name="customAnimationIn" data-animation-duration="3250" data-animation-direction="">
+			<p class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-2" data-animation-name="customAnimationIn" data-animation-duration="1000">mi_lista[3:] es igual a hacer mi_lista[3:len(lista)]<span style="font-weight: 700;"></span>
+			</p>
+			<p class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-3" data-animation-name="customAnimationIn" data-animation-duration="1000">Ahora si no pones ningún número, y solo deja los dos puntos, se copiará la lista<br>completa.
+			</p>
+			<img class="u-image u-image-default u-opacity u-opacity-85 u-image-2" src="{% static 'img/parablog68.jpg' %}" alt="sublistas python" data-image-width="948" data-image-height="389" data-animation-name="bounceIn" data-animation-duration="3250" data-animation-direction="">
+			<p class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-4" data-animation-name="customAnimationIn" data-animation-duration="1000">mi_lista[:] es igual a mi_lista[0:len(lista)]</p>
+		</div>
+
+
+
+
+	</section>
+	<section class="u-clearfix u-image u-section-8" id="sec-59f2" data-image-width="1782" data-image-height="1080">
+		<div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+			<h3 class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-1" data-animation-name="customAnimationIn" data-animation-duration="1000">Copiar una lista</h3>
+			<p class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-2" data-animation-name="customAnimationIn" data-animation-duration="1000">Si necesitamos una copia de la lista en otra variable podremos hacer</p>
+			<div class="u-black u-container-style u-group u-opacity u-opacity-70 u-group-1" data-animation-name="flipIn" data-animation-duration="3250" data-animation-direction="X">
+				<div class="u-container-layout u-valign-top u-container-layout-1">
+					<p class="u-align-center u-hover-feature u-text u-text-default u-text-3" data-animation-name="customAnimationIn" data-animation-duration="3000">&gt;&gt;&gt; copia = mi_lista[]</p>
+					<p class="u-align-center u-hover-feature u-text u-text-default u-text-4" data-animation-name="customAnimationIn" data-animation-duration="3000">o también utilizar el método&nbsp;<span style="font-weight: 700;">copy()</span>
+					</p>
+					<p class="u-align-center u-hover-feature u-text u-text-default u-text-5" data-animation-name="customAnimationIn" data-animation-duration="3000" data-animation-direction="">&gt;&gt;&gt; copia = mi_lista.copy()</p>
+				</div>
+			</div>
+			<p class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-6" data-animation-name="customAnimationIn" data-animation-duration="1000">¿Por qué no podríamos simplemente hacer&nbsp;<span style="font-weight: 700;">copia = mi_lista</span>&nbsp;directamente?<br>prueba el siguiente código:
+			</p>
+			<img class="u-align-center u-image u-image-default u-opacity u-opacity-85 u-image-1" src="{% static 'img/parablog69.jpg' %}" alt="copiar listas en python" data-image-width="824" data-image-height="163" data-animation-name="pulse" data-animation-duration="3250" data-animation-direction="">
+			<p class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-7" data-animation-name="customAnimationIn" data-animation-duration="1000">¿qué sucedió?</p>
+			<p class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-8" data-animation-name="customAnimationIn" data-animation-duration="1000">Ahora prueba:</p>
+			<img class="u-align-center u-image u-image-default u-opacity u-opacity-85 u-image-2" src="{% static 'img/parablog70.jpg' %}" alt="copy() listas python o [:]" data-image-width="709" data-image-height="279" data-animation-name="customAnimationIn" data-animation-duration="3250">
+			<p class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-9" data-animation-name="customAnimationIn" data-animation-duration="1000">¿Y ahora?</p>
+			<p class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-10" data-animation-name="customAnimationIn" data-animation-duration="1000">También puedes modificar varios elementos a la vez operando con sublistas.</p>
+			<img class="u-image u-image-default u-opacity u-opacity-85 u-image-3" src="{% static 'img/parablog71.jpg' %}" alt=" modificar varios elementos a la vez operando con sublistas." data-image-width="949" data-image-height="392" data-animation-name="customAnimationIn" data-animation-duration="3250">
+		</div>
+
+
+
+
+
+
+
+
+
+
+	</section>
+	<section class="u-clearfix u-image u-section-9" id="sec-e5b4" data-image-width="1782" data-image-height="1080">
+		<div class="u-clearfix u-sheet u-sheet-1">
+			<h3 class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-1" data-animation-name="customAnimationIn" data-animation-duration="1000">Ordenar una lista</h3>
+			<p class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-2" data-animation-name="customAnimationIn" data-animation-duration="1000">Para ordenar una lista podemos usar el método sort()</p>
+			<img class="u-align-center u-image u-image-default u-opacity u-opacity-85 u-image-1" src="{% static 'img/parablog72.jpg' %}" alt="Ordenar listas" data-image-width="949" data-image-height="392" data-animation-name="customAnimationIn" data-animation-duration="3250" data-animation-direction="">
+			<p class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-3" data-animation-name="customAnimationIn" data-animation-duration="1000">para ordenarlos de manera inversa, puedes pasar el parámetro reverse = True el método sort()</p>
+			<img class="u-image u-image-default u-opacity u-opacity-85 u-image-2" src="{% static 'img/parablog73.jpg' %}" alt=" puedes pasar el parámetro reverse = True el método sort()" data-image-width="947" data-image-height="389" data-animation-name="customAnimationIn" data-animation-duration="3250">
+			<p class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-4" data-animation-name="customAnimationIn" data-animation-duration="1000">otros ejemplos:</p>
+			<img class="u-image u-image-default u-opacity u-opacity-85 u-image-3" src="{% static 'img/parablog74.jpg' %}" alt="otro ejemplo de sort()" data-image-width="955" data-image-height="391" data-animation-name="customAnimationIn" data-animation-duration="3250">
+		</div>
+
+
+
+
+	</section>
+	<section class="u-clearfix u-image u-section-10" id="sec-f89f" data-image-width="1782" data-image-height="1080">
+		<div class="u-clearfix u-sheet u-sheet-1">
+			<h3 class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-1" data-animation-name="customAnimationIn" data-animation-duration="1000">Invertir una lista</h3>
+			<p class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-2" data-animation-name="customAnimationIn" data-animation-duration="1000">Para invertir el orden de una lista, se puede usar el método reverse()</p>
+			<img class="u-image u-image-default u-opacity u-opacity-85 u-image-1" src="{% static 'img/parablog75.jpg' %}" alt=" invertir el orden de una lista" data-image-width="948" data-image-height="390" data-animation-name="customAnimationIn" data-animation-duration="3250">
+			<div class="u-clearfix u-expanded-width u-gutter-0 u-layout-wrap u-layout-wrap-1">
+				<div class="u-layout">
+					<div class="u-layout-col">
+						<div class="u-size-30">
+							<div class="u-layout-row">
+								<div class="u-container-style u-effect-hover-zoom u-layout-cell u-size-30 u-layout-cell-1" data-image-width="950" data-image-height="474" data-animation-name="flipIn" data-animation-duration="3250" data-animation-direction="X">
+									<div class="u-background-effect u-expanded">
+										<div class="u-background-effect-image u-expanded u-image u-image-2" data-image-width="950" data-image-height="474"></div>
+									</div>
+									<div class="u-container-layout u-container-layout-1"></div>
+								</div>
+								<div class="u-container-style u-layout-cell u-size-30 u-layout-cell-2">
+									<div class="u-container-layout u-container-layout-2">
+										<h3 class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-3" data-animation-name="customAnimationIn" data-animation-duration="3000">Saber si un elemento se encuentra en la lista</h3>
+										<p class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-4" data-animation-name="customAnimationIn" data-animation-duration="3000">para saber si un elemento se encuentra en la lista, podemos usar el operador in.</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="u-size-30">
+							<div class="u-layout-row">
+								<div class="u-container-style u-layout-cell u-size-30 u-layout-cell-3">
+									<div class="u-container-layout u-valign-middle u-container-layout-3">
+										<p class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-5" data-animation-name="customAnimationIn" data-animation-duration="3000">para saber cuantas veces se encuentra un elemento dentro de una lista podremos usar<br>el método count()
+										</p>
+									</div>
+								</div>
+								<div class="u-container-style u-effect-hover-zoom u-layout-cell u-size-30 u-layout-cell-4" data-image-width="942" data-image-height="411" alt="método count()" data-animation-name="customAnimationIn" data-animation-duration="3250" data-animation-direction="">
+									<div class="u-background-effect u-expanded">
+										<div class="u-background-effect-image u-expanded u-image u-image-3" data-image-width="942" data-image-height="411" alt="método count()"></div>
+									</div>
+									<div class="u-container-layout u-container-layout-4"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+
+
+
+	</section>
+	<section class="u-clearfix u-image u-section-11" id="sec-d59d" data-image-width="1782" data-image-height="1080">
+		<div class="u-clearfix u-sheet u-sheet-1">
+			<h3 class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-1" data-animation-name="customAnimationIn" data-animation-duration="1000">Conocer el índice de un elemento</h3>
+			<p class="u-align-left u-hover-feature u-text u-text-body-alt-color u-text-default u-text-2" data-animation-name="customAnimationIn" data-animation-duration="1000">Podemos conocer el índice de un elemento utilizando el método index()</p>
+			<img class="u-align-right u-image u-image-default u-opacity u-opacity-85 u-image-1" src="{% static 'img/parablog78.jpg' %}" alt="método index()" data-image-width="945" data-image-height="436" data-animation-name="customAnimationIn" data-animation-duration="3250">
+			<p class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-3" data-animation-name="customAnimationIn" data-animation-duration="1000">En el caso de tener más de un elemento igual, index() solo va a devolver el índice del<br>primero.
+			</p>
+			<img class="u-image u-image-default u-opacity u-opacity-85 u-image-2" src="{% static 'img/parablog79.jpg' %}" alt=" index() solo va a devolver el índice del primero." data-image-width="942" data-image-height="369" data-animation-name="customAnimationIn" data-animation-duration="3250">
+		</div>
+
+
+
+	</section>
+	<section class="u-clearfix u-image u-section-12" id="sec-3d3f" data-image-width="1782" data-image-height="1080">
+		<div class="u-clearfix u-sheet u-sheet-1">
+			<h3 class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-1" data-animation-name="customAnimationIn" data-animation-duration="1000">Eliminar elementos de una lista.</h3>
+			<div data-interval="5000" data-u-ride="carousel" class="u-border-8 u-border-black u-carousel u-expanded-width u-slider u-slider-1" id="carousel-1583">
+				<ol class="u-absolute-hcenter u-carousel-indicators u-carousel-indicators-1">
+					<li data-u-target="#carousel-1583" class="u-active u-active-black u-white" data-u-slide-to="0"></li>
+					<li data-u-target="#carousel-1583" class="u-active-black u-white" data-u-slide-to="1"></li>
+					<li data-u-target="#carousel-1583" class="u-active-black u-white" data-u-slide-to="2"></li>
+					<li data-u-target="#carousel-1583" class="u-active-black u-white" data-u-slide-to="3"></li>
+					<li data-u-target="#carousel-1583" class="u-active-black u-white" data-u-slide-to="4"></li>
+				</ol>
+				<div class="u-carousel-inner" role="listbox">
+					<div class="u-active u-carousel-item u-container-style u-slide">
+						<div class="u-container-layout u-valign-top u-container-layout-1">
+							<p class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-2" data-animation-name="customAnimationIn" data-animation-duration="3000">puedes eliminar elementos de una lista utilizando la palabra reservada&nbsp;<span style="font-weight: 700;">del</span>
+							</p>
+							<img class="u-expanded-width u-image u-image-default u-image-1" src="{% static 'img/parablog80.jpg' %}" alt=" palabra reservada del" data-image-width="945" data-image-height="430" data-animation-name="customAnimationIn" data-animation-duration="3250">
+							<p class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-3" data-animation-name="customAnimationIn" data-animation-duration="3000">en el ejemplo se borro "d" que se encontraba en el índice 3.</p>
+						</div>
+						<style data-mode="XL">
+							.u-block-null-7 {
+							  padding-top: 30px;
+							  padding-bottom: 30px;
+							  padding-left: 50px;
+							  padding-right: 50px;
+							}
+							.u-block-null-13 {
+							  font-size: 1.25rem;
+							  text-shadow: 2px -2px 8px rgba(128,128,128,1);
+							  --animation-custom_in-translate_x: -200px;
+							  --animation-custom_in-translate_y: 0px;
+							  --animation-custom_in-opacity: 0;
+							  --animation-custom_in-rotate: 0deg;
+							  --animation-custom_in-scale: 1;
+							  transition-duration: 0.5s;
+							  box-shadow: rgba(var(---r),var(---g),var(---b),0);
+							  transform: translateX(0px) translateY(0px) scale(1) rotate(0deg);
+							  margin-top: 0;
+							  margin-bottom: 0;
+							  margin-left: auto;
+							  margin-right: auto;
+							}
+							.u-block-null-12 {
+							  height: 470px;
+							  margin-top: 26px;
+							  margin-bottom: 0;
+							  --animation-custom_in-translate_x: 0px;
+							  --animation-custom_in-translate_y: 0px;
+							  --animation-custom_in-opacity: 0;
+							  --animation-custom_in-rotate: 0deg;
+							  --animation-custom_in-scale: 0.3;
+							}
+							.u-block-null-14 {
+							  font-size: 1.25rem;
+							  --animation-custom_in-scale: 1;
+							  transition-duration: 0.5s;
+							  transform: scale(1.1) translateX(0px) translateY(0px);
+							  box-shadow: 0 0 rgba(0,0,0,0) rgba(var(---r),var(---g),var(---b),0);
+							  text-shadow: 0 rgba(0,0,0,0) rgba(0,0,0,0) rgba(var(---r),var(---g),var(---b),0);
+							  margin-top: 30px;
+							  margin-left: auto;
+							  margin-right: auto;
+							  margin-bottom: 0;
+							}
+						</style>
+						<style data-mode="LG">
+							@media (max-width: 1199px) {
+							  .u-block-null-7 {
+							    padding-top: 30px;
+							    padding-bottom: 30px;
+							    padding-left: 50px;
+							    padding-right: 50px;
+							  }
+							  .u-block-null-13 {
+							    text-shadow: 2px -2px 8px rgba(128,128,128,1);
+							    box-shadow: rgba(var(---r),var(---g),var(---b),0);
+							    font-size: 1.25rem;
+							    --animation-custom_in-translate_x: -200px;
+							    --animation-custom_in-translate_y: 0px;
+							    --animation-custom_in-opacity: 0;
+							    --animation-custom_in-rotate: 0deg;
+							    --animation-custom_in-scale: 1;
+							    transition-duration: 0.5s;
+							    transform: translateX(0px) translateY(0px) scale(1) rotate(0deg);
+							    margin-top: 0;
+							    margin-left: auto;
+							    margin-right: auto;
+							    margin-bottom: 0;
+							  }
+							  .u-block-null-12 {
+							    height: 470px;
+							    margin-top: 26px;
+							    margin-bottom: 0;
+							    --animation-custom_in-translate_x: 0px;
+							    --animation-custom_in-translate_y: 0px;
+							    --animation-custom_in-opacity: 0;
+							    --animation-custom_in-rotate: 0deg;
+							    --animation-custom_in-scale: 0.3;
+							  }
+							  .u-block-null-14 {
+							    box-shadow: 0 0 rgba(0,0,0,0) rgba(var(---r),var(---g),var(---b),0);
+							    text-shadow: 0 rgba(0,0,0,0) rgba(0,0,0,0) rgba(var(---r),var(---g),var(---b),0);
+							    font-size: 1.25rem;
+							    --animation-custom_in-scale: 1;
+							    transition-duration: 0.5s;
+							    transform: scale(1.1) translateX(0px) translateY(0px);
+							    margin-top: 30px;
+							    margin-left: auto;
+							    margin-right: auto;
+							    margin-bottom: 0;
+							  }
+							}
+						</style>
+						<style data-mode="MD">
+							@media (max-width: 991px) {
+							  .u-block-null-7 {
+							    padding-top: 30px;
+							    padding-bottom: 30px;
+							    padding-left: 30px;
+							    padding-right: 30px;
+							  }
+							  .u-block-null-13 {
+							    text-shadow: 2px -2px 8px rgba(128,128,128,1);
+							    box-shadow: rgba(var(---r),var(---g),var(---b),0);
+							    font-size: 1.25rem;
+							    --animation-custom_in-translate_x: -200px;
+							    --animation-custom_in-translate_y: 0px;
+							    --animation-custom_in-opacity: 0;
+							    --animation-custom_in-rotate: 0deg;
+							    --animation-custom_in-scale: 1;
+							    transition-duration: 0.5s;
+							    transform: translateX(0px) translateY(0px) scale(1) rotate(0deg);
+							    margin-top: 0;
+							    margin-left: auto;
+							    margin-right: auto;
+							    margin-bottom: 0;
+							  }
+							  .u-block-null-12 {
+							    height: 470px;
+							    margin-top: 26px;
+							    margin-bottom: 0;
+							    --animation-custom_in-translate_x: 0px;
+							    --animation-custom_in-translate_y: 0px;
+							    --animation-custom_in-opacity: 0;
+							    --animation-custom_in-rotate: 0deg;
+							    --animation-custom_in-scale: 0.3;
+							  }
+							  .u-block-null-14 {
+							    box-shadow: 0 0 rgba(0,0,0,0) rgba(var(---r),var(---g),var(---b),0);
+							    text-shadow: 0 rgba(0,0,0,0) rgba(0,0,0,0) rgba(var(---r),var(---g),var(---b),0);
+							    font-size: 1.25rem;
+							    --animation-custom_in-scale: 1;
+							    transition-duration: 0.5s;
+							    transform: scale(1.1) translateX(0px) translateY(0px);
+							    margin-top: 30px;
+							    margin-left: auto;
+							    margin-right: auto;
+							    margin-bottom: 0;
+							  }
+							}
+						</style>
+						<style data-mode="SM">
+							@media (max-width: 767px) {
+							  .u-block-null-7 {
+							    padding-top: 30px;
+							    padding-bottom: 30px;
+							    padding-left: 10px;
+							    padding-right: 10px;
+							  }
+							  .u-block-null-13 {
+							    text-shadow: 2px -2px 8px rgba(128,128,128,1);
+							    box-shadow: rgba(var(---r),var(---g),var(---b),0);
+							    font-size: 1.25rem;
+							    --animation-custom_in-translate_x: -200px;
+							    --animation-custom_in-translate_y: 0px;
+							    --animation-custom_in-opacity: 0;
+							    --animation-custom_in-rotate: 0deg;
+							    --animation-custom_in-scale: 1;
+							    transition-duration: 0.5s;
+							    transform: translateX(0px) translateY(0px) scale(1) rotate(0deg);
+							    margin-top: 0;
+							    margin-left: auto;
+							    margin-right: auto;
+							    margin-bottom: 0;
+							  }
+							  .u-block-null-12 {
+							    height: 470px;
+							    margin-top: 26px;
+							    margin-bottom: 0;
+							    --animation-custom_in-translate_x: 0px;
+							    --animation-custom_in-translate_y: 0px;
+							    --animation-custom_in-opacity: 0;
+							    --animation-custom_in-rotate: 0deg;
+							    --animation-custom_in-scale: 0.3;
+							  }
+							  .u-block-null-14 {
+							    box-shadow: 0 0 rgba(0,0,0,0) rgba(var(---r),var(---g),var(---b),0);
+							    text-shadow: 0 rgba(0,0,0,0) rgba(0,0,0,0) rgba(var(---r),var(---g),var(---b),0);
+							    font-size: 1.25rem;
+							    --animation-custom_in-scale: 1;
+							    transition-duration: 0.5s;
+							    transform: scale(1.1) translateX(0px) translateY(0px);
+							    margin-top: 30px;
+							    margin-left: auto;
+							    margin-right: auto;
+							    margin-bottom: 0;
+							  }
+							}
+						</style>
+						<style data-mode="XS">
+							@media (max-width: 575px) {
+							  .u-block-null-7 {
+							    padding-top: 30px;
+							    padding-bottom: 30px;
+							    padding-left: 10px;
+							    padding-right: 10px;
+							  }
+							  .u-block-null-13 {
+							    text-shadow: 2px -2px 8px rgba(128,128,128,1);
+							    box-shadow: rgba(var(---r),var(---g),var(---b),0);
+							    font-size: 1.25rem;
+							    --animation-custom_in-translate_x: -200px;
+							    --animation-custom_in-translate_y: 0px;
+							    --animation-custom_in-opacity: 0;
+							    --animation-custom_in-rotate: 0deg;
+							    --animation-custom_in-scale: 1;
+							    transition-duration: 0.5s;
+							    transform: translateX(0px) translateY(0px) scale(1) rotate(0deg);
+							    margin-top: 0;
+							    margin-left: auto;
+							    margin-right: auto;
+							    margin-bottom: 0;
+							  }
+							  .u-block-null-12 {
+							    height: 470px;
+							    margin-top: 26px;
+							    margin-bottom: 0;
+							    --animation-custom_in-translate_x: 0px;
+							    --animation-custom_in-translate_y: 0px;
+							    --animation-custom_in-opacity: 0;
+							    --animation-custom_in-rotate: 0deg;
+							    --animation-custom_in-scale: 0.3;
+							  }
+							  .u-block-null-14 {
+							    box-shadow: 0 0 rgba(0,0,0,0) rgba(var(---r),var(---g),var(---b),0);
+							    text-shadow: 0 rgba(0,0,0,0) rgba(0,0,0,0) rgba(var(---r),var(---g),var(---b),0);
+							    font-size: 1.25rem;
+							    --animation-custom_in-scale: 1;
+							    transition-duration: 0.5s;
+							    transform: scale(1.1) translateX(0px) translateY(0px);
+							    margin-top: 30px;
+							    margin-left: auto;
+							    margin-right: auto;
+							    margin-bottom: 0;
+							  }
+							}
+						</style>
+					</div>
+					<div class="u-carousel-item u-container-style u-slide">
+						<div class="u-container-layout u-valign-top u-container-layout-2">
+							<p class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-4" data-animation-name="bounceIn" data-animation-duration="3000" data-animation-direction="">Podemos borrar de a varios elementos operando sublistas<span style="font-weight: 700;">&nbsp;[:]</span>
+							</p>
+							<img class="u-expanded-width u-image u-image-default u-image-2" src="{% static 'img/parablog81.jpg' %}" alt="operando sublistas [:]" data-image-width="950" data-image-height="431" data-animation-name="pulse" data-animation-duration="3250" data-animation-direction="">
+						</div>
+					</div>
+					<div class="u-carousel-item u-container-style u-slide">
+						<div class="u-container-layout u-container-layout-3">
+							<p class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-5" data-animation-name="customAnimationIn" data-animation-direction="" data-animation-duration="3000">Otra manera de eliminar elementos es con el método&nbsp;<span style="font-weight: 700;">remove()</span>&nbsp;y especificando el<br>elemento a borrar.
+							</p>
+							<img class="u-expanded-width u-image u-image-default u-image-3" src="{% static 'img/parablog82.jpg' %}" alt="método remove()" data-image-width="948" data-image-height="428" data-animation-name="customAnimationIn" data-animation-duration="3250" data-animation-direction="">
+						</div>
+						<style data-mode="XL">
+							.u-block-null-20 {
+							  padding-top: 30px;
+							  padding-bottom: 30px;
+							  padding-left: 50px;
+							  padding-right: 50px;
+							}
+							.u-block-null-21 {
+							  font-size: 1.25rem;
+							  --animation-custom_in-translate_x: 0px;
+							  --animation-custom_in-translate_y: 0px;
+							  --animation-custom_in-opacity: 0;
+							  --animation-custom_in-rotate: 0deg;
+							  --animation-custom_in-scale: 0.3;
+							  transition-duration: 0.5s;
+							  transform: scale(1.1) translateX(0px) translateY(0px);
+							  box-shadow: 0 0 rgba(0,0,0,0) rgba(var(---r),var(---g),var(---b),0);
+							  text-shadow: 0 rgba(0,0,0,0) rgba(0,0,0,0) rgba(var(---r),var(---g),var(---b),0);
+							  margin-top: 0;
+							  margin-bottom: 0;
+							  margin-left: auto;
+							  margin-right: auto;
+							}
+						</style>
+						<style data-mode="LG">
+							@media (max-width: 1199px) {
+							  .u-block-null-20 {
+							    padding-top: 30px;
+							    padding-bottom: 30px;
+							    padding-left: 50px;
+							    padding-right: 50px;
+							  }
+							  .u-block-null-21 {
+							    box-shadow: 0 0 rgba(0,0,0,0) rgba(var(---r),var(---g),var(---b),0);
+							    text-shadow: 0 rgba(0,0,0,0) rgba(0,0,0,0) rgba(var(---r),var(---g),var(---b),0);
+							    font-size: 1.25rem;
+							    --animation-custom_in-translate_x: 0px;
+							    --animation-custom_in-translate_y: 0px;
+							    --animation-custom_in-opacity: 0;
+							    --animation-custom_in-rotate: 0deg;
+							    --animation-custom_in-scale: 0.3;
+							    transition-duration: 0.5s;
+							    transform: scale(1.1) translateX(0px) translateY(0px);
+							    margin-top: 0;
+							    margin-bottom: 0;
+							    margin-left: auto;
+							    margin-right: auto;
+							  }
+							}
+						</style>
+						<style data-mode="MD">
+							@media (max-width: 991px) {
+							  .u-block-null-20 {
+							    padding-top: 30px;
+							    padding-bottom: 30px;
+							    padding-left: 30px;
+							    padding-right: 30px;
+							  }
+							  .u-block-null-21 {
+							    box-shadow: 0 0 rgba(0,0,0,0) rgba(var(---r),var(---g),var(---b),0);
+							    text-shadow: 0 rgba(0,0,0,0) rgba(0,0,0,0) rgba(var(---r),var(---g),var(---b),0);
+							    font-size: 1.25rem;
+							    --animation-custom_in-translate_x: 0px;
+							    --animation-custom_in-translate_y: 0px;
+							    --animation-custom_in-opacity: 0;
+							    --animation-custom_in-rotate: 0deg;
+							    --animation-custom_in-scale: 0.3;
+							    transition-duration: 0.5s;
+							    transform: scale(1.1) translateX(0px) translateY(0px);
+							    margin-top: 0;
+							    margin-bottom: 0;
+							    margin-left: auto;
+							    margin-right: auto;
+							  }
+							}
+						</style>
+						<style data-mode="SM">
+							@media (max-width: 767px) {
+							  .u-block-null-20 {
+							    padding-top: 30px;
+							    padding-bottom: 30px;
+							    padding-left: 10px;
+							    padding-right: 10px;
+							  }
+							  .u-block-null-21 {
+							    box-shadow: 0 0 rgba(0,0,0,0) rgba(var(---r),var(---g),var(---b),0);
+							    text-shadow: 0 rgba(0,0,0,0) rgba(0,0,0,0) rgba(var(---r),var(---g),var(---b),0);
+							    font-size: 1.25rem;
+							    --animation-custom_in-translate_x: 0px;
+							    --animation-custom_in-translate_y: 0px;
+							    --animation-custom_in-opacity: 0;
+							    --animation-custom_in-rotate: 0deg;
+							    --animation-custom_in-scale: 0.3;
+							    transition-duration: 0.5s;
+							    transform: scale(1.1) translateX(0px) translateY(0px);
+							    margin-top: 0;
+							    margin-bottom: 0;
+							    margin-left: auto;
+							    margin-right: auto;
+							  }
+							}
+						</style>
+						<style data-mode="XS">
+							@media (max-width: 575px) {
+							  .u-block-null-20 {
+							    padding-top: 30px;
+							    padding-bottom: 30px;
+							    padding-left: 10px;
+							    padding-right: 10px;
+							  }
+							  .u-block-null-21 {
+							    box-shadow: 0 0 rgba(0,0,0,0) rgba(var(---r),var(---g),var(---b),0);
+							    text-shadow: 0 rgba(0,0,0,0) rgba(0,0,0,0) rgba(var(---r),var(---g),var(---b),0);
+							    font-size: 1.25rem;
+							    --animation-custom_in-translate_x: 0px;
+							    --animation-custom_in-translate_y: 0px;
+							    --animation-custom_in-opacity: 0;
+							    --animation-custom_in-rotate: 0deg;
+							    --animation-custom_in-scale: 0.3;
+							    transition-duration: 0.5s;
+							    transform: scale(1.1) translateX(0px) translateY(0px);
+							    margin-top: 0;
+							    margin-bottom: 0;
+							    margin-left: auto;
+							    margin-right: auto;
+							  }
+							}
+						</style>
+					</div>
+					<div class="u-carousel-item u-container-style u-slide u-section-12">
+						<div class="u-container-layout u-valign-top u-sheet-1">
+							<p class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-1" data-animation-name="customAnimationIn" data-animation-direction="" data-animation-duration="3000">Otra forma de quitar elementos es utilizando el <span style="font-weight: 700;">método pop()</span>, que no sólo quitará un<br>elemento de la lista si no que nos retornará el valor quitado.
+							</p>
+							<img class="u-expanded-width u-image u-image-default u-image-4" src="{% static 'img/parablog83.jpg' %}" alt="método pop()" data-image-width="944" data-image-height="427" data-animation-name="pulse" data-animation-duration="3000" data-animation-direction="">
+						</div>
+						<style data-mode="XL">
+							.u-block-null-2 {
+							  padding-top: 30px;
+							  padding-bottom: 30px;
+							  padding-left: 50px;
+							  padding-right: 50px;
+							}
+							.u-block-null-3 {
+							  font-size: 1.25rem;
+							  --animation-custom_in-translate_x: -400px;
+							  --animation-custom_in-translate_y: 0px;
+							  --animation-custom_in-opacity: 0;
+							  --animation-custom_in-rotate: 180deg;
+							  --animation-custom_in-scale: 1;
+							  transition-duration: 0.5s;
+							  transform: scale(1.1) translateX(0px) translateY(0px);
+							  box-shadow: 0 0 rgba(0,0,0,0) rgba(var(---r),var(---g),var(---b),0);
+							  text-shadow: 0 rgba(0,0,0,0) rgba(0,0,0,0) rgba(var(---r),var(---g),var(---b),0);
+							  margin-top: 0;
+							  margin-bottom: 0;
+							  margin-left: auto;
+							  margin-right: auto;
+							}
+						</style>
+						<style data-mode="LG">
+							@media (max-width: 1199px) {
+							  .u-block-null-2 {
+							    padding-top: 30px;
+							    padding-bottom: 30px;
+							    padding-left: 50px;
+							    padding-right: 50px;
+							  }
+							  .u-block-null-3 {
+							    box-shadow: 0 0 rgba(0,0,0,0) rgba(var(---r),var(---g),var(---b),0);
+							    text-shadow: 0 rgba(0,0,0,0) rgba(0,0,0,0) rgba(var(---r),var(---g),var(---b),0);
+							    font-size: 1.25rem;
+							    --animation-custom_in-translate_x: -400px;
+							    --animation-custom_in-translate_y: 0px;
+							    --animation-custom_in-opacity: 0;
+							    --animation-custom_in-rotate: 180deg;
+							    --animation-custom_in-scale: 1;
+							    transition-duration: 0.5s;
+							    transform: scale(1.1) translateX(0px) translateY(0px);
+							    margin-top: 0;
+							    margin-bottom: 0;
+							    margin-left: auto;
+							    margin-right: auto;
+							  }
+							}
+						</style>
+						<style data-mode="MD">
+							@media (max-width: 991px) {
+							  .u-block-null-2 {
+							    padding-top: 30px;
+							    padding-bottom: 30px;
+							    padding-left: 30px;
+							    padding-right: 30px;
+							  }
+							  .u-block-null-3 {
+							    box-shadow: 0 0 rgba(0,0,0,0) rgba(var(---r),var(---g),var(---b),0);
+							    text-shadow: 0 rgba(0,0,0,0) rgba(0,0,0,0) rgba(var(---r),var(---g),var(---b),0);
+							    font-size: 1.25rem;
+							    --animation-custom_in-translate_x: -400px;
+							    --animation-custom_in-translate_y: 0px;
+							    --animation-custom_in-opacity: 0;
+							    --animation-custom_in-rotate: 180deg;
+							    --animation-custom_in-scale: 1;
+							    transition-duration: 0.5s;
+							    transform: scale(1.1) translateX(0px) translateY(0px);
+							    margin-top: 0;
+							    margin-bottom: 0;
+							    margin-left: auto;
+							    margin-right: auto;
+							  }
+							}
+						</style>
+						<style data-mode="SM">
+							@media (max-width: 767px) {
+							  .u-block-null-2 {
+							    padding-top: 30px;
+							    padding-bottom: 30px;
+							    padding-left: 10px;
+							    padding-right: 10px;
+							  }
+							  .u-block-null-3 {
+							    box-shadow: 0 0 rgba(0,0,0,0) rgba(var(---r),var(---g),var(---b),0);
+							    text-shadow: 0 rgba(0,0,0,0) rgba(0,0,0,0) rgba(var(---r),var(---g),var(---b),0);
+							    font-size: 1.25rem;
+							    --animation-custom_in-translate_x: -400px;
+							    --animation-custom_in-translate_y: 0px;
+							    --animation-custom_in-opacity: 0;
+							    --animation-custom_in-rotate: 180deg;
+							    --animation-custom_in-scale: 1;
+							    transition-duration: 0.5s;
+							    transform: scale(1.1) translateX(0px) translateY(0px);
+							    margin-top: 0;
+							    margin-bottom: 0;
+							    margin-left: auto;
+							    margin-right: auto;
+							  }
+							}
+						</style>
+						<style data-mode="XS">
+							@media (max-width: 575px) {
+							  .u-block-null-2 {
+							    padding-top: 30px;
+							    padding-bottom: 30px;
+							    padding-left: 10px;
+							    padding-right: 10px;
+							  }
+							  .u-block-null-3 {
+							    box-shadow: 0 0 rgba(0,0,0,0) rgba(var(---r),var(---g),var(---b),0);
+							    text-shadow: 0 rgba(0,0,0,0) rgba(0,0,0,0) rgba(var(---r),var(---g),var(---b),0);
+							    font-size: 1.25rem;
+							    --animation-custom_in-translate_x: -400px;
+							    --animation-custom_in-translate_y: 0px;
+							    --animation-custom_in-opacity: 0;
+							    --animation-custom_in-rotate: 180deg;
+							    --animation-custom_in-scale: 1;
+							    transition-duration: 0.5s;
+							    transform: scale(1.1) translateX(0px) translateY(0px);
+							    margin-top: 0;
+							    margin-bottom: 0;
+							    margin-left: auto;
+							    margin-right: auto;
+							  }
+							}
+						</style>
+					</div>
+					<div class="u-border-black u-carousel-item u-container-style u-slide">
+						<div class="u-container-layout u-container-layout-5">
+							<p class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-7" data-animation-name="customAnimationIn" data-animation-duration="3000">También podemos especificar el índice del elemento que queremos quitar.</p>
+							<img class="u-expanded-width u-image u-image-default u-image-5" src="{% static 'img/parablog84.jpg' %}" alt="elemento que queremos quitar python listas" data-image-width="951" data-image-height="428" data-animation-name="customAnimationIn" data-animation-duration="3250">
+						</div>
+						<style data-mode="XL">
+							.u-block-null-25 {
+							  padding-top: 30px;
+							  padding-bottom: 30px;
+							  padding-left: 50px;
+							  padding-right: 50px;
+							}
+							.u-block-null-26 {
+							  font-size: 1.25rem;
+							  --animation-custom_in-rotate: 180deg;
+							  --animation-custom_in-scale: 1;
+							  transition-duration: 0.5s;
+							  transform: scale(1.1) translateX(0px) translateY(0px);
+							  box-shadow: 0 0 rgba(0,0,0,0) rgba(var(---r),var(---g),var(---b),0);
+							  text-shadow: 0 rgba(0,0,0,0) rgba(0,0,0,0) rgba(var(---r),var(---g),var(---b),0);
+							  margin-top: 0;
+							  margin-bottom: 0;
+							  margin-left: auto;
+							  margin-right: auto;
+							}
+						</style>
+						<style data-mode="LG">
+							@media (max-width: 1199px) {
+							  .u-block-null-25 {
+							    padding-top: 30px;
+							    padding-bottom: 30px;
+							    padding-left: 50px;
+							    padding-right: 50px;
+							  }
+							  .u-block-null-26 {
+							    box-shadow: 0 0 rgba(0,0,0,0) rgba(var(---r),var(---g),var(---b),0);
+							    text-shadow: 0 rgba(0,0,0,0) rgba(0,0,0,0) rgba(var(---r),var(---g),var(---b),0);
+							    font-size: 1.25rem;
+							    --animation-custom_in-rotate: 180deg;
+							    --animation-custom_in-scale: 1;
+							    transition-duration: 0.5s;
+							    transform: scale(1.1) translateX(0px) translateY(0px);
+							    margin-top: 0;
+							    margin-bottom: 0;
+							    margin-left: auto;
+							    margin-right: auto;
+							  }
+							}
+						</style>
+						<style data-mode="MD">
+							@media (max-width: 991px) {
+							  .u-block-null-25 {
+							    padding-top: 30px;
+							    padding-bottom: 30px;
+							    padding-left: 30px;
+							    padding-right: 30px;
+							  }
+							  .u-block-null-26 {
+							    box-shadow: 0 0 rgba(0,0,0,0) rgba(var(---r),var(---g),var(---b),0);
+							    text-shadow: 0 rgba(0,0,0,0) rgba(0,0,0,0) rgba(var(---r),var(---g),var(---b),0);
+							    font-size: 1.25rem;
+							    --animation-custom_in-rotate: 180deg;
+							    --animation-custom_in-scale: 1;
+							    transition-duration: 0.5s;
+							    transform: scale(1.1) translateX(0px) translateY(0px);
+							    margin-top: 0;
+							    margin-bottom: 0;
+							    margin-left: auto;
+							    margin-right: auto;
+							  }
+							}
+						</style>
+						<style data-mode="SM">
+							@media (max-width: 767px) {
+							  .u-block-null-25 {
+							    padding-top: 30px;
+							    padding-bottom: 30px;
+							    padding-left: 10px;
+							    padding-right: 10px;
+							  }
+							  .u-block-null-26 {
+							    box-shadow: 0 0 rgba(0,0,0,0) rgba(var(---r),var(---g),var(---b),0);
+							    text-shadow: 0 rgba(0,0,0,0) rgba(0,0,0,0) rgba(var(---r),var(---g),var(---b),0);
+							    font-size: 1.25rem;
+							    --animation-custom_in-rotate: 180deg;
+							    --animation-custom_in-scale: 1;
+							    transition-duration: 0.5s;
+							    transform: scale(1.1) translateX(0px) translateY(0px);
+							    margin-top: 0;
+							    margin-bottom: 0;
+							    margin-left: auto;
+							    margin-right: auto;
+							  }
+							}
+						</style>
+						<style data-mode="XS">
+							@media (max-width: 575px) {
+							  .u-block-null-25 {
+							    padding-top: 30px;
+							    padding-bottom: 30px;
+							    padding-left: 10px;
+							    padding-right: 10px;
+							  }
+							  .u-block-null-26 {
+							    box-shadow: 0 0 rgba(0,0,0,0) rgba(var(---r),var(---g),var(---b),0);
+							    text-shadow: 0 rgba(0,0,0,0) rgba(0,0,0,0) rgba(var(---r),var(---g),var(---b),0);
+							    font-size: 1.25rem;
+							    --animation-custom_in-rotate: 180deg;
+							    --animation-custom_in-scale: 1;
+							    transition-duration: 0.5s;
+							    transform: scale(1.1) translateX(0px) translateY(0px);
+							    margin-top: 0;
+							    margin-bottom: 0;
+							    margin-left: auto;
+							    margin-right: auto;
+							  }
+							}
+						</style>
+					</div>
+				</div>
+				<a class="u-absolute-vcenter u-carousel-control u-carousel-control-prev u-spacing-5 u-text-body-alt-color u-text-hover-palette-4-base u-carousel-control-1" href="#carousel-1583" role="button" data-u-slide="prev">
+					<span aria-hidden="true">
+              <svg viewBox="0 0 477.175 477.175"><path d="M145.188,238.575l215.5-215.5c5.3-5.3,5.3-13.8,0-19.1s-13.8-5.3-19.1,0l-225.1,225.1c-5.3,5.3-5.3,13.8,0,19.1l225.1,225
+                    c2.6,2.6,6.1,4,9.5,4s6.9-1.3,9.5-4c5.3-5.3,5.3-13.8,0-19.1L145.188,238.575z"></path></svg>
+            </span>
+					<span class="sr-only">Previous</span>
+				</a>
+				<a class="u-absolute-vcenter u-carousel-control u-carousel-control-next u-spacing-5 u-text-body-alt-color u-text-hover-palette-4-base u-carousel-control-2" href="#carousel-1583" role="button" data-u-slide="next">
+					<span aria-hidden="true">
+              <svg viewBox="0 0 477.175 477.175"><path d="M360.731,229.075l-225.1-225.1c-5.3-5.3-13.8-5.3-19.1,0s-5.3,13.8,0,19.1l215.5,215.5l-215.5,215.5
+                    c-5.3,5.3-5.3,13.8,0,19.1c2.6,2.6,6.1,4,9.5,4c3.4,0,6.9-1.3,9.5-4l225.1-225.1C365.931,242.875,365.931,234.275,360.731,229.075z"></path></svg>
+            </span>
+					<span class="sr-only">Next</span>
+				</a>
+			</div>
+			<p class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-8" data-animation-name="customAnimationIn" data-animation-duration="1000">Algunas funciones de Python que puedes utilizar en listas son:</p>
+			<ul class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-9" data-animation-name="customAnimationIn" data-animation-duration="1000">
+				<li style="padding-left: 42px;">len() para saber la longitud (cantidad de elementos) que contiene una lista<br>
+				</li>
+				<li style="padding-left: 42px;">min() devuelve el mínimo<br>
+				</li>
+				<li style="padding-left: 42px;">max() devuelve el máximo<br>
+				</li>
+				<li style="padding-left: 42px;">sum() devuelve la suma entre sus elementos<br>
+				</li>
+			</ul>
+			<img class="u-align-center u-image u-image-default u-opacity u-opacity-85 u-image-6" src="{% static 'img/parablog85.jpg' %}" alt="function len() - function min() - function max() - function sum() listas python" data-image-width="948" data-image-height="669" data-animation-name="flipIn" data-animation-duration="3250" data-animation-direction="X">
+			<p class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-10" data-animation-name="customAnimationIn" data-animation-duration="1000">También puedes utilizar operadores matemáticos en las listas:</p>
+			<img class="u-align-center u-image u-image-default u-opacity u-opacity-85 u-image-7" src="{% static 'img/parablog86.jpg' %}" alt="operadores matemáticos en las listas" data-image-width="943" data-image-height="665" data-animation-name="bounceIn" data-animation-duration="3250" data-animation-direction="">
+			<p class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-11" data-animation-name="customAnimationIn" data-animation-duration="1000">¿Observaste algunas similitudes entre listas y cadenas de caracteres?</p>
+			<a href="https://nicepage.online" class="u-border-none u-btn u-btn-round u-button-style u-hover-palette-4-base u-palette-2-base u-radius-2 u-btn-1" data-animation-name="flipIn" data-animation-duration="3250" data-animation-direction="X"><span class="u-file-icon u-icon"><img src="{% static 'img/545680.png' %}" alt=""></span>&nbsp;Anterior
+        </a>
+			<a href="https://nicepage.com/c/about-us-html-templates" class="u-border-none u-btn u-btn-round u-button-style u-hover-palette-4-base u-palette-2-base u-radius-2 u-btn-2" data-animation-name="flipIn" data-animation-duration="3250" data-animation-direction="X">Siguiente&nbsp;<span class="u-icon u-text-black"><svg class="u-svg-content" viewBox="0 0 512 512" x="0px" y="0px" style="width: 1em; height: 1em;"><path d="M506.134,241.843c-0.006-0.006-0.011-0.013-0.018-0.019l-104.504-104c-7.829-7.791-20.492-7.762-28.285,0.068 c-7.792,7.829-7.762,20.492,0.067,28.284L443.558,236H20c-11.046,0-20,8.954-20,20c0,11.046,8.954,20,20,20h423.557 l-70.162,69.824c-7.829,7.792-7.859,20.455-0.067,28.284c7.793,7.831,20.457,7.858,28.285,0.068l104.504-104 c0.006-.006,0.011-.013,0.018-.019C513.968,262.339,513.943,249.635,506.134,241.843z"></path></svg><img></span>
+        </a>
+		</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	</section>
+
+
+	<footer class="u-align-center u-clearfix u-footer u-grey-80 u-footer" id="sec-b796">
+		<div class="u-clearfix u-sheet u-sheet-1">
+			<p class="u-small-text u-text u-text-variant u-text-1">Sample text. Click to select the text box. Click again or double click to start editing the text.</p>
+		</div>
+	</footer>
+	<section class="u-backlink u-clearfix u-grey-80">
+		<a class="u-link" href="https://nicepage.com/website-templates" target="_blank">
+			<span>Website Templates</span>
+		</a>
+		<p class="u-text">
+			<span>created with</span>
+		</p>
+		<a class="u-link" href="" target="_blank">
+			<span>Website Builder Software</span>
+		</a>.
+	</section><span style="height: 64px; width: 64px; margin-left: 0px; margin-right: auto; margin-top: 0px; background-image: none; right: 20px; bottom: 20px; padding: 15px; box-shadow: 2px -2px 8px 0px rgba(128,128,128,1);" class="u-back-to-top u-icon u-icon-circle u-opacity u-opacity-85 u-white" data-href="#">
+        <svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 551.13 551.13"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-1d98"></use></svg>
+        <svg class="u-svg-content" enable-background="new 0 0 551.13 551.13" viewBox="0 0 551.13 551.13" xmlns="http://www.w3.org/2000/svg" id="svg-1d98"><path d="m275.565 189.451 223.897 223.897h51.668l-275.565-275.565-275.565 275.565h51.668z"></path></svg>
+    </span>
+
+</body>
+</html>

@@ -65,19 +65,22 @@ def condicionales(request):
 
 @login_required(login_url='autenticacion')
 def repetitivas(request):
-	template_name = "usuarios/repetitivas.html"
+	template_name = "usuarios/Estructura-Repetitivas/estructura-repetitivas.html"
+	#Anterior ruta -->  "usuarios/repetitivas.html"
 	ctx = {}
 	return render(request, template_name, ctx)
 
 @login_required(login_url='autenticacion')
 def funciones(request): 
-	template_name = "usuarios/funciones.html"
+	template_name = "usuarios/Funciones-en-python/funciones-en-python.html"
+	#Anterior ruta -->  "usuarios/funciones.html"
 	ctx = {}
 	return render(request, template_name, ctx)
 
 @login_required(login_url='autenticacion')
 def listas(request): 
-	template_name = "usuarios/listas.html"
+	template_name = "usuarios/Listas-en-Python/listas-en-python.html"
+	#Anterior ruta -->  "usuarios/listas.html"
 	ctx = {}
 	return render(request, template_name, ctx)
 
