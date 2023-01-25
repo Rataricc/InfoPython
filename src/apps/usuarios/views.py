@@ -58,7 +58,8 @@ def manejo_de_variables(request):
 
 @login_required(login_url='autenticacion')
 def condicionales(request): 
-	template_name = "usuarios/condicionales.html"
+	template_name = "usuarios/Estructura-Condicional/estructura-condicional.html"
+	#Anterior ruta --> "usuarios/condicionales.html"
 	ctx = {}
 	return render(request, template_name, ctx)
 

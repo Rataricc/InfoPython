@@ -1,0 +1,371 @@
+{% load static %}
+<!DOCTYPE html>
+<html style="font-size: 16px;" lang="es">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="utf-8">
+	<meta name="keywords" content="Estructura de Control Condicionales, Introducción, Mas Ejemplos de Condicionales, ¿Comó funciona?">
+	<meta name="description" content="">
+	<title>Estructura Condicional</title>
+	<link rel="stylesheet" href="../../static/css/nicepage01.css" media="screen">
+	<link rel="stylesheet" href="../../static/css/estructura-condicional/estructura-condicional.css" media="screen">
+	<script class="u-script" type="text/javascript" src="{% static 'js/jquery01.js' %}" defer=""></script>
+	<script class="u-script" type="text/javascript" src="{% static 'js/nicepage01.js' %}" defer=""></script>
+	<meta name="generator" content="Nicepage 5.3.2, nicepage.com">
+    <link rel="shortcut icon" href="../../static/img/ico/parablog6.jpg">
+	<link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
+
+
+	<script type="application/ld+json">
+		{
+				"@context": "http://schema.org",
+				"@type": "Organization",
+				"name": "",
+				"logo": "images/aInfo6.jpg"
+		}
+	</script>
+	<meta name="theme-color" content="#232b79">
+	<meta property="og:title" content="Estructura Condicional">
+	<meta property="og:type" content="website">
+</head>
+<body class="u-body u-overlap u-xl-mode" data-lang="es">
+	<header class="u-clearfix u-header u-sticky u-header" id="sec-a184">
+		<div class="u-clearfix u-sheet u-sheet-1">
+			<a href="#" class="u-active-black u-border-1 u-border-active-black u-border-grey-30 u-border-hover-black u-btn u-btn-round u-button-style u-hover-palette-4-base u-radius-12 u-text-active-white u-text-hover-white u-white u-btn-1">Más</a>
+			<nav class="u-menu u-menu-dropdown u-offcanvas u-menu-1" data-responsive-from="XXL">
+				<div class="menu-collapse" style="font-size: 1rem; letter-spacing: 0px;">
+					<a class="u-button-style u-custom-left-right-menu-spacing u-custom-padding-bottom u-custom-text-active-color u-custom-text-color u-custom-text-hover-color u-custom-top-bottom-menu-spacing u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="#">
+						<svg class="u-svg-link" viewBox="0 0 24 24"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#menu-hamburger"></use></svg>
+						<svg class="u-svg-content" version="1.1" id="menu-hamburger" viewBox="0 0 16 16" x="0px" y="0px" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g><rect y="1" width="16" height="2"></rect><rect y="7" width="16" height="2"></rect><rect y="13" width="16" height="2"></rect>
+                        </g></svg>
+					</a>
+				</div>
+				<div class="u-custom-menu u-nav-container">
+					<ul class="u-nav u-spacing-20 u-unstyled u-nav-1">
+						<li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-white u-text-body-alt-color u-text-hover-palette-4-base" href="Inicio.html" style="padding: 16px 28px;">Inicio</a>
+						</li>
+						<li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-white u-text-body-alt-color u-text-hover-palette-4-base" href="#" style="padding: 16px 28px;">Contacto</a>
+						</li>
+					</ul>
+				</div>
+				<div class="u-custom-menu u-nav-container-collapse">
+					<div class="u-black u-container-style u-inner-container-layout u-opacity u-opacity-95 u-sidenav">
+						<div class="u-inner-container-layout u-sidenav-overflow">
+							<div class="u-menu-close"></div>
+							<ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-2">
+								<li class="u-nav-item"><a class="u-button-style u-nav-link" href="Inicio.html" style="padding: 10px 20px;">Inicio</a>
+								</li>
+								<li class="u-nav-item"><a class="u-button-style u-nav-link" href="#" style="padding: 10px 20px;">Contacto</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="u-black u-menu-overlay u-opacity u-opacity-70"></div>
+				</div>
+			</nav>
+			<a href="https://nicepage.com" class="u-image u-logo u-image-1" data-image-width="782" data-image-height="383">
+				<img class="u-logo-image u-logo-image-1" src="{% static 'img/masimg/aInfo6.jpg'%}">
+			</a>
+		</div>
+	</header>
+	<section class="u-clearfix u-image u-section-1" id="sec-2d8e" data-image-width="1782" data-image-height="1080">
+		<div class="u-clearfix u-sheet u-sheet-1">
+			<h1 class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-1" data-animation-name="customAnimationIn" data-animation-duration="1000">Estructura de Control Condicionales</h1>
+			<h2 class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-2" data-animation-name="customAnimationIn" data-animation-duration="1000">Introducción</h2>
+			<div class="u-align-center u-clearfix u-gutter-6 u-layout-wrap u-layout-wrap-1">
+				<div class="u-layout">
+					<div class="u-layout-row">
+						<div class="u-container-style u-layout-cell u-size-30 u-layout-cell-1">
+							<div class="u-container-layout u-container-layout-1">
+								<p class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-3" data-animation-name="customAnimationIn" data-animation-duration="3000" data-animation-direction="">Si un programa sólo ejecutara instrucciones planas, unas tras otra<br>no serviría de mucho. Pues, el hecho que las acciones se ejecuten<br>secuncialmente implica que nunca se ejecutara más de una acción al mismo<br>tiempo.
+								</p>
+								<p class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-4" data-animation-name="customAnimationIn" data-animation-duration="3000" data-animation-direction="">Por suerte ahí es donde aparecen las estructuras de control, las cuales van a<br>permitir que&nbsp;el flujo del programa se adapte y sepa cómo actuar ante<br>determinadas situaciones e incluso repetir una tarea si es necesario.
+								</p>
+							</div>
+						</div>
+						<div class="u-container-style u-layout-cell u-size-30 u-layout-cell-2">
+							<div class="u-container-layout u-container-layout-2">
+								<img class="u-expanded-height u-image u-image-contain u-image-1" src="{% static 'img/parablog2.jpg' %}" data-image-width="342" data-image-height="554" data-animation-name="customAnimationIn" data-animation-duration="3000" data-animation-direction="">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</section>
+	<section class="u-clearfix u-image u-section-2" id="sec-883e" data-image-width="1782" data-image-height="1080">
+		<div class="u-clearfix u-sheet u-sheet-1">
+			<h2 class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-1" data-animation-name="customAnimationIn" data-animation-duration="1000">Mas Ejemplos de Condicionales</h2>
+			<img class="u-align-center u-image u-image-contain u-image-default u-opacity u-opacity-80 u-image-1" src="{% static 'img/parablog3.jpg' %}" alt="condicionales" data-image-width="564" data-image-height="484" data-animation-name="customAnimationIn" data-animation-duration="3000" data-animation-direction="">
+			<p class="u-align-center u-text u-text-body-alt-color u-text-default u-text-2">No todos los problemas pueden resolverse empleando estrucutras secuenciales.<br>Cuando hay que tomar una decisión aparecen las estructuras condicionales.
+			</p>
+		</div>
+
+	</section>
+	<section class="u-clearfix u-image u-section-3" id="sec-a496" data-image-width="1782" data-image-height="1080">
+		<div class="u-clearfix u-sheet u-sheet-1">
+			<img class="u-align-center u-image u-image-contain u-image-default u-opacity u-opacity-70 u-image-1" src="{% static 'img/parablog4.jpg' %}" alt="python condicionales" data-image-width="476" data-image-height="432" data-animation-name="customAnimationIn" data-animation-duration="3000" data-animation-direction="">
+			<p class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-1" data-animation-name="customAnimationIn" data-animation-duration="1000">De hecho, en nuestra vida diaria se nos presentan situaciones donde<br>debemos decidir.
+			</p>
+			<ul class="u-align-left u-hover-feature u-text u-text-body-alt-color u-text-2" data-animation-name="customAnimationIn" data-animation-duration="1000">
+				<li>¿Elijo la carrera A o la carrera B?</li>
+				<li>¿Me pongo este pantalón?<br>
+				</li>
+				<li>Para ir al trabajo, ¿elijo el camino A o el camino B?<br>
+				</li>
+				<li>Hoy veamos una peli, ¿cuál la 1 o la 2?<br>
+				</li>
+			</ul>
+		</div>
+
+	</section>
+	<section class="u-clearfix u-image u-section-4" id="sec-cf73" data-image-width="1782" data-image-height="1080">
+		<div class="u-clearfix u-sheet u-sheet-1">
+			<h2 class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-1" data-animation-name="customAnimationIn" data-animation-duration="1000">¿Comó funciona?</h2>
+			<p class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-2" data-animation-name="customAnimationIn" data-animation-duration="1000">En las estructuras condicionales, se realiza una evaluación de una condición y de acuerdo al<br>resultado, el programa realiza una determinada acción.<br>Las condiciones son especificadas utilizando expresiones lógicas.
+			</p>
+			<p class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-3" data-animation-name="customAnimationIn" data-animation-duration="1000">A partir de aquí te recomendamos ir probando las sentencias de ejemplo<br>para que te sea más fácil comprobar su funcionamiento.
+			</p>
+			<h3 class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-4" data-animation-name="customAnimationIn" data-animation-duration="1000">Condicional simple: Sentencia if (si)</h3>
+			<p class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-5" data-animation-name="customAnimationIn" data-animation-duration="1000" data-animation-direction="X">La sentencia if se ejecuta siempre que la expresión que comprueba devuelve True:</p>
+			<div class="u-align-center u-clearfix u-layout-wrap u-layout-wrap-1">
+				<div class="u-layout">
+					<div class="u-layout-col">
+						<div class="u-size-30">
+							<div class="u-layout-row">
+								<div class="u-container-style u-effect-over-left u-grey-75 u-hover-box u-layout-cell u-opacity u-opacity-85 u-size-60 u-layout-cell-1" data-animation-name="customAnimationIn" data-animation-duration="3000">
+									<div class="u-back-slide u-container-layout u-container-layout-1">
+										<h3 class="u-align-center u-text u-text-body-alt-color u-text-default u-text-6" data-animation-name="customAnimationIn" data-animation-duration="3250">Código</h3>
+										<p class="u-align-center u-text u-text-default u-text-palette-4-base u-text-7" data-animation-name="customAnimationIn" data-animation-duration="3250">if True: # equivale a if not False<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;print("Se cumple la condición")<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;print("También se muestra este print")<br>
+										</p>
+									</div>
+									<div class="u-black u-container-layout u-opacity u-opacity-25 u-over-slide u-container-layout-2"></div>
+								</div>
+							</div>
+						</div>
+						<div class="u-size-30">
+							<div class="u-layout-row">
+								<div class="u-container-style u-effect-over-left u-grey-90 u-hover-box u-layout-cell u-opacity u-opacity-90 u-size-60 u-layout-cell-2" data-animation-name="customAnimationIn" data-animation-duration="3000">
+									<div class="u-back-slide u-container-layout u-container-layout-3">
+										<h3 class="u-align-center u-text u-text-default u-text-8" data-animation-name="bounceIn" data-animation-duration="3250" data-animation-direction="">Resultado</h3>
+										<p class="u-align-center u-text u-text-default u-text-palette-4-base u-text-9" data-animation-name="flipIn" data-animation-duration="3250" data-animation-direction="X">Se cumple la condición<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ​También se muestra este print
+										</p>
+									</div>
+									<div class="u-black u-container-layout u-opacity u-opacity-25 u-over-slide u-container-layout-4"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</section>
+	<section class="u-clearfix u-image u-section-5" id="sec-54ec" data-image-width="1782" data-image-height="1080">
+		<div class="u-clearfix u-sheet u-sheet-1">
+			<p class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-1" data-animation-name="customAnimationIn" data-animation-duration="1000">Puede ocurrir que necesites encadenar condicionales pues:</p>
+			<ul class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-2" data-animation-name="customAnimationIn" data-animation-duration="1000">
+				<li>Si se verifica una determinada condición, ejecutar una serie de instrucciones (bloque 1).<br>
+				</li>
+				<li>Si no, esto es, si la condición NO se verifica, ejecutar otra serie de instrucciones (bloque 2). </li>
+			</ul>
+			<div class="u-align-center u-clearfix u-layout-wrap u-layout-wrap-1">
+				<div class="u-layout">
+					<div class="u-layout-col">
+						<div class="u-size-30">
+							<div class="u-layout-row">
+								<div class="u-container-style u-effect-over-left u-grey-80 u-hover-box u-layout-cell u-opacity u-opacity-80 u-size-60 u-layout-cell-1" data-animation-name="customAnimationIn" data-animation-duration="3000">
+									<div class="u-back-slide u-container-layout u-container-layout-1">
+										<h3 class="u-align-left u-hover-feature u-text u-text-body-alt-color u-text-default u-text-3" data-animation-name="customAnimationIn" data-animation-duration="3250">Código</h3>
+										<p class="u-align-center u-hover-feature u-text u-text-palette-4-base u-text-4" data-animation-name="flipIn" data-animation-duration="3250" data-animation-direction="X">a = 5<br>&nbsp; &nbsp; &nbsp; if a == 2:<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;print("a vale 2")<br>&nbsp; &nbsp; &nbsp; &nbsp;if a == 5:<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;print("a vale 5")
+										</p>
+									</div>
+									<div class="u-black u-container-layout u-opacity u-opacity-25 u-over-slide u-container-layout-2"></div>
+								</div>
+							</div>
+						</div>
+						<div class="u-size-30">
+							<div class="u-layout-row">
+								<div class="u-container-style u-effect-over-left u-grey-90 u-hover-box u-layout-cell u-opacity u-opacity-80 u-size-60 u-layout-cell-2" data-animation-name="customAnimationIn" data-animation-duration="3000" data-animation-direction="">
+									<div class="u-back-slide u-container-layout u-container-layout-3">
+										<h3 class="u-hover-feature u-text u-text-default u-text-5" data-animation-name="pulse" data-animation-duration="3250" data-animation-direction="">Resultado</h3>
+										<p class="u-align-center u-hover-feature u-text u-text-default u-text-palette-4-base u-text-6" data-animation-name="customAnimationIn" data-animation-duration="3250" data-animation-direction="">a vale 5</p>
+									</div>
+									<div class="u-black u-container-layout u-opacity u-opacity-25 u-over-slide u-container-layout-4"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<p class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-7" data-animation-name="customAnimationIn" data-animation-duration="1000">O también anidar if dentro de if:</p>
+			<div class="u-align-center u-clearfix u-layout-wrap u-layout-wrap-2">
+				<div class="u-layout">
+					<div class="u-layout-col">
+						<div class="u-size-30">
+							<div class="u-layout-row">
+								<div class="u-container-style u-effect-over-left u-grey-80 u-hover-box u-layout-cell u-opacity u-opacity-85 u-size-60 u-layout-cell-3" data-animation-name="customAnimationIn" data-animation-duration="3000" data-animation-direction="">
+									<div class="u-back-slide u-container-layout u-container-layout-5">
+										<h3 class="u-hover-feature u-text u-text-default u-text-8" data-animation-name="flipIn" data-animation-duration="3250" data-animation-direction="X">Código</h3>
+										<p class="u-align-left u-hover-feature u-text u-text-default u-text-palette-4-base u-text-9" data-animation-name="customAnimationIn" data-animation-duration="3250" data-animation-direction="">a = 5<br>b = 10<br>if a == 5:<br>&nbsp; &nbsp; &nbsp; &nbsp;print("a vale ", a)<br>&nbsp; &nbsp; &nbsp; &nbsp;if b == 10:<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;print("y b vale ", b)
+										</p>
+									</div>
+									<div class="u-black u-container-layout u-opacity u-opacity-25 u-over-slide u-container-layout-6"></div>
+								</div>
+							</div>
+						</div>
+						<div class="u-size-30">
+							<div class="u-layout-row">
+								<div class="u-container-style u-effect-over-left u-grey-90 u-hover-box u-layout-cell u-opacity u-opacity-85 u-size-60 u-layout-cell-4" data-animation-name="bounceIn" data-animation-duration="3000" data-animation-direction="">
+									<div class="u-back-slide u-container-layout u-container-layout-7">
+										<h3 class="u-hover-feature u-text u-text-default u-text-10" data-animation-name="customAnimationIn" data-animation-duration="3250">Resultado</h3>
+										<p class="u-align-center u-hover-feature u-text u-text-default u-text-palette-4-base u-text-11" data-animation-name="customAnimationIn" data-animation-duration="3250">a vale 5<br>y b vale 10
+										</p>
+									</div>
+									<div class="u-black u-container-layout u-opacity u-opacity-25 u-over-slide u-container-layout-8"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</section>
+	<section class="u-clearfix u-image u-section-6" id="sec-61cf" data-image-width="1782" data-image-height="1080">
+		<div class="u-clearfix u-sheet u-sheet-1">
+			<p class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-1" data-animation-name="customAnimationIn" data-animation-duration="1000" data-animation-direction="">Como condición podemos evaluar múltiples expresiones, siempre que ésta devuelvan True o<br>False
+			</p>
+			<div class="u-align-center u-clearfix u-layout-wrap u-layout-wrap-1">
+				<div class="u-layout">
+					<div class="u-layout-col">
+						<div class="u-size-30">
+							<div class="u-layout-row">
+								<div class="u-container-style u-effect-over-left u-grey-80 u-hover-box u-layout-cell u-opacity u-opacity-85 u-size-60 u-layout-cell-1" data-animation-name="customAnimationIn" data-animation-duration="3000">
+									<div class="u-back-slide u-container-layout u-container-layout-1">
+										<h3 class="u-hover-feature u-text u-text-default u-text-2" data-animation-name="customAnimationIn" data-animation-duration="3250">Código</h3>
+										<p class="u-hover-feature u-text u-text-default u-text-palette-4-base u-text-3" data-animation-name="flipIn" data-animation-duration="3250" data-animation-direction="X">if a == 5 and b == 10:<br>&nbsp; &nbsp; &nbsp; &nbsp; print("a vale 5 y b vale 10")<br>
+										</p>
+									</div>
+									<div class="u-black u-container-layout u-opacity u-opacity-25 u-over-slide u-container-layout-2"></div>
+								</div>
+							</div>
+						</div>
+						<div class="u-size-30">
+							<div class="u-layout-row">
+								<div class="u-container-style u-effect-over-left u-grey-90 u-hover-box u-layout-cell u-opacity u-opacity-85 u-size-60 u-layout-cell-2" data-animation-name="customAnimationIn" data-animation-duration="3000">
+									<div class="u-back-slide u-container-layout u-container-layout-3">
+										<h3 class="u-hover-feature u-text u-text-default u-text-4" data-animation-name="pulse" data-animation-duration="3250" data-animation-direction="">Resultado</h3>
+										<p class="u-align-center u-hover-feature u-text u-text-default u-text-palette-4-base u-text-5" data-animation-name="flipIn" data-animation-duration="3250" data-animation-direction="X">a vale 5 y b vale 10</p>
+									</div>
+									<div class="u-black u-container-layout u-opacity u-opacity-25 u-over-slide u-container-layout-4"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<h3 class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-6" data-animation-name="customAnimationIn" data-animation-duration="1000">Condicional alternativo o doble: Sentencia else (sino)</h3>
+			<div class="u-align-center u-clearfix u-layout-wrap u-layout-wrap-2">
+				<div class="u-layout">
+					<div class="u-layout-col">
+						<div class="u-size-30">
+							<div class="u-layout-row">
+								<div class="u-container-style u-effect-over-left u-grey-80 u-hover-box u-layout-cell u-opacity u-opacity-85 u-size-60 u-layout-cell-3" data-animation-name="customAnimationIn" data-animation-duration="3000">
+									<div class="u-back-slide u-container-layout u-valign-bottom u-container-layout-5">
+										<h3 class="u-hover-feature u-text u-text-default u-text-7" data-animation-name="flipIn" data-animation-duration="3250" data-animation-direction="X">Código</h3>
+										<p class="u-hover-feature u-text u-text-default u-text-palette-4-base u-text-8" data-animation-name="bounceIn" data-animation-duration="3250" data-animation-direction="">n = 11<br>if n % 2 == 0:<br>&nbsp; &nbsp; &nbsp; &nbsp;print(n, "es un número par")<br>else:<br>&nbsp; &nbsp; &nbsp; &nbsp;print(n, "es número impar")
+										</p>
+									</div>
+									<div class="u-black u-container-layout u-opacity u-opacity-25 u-over-slide u-container-layout-6"></div>
+								</div>
+							</div>
+						</div>
+						<div class="u-size-30">
+							<div class="u-layout-row">
+								<div class="u-container-style u-effect-over-left u-grey-90 u-hover-box u-layout-cell u-opacity u-opacity-85 u-size-60 u-layout-cell-4" data-animation-name="customAnimationIn" data-animation-duration="3000">
+									<div class="u-back-slide u-container-layout u-container-layout-7">
+										<h3 class="u-hover-feature u-text u-text-default u-text-9" data-animation-name="pulse" data-animation-duration="3250" data-animation-direction="">Resultado</h3>
+										<p class="u-align-center u-hover-feature u-text u-text-default u-text-palette-4-base u-text-10" data-animation-name="customAnimationIn" data-animation-duration="3250" data-animation-direction="">11 es un resultado impar</p>
+									</div>
+									<div class="u-black u-container-layout u-opacity u-opacity-25 u-over-slide u-container-layout-8"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</section>
+	<section class="u-clearfix u-image u-section-7" id="sec-7f3b" data-image-width="1782" data-image-height="1080">
+		<div class="u-clearfix u-sheet u-sheet-1">
+			<h3 class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-1" data-animation-name="customAnimationIn" data-animation-duration="1000">Condicional multiple: Sentencia elif (sino si)</h3>
+			<p class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-2" data-animation-name="customAnimationIn" data-animation-duration="1000">on frecuencia es necesario que existan más de dos elecciones posibles.<br>Este problema se podría resolver por estructuras selectivas simples o alternativas, encadenadas.<br>Pero si el número de alternativas es grande puede plantear serios problemas de escritura y de<br>legibilidad.
+			</p>
+			<p class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-3" data-animation-name="customAnimationIn" data-animation-duration="1000">Por este motivo, en estos casos, se recomienda el uso de la estructura condicional alternativo<br>múltiple que permite&nbsp;<span style="font-weight: 700;">avaluar una variable que puede tomar de 1 a n valores</span>&nbsp;y según ocurra uno<br>de esos valores, se realizará&nbsp;<span style="font-weight: 700;">una de las n acciones;</span>&nbsp;es decir, que el programa seguirá sólo un<br>determinado camino entre varios.
+			</p>
+			<p class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-4" data-animation-name="customAnimationIn" data-animation-duration="1000">En Python se encadena a un if u otro elif para comprobar múltiples condicionales, siempre que las<br>anteriores no se ejecuten:
+			</p>
+			<div class="u-align-center u-clearfix u-layout-wrap u-layout-wrap-1">
+				<div class="u-layout">
+					<div class="u-layout-col">
+						<div class="u-size-30">
+							<div class="u-layout-row">
+								<div class="u-container-style u-effect-over-left u-grey-80 u-hover-box u-layout-cell u-opacity u-opacity-80 u-size-60 u-layout-cell-1" data-animation-name="customAnimationIn" data-animation-duration="1000">
+									<div class="u-back-slide u-container-layout u-valign-bottom u-container-layout-1">
+										<h3 class="u-hover-feature u-text u-text-default u-text-5" data-animation-name="customAnimationIn" data-animation-duration="3250">Código</h3>
+										<p class="u-hover-feature u-text u-text-default u-text-palette-4-base u-text-6" data-animation-name="customAnimationIn" data-animation-duration="3250">nota = float(input("Ingresar una nota: "))<br>if nota &gt;= 9:<br>&nbsp; &nbsp; &nbsp; &nbsp; print("Sobresaliente")<br>elif nota &gt;= 7:<br>&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;print("Notable")<br>elif nota &gt;= 6:<br>&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;print("Bien")<br>elif nota &gt;= 5:<br>&nbsp; &nbsp; &nbsp; &nbsp; print("Suficiente")<br>else:<br>&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;print("Insuficiente")
+										</p>
+									</div>
+									<div class="u-black u-container-layout u-opacity u-opacity-25 u-over-slide u-container-layout-2"></div>
+								</div>
+							</div>
+						</div>
+						<div class="u-size-30">
+							<div class="u-layout-row">
+								<div class="u-container-style u-effect-over-left u-grey-90 u-hover-box u-layout-cell u-opacity u-opacity-90 u-size-60 u-layout-cell-2" data-animation-name="customAnimationIn" data-animation-duration="1000">
+									<div class="u-back-slide u-container-layout u-valign-top u-container-layout-3">
+										<h3 class="u-hover-feature u-text u-text-default u-text-7" data-animation-name="customAnimationIn" data-animation-duration="3250">Resultado</h3>
+										<p class="u-align-center u-hover-feature u-text u-text-default u-text-palette-4-base u-text-8" data-animation-name="customAnimationIn" data-animation-duration="3250">Introduce una nota: 10<br>Sobresaliente
+										</p>
+									</div>
+									<div class="u-black u-container-layout u-opacity u-opacity-25 u-over-slide u-container-layout-4"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<a href="https://nicepage.com/html-website-builder" class="u-border-2 u-border-grey-75 u-btn u-btn-round u-button-style u-hover-palette-4-base u-palette-2-base u-radius-2 u-text-body-alt-color u-btn-1" data-animation-name="flipIn" data-animation-duration="3000" data-animation-direction="X">Siguiente&nbsp;<span class="u-icon u-text-black"><svg class="u-svg-content" viewBox="0 0 512 512" x="0px" y="0px" style="width: 1em; height: 1em;"><path d="M506.134,241.843c-0.006-0.006-0.011-0.013-0.018-0.019l-104.504-104c-7.829-7.791-20.492-7.762-28.285,0.068 c-7.792,7.829-7.762,20.492,0.067,28.284L443.558,236H20c-11.046,0-20,8.954-20,20c0,11.046,8.954,20,20,20h423.557 l-70.162,69.824c-7.829,7.792-7.859,20.455-0.067,28.284c7.793,7.831,20.457,7.858,28.285,0.068l104.504-104 c0.006-.006,0.011-.013,0.018-.019C513.968,262.339,513.943,249.635,506.134,241.843z"></path></svg><img></span>
+        </a>
+			<a href="https://nicepage.com/website-design" class="u-border-2 u-border-grey-75 u-btn u-btn-round u-button-style u-hover-palette-4-base u-palette-2-base u-radius-2 u-btn-2" data-animation-name="customAnimationIn" data-animation-duration="3000"><span class="u-file-icon u-icon"><img src="images/545680.png" alt=""></span>&nbsp;Anterior
+        </a>
+		</div>
+
+	</section>
+
+
+	<footer class="u-align-center u-clearfix u-footer u-grey-80 u-footer" id="sec-b796">
+		<div class="u-clearfix u-sheet u-sheet-1">
+			<p class="u-small-text u-text u-text-variant u-text-1">Sample text. Click to select the text box. Click again or double click to start editing the text.</p>
+		</div>
+	</footer>
+	<section class="u-backlink u-clearfix u-grey-80">
+		<a class="u-link" href="https://nicepage.com/website-templates" target="_blank">
+			<span>Website Templates</span>
+		</a>
+		<p class="u-text">
+			<span>created with</span>
+		</p>
+		<a class="u-link" href="" target="_blank">
+			<span>Website Builder Software</span>
+		</a>.
+	</section><span style="height: 64px; width: 64px; margin-left: 0px; margin-right: auto; margin-top: 0px; background-image: none; right: 20px; bottom: 20px; padding: 15px; box-shadow: 2px -2px 8px 0px rgba(128,128,128,1);" class="u-back-to-top u-icon u-icon-circle u-opacity u-opacity-85 u-white" data-href="#">
+        <svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 551.13 551.13"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-1d98"></use></svg>
+        <svg class="u-svg-content" enable-background="new 0 0 551.13 551.13" viewBox="0 0 551.13 551.13" xmlns="http://www.w3.org/2000/svg" id="svg-1d98"><path d="m275.565 189.451 223.897 223.897h51.668l-275.565-275.565-275.565 275.565h51.668z"></path></svg>
+    </span>
+
+</body>
+</html>
