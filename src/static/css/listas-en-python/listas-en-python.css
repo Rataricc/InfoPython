@@ -315,11 +315,11 @@
   }
   
   .u-section-2 .u-image-1 {
-    background-image: url("images/parablog48.jpg");
+    background-image: url("../../../static/img/parablog48.jpg");
   }
   
   .u-section-2 .u-image-1 {
-    background-image: url("images/parablog48.jpg");
+    background-image: url("../../../static/img/parablog48.jpg");
   }
   
   .u-section-2 .u-container-layout-1 {
@@ -406,7 +406,7 @@
   }
   
   .u-section-2 .u-image-3 {
-    background-image: url("images/parablog49.jpg");
+    background-image: url("../../../static/img/parablog49.jpg");
   }
   
   .u-section-2 .u-container-layout-4 {
@@ -3849,7 +3849,7 @@
   }
   
   .u-section-10 .u-image-2 {
-    background-image: url("images/parablog76.jpg");
+    background-image: url("../../../static/img/parablog76.jpg");
     transition-duration: 2s;
   }
   
@@ -3927,7 +3927,7 @@
   }
   
   .u-section-10 .u-image-3 {
-    background-image: url("images/parablog77.jpg");
+    background-image: url("../../../static/img/parablog77.jpg");
     background-position: 0% 50%;
     transition-duration: 2s;
   }
@@ -4591,7 +4591,7 @@
   }
   
    .u-section-12 {
-    background-image: url("images/-min.jpg");
+    background-image: url("../../../static/img/masimg/-min.jpg");
     background-position: 50% 50%;
   }
   
