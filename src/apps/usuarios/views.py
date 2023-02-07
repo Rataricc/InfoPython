@@ -86,13 +86,15 @@ def listas(request):
 
 @login_required(login_url='autenticacion')
 def tuplas(request): 
-	template_name = "usuarios/tuplas.html"
+	template_name = "usuarios/Tuplas-en-Python/tuplas.html"
+	#Anterior ruta -->  "usuarios/tuplas.html"
 	ctx = {}
 	return render(request, template_name, ctx)
 
 @login_required(login_url='autenticacion')
 def diccionarios(request):
-	template_name = "usuarios/diccionarios.html"
+	template_name = "usuarios/Diccionarios-en-Python/diccionarios.html"
+	#Anterior ruta -->  "usuarios/diccionarios.html"
 	ctx = {}
 	return render(request, template_name, ctx)
 
