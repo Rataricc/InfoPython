@@ -1,0 +1,443 @@
+{% load static %}
+<!DOCTYPE html>
+<html style="font-size: 16px;" lang="es">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="utf-8">
+	<meta name="keywords" content="Manejo de Errores, Errores y excepciones, Por suerte para esas situaciones existen las excpciones.">
+	<meta name="description" content="">
+	<title>Manejo de Errores</title>
+	<link rel="stylesheet" href="../../static/css/nicepage02.css" media="screen">
+	<link rel="stylesheet" href="../../static/css/manejo-errores-python/Manejo-de-Errores.css" media="screen">
+	<script class="u-script" type="text/javascript" src="{% static 'js/jquery02.js' %}" defer=""></script>
+	<script class="u-script" type="text/javascript" src="{% static 'js/nicepage02.js' %}" defer=""></script>
+    <link rel="shortcut icon" href="../../static/img/ico/parablog6.jpg">
+	<meta name="generator" content="Nicepage 5.4.4, nicepage.com">
+	<link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
+
+
+
+
+
+
+
+
+
+
+	<script type="application/ld+json">
+		{
+				"@context": "http://schema.org",
+				"@type": "Organization",
+				"name": "",
+				"logo": "images/aInfo6.jpg"
+		}
+	</script>
+	<meta name="theme-color" content="#232b79">
+	<meta property="og:title" content="Manejo de Errores">
+	<meta property="og:type" content="website">
+	<meta data-intl-tel-input-cdn-path="intlTelInput/">
+</head>
+<body class="u-body u-overlap u-overlap-transparent u-xl-mode" data-lang="es">
+	<header class="u-clearfix u-header u-sticky u-header" id="sec-a184">
+		<div class="u-clearfix u-sheet u-sheet-1">
+			<a href="#" class="u-active-black u-border-1 u-border-active-black u-border-grey-30 u-border-hover-black u-btn u-btn-round u-button-style u-hover-palette-4-base u-radius-12 u-text-active-white u-text-hover-white u-white u-btn-1">Más</a>
+			<nav class="u-menu u-menu-dropdown u-offcanvas u-menu-1" data-responsive-from="XXL">
+				<div class="menu-collapse" style="font-size: 1rem; letter-spacing: 0px;">
+					<a class="u-button-style u-custom-left-right-menu-spacing u-custom-padding-bottom u-custom-text-active-color u-custom-text-color u-custom-text-hover-color u-custom-top-bottom-menu-spacing u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="#">
+						<svg class="u-svg-link" viewBox="0 0 24 24"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#menu-hamburger"></use></svg>
+						<svg class="u-svg-content" version="1.1" id="menu-hamburger" viewBox="0 0 16 16" x="0px" y="0px" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g><rect y="1" width="16" height="2"></rect><rect y="7" width="16" height="2"></rect><rect y="13" width="16" height="2"></rect>
+                        </g></svg>
+					</a>
+				</div>
+				<div class="u-custom-menu u-nav-container">
+					<ul class="u-nav u-spacing-20 u-unstyled u-nav-1">
+						<li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-white u-text-body-alt-color u-text-hover-palette-4-base" href="Inicio.html" style="padding: 16px 28px;">Inicio</a>
+						</li>
+						<li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-white u-text-body-alt-color u-text-hover-palette-4-base" href="#" style="padding: 16px 28px;">Contacto</a>
+						</li>
+					</ul>
+				</div>
+				<div class="u-custom-menu u-nav-container-collapse">
+					<div class="u-black u-container-style u-inner-container-layout u-opacity u-opacity-95 u-sidenav">
+						<div class="u-inner-container-layout u-sidenav-overflow">
+							<div class="u-menu-close"></div>
+							<ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-2">
+								<li class="u-nav-item"><a class="u-button-style u-nav-link" href="Inicio.html" style="padding: 10px 20px;">Inicio</a>
+								</li>
+								<li class="u-nav-item"><a class="u-button-style u-nav-link" href="#" style="padding: 10px 20px;">Contacto</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="u-black u-menu-overlay u-opacity u-opacity-70"></div>
+				</div>
+			</nav>
+			<a href="https://nicepage.com" class="u-image u-logo u-image-1" data-image-width="782" data-image-height="383">
+				<img class="u-logo-image u-logo-image-1" src="{% static 'img/masimg/aInfo6.jpg' %}">
+			</a>
+		</div>
+	</header>
+	<section class="u-clearfix u-image u-section-1" id="sec-427d" data-image-width="1782" data-image-height="1080">
+		<div class="u-clearfix u-sheet u-sheet-1">
+			<h1 class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-1" data-animation-name="customAnimationIn" data-animation-duration="1000">Manejo de Errores</h1>
+			<h2 class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-2" data-animation-name="customAnimationIn" data-animation-duration="1000">Errores y excepciones</h2>
+			<p class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-3" data-animation-name="customAnimationIn" data-animation-duration="1000">En algunas ocasiones nuestros programas pueden fallar ocasionando su detención.</p>
+			<p class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-4" data-animation-name="customAnimationIn" data-animation-duration="1000">Ya sea por&nbsp;<span style="font-weight: 700;">errores de sintaxis o de lógica</span>, tenemos que ser capaces de detectar esos<br>momentos y tratarlos debidamente para prevenirlos.
+			</p>
+			<img class="u-image u-image-default u-opacity u-opacity-90 u-image-1" src="{% static 'img/parablog101.jpg' %}" alt="Errores y excepciones " data-image-width="1168" data-image-height="713" data-animation-name="customAnimationIn" data-animation-duration="3250">
+		</div>
+
+
+
+
+	</section>
+	<section class="u-clearfix u-image u-section-2" id="sec-1184" data-image-width="1782" data-image-height="1080">
+		<div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+			<h3 class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-1" data-animation-name="customAnimationIn" data-animation-duration="1000">Errores</h3>
+			<p class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-2" data-animation-name="customAnimationIn" data-animation-duration="1000">Los&nbsp;<span style="font-weight: 700;">errores</span>&nbsp;detienen la ejecución del programa y tienen varias causas.
+			</p>
+			<p class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-3" data-animation-name="customAnimationIn" data-animation-duration="1000">Para poder estudiarlos mejor vamos a provocar algunos intencionadamente.</p>
+			<h3 class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-4" data-animation-name="customAnimationIn" data-animation-duration="1000">Errores de sintaxis</h3>
+			<p class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-5" data-animation-name="customAnimationIn" data-animation-duration="1000">Texto de muestra. Haz click para seleccionar el elemento de Texto.</p>
+			<div class="u-black u-container-style u-group u-group-1" data-animation-name="customAnimationIn" data-animation-duration="3000">
+				<div class="u-container-layout u-valign-bottom u-container-layout-1">
+					<h3 class="u-hover-feature u-text u-text-default u-text-6" data-animation-name="customAnimationIn" data-animation-duration="3250">Código</h3>
+					<p class="u-hover-feature u-text u-text-default u-text-7" data-animation-name="customAnimationIn" data-animation-duration="3250">print("Hola"</p>
+					<h3 class="u-hover-feature u-text u-text-default u-text-8" data-animation-name="customAnimationIn" data-animation-duration="3250">Resultado</h3>
+					<p class="u-hover-feature u-text u-text-default u-text-9" data-animation-name="customAnimationIn" data-animation-duration="3250">File " ipython-input-1-8bc9f5174855&gt;", line 1<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;print("Hola"<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;^<br>SyntaxError: unexpected EOF while parsing
+					</p>
+				</div>
+			</div>
+			<h3 class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-10" data-animation-name="customAnimationIn" data-animation-duration="1000">Errores de nombre</h3>
+			<p class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-11" data-animation-name="customAnimationIn" data-animation-duration="1000">Se producen cuando el sistema interpreta que debe ejecutar alguna función, método... pero no<br>lo encuentra definido. Devuelven el código&nbsp;<span style="font-weight: 700;">NameError</span>:
+			</p>
+			<div class="u-black u-container-style u-group u-group-2" data-animation-name="customAnimationIn" data-animation-duration="3000">
+				<div class="u-container-layout u-valign-bottom u-container-layout-2">
+					<h3 class="u-hover-feature u-text u-text-default u-text-12" data-animation-name="customAnimationIn" data-animation-duration="3250">Código</h3>
+					<p class="u-hover-feature u-text u-text-default u-text-13" data-animation-name="customAnimationIn" data-animation-duration="3250">pint("Hola")</p>
+					<h3 class="u-hover-feature u-text u-text-default u-text-14" data-animation-name="customAnimationIn" data-animation-duration="3250">Resultado</h3>
+					<p class="u-hover-feature u-text u-text-default u-text-15" data-animation-name="customAnimationIn" data-animation-duration="3250">ipython-input-2-155163d628c2&gt; in module&gt;()<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;----&gt; 1 pint("Hola")<br>NameError: name 'pint' is not defined<br>
+					</p>
+				</div>
+			</div>
+		</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	</section>
+	<section class="u-clearfix u-image u-section-3" id="sec-05ce" data-image-width="1782" data-image-height="1080">
+		<div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+			<p class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-1" data-animation-name="customAnimationIn" data-animation-duration="1000">La mayoría de errores sintácticos y de nombre los identifican los editores de código<br>antes de la ejecución, pero existen otros tipos que pasan más desapercibidos.
+			</p>
+			<h3 class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-2" data-animation-name="customAnimationIn" data-animation-duration="1000">Errores semánticos</h3>
+			<p class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-3" data-animation-name="customAnimationIn" data-animation-duration="1000">Estos errores son muy dificíles de identificar porque van ligados al sentido del funcionamiento y<br>dependen de la situación.&nbsp;<span style="font-weight: 700;">Algunas veces pueden ocurrir y otras no</span>.
+			</p>
+			<img class="u-image u-image-default u-opacity u-opacity-50 u-image-1" src="{% static 'img/parablog102.jpg' %}" alt="Errores semanticos" data-image-width="332" data-image-height="233" data-animation-name="customAnimationIn" data-animation-duration="3250">
+			<p class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-4" data-animation-name="customAnimationIn" data-animation-duration="1000">La mejor forma de prevenirlos es programando mucho<br>y aprendiendo de tus propios fallos, la experencia<br>es clave.
+			</p>
+			<p class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-5" data-animation-name="customAnimationIn" data-animation-duration="1000">Veamos un par de ejemplos:<br>Ejemplo pop() con lista vacía
+			</p>
+			<p class="u-align-left u-hover-feature u-text u-text-body-alt-color u-text-default u-text-6" data-animation-name="customAnimationIn" data-animation-duration="1000">Si intentamos sacar un elemento de una lista vacía, el programa dará fallo de tipo&nbsp;IndexError.<br>Esta situación ocurre&nbsp;sólo durante la ejecución&nbsp;del programa, por lo que los editores no lo detectarán:
+			</p>
+			<div class="u-black u-container-style u-group u-group-1" data-animation-name="customAnimationIn" data-animation-duration="3000">
+				<div class="u-container-layout u-valign-bottom u-container-layout-1">
+					<h3 class="u-hover-feature u-text u-text-default u-text-7" data-animation-name="customAnimationIn" data-animation-duration="3250">Código</h3>
+					<p class="u-hover-feature u-text u-text-default u-text-8" data-animation-name="customAnimationIn" data-animation-duration="3250">l = []<br>l.pop()
+					</p>
+					<h3 class="u-hover-feature u-text u-text-default u-text-9" data-animation-name="customAnimationIn" data-animation-duration="3250">Resultado</h3>
+					<p class="u-hover-feature u-text u-text-default u-text-10" data-animation-name="customAnimationIn" data-animation-duration="3250">ipython-input-6-9e6f3717293a&gt; in module&gt;()<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ----&gt; 1 l.pop()<br>IndexError: pop from empty list<br>
+					</p>
+				</div>
+			</div>
+			<p class="u-align-left u-hover-feature u-text u-text-body-alt-color u-text-default u-text-11" data-animation-name="customAnimationIn" data-animation-duration="1000">Ejemplo lectura de cadena y operación sin conversión a número</p>
+			<p class="u-align-left u-hover-feature u-text u-text-body-alt-color u-text-default u-text-12" data-animation-name="customAnimationIn" data-animation-duration="1000">Cuando leemos un valor con la función<span style="font-weight: 700;">&nbsp;input()</span>, éste siempre se obtendrá como una cadena de<br>caracteres. Si intentamos operarlo directamente con otros números tendremos un fallo<br>
+				<span style="font-weight: 700;">TypeError&nbsp;</span>que tampoco detectan los editores de código:
+			</p>
+			<div class="u-black u-container-style u-group u-group-2" data-animation-name="flipIn" data-animation-duration="3000" data-animation-direction="X">
+				<div class="u-container-layout u-valign-bottom u-container-layout-2">
+					<h3 class="u-hover-feature u-text u-text-default u-text-13" data-animation-name="customAnimationIn" data-animation-duration="3250">Código</h3>
+					<p class="u-hover-feature u-text u-text-default u-text-14" data-animation-name="customAnimationIn" data-animation-duration="3250">n = input("Introduce un número: ")<br>print("{}/{} = {}".format(n,m,n/m))
+					</p>
+					<h3 class="u-hover-feature u-text u-text-default u-text-15" data-animation-name="customAnimationIn" data-animation-duration="3250">Resultado</h3>
+					<p class="u-hover-feature u-text u-text-default u-text-16" data-animation-name="customAnimationIn" data-animation-duration="3250">Introduce un número: 4<br>----------------------------------------------------------------------<br>TypeError Traceback (most recent call last)<br>ipython-input-12-85bb893ab3e3&gt; in module&gt;()<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ----&gt; 1 print("{}/{} = {}".format(n,m,n/m))<br>TypeError: unsupported operand type(s) for /: 'str' and 'int'<br>
+					</p>
+				</div>
+			</div>
+		</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	</section>
+	<section class="u-clearfix u-image u-section-4" id="sec-3d07" data-image-width="1782" data-image-height="1080">
+		<div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+			<p class="u-hover-feature u-text u-text-body-alt-color u-text-default u-text-1" data-animation-name="customAnimationIn" data-animation-duration="1000">Como ya sabemos este error se puede prevenir transformando la cadena a entero o flotante:</p>
+			<div class="u-black u-container-style u-group u-group-1" data-animation-name="bounceIn" data-animation-duration="3000" data-animation-direction="">
+				<div class="u-container-layout u-valign-bottom u-container-layout-1">
+					<h3 class="u-hover-feature u-text u-text-default u-text-2" data-animation-name="customAnimationIn" data-animation-duration="3250">Código</h3>
+					<p class="u-hover-feature u-text u-text-default u-text-3" data-animation-name="customAnimationIn" data-animation-duration="3250">n = float(input("Introduce un número: "))<br>m = 4<br>print("{}/{} = {}".format(n,m,n/m))
+					</p>
+					<h3 class="u-hover-feature u-text u-text-default u-text-4" data-animation-name="customAnimationIn" data-animation-duration="3250">Resultado</h3>
+					<p class="u-hover-feature u-text u-text-default u-text-5" data-animation-name="customAnimationIn" data-animation-duration="3250">Introduce un número: 10<br>10.0/4 = 2.5
+					</p>
+				</div>
+			</div>
+			<p class="u-hover-feature u-text u-text-body-alt-color u-text-default u-text-6" data-animation-name="customAnimationIn" data-animation-duration="1000">Sin embargo no siempre se puede prevenir, como cuando se introduce una cadena que no es un<br>número:
+			</p>
+			<div class="u-black u-container-style u-group u-group-2" data-animation-name="customAnimationIn" data-animation-duration="3000">
+				<div class="u-container-layout u-valign-bottom u-container-layout-2">
+					<h3 class="u-hover-feature u-text u-text-default u-text-7" data-animation-name="customAnimationIn" data-animation-duration="3250">Código</h3>
+					<p class="u-hover-feature u-text u-text-default u-text-8" data-animation-name="customAnimationIn" data-animation-duration="3250">n = float(input("Introduce un número: "))<br>m = 4<br>print("{}/{} = {}".format(n,m,n/m))
+					</p>
+					<h3 class="u-hover-feature u-text u-text-default u-text-9" data-animation-name="customAnimationIn" data-animation-duration="3250">Resultado</h3>
+					<p class="u-hover-feature u-text u-text-default u-text-10" data-animation-name="customAnimationIn" data-animation-duration="3250">Introduce un número: aaa<br>---------------------------------------------------------------------------<br>ValueError Traceback (most recent call last)<br>ipython-input-14-c0e7fd4a26a9&gt; in module&gt;()<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;----&gt; 1 n = float(input("Introduce un número: "))<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;2 m = 4<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;3 print("{}/{} = {}".format(n,m,n/m))<br>ValueError: could not convert string to float: 'aaa'<br>
+					</p>
+				</div>
+			</div>
+			<p class="u-hover-feature u-text u-text-body-alt-color u-text-default u-text-11" data-animation-name="customAnimationIn" data-animation-duration="1000">Como se puede observar, es difícil prevenir fallos que ni siquiera nos habíamos planteado que<br>podían existir.
+			</p>
+		</div>
+
+
+
+
+
+
+
+
+
+
+
+	</section>
+	<section class="u-clearfix u-image u-section-5" id="sec-dbe4" data-image-width="1782" data-image-height="1080">
+		<div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+			<h2 class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-1" data-animation-name="customAnimationIn" data-animation-duration="1000">Por suerte para esas situaciones existen las excpciones.</h2>
+			<p class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-2" data-animation-name="customAnimationIn" data-animation-duration="1000">Las&nbsp;<span style="font-weight: 700;">excepciones</span>&nbsp;son bloques de código que<span style="font-weight: 700;">&nbsp;nos permiten continuar con la ejecución de un programa</span>&nbsp;pese a que ocurra un error.
+			</p>
+			<p class="u-align-left u-hover-feature u-text u-text-body-alt-color u-text-default u-text-3" data-animation-name="customAnimationIn" data-animation-duration="1000">Siguiendo con el ejemplo anterior, teníamos el caso en que leíamos un número por teclado, pero<br>el usuario no introducía un número:
+			</p>
+			<h3 class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-4" data-animation-name="customAnimationIn" data-animation-duration="1000">Bloques try - except</h3>
+			<p class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-5" data-animation-name="customAnimationIn" data-animation-duration="1000">Para prevenir el fallo debemos poner el código propenso a errores en un<span style="font-weight: 700;">&nbsp;bloque try</span>&nbsp;y luego<br>encadenar un bloque&nbsp;<span style="font-weight: 700;">except</span>&nbsp;para tratar la situación excepcional mostrando que ha ocurrido un fallo:
+			</p>
+			<div class="u-black u-container-style u-group u-group-1" data-animation-name="customAnimationIn" data-animation-duration="3000">
+				<div class="u-container-layout u-valign-bottom u-container-layout-1">
+					<h3 class="u-hover-feature u-text u-text-default u-text-6" data-animation-name="customAnimationIn" data-animation-duration="3250">Código</h3>
+					<p class="u-hover-feature u-text u-text-default u-text-7" data-animation-name="customAnimationIn" data-animation-duration="3250">try:<br>&nbsp; &nbsp; &nbsp; &nbsp; n = float(input("Introduce un número: "))<br>&nbsp; &nbsp; &nbsp; &nbsp; m = 4<br>&nbsp; &nbsp; &nbsp; &nbsp; print("{}/{} = {}".format(n,m,n/m))<br>except:<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;print("Ha ocurrido un error, introduce bien el número")
+					</p>
+					<h3 class="u-hover-feature u-text u-text-default u-text-8" data-animation-name="customAnimationIn" data-animation-duration="3250">Resultado</h3>
+					<p class="u-hover-feature u-text u-text-default u-text-9" data-animation-name="customAnimationIn" data-animation-duration="3250">Introduce un número: aaa<br>Ha ocurrido un error, introduce bien el número
+					</p>
+				</div>
+			</div>
+			<p class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-10" data-animation-name="customAnimationIn" data-animation-duration="1000">Como vemos esta forma nos permite controlar situaciones excepcionales que generalmente<br>darían error y en su lugar mostrar un mensaje o ejecutar una pieza de código alternativo.
+			</p>
+			<p class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-11" data-animation-name="customAnimationIn" data-animation-duration="1000">Podemos aprovechar las excepciones para forzar al usuario a introducir un número haciendo uso<br>de un&nbsp;<span style="font-weight: 700;">bucle while</span>, repitiendo la lectura por teclado hasta que lo hagan bien y entonces<br>romper el bucle con un&nbsp;<span style="font-weight: 700;">break</span>:
+			</p>
+			<div class="u-black u-container-style u-group u-group-2" data-animation-name="bounceIn" data-animation-duration="3250" data-animation-direction="">
+				<div class="u-container-layout u-valign-bottom u-container-layout-2">
+					<h3 class="u-hover-feature u-text u-text-default u-text-12" data-animation-name="customAnimationIn" data-animation-duration="3250">Código</h3>
+					<p class="u-hover-feature u-text u-text-default u-text-13" data-animation-name="customAnimationIn" data-animation-duration="1000">while(True):<br>&nbsp; &nbsp; &nbsp; &nbsp;try:<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;n = float(input("Introduce un número: "))<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;m = 4<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;print("{}/{} = {}".format(n,m,n/m))<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;break # Importante romper la iteración si todo ha salido bien<br>&nbsp; &nbsp; &nbsp; &nbsp;except:<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;print("Ha ocurrido un error, introduce bien el número")
+					</p>
+					<h3 class="u-align-left u-hover-feature u-text u-text-default u-text-14" data-animation-name="customAnimationIn" data-animation-duration="3250">Resultado</h3>
+					<p class="u-align-left u-hover-feature u-text u-text-default u-text-15" data-animation-name="customAnimationIn" data-animation-duration="3250">Introduce un número: aaa<br>Ha ocurrido un error, introduce bien el número<br>Introduce un número: sdsdsd<br>Ha ocurrido un error, introduce bien el número<br>Introduce un número: sdsdsd<br>Ha ocurrido un error, introduce bien el número<br>Introduce un número: sdsd<br>Ha ocurrido un error, introduce bien el número<br>Introduce un número: 10<br>10.0/4 = 2.5
+					</p>
+				</div>
+			</div>
+		</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	</section>
+	<section class="u-clearfix u-image u-section-6" id="sec-a302" data-image-width="1782" data-image-height="1080">
+		<div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+			<h3 class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-1" data-animation-name="customAnimationIn" data-animation-duration="1000">Bloque else</h3>
+			<p class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-2" data-animation-name="customAnimationIn" data-animation-duration="1000">Es posible encadenar un<span style="font-weight: 700;">&nbsp;bloque else</span>&nbsp;después del&nbsp;<span style="font-weight: 700;">except</span>&nbsp;para comprobar el caso en que todo<br>funcione correctamente (no se ejecuta la excepción).
+			</p>
+			<p class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-3" data-animation-name="customAnimationIn" data-animation-duration="1000">El&nbsp;<span style="font-weight: 700;">bloque else</span>&nbsp;es un buen momento para romper la iteración con break si todo funciona<br>correctamente:
+			</p>
+			<div class="u-black u-container-style u-group u-group-1" data-animation-name="customAnimationIn" data-animation-duration="3250">
+				<div class="u-container-layout u-valign-bottom u-container-layout-1">
+					<h3 class="u-hover-feature u-text u-text-default u-text-4" data-animation-name="customAnimationIn" data-animation-duration="3250">Código</h3>
+					<p class="u-hover-feature u-text u-text-default u-text-5" data-animation-name="customAnimationIn" data-animation-duration="3250">while(True):<br>&nbsp; &nbsp; &nbsp; &nbsp; try:<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; n = float(input("Introduce un número: "))<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; m = 4<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; print("{}/{} = {}".format(n,m,n/m))<br>&nbsp; &nbsp; &nbsp; &nbsp; except:<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; print("Ha ocurrido un error, introduce bien el número")<br>&nbsp; &nbsp; &nbsp; &nbsp; else:<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;print("Todo ha funcionado correctamente")<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;break # Importante romper la iteración si todo ha salido bien
+					</p>
+					<h3 class="u-align-left u-hover-feature u-text u-text-default u-text-6" data-animation-name="customAnimationIn" data-animation-duration="3250">Resultado</h3>
+					<p class="u-align-left u-hover-feature u-text u-text-default u-text-7" data-animation-name="customAnimationIn" data-animation-duration="3250">Introduce un número: 10<br>10.0/4 = 2.5<br>Todo ha funcionado correctamente
+					</p>
+				</div>
+			</div>
+		</div>
+
+
+
+
+
+
+
+	</section>
+	<section class="u-clearfix u-image u-section-7" id="sec-b759" data-image-width="1782" data-image-height="1080">
+		<div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+			<h3 class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-1" data-animation-name="customAnimationIn" data-animation-duration="1000">Bloque finally</h3>
+			<p class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-2" data-animation-name="customAnimationIn" data-animation-duration="1000">Por último es posible utilizar un&nbsp;<span style="font-weight: 700;">bloque finally</span>&nbsp;que se ejecute al final del código, ocurra o no<br>un error:
+			</p>
+			<div class="u-black u-container-style u-group u-group-1" data-animation-name="customAnimationIn" data-animation-duration="3000">
+				<div class="u-container-layout u-valign-bottom u-container-layout-1">
+					<h3 class="u-hover-feature u-text u-text-default u-text-3" data-animation-name="customAnimationIn" data-animation-duration="3250">Código</h3>
+					<p class="u-hover-feature u-text u-text-default u-text-4" data-animation-name="customAnimationIn" data-animation-duration="3250">while(True):<br>&nbsp; &nbsp; &nbsp; &nbsp;try:<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;n = float(input("Introduce un número: "))<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;m = 4<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;print("{}/{} = {}".format(n,m,n/m))<br>&nbsp; &nbsp; &nbsp; &nbsp;except:<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; print("Ha ocurrido un error, introduce bien el número")<br>&nbsp; &nbsp; &nbsp; &nbsp;else:<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;print("Todo ha funcionado correctamente")<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;break # Importante romper la iteración si todo ha salido bien<br>&nbsp; &nbsp; &nbsp; &nbsp;finally:<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;print("Fin de la iteración") # Siempre se ejecuta
+					</p>
+					<h3 class="u-align-left u-hover-feature u-text u-text-default u-text-5" data-animation-name="customAnimationIn" data-animation-duration="3250">Resultado</h3>
+					<p class="u-align-left u-hover-feature u-text u-text-default u-text-6" data-animation-name="customAnimationIn" data-animation-duration="3250">Introduce un número: aaa Ha ocurrido un error, introduce bien el número<br>Fin de la iteración<br>Introduce un número: 10<br>10.0/4 = 2.5<br>Todo ha funcionado correctamente<br>Fin de la iteración
+					</p>
+				</div>
+			</div>
+		</div>
+
+
+
+
+
+
+	</section>
+	<section class="u-clearfix u-image u-section-8" id="sec-a28a" data-image-width="1782" data-image-height="1080">
+		<div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+			<h3 class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-1" data-animation-name="customAnimationIn" data-animation-duration="1000">Excepciones múltiples</h3>
+			<p class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-2" data-animation-name="customAnimationIn" data-animation-duration="1000">Es una misma pieza de código pueden ocurrir muchos errores distintos y quizá nos interese<br>actuar de forma diferente en cada caso.
+			</p>
+			<p class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-3" data-animation-name="customAnimationIn" data-animation-duration="1000">Para esas situaciones algo que podemos hacer es asignar una excepción a una variable.</p>
+			<p class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-4" data-animation-name="customAnimationIn" data-animation-duration="1000">De esta forma es posible analizar el tipo de error que sucede gracias a su identificador:</p>
+			<div class="u-black u-container-style u-group u-group-1" data-animation-name="customAnimationIn" data-animation-duration="3000" data-animation-direction="">
+				<div class="u-container-layout u-valign-bottom u-container-layout-1">
+					<h3 class="u-hover-feature u-text u-text-default u-text-5" data-animation-name="customAnimationIn" data-animation-duration="3250">Código</h3>
+					<p class="u-hover-feature u-text u-text-6" data-animation-name="customAnimationIn" data-animation-duration="3250">try:<br>&nbsp; &nbsp; &nbsp; &nbsp;n = input("Introduce un número: ") # no transformamos a número<br>&nbsp; &nbsp; &nbsp; &nbsp;5/n<br>except Exception as e:&nbsp; &nbsp; &nbsp; # guardamos la excepción como una variable e&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<br>&nbsp; &nbsp; &nbsp; &nbsp;print("Ha ocurrido un error =&gt;", type(e).__name__)<br>
+					</p>
+					<h3 class="u-align-left u-hover-feature u-text u-text-7" data-animation-name="customAnimationIn" data-animation-duration="3250">Resultado</h3>
+					<p class="u-align-left u-hover-feature u-text u-text-default u-text-8" data-animation-name="customAnimationIn" data-animation-duration="3250">Introduce un número: 10<br>Ha ocurrido un error =&gt; TypeError
+					</p>
+				</div>
+			</div>
+			<p class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-9" data-animation-name="customAnimationIn" data-animation-duration="1000">Gracias a los identificadores de errores podemos crear múltiples comprobaciones, siempre que<br>dejamos en último lugar la excepción por defecto Excepción que engloba cualquier tipo de error<br>(si la pusiéramos al principio las demás excepciones nunca se ejecutarán):
+			</p>
+			<div class="u-black u-container-style u-group u-group-2" data-animation-name="customAnimationIn" data-animation-duration="3000">
+				<div class="u-container-layout u-valign-bottom u-container-layout-2">
+					<h3 class="u-hover-feature u-text u-text-default u-text-10" data-animation-name="customAnimationIn" data-animation-duration="3250">Códig<span style="font-weight: 700;"></span>o
+            </h3>
+					<p class="u-hover-feature u-text u-text-default u-text-11" data-animation-name="customAnimationIn" data-animation-duration="3250">try:<br>&nbsp; &nbsp; &nbsp; &nbsp;n = float(input("Introduce un número divisor: "))<br>&nbsp; &nbsp; &nbsp; &nbsp;5/n<br>except TypeError:<br>&nbsp; &nbsp; &nbsp; &nbsp;print("No se puede dividir el número entre una cadena")<br>except ValueError:<br>&nbsp; &nbsp; &nbsp; &nbsp;print("Debes introducir una cadena que sea un número")<br>except ZeroDivisionError:<br>&nbsp; &nbsp; &nbsp; &nbsp;print("No se puede dividir por cero, prueba otro número")<br>except Exception as e:<br>&nbsp; &nbsp; &nbsp; &nbsp;print("Ha ocurrido un error no previsto", type(e).__name__ )&nbsp;
+					</p>
+					<h3 class="u-align-left u-hover-feature u-text u-text-default u-text-12" data-animation-name="customAnimationIn" data-animation-duration="3250">Resultado</h3>
+					<p class="u-align-left u-hover-feature u-text u-text-default u-text-13" data-animation-name="customAnimationIn" data-animation-duration="3250">Introduce un número divisor: 0<br>No se puede dividir por cero, prueba otro número
+					</p>
+				</div>
+			</div>
+		</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+	</section>
+	<section class="u-clearfix u-image u-section-9" id="sec-5290" data-image-width="1782" data-image-height="1080">
+		<div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+			<h3 class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-1" data-animation-name="customAnimationIn" data-animation-duration="1000">Invocación de excepciones</h3>
+			<p class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-2" data-animation-name="customAnimationIn" data-animation-duration="1000">En algunas ocasiones quizá nos interesa llamar un<span style="font-weight: 700;">&nbsp;error manualmente</span>, ya que un<span style="font-weight: 700;">&nbsp;print</span>
+				<br>común no es muy elegante. Para ello existe una palabra reservada llamada&nbsp;<span style="font-weight: 700;">raise</span>&nbsp;con la cual<br>podemos lanzar un error manual pasándole el identificador.
+			</p>
+			<p class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-3" data-animation-name="customAnimationIn" data-animation-duration="1000">Luego simplemente podemos añadir un&nbsp;<span style="font-weight: 700;">except</span>&nbsp;para tratar esta excepción que hemos lanzado:
+			</p>
+			<div class="u-black u-container-style u-group u-group-1" data-animation-name="customAnimationIn" data-animation-duration="3000" data-animation-direction="">
+				<div class="u-container-layout u-valign-bottom u-container-layout-1">
+					<h3 class="u-hover-feature u-text u-text-default u-text-4" data-animation-name="customAnimationIn" data-animation-duration="3250">Código</h3>
+					<p class="u-hover-feature u-text u-text-default u-text-5" data-animation-name="customAnimationIn" data-animation-duration="3250">def mi_funcion(algo=None):<br>&nbsp; &nbsp; &nbsp; &nbsp; tyr:<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;if algo is None:<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;raise ValueError("Error! No se permite un valor nulo")<br>&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;except ValueError:<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;print("Error! No se permite un valor nulo (desde la excepción)")<br>&nbsp;<br>mi_funcion()<br>
+					</p>
+					<h3 class="u-align-left u-hover-feature u-text u-text-default u-text-6" data-animation-name="customAnimationIn" data-animation-duration="3250">Resultado</h3>
+					<p class="u-align-left u-hover-feature u-text u-text-default u-text-7" data-animation-name="customAnimationIn" data-animation-duration="3250">Error! No se permite un valor nulo (desde la excepción)<span style="font-weight: 400;">
+                <span style="font-weight: 700;">
+                  <span style="font-weight: 400;">
+                    <span style="font-weight: 700;">
+                      <span style="font-weight: 400;"></span>
+						</span>
+						</span>
+						</span>
+						</span>
+					</p>
+				</div>
+			</div>
+			<a href="#" class="u-border-none u-btn u-btn-round u-button-style u-hover-palette-4-base u-palette-2-base u-radius-2 u-btn-1" data-animation-name="customAnimationIn" data-animation-duration="3250"><span class="u-file-icon u-icon"><img src="{% static 'img/545680.png' %}" alt=""></span>&nbsp;Anterior
+        </a>
+			<a href="#" class="u-border-none u-btn u-btn-round u-button-style u-hover-palette-4-base u-palette-2-base u-radius-2 u-btn-2" data-animation-name="customAnimationIn" data-animation-duration="3250">Siguiente&nbsp;<span class="u-icon u-text-black"><svg class="u-svg-content" viewBox="0 0 512 512" x="0px" y="0px" style="width: 1em; height: 1em;"><path d="M506.134,241.843c-0.006-0.006-0.011-0.013-0.018-0.019l-104.504-104c-7.829-7.791-20.492-7.762-28.285,0.068 c-7.792,7.829-7.762,20.492,0.067,28.284L443.558,236H20c-11.046,0-20,8.954-20,20c0,11.046,8.954,20,20,20h423.557 l-70.162,69.824c-7.829,7.792-7.859,20.455-0.067,28.284c7.793,7.831,20.457,7.858,28.285,0.068l104.504-104 c0.006-.006,0.011-.013,0.018-.019C513.968,262.339,513.943,249.635,506.134,241.843z"></path></svg><img></span>
+        </a>
+		</div>
+
+
+
+
+
+
+
+	</section>
+
+
+	<footer class="u-align-center u-clearfix u-footer u-grey-80 u-footer" id="sec-b796">
+		<div class="u-clearfix u-sheet u-sheet-1">
+			<p class="u-small-text u-text u-text-variant u-text-1">Sample text. Click to select the text box. Click again or double click to start editing the text.</p>
+		</div>
+	</footer>
+	<section class="u-backlink u-clearfix u-grey-80">
+		<a class="u-link" href="https://nicepage.com/website-templates" target="_blank">
+			<span>Website Templates</span>
+		</a>
+		<p class="u-text">
+			<span>created with</span>
+		</p>
+		<a class="u-link" href="" target="_blank">
+			<span>Website Builder Software</span>
+		</a>.
+	</section><span style="height: 64px; width: 64px; margin-left: 0px; margin-right: auto; margin-top: 0px; background-image: none; right: 20px; bottom: 20px; padding: 15px; box-shadow: 2px -2px 8px 0px rgba(128,128,128,1);" class="u-back-to-top u-icon u-icon-circle u-opacity u-opacity-85 u-white" data-href="#">
+        <svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 551.13 551.13"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-1d98"></use></svg>
+        <svg class="u-svg-content" enable-background="new 0 0 551.13 551.13" viewBox="0 0 551.13 551.13" xmlns="http://www.w3.org/2000/svg" id="svg-1d98"><path d="m275.565 189.451 223.897 223.897h51.668l-275.565-275.565-275.565 275.565h51.668z"></path></svg>
+    </span>
+
+</body>
+</html>

@@ -1,0 +1,772 @@
+{% load static %}
+<!DOCTYPE html>
+<html style="font-size: 16px;" lang="es">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="utf-8">
+	<meta name="keywords" content="Programacion Orientada a Objetos (POO), Paradigma de Programación Orientada a Objetos">
+	<meta name="description" content="">
+	<title>POO</title>
+	<link rel="stylesheet" href="../../static/css/nicepage02.css" media="screen">
+	<link rel="stylesheet" href="../../static/css/poo-python/POO.css" media="screen">
+	<script class="u-script" type="text/javascript" src="{% static 'js/jquery02.js' %}" defer=""></script>
+	<script class="u-script" type="text/javascript" src="{% static 'js/nicepage02.js' %}" defer=""></script>
+    <link rel="shortcut icon" href="../../static/img/ico/parablog6.jpg">
+	<meta name="generator" content="Nicepage 5.4.4, nicepage.com">
+	<link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
+
+
+	<script type="application/ld+json">
+		{
+				"@context": "http://schema.org",
+				"@type": "Organization",
+				"name": "",
+				"logo": "images/aInfo6.jpg"
+		}
+	</script>
+	<meta name="theme-color" content="#232b79">
+	<meta property="og:title" content="POO">
+	<meta property="og:type" content="website">
+	<meta data-intl-tel-input-cdn-path="intlTelInput/">
+</head>
+<body class="u-body u-overlap u-xl-mode" data-lang="es">
+	<header class="u-clearfix u-header u-sticky u-header" id="sec-a184">
+		<div class="u-clearfix u-sheet u-sheet-1">
+			<a href="#" class="u-active-black u-border-1 u-border-active-black u-border-grey-30 u-border-hover-black u-btn u-btn-round u-button-style u-hover-palette-4-base u-radius-12 u-text-active-white u-text-hover-white u-white u-btn-1">Más</a>
+			<nav class="u-menu u-menu-dropdown u-offcanvas u-menu-1" data-responsive-from="XXL">
+				<div class="menu-collapse" style="font-size: 1rem; letter-spacing: 0px;">
+					<a class="u-button-style u-custom-left-right-menu-spacing u-custom-padding-bottom u-custom-text-active-color u-custom-text-color u-custom-text-hover-color u-custom-top-bottom-menu-spacing u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="#">
+						<svg class="u-svg-link" viewBox="0 0 24 24"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#menu-hamburger"></use></svg>
+						<svg class="u-svg-content" version="1.1" id="menu-hamburger" viewBox="0 0 16 16" x="0px" y="0px" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g><rect y="1" width="16" height="2"></rect><rect y="7" width="16" height="2"></rect><rect y="13" width="16" height="2"></rect>
+                        </g></svg>
+					</a>
+				</div>
+				<div class="u-custom-menu u-nav-container">
+					<ul class="u-nav u-spacing-20 u-unstyled u-nav-1">
+						<li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-white u-text-body-alt-color u-text-hover-palette-4-base" href="Inicio.html" style="padding: 16px 28px;">Inicio</a>
+						</li>
+						<li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-white u-text-body-alt-color u-text-hover-palette-4-base" href="#" style="padding: 16px 28px;">Contacto</a>
+						</li>
+					</ul>
+				</div>
+				<div class="u-custom-menu u-nav-container-collapse">
+					<div class="u-black u-container-style u-inner-container-layout u-opacity u-opacity-95 u-sidenav">
+						<div class="u-inner-container-layout u-sidenav-overflow">
+							<div class="u-menu-close"></div>
+							<ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-2">
+								<li class="u-nav-item"><a class="u-button-style u-nav-link" href="Inicio.html" style="padding: 10px 20px;">Inicio</a>
+								</li>
+								<li class="u-nav-item"><a class="u-button-style u-nav-link" href="#" style="padding: 10px 20px;">Contacto</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="u-black u-menu-overlay u-opacity u-opacity-70"></div>
+				</div>
+			</nav>
+			<a href="https://nicepage.com" class="u-image u-logo u-image-1" data-image-width="782" data-image-height="383">
+				<img class="u-logo-image u-logo-image-1" src="{% static 'img/masimg/aInfo6.jpg' %}">
+			</a>
+		</div>
+	</header>
+	<section class="u-clearfix u-container-align-center u-image u-section-1" id="sec-337b" data-image-width="1782" data-image-height="1080">
+		<div class="u-clearfix u-sheet u-sheet-1">
+			<h1 class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-1" data-animation-name="customAnimationIn" data-animation-duration="1000">Programacion Orientada a Objetos (POO)</h1>
+			<h2 class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-2" data-animation-name="customAnimationIn" data-animation-duration="1000">Paradigma de Programación Orientada a Objetos</h2>
+			<p class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-3" data-animation-name="customAnimationIn" data-animation-duration="1000">Un&nbsp;<span style="font-weight: 700;">paradigma</span>&nbsp;es el resultado de un proceso social en el cual un grupo<br>de personas desarrolla nuevas ideas y crea principios y prácticas alrededor de estas ideas.
+			</p>
+			<img class="u-image u-image-default u-opacity u-opacity-70 u-image-1" src="{% static 'img/parablog103.jpg' %}" alt="Paradigma de Programación Orientada a Objetos" data-image-width="473" data-image-height="361" data-animation-name="customAnimationIn" data-animation-duration="3250">
+			<p class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-4" data-animation-name="customAnimationIn" data-animation-duration="1000">En programación, se trata de un enfoque concreto de desarrollar y estructurar el desarrollo<br>de programas en base a Objetos.
+			</p>
+		</div>
+
+
+
+
+	</section>
+	<section class="u-clearfix u-image u-section-2" id="sec-cffc" data-image-width="1782" data-image-height="1080">
+		<div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+			<h3 class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-1" data-animation-name="customAnimationIn" data-animation-duration="1000">Clase</h3>
+			<p class="u-align-left u-hover-feature u-text u-text-body-alt-color u-text-default u-text-2" data-animation-name="customAnimationIn" data-animation-duration="1000">Una&nbsp;<span style="font-weight: 700;">clase es un modelo que define las propiedades y comportamiento de un tipo de objeto<br>concreto
+          </span>, en la instanciación se hace la lectura de estas definiciones y se crea un objeto a partir<br>de ellas. Las clases son abstracciones que representan a un conjunto de objetos con un comportamiento e interfaz<br>común.
+			</p>
+			<p class="u-align-left u-hover-feature u-text u-text-body-alt-color u-text-default u-text-3" data-animation-name="customAnimationIn" data-animation-duration="1000">Una clase se compone de dos partes:</p>
+			<ul class="u-align-left u-hover-feature u-text u-text-body-alt-color u-text-default u-text-4" data-animation-name="customAnimationIn" data-animation-duration="1000">
+				<li>
+					<span style="font-weight: 700;">Atributos</span>:&nbsp;esto es, los datos que se refieren al estado del objeto.<br>
+				</li>
+				<li>
+					<span style="font-weight: 700;">Métodos</span>:&nbsp;son funciones que pueden aplicarse a objetos.
+				</li>
+			</ul>
+		</div>
+
+
+
+
+	</section>
+	<section class="u-clearfix u-image u-section-3" id="sec-8ebb" data-image-width="1782" data-image-height="1080">
+		<div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+			<h3 class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-1" data-animation-name="customAnimationIn" data-animation-duration="1000">Objeto</h3>
+			<p class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-2" data-animation-name="customAnimationIn" data-animation-duration="1000">
+				<span style="font-weight: 700;">Entidad provista de un conjunto de propiedades o atributos (datos) y de comportamiento o<br>funcionalidad (métodos)
+          </span>,&nbsp;los mismos que consecuentemente reaccionan a eventos. Se corresponden<br>con los objetos reales del mundo que nos rodea, o con objetos internos del sistema (del programa).<br>En realidad, un objeto es una instancia de una clase, por lo que se pueden intercambiar los términos objeto o<br>instancia. Un ejemplo de objeto podría ser un automóvil, en el que tendríamos atributos como la marca, el<br>número de puertas o el color y métodos como arrancar y parar. O bien cualquier otra combinación de atributos y<br>métodos según lo que fuera relevante para nuestro programa.
+			</p>
+			<p class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-3" data-animation-name="customAnimationIn" data-animation-duration="1000">Un objeto consta de:</p>
+			<ul class="u-align-left u-hover-feature u-text u-text-body-alt-color u-text-default u-text-4" data-animation-name="customAnimationIn" data-animation-duration="1000">
+				<li>
+					<span style="font-weight: 700;">Tiempo de vida</span>:&nbsp;La duración de un objeto en un programa siempre está limitada en el<br>tiempo. La mayoría de los objetos son creados mediante un mecanismo denominado instanciación,<br>y cuando dejan de existir se dice que son destruidos.<br>
+				</li>
+				<li>
+					<span style="font-weight: 700;">Estado</span>:&nbsp;Todo objeto posee un estado, definido por sus atributos. Con él se definen las<br>propiedades del objeto, y el estado en que se encuentra en un momento determinado de su exitencia.<br>
+				</li>
+				<li>
+					<span style="font-weight: 700;">Comportamiento</span>:&nbsp;Todo objeto ha de presentar una interfaz, definida por sus métodos,<br>para que el resto de objetos que componen los programas puedan interactuar con él.<br>
+				</li>
+				<li>
+					<span style="font-weight: 700;">Identidad</span>:&nbsp;Propiedad del objeto que lo distingue de los demás.<br>
+				</li>
+			</ul>
+			<p class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-5" data-animation-name="customAnimationIn" data-animation-duration="1000">El equivalente de un objeto en el paradigma estructurado sería una variable. Así mismo la<br>instanciación de objetos equivaldría a la declaración de variables, y el tiempo de vida de un<br>objeto al ámbito* de una variable.
+			</p>
+			<p class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-6" data-animation-name="customAnimationIn" data-animation-duration="1000">La zona del programa en la que una variable puede ser utilizada es lo que se conoce como su ámbito de<br>una variable local está limitado al código de la función en la que está definida.
+			</p>
+			<img class="u-image u-image-default u-opacity u-opacity-70 u-image-1" src="{% static 'img/parablog104.jpg' %}" alt="Clases y atributos" data-image-width="301" data-image-height="277" data-animation-name="customAnimationIn" data-animation-duration="3250" data-animation-direction="">
+			<p class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-7" data-animation-name="customAnimationIn" data-animation-duration="1000">Para modelar soluciones usuando Paradigma orientado a Objetos, comúnmente se utilizan los<br>
+				<span style="font-weight: 700;">Diagramas de Clases</span>, es uno de los diagramas includios en UML 2.5 clasificado dentro de los<br>diagramas de estructura y, como tal, se utiliza para representar los elementos que componen un<br>sistema de información desde un punto de vista estático.
+			</p>
+			<img class="u-image u-image-default u-opacity u-opacity-80 u-image-2" src="{% static 'img/parablog105.jpg' %}" alt="clases, atributos, metodos POO  python" data-image-width="515" data-image-height="281" data-animation-name="customAnimationIn" data-animation-duration="3250">
+		</div>
+
+
+
+
+
+
+
+	</section>
+	<section class="u-clearfix u-image u-section-4" id="sec-f546" data-image-width="1782" data-image-height="1080">
+		<div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+			<p class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-1" data-animation-name="customAnimationIn" data-animation-duration="1000">En Python las clases se definen mediante la palabra clave&nbsp;<span style="font-weight: 700;">class</span>&nbsp;seguida del nombre de la clase,<br>dos puntos (:) y a continuación, indentado, el cuerpo de la clase.
+			</p>
+			<div class="u-black u-container-style u-group u-group-1" data-animation-name="flipIn" data-animation-duration="3250" data-animation-direction="X">
+				<div class="u-container-layout u-container-layout-1">
+					<h3 class="u-hover-feature u-text u-text-default u-text-2" data-animation-name="customAnimationIn" data-animation-duration="3250">Código</h3>
+					<p class="u-hover-feature u-text u-text-default u-text-3" data-animation-name="customAnimationIn" data-animation-duration="3250">Definir la clase Persona con sus métodos y atributos.</p>
+					<p class="u-hover-feature u-text u-text-default u-text-4" data-animation-name="customAnimationIn" data-animation-duration="3250">class&nbsp;Persona:<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;def __init__&nbsp;(self, nombre, edad, genero, estatura, peso):<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;self.nombre = nombre<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;self.edad = edad<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;self.genero = genero<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;self.estatura = estatura<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;self.peso = peso<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;def&nbsp;hablar(self):<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;print("Hola soy {}". format(self.nombre))<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;def&nbsp;correr(self):<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;print("{} esta corriendo". format(self.nombre))<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;def&nbsp;caminar(self):<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;print("{} esta caminando". format(self.nombre))
+					</p>
+				</div>
+			</div>
+			<p class="u-align-left u-hover-feature u-text u-text-body-alt-color u-text-default u-text-5" data-animation-name="customAnimationIn" data-animation-duration="1000">El método&nbsp;<span style="font-weight: 700;">__init__</span>, con una doble barra baja al principio y al final del nombre, se ejecuta justo<br>después de crear un nuevo objeto a partir de la clase, proceso que se conoce con el nombre de instanciación. El método<br>
+				<span style="font-weight: 700;">__init__</span>&nbsp;sirve, como sugiere su nombre, para realizar cualquier proceso de inicialización que sea necesario<br>como puede ser la asiganación de valores a atributos, cálculos, llamadas a otras funciones o procedimientos.
+			</p>
+			<p class="u-align-left u-hover-feature u-text u-text-body-alt-color u-text-default u-text-6" data-animation-name="customAnimationIn" data-animation-duration="1000">Como vemos el primer parámetro de<span style="font-weight: 700;">&nbsp;__init__&nbsp;</span>y del resto de métodos de la clase es siempre&nbsp;<span style="font-weight: 700;">self</span>
+				<br>que sirve para referirse al objeto actual.<br>Este mecanismo es necesario para poder acceder a los atributos y métodos del objeto diferenciando,<br>por ejemplo, una variable local&nbsp;<span style="font-weight: 700;">mi_var</span>&nbsp;de un atributo del objeto&nbsp;<span style="font-weight: 700;">self.mi_var</span>.
+			</p>
+			<p class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-7" data-animation-name="customAnimationIn" data-animation-duration="1000">Si volvemos al método&nbsp;__init__&nbsp;de nuestra clase Persona véremos como se utiliza&nbsp;self&nbsp;para<br>asignar al atributo nombre del objeto (self.nombre) el valor que el programador especifica para<br>el párametro nombre. El parámetro nombre se destruye al final de la función, mientras que el atributo nombre se conserva (y puede ser accedido) mientras el objeto viva.
+			</p>
+			<p class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-8" data-animation-name="customAnimationIn" data-animation-duration="1000">Para crear un objeto se escribiría el nombre de la clase seguido de cualquier parámetro que sea necesario<br>entre paréntesis. Estos parámetros son los que se pasarán al método&nbsp;<span style="font-weight: 700;">__init__</span>, que como<br>decíamos es el método que se llama al instanciar la clase.
+			</p>
+			<div class="u-black u-container-style u-group u-group-2" data-animation-name="bounceIn" data-animation-duration="3250" data-animation-direction="">
+				<div class="u-container-layout u-valign-bottom u-container-layout-2">
+					<h3 class="u-hover-feature u-text u-text-default u-text-9" data-animation-name="customAnimationIn" data-animation-duration="3250">Código</h3>
+					<p class="u-hover-feature u-text u-text-10" data-animation-name="customAnimationIn" data-animation-duration="3250">Definir la clase Persona con sus métodos y atributos y crear objetos a partir de ella.</p>
+					<p class="u-hover-feature u-text u-text-11" data-animation-name="customAnimationIn" data-animation-duration="1000">class&nbsp;Persona:<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;def __init__(self, nombre, edad, sexo, estatura, peso):<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;self.nombre = nombre<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;self.edad = edad<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;self.sexo = sexo<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;self.estatura = estatura<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;self.peso = peso&nbsp;<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;def&nbsp;hablar(self):<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;print("Hola soy {}". format(self.nombre))&nbsp;<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;def&nbsp;correr(self):<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;print("{} esta corriendo". format(self.nombre))<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;def&nbsp;caminar(self):<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;print("{} esta caminando". format(self.nombre))&nbsp;<br>
+						<br>persona1 =&nbsp;Persona("Juan",&nbsp;23,&nbsp;"Masculino",&nbsp;170,&nbsp;90)<br>persona2 =&nbsp;Persona("Maria",&nbsp;25,&nbsp;"Femenino",&nbsp;160,&nbsp;70)<br>
+					</p>
+				</div>
+			</div>
+			<p class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-12" data-animation-name="customAnimationIn" data-animation-duration="1000">En el ejemplo podemos ver que aunque la definición de la función indica claramente que<br>precisa de seis parámetros (self, nombre, edad, sexo, estatura y peso), a la hora de crear un objeto<br>de esta clase pasaremos solo cinco parámetros. Esto es así por que Python pasa el primer argumento<br>(la referencia al objeto que se crea) automáticamente.
+			</p>
+		</div>
+
+
+
+
+
+
+
+
+
+
+
+
+	</section>
+	<section class="u-clearfix u-image u-section-5" id="sec-a8ce" data-image-width="1782" data-image-height="1080">
+		<div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+			<p class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-1" data-animation-name="customAnimationIn" data-animation-duration="1000">Ahora que ya hemos creado nuestros objetos, podemos acceder a sus atributos y métodos<br>mediante la sintaxis&nbsp;<span style="font-weight: 700;">objeto.atributo</span>&nbsp;y&nbsp;<span style="font-weight: 700;">objeto.método()</span>:
+			</p>
+			<div class="u-black u-container-style u-group u-group-1" data-animation-name="bounceIn" data-animation-duration="3000" data-animation-direction="">
+				<div class="u-container-layout u-valign-bottom u-container-layout-1">
+					<h3 class="u-hover-feature u-text u-text-default u-text-2" data-animation-name="customAnimationIn" data-animation-duration="3250">Código</h3>
+					<p class="u-hover-feature u-text u-text-3" data-animation-name="customAnimationIn" data-animation-duration="3250">Definir la clase Persona con sus métodos y atributos y crear un objeto y acceder a sus métodos y atributos.</p>
+					<p class="u-hover-feature u-text u-text-4" data-animation-name="customAnimationIn" data-animation-duration="3250">class&nbsp;Persona:<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;def __init__(self, nombre, edad, sexo, estatura, peso):<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; self.nombre = nombre<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; self.edad = edad<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; self.sexo = sexo<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; self.estatura = estatura<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; self.peso = peso<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;def&nbsp;hablar(self):&nbsp;<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; print("Hola soy {}". format(self.nombre))<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;def&nbsp;correr(self):<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; print("{} esta corriendo". format(self.nombre))&nbsp;<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;def&nbsp;caminar(self):<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; print("{} esta caminando". format(self.nombre))<br>
+						<br>persona1 =&nbsp;Persona("Juan",&nbsp;23,&nbsp;"Masculino",&nbsp;170,&nbsp;90)<br>persona2 =&nbsp;Persona("Maria",&nbsp;25,&nbsp;"Femenino",&nbsp;160,&nbsp;70)<br>
+						<br>print(persona1.nombre)<br>print(persona1.edad)<br>print(persona1.sexo)<br>print(persona1.estatura)<br>print(persona1.peso)<br>persona1.hablar()<br>persona1.correr()<br>persona1.caminar()<br>
+					</p>
+					<h3 class="u-hover-feature u-text u-text-5" data-animation-name="customAnimationIn" data-animation-duration="3250">Resultado</h3>
+					<p class="u-hover-feature u-text u-text-default u-text-6" data-animation-name="customAnimationIn" data-animation-duration="3250" data-animation-direction="">Juan<br>23<br>Masculino<br>170<br>90<br>Hola soy Juan<br>Juan está corriendo<br>Juan está caminando
+					</p>
+				</div>
+			</div>
+		</div>
+
+
+
+
+
+
+	</section>
+	<section class="u-clearfix u-image u-section-6" id="sec-8823" data-image-width="1782" data-image-height="1080">
+		<div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+			<p class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-1" data-animation-name="customAnimationIn" data-animation-duration="1000">
+				<span style="font-weight: 700;">Clase</span>:&nbsp;Persona
+			</p>
+			<p class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-2" data-animation-name="customAnimationIn" data-animation-duration="1000">
+				<span style="font-weight: 700;">El objeto instanciado</span>&nbsp;(creado a partir de esa clase): persona1
+			</p>
+			<div class="u-clearfix u-layout-wrap u-layout-wrap-1">
+				<div class="u-layout">
+					<div class="u-layout-row">
+						<div class="u-black u-container-style u-layout-cell u-size-30 u-layout-cell-1" data-animation-name="customAnimationIn" data-animation-duration="3000">
+							<div class="u-container-layout u-container-layout-1">
+								<h3 class="u-hover-feature u-text u-text-default u-text-3" data-animation-name="customAnimationIn" data-animation-duration="3250">Atributos:</h3>
+								<ul class="u-hover-feature u-text u-text-default u-text-4" data-animation-name="customAnimationIn" data-animation-duration="3250">
+									<li>nombre: "juan"<br>
+									</li>
+									<li>edad: 23<br>
+									</li>
+									<li>sexo:"Masculino"<br>
+									</li>
+									<li>estatura: 170<br>
+									</li>
+									<li>peso: 90<br>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="u-container-style u-grey-90 u-layout-cell u-size-30 u-layout-cell-2" data-animation-name="customAnimationIn" data-animation-duration="3000">
+							<div class="u-container-layout u-container-layout-2">
+								<h3 class="u-hover-feature u-text u-text-default u-text-5" data-animation-name="customAnimationIn" data-animation-duration="3250">Métodos:</h3>
+								<ul class="u-hover-feature u-text u-text-default u-text-6" data-animation-name="customAnimationIn" data-animation-duration="3250">
+									<li>hablar()<br>
+									</li>
+									<li>correr()<br>
+									</li>
+									<li>caminar()<br>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+
+
+
+
+	</section>
+	<section class="u-clearfix u-image u-section-7" id="sec-aa5b" data-image-width="1782" data-image-height="1080">
+		<div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+			<h3 class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-1" data-animation-name="customAnimationIn" data-animation-duration="1000">Herencia</h3>
+			<p class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-2" data-animation-name="customAnimationIn" data-animation-duration="1000">Hay tres conceptos que son básicos para cualquier lenguaje de programación orientada a objetos:<br>el&nbsp;<span style="font-weight: 700;">encapsulamiento</span>, la&nbsp;<span style="font-weight: 700;">herencia</span>&nbsp;y el&nbsp;<span style="font-weight: 700;">polimorfismo</span>.
+			</p>
+			<img class="u-image u-image-default u-opacity u-opacity-80 u-image-1" src="{% static 'img/parablog106.jpg' %}" alt="Herencia en python" data-image-width="934" data-image-height="746" data-animation-name="customAnimationIn" data-animation-duration="3250">
+			<p class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-3" data-animation-name="customAnimationIn" data-animation-duration="1000">En un lenguaje orientado a objetos cuando hacemos que una clase (subclase)&nbsp;herede&nbsp;de<br>otra clase (superclase) estamos haciendo que la subclase contenga todos los atributos y métodos que tenía la superclase.
+			</p>
+			<p class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-4" data-animation-name="customAnimationIn" data-animation-duration="1000">Al acto de heredar de una clase también se le llama a menudo "extender una clase".</p>
+		</div>
+
+
+
+
+	</section>
+	<section class="u-clearfix u-image u-section-8" id="sec-7dcc" data-image-width="1782" data-image-height="1080">
+		<div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+			<h3 class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-1" data-animation-name="customAnimationIn" data-animation-duration="1000">Herencia Simple</h3>
+			<p class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-2" data-animation-name="customAnimationIn" data-animation-duration="1000">Supongamos que queremos modelar los instrumentos musicales de una banda, tendremos entonces una<br>
+				<span style="font-weight: 700;">clase Guitarra</span>, una <span style="font-weight: 700;">clase Batería</span>, una <span style="font-weight: 700;">clase Bajo</span>, etc. Cada una de estas clases<br>tendrá una serie de atributos y métodos, pero ocurre que, por el hecho de ser instrumentos musicales,<br>estas clases compartirán muchos de sus atributos y métodos; un ejemplo sería el método&nbsp;<span style="font-weight: 700;">tocar()</span>.<br>Es más sencillo crear un tipo de objeto Instrumento con sus atributos y métodos comunes e indicar al programa que<br>Guitarra, Batería y Bajo son tipos de instrumentos, haciendo que hereden de Instrumento.
+			</p>
+			<img class="u-image u-image-default u-opacity u-opacity-80 u-image-1" src="{% static 'img/parablog107.jpg' %}" alt="Herencia simple en python" data-image-width="618" data-image-height="404" data-animation-name="customAnimationIn" data-animation-duration="3250">
+			<p class="u-align-left u-hover-feature u-text u-text-body-alt-color u-text-default u-text-3" data-animation-name="customAnimationIn" data-animation-duration="1000">Para indicar que una clase hereda de otra se coloca el nombre de la clase que se hereda entre paréntesis después<br>del nombre de la clase:
+			</p>
+			<div class="u-black u-container-style u-group u-group-1" data-animation-name="flipIn" data-animation-duration="3250" data-animation-direction="X">
+				<div class="u-container-layout u-valign-bottom u-container-layout-1">
+					<h3 class="u-hover-feature u-text u-text-default u-text-4" data-animation-name="customAnimationIn" data-animation-duration="3250">Código</h3>
+					<p class="u-hover-feature u-text u-text-5" data-animation-name="customAnimationIn" data-animation-duration="3250">Definir la clase Instrumento con sus métodos y atributos y crear clases que hereden de ella.</p>
+					<p class="u-hover-feature u-text u-text-6" data-animation-name="customAnimationIn" data-animation-duration="3250">class&nbsp;Instrumento:<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;def __init__(self, precio):<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;self.precio = precio<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;def&nbsp;tocar(self):<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;print("Estamos tocando música")<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;def&nbsp;precio(self):<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;print("El precio de este instrumento es: $",&nbsp;self.precio)&nbsp;<br>class&nbsp;Bateria(Instrumento):<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;pass<br>&nbsp;class&nbsp;Guitarra(Instrumento):<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;pass
+					</p>
+				</div>
+			</div>
+			<p class="u-align-left u-hover-feature u-text u-text-body-alt-color u-text-default u-text-7" data-animation-name="customAnimationIn" data-animation-duration="1000">Como Bateria y Guitarra heredan de Instrumento, ambos tienen un método&nbsp;<span style="font-weight: 700;">tocar()</span>&nbsp;y un método<br>
+				<span style="font-weight: 700;">precio()</span>, y se inicializan pasando un único parámetro, precio. Pero, ¿qué ocurriría si quisiéramos<br>especificar un nuevo parámetro<span style="font-weight: 700;">&nbsp;tipo_cuerda</span>&nbsp;a la hora de crear un objeto Guitarra?; bastaría con escribir<br>un nuevo método<span style="font-weight: 700;">&nbsp;__init__</span>&nbsp;para la clase Guitarra que se ejecutaría en lugar del&nbsp;<span style="font-weight: 700;">__init__&nbsp;</span>de Instrumento.&nbsp;<br>Esto es lo que se conoce como sobreescribir métodos.
+			</p>
+			<p class="u-align-left u-hover-feature u-text u-text-body-alt-color u-text-default u-text-8" data-animation-name="customAnimationIn" data-animation-duration="1000">Ahora bien, puede ocurrir en algunos casos que necesitemos sobreescribir un método de la clase padre, pero que en ese<br>método queramos ejecutar el método de la clase padre porque nuestro nuevo método no necesite más que agregar un par de instrucciones extra. En ese caso usamos la sintaxis&nbsp;<span style="font-weight: 700;">SuperClase.metodo(self, args)&nbsp;</span>para llamar al método<br>de igual nombre de la clase padre. Por ejemplo, para llamar al método&nbsp;<span style="font-weight: 700;">__init__</span>&nbsp;de Instrumento desde Guitarra<br>usaríamos&nbsp;<span style="font-weight: 700;">Instrumento.__init__(self, precio)</span>.
+			</p>
+			<div class="u-black u-container-style u-group u-group-2" data-animation-name="customAnimationIn" data-animation-duration="3250">
+				<div class="u-container-layout u-valign-bottom u-container-layout-2">
+					<h3 class="u-hover-feature u-text u-text-default u-text-9" data-animation-name="customAnimationIn" data-animation-duration="3250">Código</h3>
+					<p class="u-hover-feature u-text u-text-10" data-animation-name="customAnimationIn" data-animation-duration="3250">Definir la clase Instrumento con sus métodos y atributos y crear clases que hereden de ella.</p>
+					<p class="u-hover-feature u-text u-text-11" data-animation-name="customAnimationIn" data-animation-duration="3250">class&nbsp;Instrumento:&nbsp;<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;def __init__(self, precio):<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; self.precio = precio<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;def&nbsp;tocar(self):<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;print("Estamos tocando música")<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;def&nbsp;precio(self):<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;print("El precio de este instrumento es: $",&nbsp;self.precio)<br>class&nbsp;Bateria(Instrumento):<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;pass<br>class&nbsp;Guitarra(Instrumento):<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;def __init__(self, tipo_cuerda, precio):<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Instrumento.__init__(self, precio)<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; self.tipo_cuerda = tipo_cuerda
+					</p>
+				</div>
+			</div>
+			<p class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-12" data-animation-name="customAnimationIn" data-animation-duration="1000">Observe que en este caso si es necesario especificar el parámetro&nbsp;<span style="font-weight: 700;">self</span>.
+			</p>
+		</div>
+
+
+
+
+
+
+
+
+
+
+
+
+	</section>
+	<section class="u-clearfix u-image u-section-9" id="sec-3c14" data-image-width="1782" data-image-height="1080">
+		<div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+			<h3 class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-1" data-animation-name="customAnimationIn" data-animation-duration="1000">Herencia múltiple</h3>
+			<p class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-2" data-animation-name="customAnimationIn" data-animation-duration="1000">En Python, a diferencia de otros lenguajes como Java o C#, se permite la herencia múltiple, es decir, una clase<br>puede heredar de varias clases a la vez. Por ejemplo, podríamos tener una clase Cocodrilo que heredara de la clase<br>Terrestre, con métodos como&nbsp;<span style="font-weight: 700;">caminar()</span>&nbsp;y atributos como&nbsp;<span style="font-weight: 700;">velocidad_caminar</span>&nbsp;y de la clase<br>Acuático, con métodos como&nbsp;<span style="font-weight: 700;">nadar()</span>&nbsp;y atributos como&nbsp;<span style="font-weight: 700;">velocidad_nadar</span>.&nbsp;Para indicar que una<br>clase hereda de múltiples clases basta con enumerar las clases de las que se hereda separándolas por comas:
+			</p>
+			<div class="u-black u-container-style u-group u-group-1" data-animation-name="customAnimationIn" data-animation-duration="3000" data-animation-direction="">
+				<div class="u-container-layout u-valign-bottom u-container-layout-1">
+					<h3 class="u-hover-feature u-text u-text-default u-text-3" data-animation-name="customAnimationIn" data-animation-duration="3250">Código</h3>
+					<p class="u-hover-feature u-text u-text-4" data-animation-name="customAnimationIn" data-animation-duration="3250">Definir diferentes clases con sus métodos y atributos, luego implementar herencia múltiple en una de ellas.</p>
+					<p class="u-hover-feature u-text u-text-5" data-animation-name="customAnimationIn" data-animation-duration="3250">class&nbsp;Terrestre:<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;def __init__(self):<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;pass<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;def&nbsp;desplazar(self):<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;print("El animal anda")<br>class&nbsp;Acuatico:<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;def __init__(self):<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;pass<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;def&nbsp;desplazar(self):<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;print("El animal nada")<br>class&nbsp;Cocodrilo(Terrestre, Acuatico):<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; pass<br>
+					</p>
+				</div>
+			</div>
+			<p class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-6" data-animation-name="customAnimationIn" data-animation-duration="1000">En el caso de que alguna de las clases padre tuvieran métodos con el mismo nombre y número de parámetros las clases<br>sobreescribirían la implementación de los métodos de las clases más a su derecha en la definición.<br>En el siguiente ejemplo, como Terrestre se encuentra más a la izquierda, sería la definición de&nbsp;<span style="font-weight: 700;">desplazar()</span>
+				<br>de esta clase la que prevalecerá, y por lo tanto si llamamos al método desplazar de un objeto de tipo Cocodrilo lo que<br>se imprimiría sería "El animal anda".
+			</p>
+			<div class="u-black u-container-style u-group u-group-2" data-animation-name="customAnimationIn" data-animation-duration="3000">
+				<div class="u-container-layout u-valign-bottom u-container-layout-2">
+					<h3 class="u-hover-feature u-text u-text-default u-text-7" data-animation-name="customAnimationIn" data-animation-duration="3250">Código</h3>
+					<p class="u-hover-feature u-text u-text-8" data-animation-name="customAnimationIn" data-animation-duration="3250">Definir diferentes clases con sus métodos y atributos, luego implementar herencia múltiple en una de ellas.</p>
+					<p class="u-hover-feature u-text u-text-9" data-animation-name="customAnimationIn" data-animation-duration="3250">class&nbsp;Terrestre:<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;def __init__(self):<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;pass<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;def&nbsp;desplazar(self):<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;print("El animal anda")<br>class&nbsp;Acuatico:<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;def __init__(self):<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;pass<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;def&nbsp;desplazar(self):<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;print("El animal nada")<br>class&nbsp;Cocodrilo(Terrestre, Acuatico):<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;pass<br>
+						<br>c =&nbsp;Cocodrilo()<br>c.desplazar()<br>
+					</p>
+					<h3 class="u-hover-feature u-text u-text-10" data-animation-name="customAnimationIn" data-animation-duration="3250">Resultado</h3>
+					<p class="u-hover-feature u-text u-text-default u-text-11" data-animation-name="customAnimationIn" data-animation-duration="3250">El animal anda</p>
+				</div>
+			</div>
+		</div>
+
+
+
+
+
+
+
+
+
+
+
+	</section>
+	<section class="u-clearfix u-image u-section-10" id="sec-1767" data-image-width="1782" data-image-height="1080">
+		<div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+			<p class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-1" data-animation-name="customAnimationIn" data-animation-duration="1000">Lo mismo ocurre para el caso de constructor, en caso de que se requiera el uso de el constructor<br>de alguna clase específica puede usarse la sintaxis anteriormente vista,&nbsp;<span style="font-weight: 700;">SuperClase.metodo(self, args)</span>.
+			</p>
+			<div class="u-black u-container-style u-group u-group-1" data-animation-name="flipIn" data-animation-duration="3250" data-animation-direction="X">
+				<div class="u-container-layout u-valign-bottom u-container-layout-1">
+					<h3 class="u-hover-feature u-text u-text-default u-text-2" data-animation-name="customAnimationIn" data-animation-duration="3250">Código</h3>
+					<p class="u-hover-feature u-text u-text-3" data-animation-name="customAnimationIn" data-animation-duration="3250">Definir diferentes clases con sus métodos y atributos, luego implementar herencia múltiple en una de ellas.</p>
+					<p class="u-hover-feature u-text u-text-4" data-animation-name="customAnimationIn" data-animation-duration="3250">class&nbsp;Terrestre:<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;def __init__(self):<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; print("Este es el constructor de la clase Terrestre")<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;def&nbsp;desplazar(self):<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; print("El animal anda")<br>class&nbsp;Acuatico:<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;def __init__(self):<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; print("Este es el constructor de la clase Acuático")<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;def&nbsp;desplazar(self):<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; print("El animal nada")<br>class&nbsp;Cocodrilo(Terrestre, Acuatico):<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;pass<br>c =&nbsp;Cocodrilo()<br>
+					</p>
+					<h3 class="u-hover-feature u-text u-text-5" data-animation-name="customAnimationIn" data-animation-duration="3250">Resultado</h3>
+					<p class="u-hover-feature u-text u-text-default u-text-6" data-animation-name="customAnimationIn" data-animation-duration="3250">Este es el constructor de la clase Terrestre</p>
+				</div>
+			</div>
+			<div class="u-black u-container-style u-group u-group-2" data-animation-name="customAnimationIn" data-animation-duration="3000" data-animation-direction="">
+				<div class="u-container-layout u-valign-bottom u-container-layout-2">
+					<h3 class="u-hover-feature u-text u-text-default u-text-7" data-animation-name="customAnimationIn" data-animation-duration="3250">Código</h3>
+					<p class="u-hover-feature u-text u-text-8" data-animation-name="customAnimationIn" data-animation-duration="3250">Definir diferentes clases con sus métodos y atributos, luego implementar herencia múltiple en una de ellas.</p>
+					<p class="u-hover-feature u-text u-text-9" data-animation-name="customAnimationIn" data-animation-duration="3250">class&nbsp;Terrestre:<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;def __init__(self):<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; print("Este es el constructor de la clase Terrestre")<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;def&nbsp;desplazar(self):<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; print("El animal anda")<br>class&nbsp;Acuatico:<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;def __init__(self):<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; print("Este es el constructor de la clase Acuático")<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;def&nbsp;desplazar(self):<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; print("El animal nada")<br>class&nbsp;Cocodrilo(Terrestre, Acuatico):<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;def __init__(self):<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Acuatico.__init__(self)<br>c =&nbsp;Cocodrilo()<br>
+					</p>
+					<h3 class="u-hover-feature u-text u-text-10" data-animation-name="customAnimationIn" data-animation-duration="3250">Resultado</h3>
+					<p class="u-hover-feature u-text u-text-default u-text-11" data-animation-name="customAnimationIn" data-animation-duration="3250">Este es el cosntructor de la clase Acuático</p>
+				</div>
+			</div>
+			<p class="u-align-left u-hover-feature u-text u-text-body-alt-color u-text-default u-text-12" data-animation-name="customAnimationIn" data-animation-duration="1000">En el segundo ejemplo se define cual de los constructores de las superclases se va a utilizar, permitiéndonos especificar<br>qué métodos usará de cada una de las clases padre sin importar quien esté más a su derecha en la definición de la clase.
+			</p>
+		</div>
+
+
+
+
+
+
+
+
+
+
+
+
+	</section>
+	<section class="u-clearfix u-image u-section-11" id="sec-3460" data-image-width="1782" data-image-height="1080">
+		<div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+			<h3 class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-1" data-animation-name="customAnimationIn" data-animation-duration="1000">Herencia multinivel en Python</h3>
+			<p class="u-align-left u-hover-feature u-text u-text-body-alt-color u-text-default u-text-2" data-animation-name="customAnimationIn" data-animation-duration="1000">Por otro lado, también podemos heredar de una clase derivada. Esto se llama herencia multinivel y puede ser de cualquier profundidad en Python.</p>
+			<p class="u-align-left u-hover-feature u-text u-text-body-alt-color u-text-default u-text-3" data-animation-name="customAnimationIn" data-animation-duration="1000">En la herencia multinivel, las características de la clase base y la clase derivada se heredan en la nueva clase derivada.</p>
+			<div class="u-black u-container-style u-group u-group-1" data-animation-name="bounceIn" data-animation-duration="3000" data-animation-direction="">
+				<div class="u-container-layout u-container-layout-1">
+					<h3 class="u-hover-feature u-text u-text-default u-text-4" data-animation-name="customAnimationIn" data-animation-duration="3250">Código</h3>
+					<p class="u-hover-feature u-text u-text-5" data-animation-name="customAnimationIn" data-animation-duration="3250">Definir diferentes clases con sus métodos y atributos, luego implementar herencia multinivel entre ellas.</p>
+					<p class="u-align-left u-hover-feature u-text u-text-6" data-animation-name="customAnimationIn" data-animation-duration="3250">class&nbsp;Figura:<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;def __init__(self, area):<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;self.area = area<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;def&nbsp;retornar_area(self):<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;print("El área de la figura es: ",&nbsp;self.area)<br>class&nbsp;Poligono(Figura):<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;def __init__(self, lados, area):<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;Figura.__init__(self, area)<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;self.lados = lados<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;def&nbsp;retornar_lados(self):<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; print("Los lados del poligono son: ",&nbsp;self.lados)<br>class&nbsp;Cuadrilatero(Poligono):<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;def __init__(self, area):<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Poligono.__init__(self,&nbsp;4, area)
+					</p>
+				</div>
+			</div>
+			<p class="u-align-left u-hover-feature u-text u-text-body-alt-color u-text-default u-text-7" data-animation-name="customAnimationIn" data-animation-duration="1000">Aquí por ejemplo,&nbsp;<span style="font-weight: 700;">Poligono</span>&nbsp;se deriva de&nbsp;<span style="font-weight: 700;">Figura</span>, y&nbsp;<span style="font-weight: 700;">Cuadrilatero</span>&nbsp;se deriva de<br>
+				<span style="font-weight: 700;">Poligono</span>&nbsp;por lo que&nbsp;<span style="font-weight: 700;">Cuadrilatero&nbsp;</span>tendra los métodos y atributos tanto de las clase&nbsp;<span style="font-weight: 700;">Poligono</span>
+				<br>como de la clase&nbsp;<span style="font-weight: 700;">Figura</span>. Si en la clase&nbsp;<span style="font-weight: 700;">Poligono</span>&nbsp;alguno de los métodos de&nbsp;<span style="font-weight: 700;">Figura</span>&nbsp;es redefinido<br>
+				<span style="font-weight: 700;">Cuadrilatero</span>&nbsp;heredara del método redfinido.
+			</p>
+			<p class="u-align-left u-hover-feature u-text u-text-body-alt-color u-text-default u-text-8" data-animation-name="customAnimationIn" data-animation-duration="1000">Nota: En el diseño de jerarquías de herencia no siempre es del todo fácil decidir cuándo una clase<br>debe extender a otra. La regla práctica para decidir si una clase (S) puede ser definida como heredera<br>de otra (T) es que debe cumplirse que "S es un T". Por ejemplo, Perro es una Animal, pero Vehiculo no es un Motor.
+			</p>
+		</div>
+
+
+
+
+
+
+
+
+	</section>
+	<section class="u-clearfix u-image u-section-12" id="sec-f75e" data-image-width="1782" data-image-height="1080">
+		<div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+			<h3 class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-1" data-animation-name="customAnimationIn" data-animation-duration="1000">Método de resolución de orden en Python</h3>
+			<p class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-2" data-animation-name="customAnimationIn" data-animation-duration="1000">Cada clase en Python se deriva de la <span style="font-weight: 700;">clase&nbsp;object</span>. Es el tipo más básico en Python.<br>Así que técnicamente, todas las demás clases, ya sean integradas o definidas por el usuario, son clases<br>derivadas y todos los objetos son instancias de la <span style="font-weight: 700;">clase&nbsp;object</span>.
+			</p>
+			<div class="u-black u-container-style u-group u-group-1" data-animation-name="customAnimationIn" data-animation-duration="3000" data-animation-direction="">
+				<div class="u-container-layout u-valign-bottom u-container-layout-1">
+					<h3 class="u-hover-feature u-text u-text-default u-text-3" data-animation-name="customAnimationIn" data-animation-duration="3250" data-animation-direction="X">Código</h3>
+					<p class="u-hover-feature u-text u-text-4" data-animation-name="customAnimationIn" data-animation-duration="3250">Evaluar distintos tipos de datos para verificar que son instancias de la clase object.</p>
+					<p class="u-hover-feature u-text u-text-5" data-animation-name="customAnimationIn" data-animation-duration="3250">print(&nbsp;issubclass(list,object))<br>print(&nbsp;isinstance(5.5,object&nbsp;))<br>print(&nbsp;isinstance("Hola",object&nbsp;))
+					</p>
+					<h3 class="u-hover-feature u-text u-text-6" data-animation-name="customAnimationIn" data-animation-duration="3250">Resultado</h3>
+					<p class="u-hover-feature u-text u-text-default u-text-7" data-animation-name="customAnimationIn" data-animation-duration="3250">True<br>True<br>True
+					</p>
+				</div>
+			</div>
+			<p class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-8" data-animation-name="customAnimationIn" data-animation-duration="1000">En el escenario de herencia múltiple, cualquier atributo especificado se busca primero en la clase actual.<br>Si no se encuentra, la búsqueda continúa en la clases primarias en profundidad, de izquierda a derecha, sin<br>buscar la misma clase dos veces.
+			</p>
+			<p class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-9" data-animation-name="customAnimationIn" data-animation-duration="1000">Por lo tanto, en el ejemplo anterior de la clase&nbsp;<span style="font-weight: 700;">Cuadrilatero</span>&nbsp;el orden de búsqueda es<br>
+				<span style="font-weight: 700;">[Cuadrilatero, Poligono, Figura, object]</span>. Este orden también se denomina linealización de la clase<br>
+				<span style="font-weight: 700;">Cuadrilatero</span>&nbsp;y el conjunto de reglas que se utiliza para encontrar este orden se denomina:<br>Orden de resolución de métodos, MRO por sus siglas en inglés (Method Resolution Orden).<br>El MRO de una clase puede verse como el atributo<span style="font-weight: 700;">&nbsp;__mro__</span>&nbsp;o el método&nbsp;<span style="font-weight: 700;">mro()</span>.<br>El primero devuelve una tupla mientras que el segundo devuelve una lista.
+			</p>
+			<div class="u-black u-container-style u-group u-group-2" data-animation-name="customAnimationIn" data-animation-duration="3000">
+				<div class="u-container-layout u-valign-bottom u-container-layout-2">
+					<h3 class="u-hover-feature u-text u-text-default u-text-10" data-animation-name="customAnimationIn" data-animation-duration="3250">Código</h3>
+					<p class="u-hover-feature u-text u-text-11" data-animation-name="customAnimationIn" data-animation-duration="3250">Definir diferentes clases con sus métodos y atributos, luego implementar herencia multinivel entre ellas. Luego imprimir el Orden de Resolución de métodos.</p>
+					<p class="u-hover-feature u-text u-text-12" data-animation-name="customAnimationIn" data-animation-duration="3250">class&nbsp;Figura:<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;def __init__(self, area):<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;self.area = area<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;def&nbsp;retornar_area(self):<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; print("El área de la figura es: ",&nbsp;self.area)&nbsp;<br>class&nbsp;Poligono(Figura):<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;def __init__(self, lados, area):<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Figura.__init__(self, area)&nbsp;<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;self.lados = lados<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;def&nbsp;retornar_lados(self):<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; print("Los lados del poligono son: ",&nbsp;self.lados)<br>class&nbsp;Cuadrilatero(Poligono):<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;def __init__(self, area):<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Poligono.__init__(self,&nbsp;4, area)<br>
+						<br>print(Cuadrilatero.__mro__)<br>print(Cuadrilatero.mro())<br>
+					</p>
+					<h3 class="u-hover-feature u-text u-text-13" data-animation-name="customAnimationIn" data-animation-duration="3250">Resultado</h3>
+					<p class="u-hover-feature u-text u-text-default u-text-14" data-animation-name="customAnimationIn" data-animation-duration="3250">(class '__main__.Cuadrilatero'&gt;, class '__main__.Poligono'&gt;, class<br>'__main__.Figura'&gt;, class 'object'&gt;)<br>[class '__main__.Cuadrilatero'&gt;, class '__main__.Poligono'&gt;, class<br>'__main__.Figura'&gt;, class 'object'&gt;]
+					</p>
+				</div>
+			</div>
+		</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	</section>
+	<section class="u-clearfix u-image u-section-13" id="sec-5565" data-image-width="1782" data-image-height="1080">
+		<div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+			<p class="u-hover-feature u-text u-text-body-alt-color u-text-default u-text-1" data-animation-name="customAnimationIn" data-animation-duration="1000">Aquí hay un ejemplo de herencia múltiple un poco más complejo y su visualización junto con el MRO.</p>
+			<div class="u-black u-container-style u-group u-group-1">
+				<div class="u-container-layout u-valign-bottom u-container-layout-1">
+					<h3 class="u-hover-feature u-text u-text-default u-text-2" data-animation-name="customAnimationIn" data-animation-duration="3250">Código</h3>
+					<p class="u-hover-feature u-text u-text-3" data-animation-name="customAnimationIn" data-animation-duration="3250">Definir diferentes clases con sus métodos y atributos, luego implementar herencia multinivel entre ellas. Luego imprimir el orden de resolución de métodos.</p>
+					<p class="u-hover-feature u-text u-text-4" data-animation-name="customAnimationIn" data-animation-duration="3250">class&nbsp;X:<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;pass<br>class&nbsp;Y:<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;pass<br>class&nbsp;Z:<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;pass<br>class&nbsp;A(X, Y):<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;pass<br>class&nbsp;B(Y, Z):<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;pass<br>class&nbsp;M(B, A, Z):<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;pass<br>print(M.mro())<br>
+					</p>
+					<h3 class="u-hover-feature u-text u-text-5" data-animation-name="customAnimationIn" data-animation-duration="3250">Resultado</h3>
+					<p class="u-hover-feature u-text u-text-default u-text-6" data-animation-name="customAnimationIn" data-animation-duration="3250">[class '__main__.M'&gt;, class '__main__.B'&gt;, class '__main__.A'&gt;, class<br>'__main__.X'&gt;, class '__main__.Y'&gt;, class '__main__.Z'&gt;, class<br>'object'&gt;]
+					</p>
+				</div>
+			</div>
+		</div>
+
+
+
+
+
+
+	</section>
+	<section class="u-clearfix u-image u-section-14" id="sec-9729" data-image-width="1782" data-image-height="1080">
+		<div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+			<h3 class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-1" data-animation-name="customAnimationIn" data-animation-duration="1000">Abstracción</h3>
+			<p class="u-align-left u-hover-feature u-text u-text-body-alt-color u-text-default u-text-2" data-animation-name="customAnimationIn" data-animation-duration="1000">
+				<span style="font-weight: 700;">La técnica de la abstracción consiste en asilar un determinado elemento sobre su contexto o el resto de elementos que lo acompañan y que posiblemente no sean válidos para nuestro propósito</span>.&nbsp;<br>Gracias a la abstracción separamos las características esenciales de un objeto de las no esenciales y tomaremos las caracteristícas y propiedades a tener en cuenta de un objeto en el mundo real con el fin de utilizarlas en el sistema que tratamos de implementar.
+			</p>
+			<p class="u-align-left u-hover-feature u-text u-text-body-alt-color u-text-default u-text-3" data-animation-name="customAnimationIn" data-animation-duration="1000">En<span style="font-weight: 700;"> POO</span> solo necesitas saber cómo interaccionar con los objetos, no necesita conocer los detalles de cómo está implementada la clase a partir de la cual se instancia el objeto. Sólo necesita conocer su interfaz pública.
+			</p>
+			<p class="u-align-left u-hover-feature u-text u-text-body-alt-color u-text-default u-text-4" data-animation-name="customAnimationIn" data-animation-duration="1000">El nivel de abstracción puede ser bajo (en un objeto se manipulan datos y métodos individualmente), o alto (en un objeto que solo se usan sus métodos de servicio).</p>
+		</div>
+
+
+
+
+	</section>
+	<section class="u-clearfix u-image u-section-15" id="sec-e8ce" data-image-width="1782" data-image-height="1080">
+		<div class="u-clearfix u-sheet u-sheet-1">
+			<h3 class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-1" data-animation-name="customAnimationIn" data-animation-duration="1000">Encapsulación</h3>
+			<p class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-2" data-animation-name="customAnimationIn" data-animation-duration="1000">La<span style="font-weight: 700;"> encapsulación es una forma de abstracción</span>, además es un mecanismo para llevar a la práctica la abstracción.<br>Cuando una clase existe (se define), se crean objetos a partir de ella, y se usan dichos objetos llamando los métodos<br>necesarios. Es decir, crea objetos para usar los servicios que nos proporciona la clase a través de sus métodos.<br>
+				<span style="font-weight: 700;">No necesita saber cómo trabaja el objeto, ni saber variables que usa, ni el código que contiene</span>.
+			</p>
+			<p class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-3" data-animation-name="customAnimationIn" data-animation-duration="1000">Este principio otorga beneficios importantes para el desarrollo de software:</p>
+			<ul class="u-align-left u-hover-feature u-text u-text-body-alt-color u-text-4" data-animation-name="customAnimationIn" data-animation-duration="1000">
+				<li>
+					<span style="font-weight: 700;">Modularidad</span>:&nbsp;El código fuente para un objeto puede ser escrito y mantenido<br>independientemente del código fuente para otros objetos. Además, un objeto puede ser fácilmente pasado de un lugar a otro del sistema. Por ejemplo, en el caso de la bicicleta de lecturas anteriores, es posible darle tu bicicleta a alguien más, y continuará trabajando.<br>
+				</li>
+				<li>
+					<span style="font-weight: 700;">Ocultamiento de información</span>:&nbsp;Un objeto tiene una interfaz pública que otros objetos pueden utilizar para comunicarse con él. El objeto puede mantener información y métodos privados que pueden ser modificados a cualquier tiempo sin afectar los otros objetos que dependen de él. No es necesario entender cómo usar el mecanismo de los engranajes de una bicicleta para poder utilizarlo.
+				</li>
+			</ul>
+			<p class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-5" data-animation-name="customAnimationIn" data-animation-duration="1000">La encapsulación describe el hecho de que los objetos se usan como cajas negras. Así, un objeto encapsula datos y métodos, <span style="font-weight: 700;">
+            <span style="font-weight: 400;"></span>
+				</span>que están dentro del objeto.
+			</p>
+			<ul class="u-align-left u-hover-feature u-text u-text-body-alt-color u-text-6" data-animation-name="customAnimationIn" data-animation-duration="1000">
+				<li>
+					<span style="font-weight: 700;">Interfaz pública de una clase</span>:&nbsp;Es un conjunto de métodos (métodos de servicio) que sirve para que los objetos de una clase proporcionen sus servicios. Estos servicios son los que pueden ser llamados por un cliente.<br>
+				</li>
+				<li>
+					<span style="font-weight: 700;">Método de soporte</span>:&nbsp;Son métodos adicionales en un objeto que no definen un servicio utilizable por un cliente, pero que ayudan a otros métodos en sus tareas.
+				</li>
+			</ul>
+			<p class="u-align-left u-hover-feature u-text u-text-body-alt-color u-text-7" data-animation-name="customAnimationIn" data-animation-duration="1000">La encapsulación es un mecanismo de control que restringe la capacidad de modificar el estado (el conjunto de propiedades, atributos o datos) de un objeto sólo por medio de los métodos del propio objeto, permitiendo que los atributos de un objeto<br>puedan ocultarse (superficilamente) para que no sean accedidos desde fuera de la difinición de una clase. Para ello, es necesario nombrar los atributos con un prefijo de doble subrayado:&nbsp;<span style="font-weight: 700;">__atributo</span>.
+			</p>
+		</div>
+
+
+
+
+
+
+
+	</section>
+	<section class="u-clearfix u-image u-section-16" id="sec-8341" data-image-width="1782" data-image-height="1080">
+		<div class="u-clearfix u-sheet u-sheet-1">
+			<h3 class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-1" data-animation-name="customAnimationIn" data-animation-duration="1000">Encapsulación y niveles de privacidad</h3>
+			<p class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-2" data-animation-name="customAnimationIn" data-animation-duration="1000">En encapuslamiento nos permite definir niveles de privacidad para señalar qué métodos y atributos no deben utilizarse fuera de la clase y así evitar exponer excesivamente los detalles de la implementación de una clase o un objeto.</p>
+			<p class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-3" data-animation-name="customAnimationIn" data-animation-duration="1000">Esto se consigue en otros lenguajes de programación como Java utilizando modificadores de acceso que definen si cualquiera puede acceder a esa función o variable(public) o si está restringiendo el acceso a la propia clase (private).</p>
+			<p class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-4" data-animation-name="customAnimationIn" data-animation-duration="1000">En Python no existen los modificadores de acceso, y lo que se suele hacer es usar convenciones a la hora de nombrar métodos y atributos, de forma que se señala su carácter privado, para su exlcusión del espacio de nombres, o para indicar una función especial, normalmente asociada a funcionamiento estándar del lenguaje.</p>
+			<ul class="u-align-left u-hover-feature u-text u-text-body-alt-color u-text-default u-text-5" data-animation-name="customAnimationIn" data-animation-duration="1000">
+				<li>
+					<span style="font-weight: 700;">_nombre</span>:&nbsp;Los nombres que comienzan con un único guión bajo indican de forma débil un uso interno.<br>Además, estos nombres no se incorporan en el espacio de nombres de un módulo al importarlo con "from...import *".<br>
+				</li>
+				<li>
+					<span style="font-weight: 700;">__nombre:</span>Los nombres que empiezan por dos guiones bajos (y no termina también con dos guiones bajos)<br>indican su uso privado en la clase.<br>
+				</li>
+				<li>
+					<span style="font-weight: 700;">__nombre__</span>:Los nombres que comiezan y acaban con dos guiones bajos indican atributos "mágicos", de uso<br>especial y que residen en espacios de nombres que puede manipular el usuario. Solamente deben usarse en la menera que se describe en la documentación de Python y debe evitarse la creación de nuevos atributos de este tipo.
+				</li>
+			</ul>
+			<p class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-6" data-animation-name="customAnimationIn" data-animation-duration="1000">Algunos ejemplos de nombres "singulares" de este tipo son:</p>
+			<ul class="u-align-left u-hover-feature u-text u-text-body-alt-color u-text-default u-text-7" data-animation-name="customAnimationIn" data-animation-duration="1000">
+				<li>
+					<span style="font-weight: 700;">__init__</span>:&nbsp;Método de inicialización de objetos<br>
+				</li>
+				<li>
+					<span style="font-weight: 700;">__del__</span>:&nbsp;Método de destrucción de objetos<br>
+				</li>
+				<li>
+					<span style="font-weight: 700;">__doc__</span>:&nbsp;Cadena de documentación de módulos, clases...<br>
+				</li>
+				<li>
+					<span style="font-weight: 700;">__class__</span>:&nbsp;nombre de la clase<br>
+				</li>
+				<li>
+					<span style="font-weight: 700;">__str__</span>:&nbsp;Método que devuelve una descripción de la clase como cadena de texto<br>
+				</li>
+				<li>
+					<span style="font-weight: 700;">__repr__</span>:&nbsp;Método que devuelve una representación de la clase como cadena de texto<br>
+				</li>
+				<li>
+					<span style="font-weight: 700;">__module__</span>:&nbsp;Módulo al que pertence la clase<br>
+				</li>
+			</ul>
+			<p class="u-align-left u-hover-feature u-text u-text-body-alt-color u-text-default u-text-8" data-animation-name="customAnimationIn" data-animation-duration="1000">En el siguiente ejemplo sólo se imprimirá la cadena correspondiente al método&nbsp;<span style="font-weight: 700;">publico()</span>,&nbsp;mientras<br>que al intentar llamar al método&nbsp;<span style="font-weight: 700;">__privado()&nbsp;</span>Python lanzará una excepción debido a que no existe,<br>evidentemente existe pero no podemos ver porque es privado.
+			</p>
+			<div class="u-black u-container-style u-group u-group-1" data-animation-name="customAnimationIn" data-animation-duration="3000">
+				<div class="u-container-layout u-valign-bottom u-container-layout-1">
+					<h3 class="u-hover-feature u-text u-text-default u-text-9" data-animation-name="customAnimationIn" data-animation-duration="3250">Código</h3>
+					<p class="u-hover-feature u-text u-text-default u-text-10" data-animation-name="customAnimationIn" data-animation-duration="3250">Definir una clase con métodos públicos y privados.</p>
+					<p class="u-hover-feature u-text u-text-default u-text-11" data-animation-name="customAnimationIn" data-animation-duration="3250">class&nbsp;Ejemplo:<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;def&nbsp;publico(self):<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; print("Publico")<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;def__privado(self):<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; print("Privado")<br>ej =&nbsp;Ejemplo()<br>ej.publico()<br>ej.__privado()&nbsp;
+					</p>
+					<h3 class="u-hover-feature u-text u-text-default u-text-12" data-animation-name="customAnimationIn" data-animation-duration="3250">Resultado</h3>
+					<p class="u-hover-feature u-text u-text-default u-text-13" data-animation-name="customAnimationIn" data-animation-duration="3250">Publico<br>Traceback (most recent call last):<br>File "input&gt;", line 11, in module&gt;<br>AttributeError: 'Ejemplo' object has no attribute '__privado'
+					</p>
+				</div>
+			</div>
+			<p class="u-align-left u-hover-feature u-text u-text-body-alt-color u-text-default u-text-14" data-animation-name="customAnimationIn" data-animation-duration="1000">Este mecanismo se basa en que los nombres que comienzen con un doble guión bajo se renombran para incluir<br>el nombre de la clase (característica que se conoce con el nombre de name mangling). Esto implica que el<br>método o atributo no es realmente privado, y podemos acceder a él mediante una pequeña trampa:
+			</p>
+			<div class="u-black u-container-style u-group u-group-2" data-animation-name="customAnimationIn" data-animation-duration="3000">
+				<div class="u-container-layout u-valign-bottom u-container-layout-2">
+					<h3 class="u-hover-feature u-text u-text-default u-text-15" data-animation-name="customAnimationIn" data-animation-duration="3250">Código</h3>
+					<p class="u-hover-feature u-text u-text-default u-text-16" data-animation-name="customAnimationIn" data-animation-duration="3250">Definir una clase con métodos públicos y privados.</p>
+					<p class="u-hover-feature u-text u-text-default u-text-17" data-animation-name="customAnimationIn" data-animation-duration="3250">class&nbsp;Ejemplo:<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;def&nbsp;publico(self):<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;print("Publico")<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;def__privado(self):<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;print("Privado")<br>ej =&nbsp;Ejemplo()<br>ej.publico()<br>ej._Ejemplo__privado()<br>
+					</p>
+					<h3 class="u-hover-feature u-text u-text-default u-text-18" data-animation-name="customAnimationIn" data-animation-duration="3250">Resultado</h3>
+					<p class="u-hover-feature u-text u-text-default u-text-19" data-animation-name="customAnimationIn" data-animation-duration="3250">Publico<br>Privado
+					</p>
+				</div>
+			</div>
+			<p class="u-align-left u-hover-feature u-text u-text-body-alt-color u-text-default u-text-20" data-animation-name="customAnimationIn" data-animation-duration="1000">En ocasiones también puede suceder que queremos permitir el acceso a algún atributo de nuestro objeto, pero que este<br>se produzca de forma controlada. Para esto podemos escribir métodos cuyo único cometido sea este, métodos que normalmente, por convención, tienen nombres como <span style="font-weight: 700;">getVariable</span> y <span style="font-weight: 700;">setVariable</span>; de ahí que se conozcan también con el nombre de <span style="font-weight: 700;">getters</span> y <span style="font-weight: 700;">setters</span>.
+			</p>
+			<div class="u-black u-container-style u-group u-group-3" data-animation-name="flipIn" data-animation-duration="3250" data-animation-direction="X">
+				<div class="u-container-layout u-valign-bottom u-container-layout-3">
+					<h3 class="u-hover-feature u-text u-text-default u-text-21" data-animation-name="customAnimationIn" data-animation-duration="3250">Código</h3>
+					<p class="u-hover-feature u-text u-text-22" data-animation-name="customAnimationIn" data-animation-duration="3250">Definir una clase con sus atributos privados y sus métodos getters y setters.</p>
+					<p class="u-hover-feature u-text u-text-23" data-animation-name="customAnimationIn" data-animation-duration="3250">class&nbsp;Fecha():<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;def __init__(self):<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;self.__dia =&nbsp;1<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;def&nbsp;getDia(self):<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;return&nbsp;self.__dia<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;def&nbsp;setDia(self, dia):<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;if&nbsp;dia &gt;&nbsp;0&nbsp;and&nbsp;dia &lt;&nbsp;31:<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; self.__dia = dia<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;else:<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; print("Error")<br>
+						<br>mi_fecha =&nbsp;Fecha()<br>mi_fecha.setDia(33)<br>mi_fecha.__dia=&nbsp;30<br>print(mi_fecha.getDia())<br>
+					</p>
+					<h3 class="u-hover-feature u-text u-text-24" data-animation-name="customAnimationIn" data-animation-duration="3250">Result<span style="font-weight: 700;"></span>ado
+                    </h3>
+					<p class="u-hover-feature u-text u-text-default u-text-25" data-animation-name="customAnimationIn" data-animation-duration="3250">Error<br>1
+					</p>
+				</div>
+			</div>
+			<p class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-26" data-animation-name="customAnimationIn" data-animation-duration="1000">Esto se podría simplificar mediante propiedades, que abstraen al usuario del hecho de que se está utilizando métodos accesores para obtener y modificar los valores del atributo:</p>
+			<div class="u-black u-container-style u-group u-group-4">
+				<div class="u-container-layout u-valign-bottom u-container-layout-4">
+					<h3 class="u-hover-feature u-text u-text-default u-text-27" data-animation-name="customAnimationIn" data-animation-duration="3250">Código</h3>
+					<p class="u-hover-feature u-text u-text-28" data-animation-name="customAnimationIn" data-animation-duration="3250">Definir una clase con sus atributos privados y sus métodos getters y setters.</p>
+					<p class="u-hover-feature u-text u-text-29" data-animation-name="customAnimationIn" data-animation-duration="3250">class&nbsp;Fecha():<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;def __init__(self):<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;self.__dia =&nbsp;1<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;def&nbsp;getDia(self):<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;return&nbsp;self.__dia<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;def&nbsp;setDia(self, dia):<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;if&nbsp;dia &gt;&nbsp;0&nbsp;and&nbsp;dia &lt;&nbsp;31:<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; self.__dia = dia<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;else:<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; print("Error")<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;dia =&nbsp;property(getDia, setDia)<br>mi_fecha =&nbsp;Fecha()<br>mi_fecha.dia =&nbsp;30<br>print(mi_fecha.dia)<br>
+					</p>
+					<h3 class="u-hover-feature u-text u-text-30" data-animation-name="customAnimationIn" data-animation-duration="3250">Resultado</h3>
+					<p class="u-hover-feature u-text u-text-default u-text-31" data-animation-name="customAnimationIn" data-animation-duration="3250">30</p>
+				</div>
+			</div>
+			<h3 class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-32" data-animation-name="customAnimationIn" data-animation-duration="1000">Polimorfismo</h3>
+			<p class="u-align-left u-hover-feature u-text u-text-body-alt-color u-text-default u-text-33" data-animation-name="customAnimationIn" data-animation-duration="1000">En programación orientada a objetos&nbsp;se <span style="font-weight: 700;">denomina polimorfismo a la capacidad que tienen los objetos<br>de una clase de responder al mismo mensaje o evento en función de los parámetros utilizados durante su invocación
+          </span>. Un objeto polimórfico es una entidad que puede contener valores de diferentes tipos durante la ejecución del programa. Esto se puede conseguir a través de la herencia: un objeto de una clase derivada es al mismo tiempo un objeto de la clase padre, de forma que allí donde se requiere un objeto de la clase padre también se puede utilizar uno de la clase hija.
+			</p>
+			<p class="u-align-left u-hover-feature u-text u-text-body-alt-color u-text-default u-text-34" data-animation-name="customAnimationIn" data-animation-duration="1000">Python, al ser de tipado dinámico, no impone restricciones a los tipos que se le pueden pasar a una función, por ejemplo,<br>más allá de que el objeto se comporte como se espera: si se va a llamar a un método&nbsp;<span style="font-weight: 700;">f()</span>&nbsp;del objeto pasado<br>como parámetro, por ejemplo, evidentemente el objeto tendrá que contar con ese método.<br>En ocasiones también se utiliza el término polimorfismo para referirse a la sobrecarga de métodos, término que se define como la capacidad del lenguaje de determinar qué método ejecutar de entre varios métodos con igual nombre según el tipo o número de los parámetros que se le pasa. En Python no existe sobrecarga de métodos (el último método sobreescribiría la implementación de los anteriores), aunque se puede conseguir un comportamiento similiar recurriendo a funciones con valores por defecto para los parámetros o a la sintaxis&nbsp;<span style="font-weight: 700;">*params</span>&nbsp;o&nbsp;<span style="font-weight: 700;">**params</span>, o bien usando decoradores.
+			</p>
+			<h3 class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-35" data-animation-name="customAnimationIn" data-animation-duration="1000">Sobrecarga de Métodos</h3>
+			<p class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-36" data-animation-name="customAnimationIn" data-animation-duration="1000">La sobrecarga de métodos es también conocida por Overriding Methods, le permite sustituir un método proveniente de la Clase Base, en la Clase Derivada debe definir un método con la misma forma (es decir, mismo nombre de método y mismo número de párametros que como está definido en la Clase Base).</p>
+			<div class="u-black u-container-style u-group u-group-5" data-animation-name="bounceIn" data-animation-duration="3000" data-animation-direction="">
+				<div class="u-container-layout u-valign-bottom u-container-layout-5">
+					<h3 class="u-hover-feature u-text u-text-default u-text-37" data-animation-name="customAnimationIn" data-animation-duration="3250">Código</h3>
+					<p class="u-hover-feature u-text u-text-38" data-animation-name="customAnimationIn" data-animation-duration="3250">Definir una clase con sus métodos y atributos implementando sobrecarga de métodos.</p>
+					<p class="u-hover-feature u-text u-text-39" data-animation-name="customAnimationIn" data-animation-duration="3250">class&nbsp;Persona():<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;def__init__(self, cedula):<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;self.cedula = cedula<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;def&nbsp;mensaje(self):<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;print("Mensaje desde la clase Persona")<br>class&nbsp;Obrero(Persona):<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;def__init__(self, cedula):<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Persona.__init__(self, cedula)&nbsp;self.__especialista =&nbsp;1<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;def&nbsp;mensanje(self):&nbsp;<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; print("Mensaje desde la clase Obrero")&nbsp; &nbsp;<br>obrero_planta =&nbsp;Obrero(12345)<br>obrero_planta.mensaje()<br>
+					</p>
+					<h3 class="u-hover-feature u-text u-text-40" data-animation-name="customAnimationIn" data-animation-duration="3250">Resultado</h3>
+					<p class="u-hover-feature u-text u-text-default u-text-41" data-animation-name="customAnimationIn" data-animation-duration="3250">Mensaje desde la clase Obrero</p>
+				</div>
+			</div>
+			<p class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-42" data-animation-name="customAnimationIn" data-animation-duration="1000">Lo que se logra definiendo el método&nbsp;<span style="font-weight: 700;">mensaje()</span>&nbsp;en la Clase Derivada&nbsp;<span style="font-weight: 700;">(Obrero)</span>&nbsp;se conoce como<br>Método Overriding haciendo que cuando se crea el objeto (en este caso&nbsp;<span style="font-weight: 700;">obrero_planta</span>) y se llame al método<br>
+				<span style="font-weight: 700;">mensaje()&nbsp;</span>este será tomado de la propia clase y no de la Clase Base&nbsp;<span style="font-weight: 700;">Persona</span>.<br>Si comenta o borra el método&nbsp;<span style="font-weight: 700;">mensaje()</span>&nbsp;de la clase&nbsp;<span style="font-weight: 700;">Obrero</span>&nbsp;(Clase Derivada) y corre nuevamente<br>el código, el método llamado será el&nbsp;<span style="font-weight: 700;">mensaje()</span>&nbsp;de la Clase Base&nbsp;<span style="font-weight: 700;">Persona</span>.
+			</p>
+			<h3 class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-43" data-animation-name="customAnimationIn" data-animation-duration="1000">Sobrecarga de Operadores</h3>
+			<p class="u-align-left u-hover-feature u-text u-text-body-alt-color u-text-default u-text-44" data-animation-name="customAnimationIn" data-animation-duration="1000">La sobrecarga de operadores es también conocida por Overloading Operators, trata básicamente de lo mismo<br>que la sobrecarga de métodos pero pertenece en esencia al ámbito de los operadores aritméticos, binarios,<br>de comparación y lógicos.
+			</p>
+			<div class="u-black u-container-style u-group u-group-6" data-animation-name="customAnimationIn" data-animation-duration="3250" data-animation-direction="">
+				<div class="u-container-layout u-valign-bottom u-container-layout-6">
+					<h3 class="u-hover-feature u-text u-text-default u-text-45" data-animation-name="customAnimationIn" data-animation-duration="3250">Código</h3>
+					<p class="u-hover-feature u-text u-text-46" data-animation-name="customAnimationIn" data-animation-duration="3250">Definir una clase con sus métodos y atributos implementando sobrecarga de operadores.</p>
+					<p class="u-hover-feature u-text u-text-47" data-animation-name="customAnimationIn" data-animation-duration="3250">class&nbsp;Punto:<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;def__init__(self, x =&nbsp;0, y =&nbsp;0):<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;self.x = x<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;self.y = y<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;def__add__(self, other):<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; x =&nbsp;self.x + other.x<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; y =&nbsp;self.y + other.y<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; return&nbsp;x, y<br>punto1 =&nbsp;Punto(4,6)<br>punto2 =&nbsp;Punto(1,-2)<br>
+						<br>print(punto1 + punto2)<br>
+					</p>
+					<h3 class="u-hover-feature u-text u-text-48" data-animation-name="customAnimationIn" data-animation-duration="3250">Resultado</h3>
+					<p class="u-hover-feature u-text u-text-default u-text-49" data-animation-name="customAnimationIn" data-animation-duration="3250">(5, 4)</p>
+				</div>
+			</div>
+			<a href="https://nicepage.com/k/auction-website-templates" class="u-border-none u-btn u-btn-round u-button-style u-hover-palette-4-base u-palette-2-base u-radius-2 u-text-black u-btn-1" data-animation-name="customAnimationIn" data-animation-duration="3250"><span class="u-file-icon u-icon"><img src="{% static 'img/545680.png' %}" alt=""></span>&nbsp;Anterior
+        </a>
+		</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	</section>
+
+
+	<footer class="u-align-center u-clearfix u-footer u-grey-80 u-footer" id="sec-b796">
+		<div class="u-clearfix u-sheet u-sheet-1">
+			<p class="u-small-text u-text u-text-variant u-text-1">Sample text. Click to select the text box. Click again or double click to start editing the text.</p>
+		</div>
+	</footer>
+	<section class="u-backlink u-clearfix u-grey-80">
+		<a class="u-link" href="https://nicepage.com/website-templates" target="_blank">
+			<span>Website Templates</span>
+		</a>
+		<p class="u-text">
+			<span>created with</span>
+		</p>
+		<a class="u-link" href="" target="_blank">
+			<span>Website Builder Software</span>
+		</a>.
+	</section><span style="height: 64px; width: 64px; margin-left: 0px; margin-right: auto; margin-top: 0px; background-image: none; right: 20px; bottom: 20px; padding: 15px; box-shadow: 2px -2px 8px 0px rgba(128,128,128,1);" class="u-back-to-top u-icon u-icon-circle u-opacity u-opacity-85 u-white" data-href="#">
+        <svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 551.13 551.13"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-1d98"></use></svg>
+        <svg class="u-svg-content" enable-background="new 0 0 551.13 551.13" viewBox="0 0 551.13 551.13" xmlns="http://www.w3.org/2000/svg" id="svg-1d98"><path d="m275.565 189.451 223.897 223.897h51.668l-275.565-275.565-275.565 275.565h51.668z"></path></svg>
+    </span>
+
+</body>
+</html>

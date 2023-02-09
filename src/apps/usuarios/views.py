@@ -100,12 +100,14 @@ def diccionarios(request):
 
 @login_required(login_url='autenticacion')
 def manejo_de_errores(request): 
-	template_name = "usuarios/manejoErrores.html"
+	template_name = "usuarios/Manejo-de-Errores/manejo-de-errores.html"
+	#Anterior ruta -->  "usuarios/manejoErrores.html"
 	ctx = {}
 	return render(request, template_name, ctx)
 
 @login_required(login_url='autenticacion')
 def poo(request): 
-	template_name = "usuarios/poo.html"
+	template_name = "usuarios/POO/poo-python.html"
+	#Anterior ruta -->  "usuarios/poo.html"
 	ctx = {}
 	return render(request, template_name, ctx)
