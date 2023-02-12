@@ -42,3 +42,14 @@ def resultado_pregunta(request, pregunta_respondida_pk):
         'respondida':respondida
     }
     return render(request,'test/resultados.html', ctx)
+
+#Esto es una nueva funcionalidad
+def tablero(request): 
+    template_name = 'test/tablero.html'
+    total_usuarios_quiz = QuizUsuario.objects.order_by('-puntaje_total')[:10]
+    contador = total_usuarios_quiz.count()
+    ctx = {
+        'usuario_quiz':total_usuarios_quiz,
+        'contar_user':contador,
+    }
+    return render(request, template_name, ctx)

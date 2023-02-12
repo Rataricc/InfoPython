@@ -30,7 +30,7 @@ class ElegirRespuesta(models.Model):
 
 class QuizUsuario(models.Model): 
     usuario = models.ForeignKey(Usuario, on_delete=models.CASCADE)
-    puntaje_total = models.DecimalField(verbose_name='Puntaje Total', default=0, decimal_places=2, max_digits=10)
+    puntaje_total = models.DecimalField(verbose_name='Puntaje Total', default=0, decimal_places=2, max_digits=10, null=True)
 
     def crear_intentos(self, pregunta): 
         intentos = PreguntasRespondidas(pregunta=pregunta, quizUser=self)
@@ -65,6 +65,7 @@ class QuizUsuario(models.Model):
 
     class Meta: 
         db_table = 'quizusuario'
+    
 
 
 
