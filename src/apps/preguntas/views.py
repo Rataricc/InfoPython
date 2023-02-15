@@ -44,6 +44,7 @@ def resultado_pregunta(request, pregunta_respondida_pk):
     return render(request,'test/resultados.html', ctx)
 
 #Esto es una nueva funcionalidad
+@login_required(login_url='autenticacion')
 def tablero(request): 
     template_name = 'test/tablero.html'
     total_usuarios_quiz = QuizUsuario.objects.order_by('-puntaje_total')[:10]
