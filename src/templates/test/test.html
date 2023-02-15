@@ -1,5 +1,5 @@
-{% extends "base/base.html" %}
 {% load static %}
+{% block test %}
 
     <!DOCTYPE html>
     <html style="font-size: 16px;" lang="es">
@@ -8,15 +8,16 @@
         <meta charset="utf-8">
         <meta name="keywords" content="">
         <meta name="description" content="">
-        <title>formulario</title>
+        <title>Preguntas</title>
         <link rel="stylesheet" href="../../static/css/nicepage02.css" media="screen">
-        <link rel="stylesheet" href="../../static/css/poo-python/POO.css" media="screen">
+        <link rel="stylesheet" href="../../static/css/testhtml/test.css" media="screen">
         <script class="u-script" type="text/javascript" src="{% static 'js/jquery02.js' %}" defer=""></script>
         <script class="u-script" type="text/javascript" src="{% static 'js/nicepage02.js' %}" defer=""></script>
         <link rel="shortcut icon" href="../../static/img/ico/parablog6.jpg">
         <meta name="generator" content="Nicepage 5.4.4, nicepage.com">
         <meta name="referrer" content="origin">
         <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
 
         <script type="application/ld+json">
@@ -28,14 +29,19 @@
             }
         </script>
         <meta name="theme-color" content="#232b79">
-        <meta property="og:title" content="formulario">
+        <meta property="og:title" content="Preguntas">
         <meta property="og:type" content="website">
         <meta data-intl-tel-input-cdn-path="intlTelInput/">
+        <!--<meta property="og:title" content="formulario">-->
     </head>
     <body class="u-body u-overlap u-xl-mode" data-lang="es">
         <header class="u-clearfix u-header u-sticky u-header" id="sec-a184">
             <div class="u-clearfix u-sheet u-sheet-1">
-                <a href="#" class="u-active-black u-border-1 u-border-active-black u-border-grey-30 u-border-hover-black u-btn u-btn-round u-button-style u-hover-palette-4-base u-radius-12 u-text-active-white u-text-hover-white u-white u-btn-1">Más</a>
+                {% if not user.is_authenticated %}
+                    <a href="{% url 'usuarios:registro'%}" class="u-active-black u-border-1 u-border-active-black u-border-grey-30 u-border-hover-black u-btn u-btn-round u-button-style u-hover-palette-4-base u-radius-12 u-text-active-white u-text-hover-white u-white u-btn-1">Registrarse</a>
+                {% else %}
+                    <a href="{% url 'logout' %}" class="u-active-black u-border-1 u-border-active-black u-border-grey-30 u-border-hover-black u-btn u-btn-round u-button-style u-hover-palette-4-base u-radius-12 u-text-active-white u-text-hover-white u-white u-btn-1">Cerrar sesion</a>
+                {% endif %}
                 <nav class="u-menu u-menu-dropdown u-offcanvas u-menu-1" data-responsive-from="XXL">
                     <div class="menu-collapse" style="font-size: 1rem; letter-spacing: 0px;">
                         <a class="u-button-style u-custom-left-right-menu-spacing u-custom-padding-bottom u-custom-text-active-color u-custom-text-color u-custom-text-hover-color u-custom-top-bottom-menu-spacing u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="#">
@@ -46,10 +52,13 @@
                     </div>
                     <div class="u-custom-menu u-nav-container">
                         <ul class="u-nav u-spacing-20 u-unstyled u-nav-1">
-                            <li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-white u-text-body-alt-color u-text-hover-palette-4-base" href="Inicio.html" style="padding: 16px 28px;">Inicio</a>
-                            </li>
-                            <li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-white u-text-body-alt-color u-text-hover-palette-4-base" href="#" style="padding: 16px 28px;">Contacto</a>
-                            </li>
+                            {% if not user.is_authenticated %}
+                                <li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-white u-text-body-alt-color u-text-hover-palette-4-base" href="{% url 'login' %}" style="padding: 16px 28px;">Iniciar Sesion</a>
+                                </li>
+                            {% else %}
+                                <li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-white u-text-body-alt-color u-text-hover-palette-4-base" href="#" style="padding: 16px 28px;">Hola {{user}} espero que disfutes del contenido</a>
+                                </li>
+                            {% endif %}
                         </ul>
                     </div>
                     <div class="u-custom-menu u-nav-container-collapse">
@@ -57,40 +66,54 @@
                             <div class="u-inner-container-layout u-sidenav-overflow">
                                 <div class="u-menu-close"></div>
                                 <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-2">
-                                    <li class="u-nav-item"><a class="u-button-style u-nav-link" href="Inicio.html" style="padding: 10px 20px;">Inicio</a>
-                                    </li>
-                                    <li class="u-nav-item"><a class="u-button-style u-nav-link" href="#" style="padding: 10px 20px;">Contacto</a>
-                                    </li>
-                                </ul>
+                                    <li class="u-nav-item"><a class="u-button-style u-nav-link" href="{% url 'usuarios:intro' %}" style="padding: 10px 20px;">Introducción a Python</a></li>
+                                    <li class="u-nav-item"><a class="u-button-style u-nav-link" href="{% url 'usuarios:entorno' %}" style="padding: 10px 20px;">Entorno de Desarollo</a></li>
+                                    <li class="u-nav-item"><a class="u-button-style u-nav-link" href="{% url 'usuarios:variablesDatos' %}" style="padding: 10px 20px;">Manejo de Variables y Tipos de Datos</a></li>
+                                    <li class="u-nav-item"><a class="u-button-style u-nav-link" href="{% url 'usuarios:manejo' %}" style="padding: 10px 20px;">Manejo de Variables</a></li>
+                                    <li class="u-nav-item"><a class="u-button-style u-nav-link" href="{% url 'usuarios:condicionales' %}" style="padding: 10px 20px;">Condicionales</a></li>
+                                    <li class="u-nav-item"><a class="u-button-style u-nav-link" href="{% url 'usuarios:repetitivas' %}" style="padding: 10px 20px;">Repetitivas</a></li>
+                                    <li class="u-nav-item"><a class="u-button-style u-nav-link" href="{% url 'usuarios:funciones' %}" style="padding: 10px 20px;">Funciones</a></li>
+                                    <li class="u-nav-item"><a class="u-button-style u-nav-link" href="{% url 'usuarios:listas' %}" style="padding: 10px 20px;">Listas</a></li>
+                                    <li class="u-nav-item"><a class="u-button-style u-nav-link" href="{% url 'usuarios:tuplas' %}" style="padding: 10px 20px;">Tuplas</a></li>
+                                    <li class="u-nav-item"><a class="u-button-style u-nav-link" href="{% url 'usuarios:diccionarios' %}" style="padding: 10px 20px;">Diccionarios</a></li>
+                                    <li class="u-nav-item"><a class="u-button-style u-nav-link" href="{% url 'usuarios:errores' %}" style="padding: 10px 20px;">Manejo de Errores</a></li>
+                                    <li class="u-nav-item"><a class="u-button-style u-nav-link" href="{% url 'usuarios:poo' %}" style="padding: 10px 20px;">POO</a></li>
+                                </ul>   
                             </div>
                         </div>
                         <div class="u-black u-menu-overlay u-opacity u-opacity-70"></div>
                     </div>
                 </nav>
-                <a href="https://nicepage.com" class="u-image u-logo u-image-1" data-image-width="782" data-image-height="383">
-                    <img class="u-logo-image u-logo-image-1" src="images/aInfo6.jpg">
+                <a href="#" class="u-image u-logo u-image-1" data-image-width="782" data-image-height="383">
+                    <img class="u-logo-image u-logo-image-1" src="{% static 'img/masimg/aInfo6.jpg' %}">
                 </a>
             </div>
         </header>
 
 
-    {% block test %}
+     <!--aca iba de prueba en block -->
         <section class="u-clearfix u-image u-section-1" id="sec-678a" data-image-width="1782" data-image-height="1080">
             
             <div class="u-clearfix u-sheet u-sheet-1">
                 {% if pregunta is None %}
                     <h3 class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-1" data-animation-name="customAnimationIn" data-animation-duration="1000">Ya haz respondido todas las preguntas</h3>
+                    <br>
+                    <center>
+                        <a href="{% url 'usuarios:poo' %}" class="u-border-none u-btn u-btn-round u-button-style u-hover-palette-4-base u-palette-2-base u-radius-2 u-text-black u-btn-1" data-animation-name="customAnimationIn" data-animation-duration="3250"><span class="u-file-icon u-icon"><img src="{% static 'img/545680.png' %}" alt=""></span>&nbsp;Anterior</a>
+                        <a href="{% url 'usuarios:intro' %}" class="u-border-none u-btn u-btn-round u-button-style u-hover-palette-4-base u-palette-2-base u-radius-2 u-btn-2" data-animation-name="customAnimationIn" data-animation-duration="3250" data-animation-direction="">Siguiente&nbsp;<span class="u-icon u-text-black"><svg class="u-svg-content" viewBox="0 0 512 512" x="0px" y="0px" style="width: 1em; height: 1em;"><path d="M506.134,241.843c-0.006-0.006-0.011-0.013-0.018-0.019l-104.504-104c-7.829-7.791-20.492-7.762-28.285,0.068 c-7.792,7.829-7.762,20.492,0.067,28.284L443.558,236H20c-11.046,0-20,8.954-20,20c0,11.046,8.954,20,20,20h423.557 l-70.162,69.824c-7.829,7.792-7.859,20.455-0.067,28.284c7.793,7.831,20.457,7.858,28.285,0.068l104.504-104 c0.006-.006,0.011-.013,0.018-.019C513.968,262.339,513.943,249.635,506.134,241.843z"></path></svg><img></span></a>
+                        <a href="{% url 'prueba' %}" class="u-border-none u-btn u-btn-round u-button-style u-hover-palette-4-base u-palette-2-base u-radius-2 u-btn-2" data-animation-name="customAnimationIn" data-animation-duration="3250" data-animation-direction="">Inicio&nbsp;</a>
+                    </center>
                 {% else %}    
                     <div class="u-black u-container-style u-group u-opacity u-opacity-80 u-group-1" data-animation-name="customAnimationIn" data-animation-duration="3250">
                         <div class="u-container-layout u-container-layout-1">
                             <br><br><br>
                             <h3 class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-2" data-animation-name="customAnimationIn" data-animation-duration="1000">{{pregunta.texto}}</h3>
                             <br><br><br>
-                            <div class="u-black u-form u-form-1">
-                                <form method="POST" class="u-clearfix u-form-spacing-10 u-form-vertical u-inner-form" source="email" name="form" style="padding: 10px;">
+                            <!--<div class="u-black u-form u-form-1">-->
+                                <form method="POST" class="form">
                                     {% csrf_token %}
                                     <div class="u-form-group u-form-name">
-                                        <input type="hidden" name="pregunta_pk" value="{{pregunta.pk}}" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" required="">
+                                        <input type="hidden" name="pregunta_pk" value="{{pregunta.pk}}" >
                                         {% for opciones in pregunta.opciones.all %}
                                             <p>
                                                 <input class="form-check-input" type="radio" name="respuesta_pk" value="{{opciones.pk}}" id="choice-{{forloop.counter}}">
@@ -100,7 +123,10 @@
                                             </p>
                                         {% endfor %}
                                         <button type="submit" class="btn btn-success">Enviar</button>
-                                        <a href="{% url 'preguntas:test' %}"><button class="btn btn-success">Continuar con la siguiente pregunta</button></a>
+                                        <!--de prueba-->
+                                        
+                                        <!---->
+                                        <!--<button type="submit" class="btn btn-success">Enviar</button>-->
                                         <!--<div class="u-align-left u-form-group u-form-submit">
                                             <a href="#" class="u-btn u-btn-submit u-button-style">Enviar</a>
                                             <input type="submit" value="submit" class="u-form-control-hidden">
@@ -123,7 +149,7 @@
                                     <input type="hidden" value="" name="recaptchaResponse">
                                     <input type="hidden" name="formServices" value="71c6f8e0bba5002a02cb9b8a332c3a20">-->
                                 </form>
-                            </div>
+                            <!--</div>-->
                         </div>
                     </div>
                 {% endif %}

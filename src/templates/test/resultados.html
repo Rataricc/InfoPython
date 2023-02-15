@@ -1,23 +1,25 @@
-{% extends "base/base.html" %}
-
 {% block test %}
-
+    {% load static %}
+    <title>Resultado</title>
     <div class="container">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="shortcut icon" href="../../static/img/ico/parablog6.jpg">
+        
         <div class="jumbotron my-4">
-            <h3 class="text-info">{{respondida.pregunta.texto|safe}}</h3>
+            <h3 class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-1" data-animation-name="customAnimationIn" data-animation-duration="1000">{{respondida.pregunta.texto|safe}}</h3>
             <p>
                 <strong>Tu Respuesta es: </strong>
                 {{respondida.respuesta.texto|safe}}
             </p>
         {% if respondida.respuesta.correcta %}
-            <h4 class="text-success">!!Felicitaciones¡¡ tu respuesta es correcta</h4>
+            <h4 class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-1" data-animation-name="customAnimationIn" data-animation-duration="1000">!!Felicitaciones¡¡ tu respuesta es correcta</h4>
         {% else %}
-            <h4 class="text-danger">Tu Respuesta es Incorrecta</h4>
+            <h4 class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-1" data-animation-name="customAnimationIn" data-animation-duration="1000">Tu Respuesta es Incorrecta</h4>
 
             {% for respuesta in respondida.pregunta.opciones.all %}
 
                 {% if respuesta.correcta %}
-                    <h4>La respuesta correcta es: <span class="text-success">{{respuesta}}</span></h4>
+                    <h4>La respuesta correcta es: <span class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-1" data-animation-name="customAnimationIn" data-animation-duration="1000">{{respuesta}}</span></h4>
                 {% endif %}
                     
             {% endfor %}
@@ -26,6 +28,6 @@
 
         <a href="{% url 'preguntas:test' %}"><button class="btn btn-success">Continuar con la siguiente pregunta</button></a>
         </div>
-    </div>
+   </div>
 
-{% endblock %}
+{% endblock test %}
