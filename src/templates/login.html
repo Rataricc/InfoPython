@@ -1,6 +1,9 @@
-{% extends "base/base.html" %}
-
+{% extends "base/info-python.html" %}
+<!--extends base/base.html-->
+{% load socialaccount %}
+{% providers_media_js %}
 {% block contenido %}
+
 	<center>
 		<h2>Iniciar Sesion</h2>
 	</center>
@@ -26,7 +29,8 @@
 									<center>
 										<button type="submit" class="btn btn-primary">Iniciar Sesion</button>
 										<a class="btn btn-info" href="{% url 'usuarios:registro' %}">Registrarse</a>
-										<a class="btn btn-danger" href="{% url 'principal' %}">Cancelar</a>	
+										<a class="btn btn-danger" href="{% url 'principal' %}">Cancelar</a> <br><br>
+										<a class="btn btn-danger" href="{% provider_login_url 'google' %}">Iniciar Sesion con Google</a>
 									</center>
 								</div>
 							</div>

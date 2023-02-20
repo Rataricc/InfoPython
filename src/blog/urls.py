@@ -22,14 +22,17 @@ from blog.views             import Error404View
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',views.inicio, name='principal'),
+    #path('',views.inicio, name='principal'), # Cambio de url, esta queda inhabilitada. 
     path('login/', auth_views.LoginView.as_view(template_name="login.html"), name="login"),
     path('logout/', auth_views.logout_then_login, name="logout"),
     path('Usuarios/', include('apps.usuarios.urls')),
     path('autenticacion/', views.usuario_autenticado, name='autenticacion'),
     path('Preguntas/', include('apps.preguntas.urls')),
+
+    path('accounts/', include('allauth.urls')),
     # url de prueba
-    path('templateNuevo/', views.template_info_python, name='prueba'),  
+    path('', views.template_info_python, name='principal'),  
+    #path('templateNuevo/', views.template_info_python, name='prueba'), asi era antes la url de arriba.
 ]
 
 handler404 = Error404View.as_view()

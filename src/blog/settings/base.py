@@ -45,6 +45,13 @@ DJANGO_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    'django.contrib.sites',
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
+    'allauth.socialaccount.providers.google',
+
 ]
 # Aplicaciones que son creadas por mi en dicho sistema o software.
 LOCAL_APPS = [
@@ -128,6 +135,14 @@ USE_TZ = True
 STATIC_URL = 'static/'
 
 STATICFILES_DIRS = os.path.join(os.path.dirname(BASE_DIR), 'static'),
+
+AUTHENTICATION_BACKENDS = [
+    'django.contrib.auth.backends.ModelBackend',
+    'allauth.account.auth_backends.AuthenticationBackend',
+]
+
+SITE_ID = 1 
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
