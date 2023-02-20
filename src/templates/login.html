@@ -2,6 +2,7 @@
 <!--extends base/base.html-->
 {% load socialaccount %}
 {% providers_media_js %}
+{% load i18n %}
 {% block contenido %}
 
 	<center>
@@ -30,7 +31,8 @@
 										<button type="submit" class="btn btn-primary">Iniciar Sesion</button>
 										<a class="btn btn-info" href="{% url 'usuarios:registro' %}">Registrarse</a>
 										<a class="btn btn-danger" href="{% url 'principal' %}">Cancelar</a> <br><br>
-										<a class="btn btn-danger" href="{% provider_login_url 'google' %}">Iniciar Sesion con Google</a>
+										<a class="btn btn-danger" aria-hidden="true" href="{% provider_login_url "google" %}">Iniciar Sesion con Google</a>
+
 									</center>
 								</div>
 							</div>
