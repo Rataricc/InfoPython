@@ -1,4 +1,7 @@
 {% load static %}
+{% load socialaccount %}
+{% load i18n %}
+{% providers_media_js %}
 <!DOCTYPE html>
 <html style="font-size: 16px;" lang="es">
 <head>
@@ -7,16 +10,15 @@
 	<meta name="keywords" content="Info-Python, Introducción a Python, Entorno de Desarrollo, Manejo de Variables y Tipos de Datos, Manejo de Variables, Condicionales, Repetitivas, Funciones en Python, Listas en Python, Tuplas, Diccionarios en Python, Manejo de Errores, Programacion Orientada a Objetos (POO)">
 	<meta name="description" content="">
 	<title>Info-Python 2.0</title>
+	<link rel="shortcut icon" href="../../static/img/ico/parablog6.jpg"><!--Ver tambien tema del icono de la pagina no carga-->
 	<link rel="stylesheet" href="../../static/css/nicepage.css" media="screen">
-	<link rel="stylesheet" href="../../static/css/info-python/index.css" media="screen">
+	<link rel="stylesheet" href="../../static/css/inicio/inicio.css" media="screen"><!--direccion anterior ../../static/css/info-python/index.css-->
 	<script class="u-script" type="text/javascript" src="{% static 'js/jquery.js' %}" defer=""></script>
 	<script class="u-script" type="text/javascript" src="{% static 'js/nicepage.js' %}" defer=""></script>
-	<meta name="generator" content="Nicepage 5.0.7, nicepage.com">
+	<meta name="generator" content="Nicepage 5.5.0, nicepage.com">
 	<link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
-	<link rel="shortcut icon" href="../../static/img/ico/parablog6.jpg">
 
-	<!--Link boostrap-->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
 
 	<script type="application/ld+json">
 		{
@@ -27,11 +29,12 @@
 		}
 	</script>
 	<meta name="theme-color" content="#232b79">
-	<meta property="og:title" content="Inicio">
+	<meta property="og:title" content="Info-Python 2.0">
 	<meta property="og:type" content="website">
+	<meta data-intl-tel-input-cdn-path="intlTelInput/">
 </head>
-<body data-home-page="Inicio.html" data-home-page-title="Inicio" class="u-body u-overlap u-overlap-contrast u-overlap-transparent u-xl-mode" data-lang="es">
-	<header class="u-clearfix u-header u-sticky u-header" id="sec-a184">
+<body class="u-body u-overlap u-xl-mode" data-lang="es">
+	<header class="u-clearfix u-header u-sticky" id="sec-a184">
 		<div class="u-clearfix u-sheet u-sheet-1">
 			{% if not user.is_authenticated %}
                 <a href="{% url 'usuarios:registro'%}" class="u-active-black u-border-1 u-border-active-black u-border-grey-30 u-border-hover-black u-btn u-btn-round u-button-style u-hover-palette-4-base u-radius-12 u-text-active-white u-text-hover-white u-white u-btn-1">Registrarse</a>
@@ -43,7 +46,7 @@
 					<a class="u-button-style u-custom-left-right-menu-spacing u-custom-padding-bottom u-custom-text-active-color u-custom-text-color u-custom-text-hover-color u-custom-top-bottom-menu-spacing u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="#">
 						<svg class="u-svg-link" viewBox="0 0 24 24"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#menu-hamburger"></use></svg>
 						<svg class="u-svg-content" version="1.1" id="menu-hamburger" viewBox="0 0 16 16" x="0px" y="0px" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g><rect y="1" width="16" height="2"></rect><rect y="7" width="16" height="2"></rect><rect y="13" width="16" height="2"></rect>
-                        </g></svg>
+						</g></svg>
 					</a>
 				</div>
 				<div class="u-custom-menu u-nav-container">
@@ -80,44 +83,488 @@
 					<div class="u-black u-menu-overlay u-opacity u-opacity-70"></div>
 				</div>
 			</nav>
-			<a href="#" class="u-image u-logo u-image-1" data-image-width="782" data-image-height="383">
+			<a href="{% url 'principal' %}" class="u-image u-logo u-image-1" data-image-width="782" data-image-height="383">
 				<img class="u-logo-image u-logo-image-1" src="{% static 'img/masimg/aInfo6.jpg'%}">
 			</a>
 		</div>
+		<style class="u-sticky-style" data-style-id="e144">
+			.u-sticky-fixed.u-sticky-e144, .u-body.u-sticky-fixed .u-sticky-e144 {
+			box-shadow: 2px -2px 8px 0px rgba(128,128,128,1) !important
+			}
+		</style>
 	</header>
-	<section class="u-align-left u-clearfix u-image u-shading u-section-1" src="" id="sec-23c1" data-image-width="1782" data-image-height="1080">
-		<h1 class="u-hover-feature u-text u-text-default u-title u-text-1" data-animation-name="customAnimationIn" data-animation-duration="3000" data-animation-direction="">Info-Python</h1>
-		{% if user.is_authenticated %}
-            <h3 class="u-text u-text-default u-text-2" data-animation-name="customAnimationIn" data-animation-duration="1250">Bienvenido a Info-Python {{user}}</h3>
-        {% else %}
-            <h3 class="u-text u-text-default u-text-2" data-animation-name="customAnimationIn" data-animation-duration="1250">Bienvenido a Info-Python</h3>
-        {% endif %}
-		<img class="u-image u-image-contain u-image-default u-image-1" src="{% static 'img/masimg/aInfo6.jpg'%}" alt="python" data-image-width="782" data-image-height="383" data-animation-name="customAnimationIn" data-animation-duration="1000" data-animation-direction="">
-		{% block registro %}
-            
-        {% endblock registro %}
-		<br>
-		{% block contenido %}
-
-		{% endblock contenido %}
-	</section>
-	<section class="u-clearfix u-image u-section-2" id="sec-fa9c" data-image-width="1782" data-image-height="1080">
+	<section class="u-clearfix u-image u-section-1" id="sec-512a" data-image-width="1782" data-image-height="1080">
 		<div class="u-clearfix u-sheet u-sheet-1">
-			<div class="u-clearfix u-expanded-width u-gutter-10 u-layout-wrap u-layout-wrap-1">
-				<div class="u-gutter-0 u-layout">
-					<div class="u-layout-row">
-						<div class="u-container-style u-layout-cell u-size-30 u-layout-cell-1">
-							<div class="u-container-layout u-container-layout-1">
-								<h2 class="u-align-center u-hover-feature u-text u-text-default u-text-palette-1-light-3 u-text-1" data-animation-name="flipIn" data-animation-duration="3000" data-animation-direction="X">Introducción a Python</h2>
-								<p class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-2" data-animation-name="customAnimationIn" data-animation-duration="3000">Hablemos sobre el lenguaje y sus principales características, las cuales lo diferencian de otros. Haciéndolo un lenguaje muy atractivo para quienes comienzan a programar y permitiendo un amplio desarrollo de aplicaciones de manera muy sencilla.</p>
-								<a href="{% url 'usuarios:intro'%}" class="u-border-none u-btn u-btn-round u-button-style u-hover-palette-4-base u-palette-2-base u-radius-50 u-btn-1" data-animation-name="" data-animation-duration="0" data-animation-direction="">Aprende más</a>
-							</div>
+			<h1 class="u-hover-feature u-text u-text-body-alt-color u-text-default u-text-1" data-animation-name="customAnimationIn" data-animation-duration="3250">Info-Python</h1>
+			<h3 class="u-hover-feature u-text u-text-body-alt-color u-text-default u-text-2" data-animation-name="customAnimationIn" data-animation-duration="3250">Bienvenido a Info-Python</h3>
+			<p class="u-hover-feature u-text u-text-body-alt-color u-text-default u-text-3" data-animation-name="customAnimationIn" data-animation-duration="3000">Este curso de programación de Python es una excelente oportunidad para que los usuarios aprendan los conceptos básicos de la programación y también se familiaricen con la sintaxis de Python. El curso está diseñado para todos los niveles de usuarios, desde principiantes hasta aquellos que quieren profundizar en Python. El curso se compone de un blog con contenido escrito y desafíos de programación para ayudar a los usuarios a comprender los conceptos y los ejercicios prácticos. Al finalizar el curso podra realizar un cuestionario para poder validar los conceptos dados en el curso, (No incluye certificacion,<span style="font-weight: 700;"> ya que el curso es completamente gratuito</span>).
+			</p>
+			<p class="u-hover-feature u-text u-text-body-alt-color u-text-default u-text-4" data-animation-name="customAnimationIn" data-animation-duration="3000">Inicie sesion para poder acceder a la informacion, es el unico requisito.</p>
+			<div class="u-list u-list-1">
+				<div class="u-repeater u-repeater-1">
+					<div class="u-container-style u-list-item u-repeater-item u-list-item-1">
+						<div class="u-container-layout u-similar-container u-container-layout-1">
+							<a href="{% provider_login_url "google" %}" class="u-border-2 u-border-white u-btn u-button-style u-custom-item u-none u-btn-1" data-animation-name="customAnimationIn" data-animation-duration="3000" data-animation-delay="0">iniciar sesion con&nbsp;&nbsp;<span class="u-file-icon u-icon u-icon-1" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction=""><img src="{% static 'img/179326.png' %}" alt="Google"></span>
+                </a>
 						</div>
-						<div class="u-align-center u-container-style u-effect-hover-zoom u-layout-cell u-size-30 u-layout-cell-2" data-image-width="1600" data-image-height="840" data-animation-name="flipIn" data-animation-duration="3000" data-animation-direction="X">
-							<div class="u-background-effect u-expanded">
-								<div class="u-background-effect-image u-expanded u-image u-image-1" data-image-width="1600" data-image-height="840"></div>
-							</div>
-							<div class="u-container-layout u-valign-middle u-container-layout-2" src=""></div>
+					</div>
+					<div class="u-container-style u-list-item u-repeater-item u-list-item-2">
+						<div class="u-container-layout u-similar-container u-container-layout-2">
+							<a href="{% provider_login_url "github" %}" class="u-border-2 u-border-white u-btn u-button-style u-custom-item u-none u-btn-2" data-animation-name="customAnimationIn" data-animation-duration="3000" data-animation-delay="0">iniciar sesion con&nbsp;&nbsp;<span class="u-file-icon u-icon u-text-white u-icon-2" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction=""><img src="{% static 'img/38401-789a6cd8.png' %}" alt="Github"></span>
+                </a>
+						</div>
+					</div>
+					<div class="u-container-style u-list-item u-repeater-item u-list-item-3">
+						<div class="u-container-layout u-similar-container u-container-layout-3">
+							<a href="{% provider_login_url "facebook" method="oauth2" %}" class="u-border-2 u-border-white u-btn u-button-style u-custom-item u-none u-btn-3" data-animation-name="customAnimationIn" data-animation-duration="3000" data-animation-delay="0">iniciar sesion con&nbsp;&nbsp;<span class="u-file-icon u-icon u-icon-3" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction=""><img src="{% static 'img/733547.png' %}" alt="Facebook"></span>
+                </a><!--Ver atenticacion de instagram y facebook despues developers.facebook.com-->
+						</div>
+					</div>
+					<div class="u-container-style u-list-item u-repeater-item u-list-item-4">
+						<div class="u-container-layout u-similar-container u-container-layout-4">
+							<a href="#" class="u-border-2 u-border-white u-btn u-button-style u-custom-item u-none u-btn-4" data-animation-name="customAnimationIn" data-animation-duration="3000" data-animation-delay="0">iniciar sesion con&nbsp;&nbsp;<span class="u-file-icon u-icon u-icon-4" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction=""><img src="{% static 'img/733579.png' %}" alt="Twitter"></span>
+                </a><!--Ver tambien al respecto sobre la API de twitter https://django-allauth.readthedocs.io/en/latest/providers.html#twitter-->
+						</div>
+					</div>
+					<div class="u-container-style u-list-item u-repeater-item u-list-item-5">
+						<div class="u-container-layout u-similar-container u-container-layout-5">
+							<a href="{% provider_login_url "instagram" %}" class="u-border-2 u-border-white u-btn u-button-style u-custom-item u-none u-btn-5" data-animation-name="customAnimationIn" data-animation-duration="3000" data-animation-delay="0">iniciar sesion con&nbsp;&nbsp;<span class="u-file-icon u-icon u-icon-5" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction=""><img src="{% static 'img/3955024.png' %}" alt="Instagram"></span>
+                </a><!--aca esta el link de inicio de sesion con instagram que tampoco funciona... creo que es por el tipo de metodo http y es https-->
+						</div>
+					</div>
+				</div>
+			</div>
+			<img class="u-image u-image-default u-opacity u-opacity-70 u-image-1" src="{% static 'img/fabedb81db4973b4d7e1c6df3cf8f4ea514c6f76add668efa6d1382b9837372d4ab89598760584aba0a919bc5c358b730d95fb56f651cec976df57_1280.jpg' %}" alt="educacion digital tecnologica:Python " data-image-width="1280" data-image-height="853" data-animation-name="customAnimationIn" data-animation-duration="3250" data-animation-direction="">
+			<p class="u-hover-feature u-text u-text-body-alt-color u-text-default u-text-5" data-animation-name="customAnimationIn" data-animation-duration="3000">No importa cuál sea su nivel de conocimiento sobre Python, este curso puede ayudarlo a ampliar su conocimiento y habilidades. El curso está diseñado para ayudar a los usuarios a desarrollar conocimientos en Python y convertirse en programadores con una base sólida y una mejor comprensión de la programación en Python.</p>
+		</div>
+
+
+
+
+
+	</section>
+	<section class="u-align-center u-clearfix u-image u-section-2" id="sec-3c4a" data-image-width="1782" data-image-height="1080">
+
+
+		<div class="u-clearfix u-sheet u-sheet-1">
+			<div class="u-expanded-width u-tab-links-align-center u-tabs u-tabs-1">
+				<ul class="u-spacing-10 u-tab-list u-unstyled" role="tablist">
+					<li class="u-tab-item" role="presentation">
+						<a class="active u-active-black u-border-6 u-border-active-black u-border-hover-black u-border-palette-1-dark-2 u-button-style u-radius-32 u-tab-link u-text-active-palette-2-base u-text-body-alt-color u-text-hover-white u-tab-link-1" id="link-tab-0da5" href="#tab-0da5" role="tab" aria-controls="tab-0da5" aria-selected="true">Introducción a Python</a>
+					</li>
+					<li class="u-tab-item" role="presentation">
+						<a class="u-active-black u-border-6 u-border-active-black u-border-hover-black u-border-palette-1-dark-2 u-button-style u-radius-32 u-tab-link u-text-active-palette-2-base u-text-body-alt-color u-text-hover-white u-tab-link-2" id="link-tab-ee47" href="#tab-ee47" role="tab" aria-controls="tab-ee47" aria-selected="false">Entorno de Desarrollo</a>
+					</li>
+					<li class="u-tab-item" role="presentation">
+						<a class="u-active-black u-border-6 u-border-active-black u-border-hover-black u-border-palette-1-dark-2 u-button-style u-radius-32 u-tab-link u-text-active-palette-2-base u-text-body-alt-color u-text-hover-white u-tab-link-3" id="link-tab-dd0d" href="#tab-dd0d" role="tab" aria-controls="tab-dd0d" aria-selected="false">Manejo de Variables y Tipos de Datos</a>
+					</li>
+					<li class="u-tab-item" role="presentation">
+						<a class="u-active-black u-border-6 u-border-active-black u-border-hover-black u-border-palette-1-dark-2 u-button-style u-radius-32 u-tab-link u-text-active-palette-2-base u-text-body-alt-color u-text-hover-white u-tab-link-4" id="link-tab-5ae1" href="#tab-5ae1" role="tab" aria-controls="tab-5ae1" aria-selected="false">Manejo de Variables (mas ejemplos)</a>
+					</li>
+					<li class="u-tab-item" role="presentation">
+						<a class="u-active-black u-border-6 u-border-active-black u-border-hover-black u-border-palette-1-dark-2 u-button-style u-radius-32 u-tab-link u-text-active-palette-2-base u-text-body-alt-color u-text-hover-white u-tab-link-5" id="link-tab-81cb" href="#tab-81cb" role="tab" aria-controls="tab-81cb" aria-selected="false">Condiciónales</a>
+					</li>
+					<li class="u-tab-item" role="presentation">
+						<a class="u-active-black u-border-6 u-border-active-black u-border-hover-black u-border-palette-1-dark-2 u-button-style u-radius-32 u-tab-link u-text-active-palette-2-base u-text-body-alt-color u-text-hover-white u-tab-link-6" id="link-tab-3e1f" href="#tab-3e1f" role="tab" aria-controls="tab-3e1f" aria-selected="false">Repetitivas</a>
+					</li>
+					<li class="u-tab-item" role="presentation">
+						<a class="u-active-black u-border-6 u-border-active-black u-border-hover-black u-border-palette-1-dark-2 u-button-style u-radius-32 u-tab-link u-text-active-palette-2-base u-text-body-alt-color u-text-hover-white u-tab-link-7" id="link-tab-a1e7" href="#tab-a1e7" role="tab" aria-controls="tab-a1e7" aria-selected="false">Funciones en Python</a>
+					</li>
+					<li class="u-tab-item" role="presentation">
+						<a class="u-active-black u-border-6 u-border-active-black u-border-hover-black u-border-palette-1-dark-2 u-button-style u-radius-32 u-tab-link u-text-active-palette-2-base u-text-body-alt-color u-text-hover-white u-tab-link-8" id="link-tab-aefb" href="#tab-aefb" role="tab" aria-controls="tab-aefb" aria-selected="false">Listas en Python</a>
+					</li>
+					<li class="u-tab-item" role="presentation">
+						<a class="u-active-black u-border-6 u-border-active-black u-border-hover-black u-border-palette-1-dark-2 u-button-style u-radius-32 u-tab-link u-text-active-palette-2-base u-text-body-alt-color u-text-hover-white u-tab-link-9" id="link-tab-1822" href="#tab-1822" role="tab" aria-controls="tab-1822" aria-selected="false">Tuplas</a>
+					</li>
+					<li class="u-tab-item" role="presentation">
+						<a class="u-active-black u-border-6 u-border-active-black u-border-hover-black u-border-palette-1-dark-2 u-button-style u-radius-32 u-tab-link u-text-active-palette-2-base u-text-body-alt-color u-text-hover-white u-tab-link-10" id="link-tab-328c" href="#tab-328c" role="tab" aria-controls="tab-328c" aria-selected="false">Diccionarios en Python</a>
+					</li>
+					<li class="u-tab-item" role="presentation">
+						<a class="u-active-black u-border-6 u-border-active-black u-border-hover-black u-border-palette-1-dark-2 u-button-style u-radius-32 u-tab-link u-text-active-palette-2-base u-text-body-alt-color u-text-hover-white u-tab-link-11" id="link-tab-b5f5" href="#tab-b5f5" role="tab" aria-controls="tab-b5f5" aria-selected="false">Manejo de Errores</a>
+					</li>
+					<li class="u-tab-item" role="presentation">
+						<a class="u-active-black u-border-6 u-border-active-black u-border-hover-black u-border-palette-1-dark-2 u-button-style u-radius-32 u-tab-link u-text-active-palette-2-base u-text-body-alt-color u-text-hover-white u-tab-link-12" id="link-tab-b00e" href="#tab-b00e" role="tab" aria-controls="tab-b00e" aria-selected="false">Programacion Orientada a Objetos (POO)</a>
+					</li>
+				</ul>
+				<div class="u-tab-content">
+					<div class="u-container-style u-shape-rectangle u-tab-active u-tab-pane" id="tab-0da5" role="tabpanel" aria-labelledby="link-tab-0da5">
+						<div class="u-container-layout u-container-layout-1">
+							<div alt="Introduccion a python" class="u-expanded-width-xs u-image u-image-circle u-image-1" data-image-width="1300" data-image-height="868" data-animation-name="customAnimationIn" data-animation-duration="3250"></div>
+							<h4 class="u-hover-feature u-text u-text-body-alt-color u-text-1" data-animation-name="customAnimationIn" data-animation-duration="3000">Introducción a Python</h4>
+							<p class="u-hover-feature u-text u-text-body-alt-color u-text-2" data-animation-name="customAnimationIn" data-animation-duration="3000">Hablemos sobre el lenguaje y sus principales características, las cuales lo diferencian de otros. Haciéndolo un lenguaje muy atractivo para quienes comienzan a programar y permitiendo un amplio desarrollo de aplicaciones de manera muy sencilla.</p>
+							<ul class="u-hover-feature u-text u-text-body-alt-color u-text-3" data-animation-name="customAnimationIn" data-animation-duration="3000">
+								<li>
+									<div class="class u-list-icon"></div>¿Qué es Python?<br>
+								</li>
+								<li>
+									<div class="class u-list-icon"></div>Interpretados y Compilados<br>
+								</li>
+								<li>
+									<div class="class u-list-icon"></div>¿Qué ventajas nos ofrece Python como lenguaje interpretado?<br>
+								</li>
+								<li>
+									<div class="class u-list-icon"></div>Multiplataforma<br>
+								</li>
+								<li>
+									<div class="class u-list-icon"></div>Tipado Dinámico<br>
+								</li>
+								<li>
+									<div class="class u-list-icon"></div>Fuertemente Tipado
+								</li>
+							</ul>
+							<a href="https://nicepage.com" class="u-border-none u-btn u-btn-round u-button-style u-hover-palette-4-base u-palette-2-base u-radius-50 u-btn-1" data-animation-name="customAnimationIn" data-animation-duration="3000">Aprende más</a>
+						</div>
+					</div>
+					<div class="u-container-style u-shape-rectangle u-tab-pane u-tab-pane-2" id="tab-ee47" role="tabpanel" aria-labelledby="link-tab-ee47">
+						<div class="u-container-layout u-container-layout-2">
+							<div alt="Entorno de Desarrollo" class="u-expanded-width-xs u-image u-image-circle u-image-2" data-image-width="1042" data-image-height="1006" data-animation-name="customAnimationIn" data-animation-duration="3250"></div>
+							<h4 class="u-hover-feature u-text u-text-body-alt-color u-text-4" data-animation-name="customAnimationIn" data-animation-duration="3000">Entorno de Desarrollo</h4>
+							<p class="u-hover-feature u-text u-text-body-alt-color u-text-5" data-animation-name="customAnimationIn" data-animation-duration="3000">Primero comprueba si tu ordenador ejecuta la versión 32 bits de Windows o la de 64, en "Tipo de sistema" en la página de "Acerca de". Para llegar a esta página, intenta uno de estos métodos:</p>
+							<ul class="u-hover-feature u-text u-text-body-alt-color u-text-6" data-animation-name="customAnimationIn" data-animation-duration="3000">
+								<li>
+									<div class="class u-list-icon"></div>INSTALACIÓN DE PYTHON 3 EN WINDOWS<br>
+								</li>
+								<li>
+									<div class="class u-list-icon"></div>Entorno de Trabajo<br>
+								</li>
+								<li>
+									<div class="class u-list-icon"></div>Nuestro primer programa
+								</li>
+							</ul>
+							<a href="https://nicepage.com" class="u-border-none u-btn u-btn-round u-button-style u-hover-palette-4-base u-palette-2-base u-radius-50 u-btn-2" data-animation-name="customAnimationIn" data-animation-duration="3000">Aprende más</a>
+						</div>
+					</div>
+					<div class="u-container-style u-shape-rectangle u-tab-pane u-tab-pane-3" id="tab-dd0d" role="tabpanel" aria-labelledby="link-tab-dd0d">
+						<div class="u-container-layout u-container-layout-3">
+							<div alt="Manejo de Variables y Tipos de Datos" class="u-expanded-width-xs u-image u-image-circle u-image-contain u-image-3" data-image-width="1280" data-image-height="720" data-animation-name="customAnimationIn" data-animation-duration="3250"></div>
+							<h4 class="u-hover-feature u-text u-text-body-alt-color u-text-7" data-animation-name="customAnimationIn" data-animation-duration="3000">Manejo de Variables y Tipos de Datos</h4>
+							<p class="u-hover-feature u-text u-text-body-alt-color u-text-8" data-animation-name="customAnimationIn" data-animation-duration="3000">Manejo de variables y tipos de datos: Son elementos que nos permiten guardar un dato para que pueda ser accesible fácilmente, manipulado y transformado a lo largo de un programa.</p>
+							<ul class="u-hover-feature u-text u-text-body-alt-color u-text-9" data-animation-name="customAnimationIn" data-animation-duration="3000">
+								<li>
+									<div class="class u-list-icon"></div>Manejo de Variables en Python<br>
+								</li>
+								<li>
+									<div class="class u-list-icon"></div>Nombres de Variables en Python<br>
+								</li>
+								<li>
+									<div class="class u-list-icon"></div>Operadores en Python: (Matemáticos)<br>
+								</li>
+								<li>
+									<div class="class u-list-icon"></div>Operadores en Python: (Lógicos)<br>
+								</li>
+								<li>
+									<div class="class u-list-icon"></div>Operadores en Python: (Strings)<br>
+								</li>
+								<li>
+									<div class="class u-list-icon"></div>¿Qué es un Dato?<br>
+								</li>
+								<li>
+									<div class="class u-list-icon"></div>Datos en Python<br>
+								</li>
+								<li>
+									<div class="class u-list-icon"></div>Tipos de Datos en Python<br>
+								</li>
+								<li>
+									<div class="class u-list-icon"></div>Tipos de Datos en Python: (Números)<br>
+								</li>
+							</ul>
+							<a href="https://nicepage.com" class="u-border-none u-btn u-btn-round u-button-style u-hover-palette-4-base u-palette-2-base u-radius-50 u-btn-3" data-animation-name="customAnimationIn" data-animation-duration="3000">Aprende más</a>
+						</div>
+					</div>
+					<div class="u-container-style u-shape-rectangle u-tab-pane u-tab-pane-4" id="tab-5ae1" role="tabpanel" aria-labelledby="link-tab-5ae1">
+						<div class="u-container-layout u-valign-top u-container-layout-4">
+							<h4 class="u-hover-feature u-text u-text-body-alt-color u-text-10" data-animation-name="customAnimationIn" data-animation-duration="3000">Manejo de Variables&nbsp;</h4>
+							<div alt="Manejo de Variables&nbsp;" class="u-expanded-width-xs u-image u-image-circle u-image-contain u-image-4" data-image-width="800" data-image-height="1200" data-animation-name="customAnimationIn" data-animation-duration="3250"></div>
+							<p class="u-hover-feature u-text u-text-body-alt-color u-text-11" data-animation-name="customAnimationIn" data-animation-duration="3000">Para definir una variable en Python, basta con nombrarla dentro del entorno y definir un valor ya que como dijimos anteriormente es un lenguaje completamente orientado a objetos, por lo que no es necesario declarar variables o el tipo antes de usarlas como en otros lenguajes.</p>
+							<ul class="u-hover-feature u-text u-text-body-alt-color u-text-12" data-animation-name="customAnimationIn" data-animation-duration="3000">
+								<li>
+									<div class="class u-list-icon"></div>Ejemplos de Plabras reservadas<br>
+								</li>
+								<li>
+									<div class="class u-list-icon"></div>Operadores<br>
+								</li>
+								<li>
+									<div class="class u-list-icon"></div>OPERADORES MATEMÁTICOS<br>
+								</li>
+								<li>
+									<div class="class u-list-icon"></div>OPERADORES DE COMPARACIÓN<br>
+								</li>
+								<li>
+									<div class="class u-list-icon"></div>OPERADORES LÓGICOS<br>
+								</li>
+								<li>
+									<div class="class u-list-icon"></div>OPERACIONES CON CADENAS/STRINGS<br>
+								</li>
+								<li>
+									<div class="class u-list-icon"></div>Función type()<br>
+								</li>
+								<li>
+									<div class="class u-list-icon"></div>Dato. Clasificación de Datos. Tipos de Datos<br>
+								</li>
+								<li>
+									<div class="class u-list-icon"></div>Tipos de Datos<br>
+								</li>
+								<li>
+									<div class="class u-list-icon"></div>etc...
+								</li>
+							</ul>
+							<a href="https://nicepage.com" class="u-border-none u-btn u-btn-round u-button-style u-hover-palette-4-base u-palette-2-base u-radius-50 u-btn-4" data-animation-name="customAnimationIn" data-animation-duration="3000">Aprende más</a>
+						</div>
+					</div>
+					<div class="u-container-style u-shape-rectangle u-tab-pane u-tab-pane-5" id="tab-81cb" role="tabpanel" aria-labelledby="link-tab-81cb">
+						<div class="u-container-layout u-valign-top u-container-layout-5">
+							<h4 class="u-hover-feature u-text u-text-body-alt-color u-text-13" data-animation-name="customAnimationIn" data-animation-duration="3000">Condicionales</h4>
+							<div alt="Condicionales" class="u-expanded-width-xs u-image u-image-circle u-image-5" data-image-width="829" data-image-height="1171" data-animation-name="customAnimationIn" data-animation-duration="3250"></div>
+							<p class="u-hover-feature u-text u-text-body-alt-color u-text-14" data-animation-name="customAnimationIn" data-animation-duration="3000">Si un programa sólo ejecutara instrucciones planas unas tras otras no servirían de mucho. Pues, el hecho que las acciones se ejecuten secuencialmente implica que nunca se ejecutara más de una acción al mismo tiempo.</p>
+							<ul class="u-hover-feature u-text u-text-body-alt-color u-text-15" data-animation-name="customAnimationIn" data-animation-duration="3000">
+								<li>
+									<div class="class u-list-icon"></div>Introducción<br>
+								</li>
+								<li>
+									<div class="class u-list-icon"></div>Ejemplos de Condicionales<br>
+								</li>
+								<li>
+									<div class="class u-list-icon"></div>¿Comó funciona?<br>
+								</li>
+								<li>
+									<div class="class u-list-icon"></div>Condicional simple: Sentencia if (si)<br>
+								</li>
+								<li>
+									<div class="class u-list-icon"></div>Condicional alternativo o doble: Sentencia else (sino)<br>
+								</li>
+								<li>
+									<div class="class u-list-icon"></div>Condicional multiple: Sentencia elif (sino si)
+								</li>
+							</ul>
+							<a href="https://nicepage.com" class="u-border-none u-btn u-btn-round u-button-style u-hover-palette-4-base u-palette-2-base u-radius-50 u-btn-5" data-animation-name="customAnimationIn" data-animation-duration="3000">Aprende más</a>
+						</div>
+					</div>
+					<div class="u-container-style u-shape-rectangle u-tab-pane u-tab-pane-6" id="tab-3e1f" role="tabpanel" aria-labelledby="link-tab-3e1f">
+						<div class="u-container-layout u-valign-top u-container-layout-6">
+							<h4 class="u-hover-feature u-text u-text-body-alt-color u-text-16" data-animation-name="customAnimationIn" data-animation-duration="3000">Repetitivas</h4>
+							<div alt="Repetitivas" class="u-expanded-width-xs u-image u-image-circle u-image-6" data-image-width="1688" data-image-height="654" data-animation-name="customAnimationIn" data-animation-duration="3250"></div>
+							<p class="u-hover-feature u-text u-text-body-alt-color u-text-17" data-animation-name="customAnimationIn" data-animation-duration="3000">Durante el proceso de cración de programas, es muy común, encontrarse con que una operacion o conjunto de operaciones deben repetirse muchas veces.Para ello es importante conocer las estructuras que permiten repetir una o varias acciones, un número determinado de veces.</p>
+							<ul class="u-hover-feature u-text u-text-body-alt-color u-text-18" data-animation-name="customAnimationIn" data-animation-duration="3000">
+								<li>
+									<div class="class u-list-icon"></div>Introducción<br>
+								</li>
+								<li>
+									<div class="class u-list-icon"></div>Contadores, Acumuladores y Banderas<br>
+								</li>
+								<li>
+									<div class="class u-list-icon"></div>Sentencia While (mientras)<br>
+								</li>
+								<li>
+									<div class="class u-list-icon"></div>Uso de else en While<br>
+								</li>
+								<li>
+									<div class="class u-list-icon"></div>Sentencia for (para)<br>
+								</li>
+								<li>
+									<div class="class u-list-icon"></div>Utilizando tipos range()<br>
+								</li>
+								<li>
+									<div class="class u-list-icon"></div>Control de Bucles<br>
+								</li>
+								<li>
+									<div class="class u-list-icon"></div>Instrucción break<br>
+								</li>
+								<li>
+									<div class="class u-list-icon"></div>etc...
+								</li>
+							</ul>
+							<a href="https://nicepage.com" class="u-border-none u-btn u-btn-round u-button-style u-hover-palette-4-base u-palette-2-base u-radius-50 u-btn-6" data-animation-name="customAnimationIn" data-animation-duration="3000">Aprende más</a>
+						</div>
+					</div>
+					<div class="u-container-style u-shape-rectangle u-tab-pane u-tab-pane-7" id="tab-a1e7" role="tabpanel" aria-labelledby="link-tab-a1e7">
+						<div class="u-container-layout u-container-layout-7">
+							<h4 class="u-hover-feature u-text u-text-body-alt-color u-text-19" data-animation-name="customAnimationIn" data-animation-duration="3000">Funciones en Python</h4>
+							<div alt="Funciones en Python" class="u-expanded-width-xs u-image u-image-circle u-image-7" data-image-width="1300" data-image-height="868" data-animation-name="customAnimationIn" data-animation-duration="3250"></div>
+							<p class="u-hover-feature u-text u-text-body-alt-color u-text-20" data-animation-name="customAnimationIn" data-animation-duration="3000">Una&nbsp;función&nbsp;es un fragmento de código con un nombre asociado que&nbsp;realiza una serie de tareas y devuelve un valor.&nbsp;A los fragmentos de código que tienen un nombre asociado y no devuelven valores se les suele llamar&nbsp;procedimientos.</p>
+							<ul class="u-hover-feature u-text u-text-body-alt-color u-text-21" data-animation-name="customAnimationIn" data-animation-duration="3000">
+								<li>
+									<div class="class u-list-icon"></div>Introducción<br>
+								</li>
+								<li>Sentencia&nbsp;def<br>
+								</li>
+								<li>
+									<div class="class u-list-icon"></div>Argumentos y parámetros<br>
+								</li>
+								<li>
+									<div class="class u-list-icon"></div>Paso de argumentos por referencia y por valor<br>
+								</li>
+								<li>
+									<div class="class u-list-icon"></div>Asignación de variables locales y globales<br>
+								</li>
+								<li>
+									<div class="class u-list-icon"></div>Sentencia pass<br>
+								</li>
+								<li>
+									<div class="class u-list-icon"></div>Sentencia return<br>
+								</li>
+								<li>
+									<div class="class u-list-icon"></div>Llamadas de retorno<br>
+								</li>
+								<li>
+									<div class="class u-list-icon"></div>Saber si una función existe y puede ser llamada<br>
+								</li>
+								<li>
+									<div class="class u-list-icon"></div>etc...
+								</li>
+							</ul>
+							<a href="https://nicepage.com" class="u-border-none u-btn u-btn-round u-button-style u-hover-palette-4-base u-palette-2-base u-radius-50 u-btn-7" data-animation-name="customAnimationIn" data-animation-duration="3000">Aprende más</a>
+						</div>
+					</div>
+					<div class="u-container-style u-shape-rectangle u-tab-pane u-tab-pane-8" id="tab-aefb" role="tabpanel" aria-labelledby="link-tab-aefb">
+						<div class="u-container-layout u-valign-top u-container-layout-8">
+							<h4 class="u-hover-feature u-text u-text-body-alt-color u-text-22" data-animation-name="customAnimationIn" data-animation-duration="3000">Listas en Python</h4>
+							<div alt="Listas en Python" class="u-expanded-width-xs u-image u-image-circle u-image-8" data-image-width="1200" data-image-height="699" data-animation-name="customAnimationIn" data-animation-duration="3250"></div>
+							<p class="u-hover-feature u-text u-text-body-alt-color u-text-23" data-animation-name="customAnimationIn" data-animation-duration="3000">Las&nbsp;listas&nbsp;en Python son conjuntos de elementos ordenados y pueden estar conformados por elementos de distintos tipo (enteros, float, cadenas, funciones, otras listas, etc).</p>
+							<ul class="u-hover-feature u-text u-text-body-alt-color u-text-24" data-animation-name="customAnimationIn" data-animation-duration="3000">
+								<li>
+									<div class="class u-list-icon"></div>Introducción<br>
+								</li>
+								<li>Los elementos de una lista&nbsp;<br>
+								</li>
+								<li>acceso mediante su índice.<br>
+								</li>
+								<li>Modificar Elementos<br>
+								</li>
+								<li>Recorrer una lista<br>
+								</li>
+								<li>Agregar elementos en una lista<br>
+								</li>
+								<li>Obtener sublistas (slicing)<br>
+								</li>
+								<li>Copiar una lista<br>
+								</li>
+								<li>Ordenar una lista<br>
+								</li>
+								<li>etc...</li>
+							</ul>
+							<a href="https://nicepage.com" class="u-border-none u-btn u-btn-round u-button-style u-hover-palette-4-base u-palette-2-base u-radius-50 u-btn-8" data-animation-name="customAnimationIn" data-animation-duration="3000">Aprende más</a>
+						</div>
+					</div>
+					<div class="u-container-style u-shape-rectangle u-tab-pane u-tab-pane-9" id="tab-1822" role="tabpanel" aria-labelledby="link-tab-1822">
+						<div class="u-container-layout u-valign-top u-container-layout-9">
+							<h4 class="u-hover-feature u-text u-text-body-alt-color u-text-25" data-animation-name="customAnimationIn" data-animation-duration="3000">Tuplas</h4>
+							<div alt="Tuplas" class="u-expanded-width-xs u-image u-image-circle u-image-9" data-image-width="1600" data-image-height="680" data-animation-name="customAnimationIn" data-animation-duration="3250"></div>
+							<p class="u-hover-feature u-text u-text-body-alt-color u-text-26" data-animation-name="customAnimationIn" data-animation-duration="3000">Las&nbsp;tuplas&nbsp;en Python, son muy similares a las listas, la principal diferencia es que las&nbsp;tuplas son inmutables, es decir, no se puede modificar o reordenar su contenido.</p>
+							<ul class="u-hover-feature u-text u-text-body-alt-color u-text-27" data-animation-name="customAnimationIn" data-animation-duration="3000">
+								<li>
+									<div class="class u-list-icon"></div>Introducción<br>
+								</li>
+								<li>Empaquetar y Desempaquetar Tuplas<br>
+								</li>
+								<li>Tuplas como retorno de una función<br>
+								</li>
+								<li>Crear listas a partir de Tuplas, y tuplas a partir de listas.<br>
+								</li>
+								<li>List comprehesion<br>
+								</li>
+								<li>etc...</li>
+							</ul>
+							<a href="https://nicepage.com" class="u-border-none u-btn u-btn-round u-button-style u-hover-palette-4-base u-palette-2-base u-radius-50 u-btn-9" data-animation-name="customAnimationIn" data-animation-duration="3000">Aprende más</a>
+						</div>
+					</div>
+					<div class="u-container-style u-shape-rectangle u-tab-pane u-tab-pane-10" id="tab-328c" role="tabpanel" aria-labelledby="link-tab-328c">
+						<div class="u-container-layout u-valign-top u-container-layout-10">
+							<h4 class="u-hover-feature u-text u-text-body-alt-color u-text-28" data-animation-name="customAnimationIn" data-animation-duration="3000">Diccionarios en Python</h4>
+							<div alt="Diccionarios en Python" class="u-expanded-width-xs u-image u-image-circle u-image-10" data-image-width="1396" data-image-height="800" data-animation-name="customAnimationIn" data-animation-duration="3250"></div>
+							<p class="u-hover-feature u-text u-text-body-alt-color u-text-29" data-animation-name="customAnimationIn" data-animation-duration="3000">En Python, un&nbsp;diccionario&nbsp;es una colección no ordena de valores que son accedidos a traves de keys (llaves o claves).</p>
+							<ul class="u-hover-feature u-text u-text-body-alt-color u-text-30" data-animation-name="customAnimationIn" data-animation-duration="3000">
+								<li>
+									<div class="class u-list-icon"></div>Introducción<br>
+								</li>
+								<li>Elementos y claves</li>
+								<li>Insertar elementos</li>
+								<li>
+									<div class="class u-list-icon"></div>Modificar clave:valor
+								</li>
+								<li>
+									<div class="class u-list-icon"></div>Borrar clave:valor
+								</li>
+								<li>
+									<div class="class u-list-icon"></div>Funciones y métodos<br>
+								</li>
+								<li>etc...</li>
+							</ul>
+							<a href="https://nicepage.com" class="u-border-none u-btn u-btn-round u-button-style u-hover-palette-4-base u-palette-2-base u-radius-50 u-btn-10" data-animation-name="customAnimationIn" data-animation-duration="3000">Aprende más</a>
+						</div>
+					</div>
+					<div class="u-container-style u-shape-rectangle u-tab-pane u-tab-pane-11" id="tab-b5f5" role="tabpanel" aria-labelledby="link-tab-b5f5">
+						<div class="u-container-layout u-valign-top u-container-layout-11">
+							<h4 class="u-hover-feature u-text u-text-body-alt-color u-text-31" data-animation-name="customAnimationIn" data-animation-duration="3000">Manejo de Errores</h4>
+							<div alt="Manejo de Errores" class="u-expanded-width-xs u-image u-image-circle u-image-11" data-image-width="1366" data-image-height="768" data-animation-name="customAnimationIn" data-animation-duration="3250"></div>
+							<p class="u-hover-feature u-text u-text-body-alt-color u-text-32" data-animation-name="customAnimationIn" data-animation-duration="3000">En algunas ocasiones nuestros programas pueden fallar ocasionando su detención.Ya sea por&nbsp;errores de sintaxis o de lógica, tenemos que ser capaces de detectar esos momentos y tratarlos debidamente para prevenirlos.</p>
+							<ul class="u-hover-feature u-text u-text-body-alt-color u-text-33" data-animation-name="customAnimationIn" data-animation-duration="3000">
+								<li>
+									<div class="class u-list-icon"></div>Introducción<br>
+								</li>
+								<li>Errores<br>
+								</li>
+								<li>Errores de sintaxis<br>
+								</li>
+								<li>Errores de nombre<br>
+								</li>
+								<li>
+									<div class="class u-list-icon"></div>Errores semánticos<br>
+								</li>
+								<li>
+									<div class="class u-list-icon"></div>Bloques try - except<br>
+								</li>
+								<li>
+									<div class="class u-list-icon"></div>Bloque else<br>
+								</li>
+								<li>
+									<div class="class u-list-icon"></div>Bloque finally<br>
+								</li>
+								<li>
+									<div class="class u-list-icon"></div>Excepciones múltiples<br>
+								</li>
+								<li>etc...</li>
+							</ul>
+							<a href="https://nicepage.com" class="u-border-none u-btn u-btn-round u-button-style u-hover-palette-4-base u-palette-2-base u-radius-50 u-btn-11" data-animation-name="customAnimationIn" data-animation-duration="3000">Aprende más</a>
+						</div>
+					</div>
+					<div class="u-container-style u-shape-rectangle u-tab-pane u-tab-pane-12" id="tab-b00e" role="tabpanel" aria-labelledby="link-tab-b00e">
+						<div class="u-container-layout u-valign-top u-container-layout-12">
+							<h4 class="u-hover-feature u-text u-text-body-alt-color u-text-34" data-animation-name="customAnimationIn" data-animation-duration="3000">Programacion Orientada a Objetos (POO)</h4>
+							<div alt="Programacion Orientada a Objetos (POO)" class="u-expanded-width-xs u-image u-image-circle u-image-12" data-image-width="1395" data-image-height="864" data-animation-name="customAnimationIn" data-animation-duration="3250"></div>
+							<p class="u-hover-feature u-text u-text-body-alt-color u-text-35" data-animation-name="customAnimationIn" data-animation-duration="3000">La programación orientada a objetos (POO)&nbsp;<b>es un paradigma de programación en el que podemos pensar en problemas complejos como objetos</b>. Un paradigma es una teoría que proporciona la base para resolver problemas
+							</p>
+							<ul class="u-hover-feature u-text u-text-body-alt-color u-text-36" data-animation-name="customAnimationIn" data-animation-duration="3000">
+								<li>
+									<div class="class u-list-icon"></div>Introducción<br>
+								</li>
+								<li>Paradigma de Programación Orientada a Objetos<br>
+								</li>
+								<li>Clase<br>
+								</li>
+								<li>
+									<div class="class u-list-icon"></div>Objeto<br>
+								</li>
+								<li>
+									<div class="class u-list-icon"></div>Herencias<br>
+								</li>
+								<li>
+									<div class="class u-list-icon"></div>Método de resolución de orden en Python<br>
+								</li>
+								<li>
+									<div class="class u-list-icon"></div>Abstracción<br>
+								</li>
+								<li>
+									<div class="class u-list-icon"></div>Encapsulación<br>
+								</li>
+								<li>
+									<div class="class u-list-icon"></div>Polimorfismo<br>
+								</li>
+								<li>
+									<div class="class u-list-icon"></div>Sobrecarga de Métodos<br>
+								</li>
+								<li>etc...</li>
+							</ul>
+							<a href="https://nicepage.com" class="u-border-none u-btn u-btn-round u-button-style u-hover-palette-4-base u-palette-2-base u-radius-50 u-btn-12" data-animation-name="customAnimationIn" data-animation-duration="3000">Aprende más</a>
 						</div>
 					</div>
 				</div>
@@ -125,291 +572,36 @@
 		</div>
 
 
-	</section>
-	<section class="u-clearfix u-image u-section-3" id="sec-5f28" data-image-width="1782" data-image-height="1080">
-		<div class="u-clearfix u-sheet u-sheet-1">
-			<div class="u-clearfix u-expanded-width u-gutter-10 u-layout-wrap u-layout-wrap-1">
-				<div class="u-layout" style="">
-					<div class="u-layout-row" style="">
-						<div class="u-align-center u-container-style u-effect-hover-zoom u-layout-cell u-left-cell u-size-30 u-size-xs-60 u-layout-cell-1" src="" data-image-width="1042" data-image-height="1006" data-animation-name="flipIn" data-animation-duration="3000" data-animation-direction="X">
-							<div class="u-background-effect u-expanded">
-								<div class="u-background-effect-image u-expanded u-image u-image-1" data-image-width="1042" data-image-height="1006"></div>
-							</div>
-							<div class="u-container-layout u-valign-middle u-container-layout-1" src=""></div>
-						</div>
-						<div class="u-container-style u-layout-cell u-right-cell u-size-30 u-size-xs-60 u-layout-cell-2" src="">
-							<div class="u-container-layout u-valign-top u-container-layout-2">
-								<h2 class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-1" data-animation-name="flipIn" data-animation-duration="3000" data-animation-direction="X">Entorno de Desarrollo</h2>
-								<p class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-2" data-animation-name="customAnimationIn" data-animation-duration="3000">Primero comprueba si tu ordenador ejecuta la versión 32 bits de Windows o la de 64, en "Tipo de sistema" en la página de "Acerca de". Para llegar a esta página, intenta uno de estos métodos:</p>
-								<a href="{% url 'usuarios:entorno'%}" class="u-border-none u-btn u-btn-round u-button-style u-hover-palette-4-base u-palette-2-base u-radius-50 u-btn-1">Aprende más</a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
 
 
-	</section>
-	<section class="u-clearfix u-image u-section-4" id="sec-b24d" data-image-width="1782" data-image-height="1080">
-		<div class="u-clearfix u-sheet u-sheet-1">
-			<div class="u-clearfix u-expanded-width u-gutter-10 u-layout-wrap u-layout-wrap-1">
-				<div class="u-layout" style="">
-					<div class="u-layout-row" style="">
-						<div class="u-container-style u-layout-cell u-left-cell u-size-30 u-size-xs-60 u-layout-cell-1" src="">
-							<div class="u-container-layout u-valign-top u-container-layout-1">
-								<h2 class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-1" data-animation-name="flipIn" data-animation-duration="3000" data-animation-direction="X">Manejo de Variables y Tipos de Datos</h2>
-								<p class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-2" data-animation-name="customAnimationIn" data-animation-duration="3000">Manejo de variables y tipos de datos: Son elementos que nos permiten guardar un dato para que pueda ser accesible fácilmente, manipulado y transformado a lo largo de un programa.</p>
-								<a href="{% url 'usuarios:variablesDatos'%}" class="u-border-none u-btn u-btn-round u-button-style u-hover-palette-4-base u-palette-2-base u-radius-50 u-btn-1">Aprende más</a>
-							</div>
-						</div>
-						<div class="u-align-center u-container-style u-effect-hover-zoom u-layout-cell u-right-cell u-size-30 u-size-xs-60 u-layout-cell-2" src="" data-image-width="1280" data-image-height="720" data-animation-name="flipIn" data-animation-duration="3000" data-animation-direction="X">
-							<div class="u-background-effect u-expanded">
-								<div class="u-background-effect-image u-expanded u-image u-image-1" data-image-width="1280" data-image-height="720"></div>
-							</div>
-							<div class="u-container-layout u-valign-middle u-container-layout-2" src=""></div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
 
 
-	</section>
-	<section class="u-clearfix u-image u-section-5" id="sec-f1c4" data-image-width="1782" data-image-height="1080">
-		<div class="u-clearfix u-sheet u-sheet-1">
-			<div class="u-clearfix u-expanded-width u-gutter-10 u-layout-wrap u-layout-wrap-1">
-				<div class="u-layout" style="">
-					<div class="u-layout-row" style="">
-						<div class="u-align-center u-container-style u-effect-hover-zoom u-layout-cell u-left-cell u-size-30 u-size-xs-60 u-layout-cell-1" src="" data-image-width="1300" data-image-height="868" data-animation-name="flipIn" data-animation-duration="3000" data-animation-direction="X">
-							<div class="u-background-effect u-expanded">
-								<div class="u-background-effect-image u-expanded u-image u-image-1" data-image-width="1300" data-image-height="868"></div>
-							</div>
-							<div class="u-container-layout u-valign-middle u-container-layout-1" src=""></div>
-						</div>
-						<div class="u-container-style u-layout-cell u-right-cell u-size-30 u-size-xs-60 u-layout-cell-2" src="">
-							<div class="u-container-layout u-valign-middle u-container-layout-2">
-								<h2 class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-1" data-animation-name="flipIn" data-animation-duration="3000" data-animation-direction="X">Manejo de Variables</h2>
-								<p class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-2" data-animation-name="customAnimationIn" data-animation-duration="3000">Para definir una variable en Python, basta con nombrarla dentro del entorno y definir un valor ya que como dijimos anteriormente es un lenguaje completamente orientado a objetos, por lo que no es necesario declarar variables o el tipo antes de usarlas como en otros lenguajes.</p>
-								<a href="{% url 'usuarios:manejo'%}" class="u-border-none u-btn u-btn-round u-button-style u-hover-palette-4-base u-palette-2-base u-radius-50 u-btn-1">Aprende más</a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
 
 
-	</section>
-	<section class="u-clearfix u-image u-section-6" id="sec-9dc5" data-image-width="1782" data-image-height="1080">
-		<div class="u-clearfix u-sheet u-sheet-1">
-			<div class="u-clearfix u-expanded-width u-gutter-10 u-layout-wrap u-layout-wrap-1">
-				<div class="u-layout" style="">
-					<div class="u-layout-row" style="">
-						<div class="u-container-style u-layout-cell u-left-cell u-size-30 u-size-xs-60 u-layout-cell-1" src="">
-							<div class="u-container-layout u-container-layout-1">
-								<h2 class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-1" data-animation-name="flipIn" data-animation-duration="3000" data-animation-direction="X">Condicionales</h2>
-								<p class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-2" data-animation-name="customAnimationIn" data-animation-duration="3000">Si un programa sólo ejecutara instrucciones planas unas tras otras no servirían de mucho. Pues, el hecho que las acciones se ejecuten secuencialmente implica que nunca se ejecutara más de una acción al mismo tiempo.</p>
-								<a href="{% url 'usuarios:condicionales'%}" class="u-border-none u-btn u-btn-round u-button-style u-hover-palette-4-base u-palette-2-base u-radius-50 u-btn-1">Aprende más</a>
-							</div>
-						</div>
-						<div class="u-align-center u-container-style u-effect-hover-zoom u-layout-cell u-right-cell u-size-30 u-size-xs-60 u-layout-cell-2" src="" data-image-width="829" data-image-height="1171" data-animation-name="flipIn" data-animation-duration="3000" data-animation-direction="X">
-							<div class="u-background-effect u-expanded">
-								<div class="u-background-effect-image u-expanded u-image u-image-1" data-image-width="829" data-image-height="1171"></div>
-							</div>
-							<div class="u-container-layout u-valign-middle u-container-layout-2" src=""></div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
 
 
-	</section>
-	<section class="u-clearfix u-image u-section-7" id="sec-a76d" data-image-width="1782" data-image-height="1080">
-		<div class="u-clearfix u-sheet u-sheet-1">
-			<div class="u-clearfix u-expanded-width u-gutter-10 u-layout-wrap u-layout-wrap-1">
-				<div class="u-layout" style="">
-					<div class="u-layout-row" style="">
-						<div class="u-align-center u-container-style u-effect-hover-zoom u-layout-cell u-left-cell u-size-30 u-size-xs-60 u-layout-cell-1" src="" data-image-width="1024" data-image-height="768" data-animation-name="flipIn" data-animation-duration="3000" data-animation-direction="X">
-							<div class="u-background-effect u-expanded">
-								<div class="u-background-effect-image u-expanded u-image u-image-1" data-image-width="1024" data-image-height="768"></div>
-							</div>
-							<div class="u-container-layout u-valign-middle u-container-layout-1" src=""></div>
-						</div>
-						<div class="u-container-style u-layout-cell u-right-cell u-size-30 u-size-xs-60 u-layout-cell-2" src="">
-							<div class="u-container-layout u-valign-top u-container-layout-2">
-								<h2 class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-1" data-animation-name="flipIn" data-animation-duration="3000" data-animation-direction="X">Repetitivas</h2>
-								<p class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-2" data-animation-name="customAnimationIn" data-animation-duration="3000">Durante el proceso de cración de programas, es muy común, encontrarse con que una operacion o conjunto de operaciones deben repetirse muchas veces.Para ello es importante conocer las estructuras que permiten repetir una o varias acciones, un número determinado de veces.</p>
-								<a href="{% url 'usuarios:repetitivas'%}" class="u-border-none u-btn u-btn-round u-button-style u-hover-palette-4-base u-palette-2-base u-radius-50 u-btn-1">Aprende más</a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
 
 
-	</section>
-	<section class="u-clearfix u-image u-section-8" id="sec-d577" data-image-width="1782" data-image-height="1080">
-		<div class="u-clearfix u-sheet u-sheet-1">
-			<div class="u-clearfix u-expanded-width u-gutter-10 u-layout-wrap u-layout-wrap-1">
-				<div class="u-layout" style="">
-					<div class="u-layout-row" style="">
-						<div class="u-container-style u-layout-cell u-left-cell u-size-30 u-size-xs-60 u-layout-cell-1" src="">
-							<div class="u-container-layout u-container-layout-1">
-								<h2 class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-1" data-animation-name="flipIn" data-animation-duration="3000" data-animation-direction="X">Funciones en Python</h2>
-								<p class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-2" data-animation-name="customAnimationIn" data-animation-duration="3000">Una&nbsp;función&nbsp;es un fragmento de código con un nombre asociado que&nbsp;realiza una serie de<br>tareas y devuelve un valor.&nbsp;A los fragmentos de código que tienen un nombre asociado y no devuelven valores<br>se les suele llamar&nbsp;procedimientos.
-								</p>
-								<a href="{% url 'usuarios:funciones'%}" class="u-border-none u-btn u-btn-round u-button-style u-hover-palette-4-base u-palette-2-base u-radius-50 u-btn-1">Aprende más</a>
-							</div>
-						</div>
-						<div class="u-align-center u-container-style u-effect-hover-zoom u-layout-cell u-right-cell u-size-30 u-size-xs-60 u-layout-cell-2" src="" data-image-width="1300" data-image-height="868" data-animation-name="flipIn" data-animation-duration="3000" data-animation-direction="X">
-							<div class="u-background-effect u-expanded">
-								<div class="u-background-effect-image u-expanded u-image u-image-1" data-image-width="1300" data-image-height="868"></div>
-							</div>
-							<div class="u-container-layout u-valign-middle u-container-layout-2" src=""></div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
 
 
-	</section>
-	<section class="u-clearfix u-image u-section-9" id="sec-771f" data-image-width="1782" data-image-height="1080">
-		<div class="u-clearfix u-sheet u-sheet-1">
-			<div class="u-clearfix u-expanded-width u-gutter-10 u-layout-wrap u-layout-wrap-1">
-				<div class="u-layout" style="">
-					<div class="u-layout-row" style="">
-						<div class="u-align-center u-container-style u-effect-hover-zoom u-layout-cell u-left-cell u-size-30 u-size-xs-60 u-layout-cell-1" src="" data-image-width="1200" data-image-height="699" data-animation-name="flipIn" data-animation-duration="3000" data-animation-direction="X">
-							<div class="u-background-effect u-expanded">
-								<div class="u-background-effect-image u-expanded u-image u-image-1" data-image-width="1200" data-image-height="699"></div>
-							</div>
-							<div class="u-container-layout u-valign-middle u-container-layout-1" src=""></div>
-						</div>
-						<div class="u-container-style u-layout-cell u-right-cell u-size-30 u-size-xs-60 u-layout-cell-2" src="">
-							<div class="u-container-layout u-container-layout-2">
-								<h2 class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-1" data-animation-name="flipIn" data-animation-duration="3000" data-animation-direction="X">Listas en Python</h2>
-								<p class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-2" data-animation-name="customAnimationIn" data-animation-duration="3000">Las&nbsp;listas&nbsp;en Python son conjuntos de elementos ordenados y pueden estar conformados por<br>elementos de distintos tipo (enteros, float, cadenas, funciones, otras listas, etc).
-								</p>
-								<a href="{% url 'usuarios:listas'%}" class="u-border-none u-btn u-btn-round u-button-style u-hover-palette-4-base u-palette-2-base u-radius-50 u-btn-1">Aprende más</a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
 
 
-	</section>
-	<section class="u-clearfix u-image u-section-10" id="sec-bb8f" data-image-width="1782" data-image-height="1080">
-		<div class="u-clearfix u-sheet u-sheet-1">
-			<div class="u-clearfix u-expanded-width u-gutter-10 u-layout-wrap u-layout-wrap-1">
-				<div class="u-layout" style="">
-					<div class="u-layout-row" style="">
-						<div class="u-container-style u-layout-cell u-left-cell u-size-30 u-size-xs-60 u-layout-cell-1" src="">
-							<div class="u-container-layout u-valign-top u-container-layout-1">
-								<h2 class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-1" data-animation-name="flipIn" data-animation-duration="3000" data-animation-direction="X">Tuplas</h2>
-								<p class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-2" data-animation-name="customAnimationIn" data-animation-duration="3000">Las&nbsp;tuplas&nbsp;en Python, son muy similares a las listas, la principal diferencia es que las&nbsp;tuplas son<br>inmutables, es decir, no se puede modificar o reordenar su contenido.
-								</p>
-								<a href="{% url 'usuarios:tuplas'%}" class="u-border-none u-btn u-btn-round u-button-style u-hover-palette-4-base u-palette-2-base u-radius-50 u-btn-1">Aprende más</a>
-							</div>
-						</div>
-						<div class="u-align-center u-container-style u-effect-hover-zoom u-layout-cell u-right-cell u-size-30 u-size-xs-60 u-layout-cell-2" src="" data-image-width="1600" data-image-height="680" data-animation-name="flipIn" data-animation-duration="3000" data-animation-direction="X">
-							<div class="u-background-effect u-expanded">
-								<div class="u-background-effect-image u-expanded u-image u-image-1" data-image-width="1600" data-image-height="680"></div>
-							</div>
-							<div class="u-container-layout u-valign-middle u-container-layout-2" src=""></div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
 
 
-	</section>
-	<section class="u-clearfix u-image u-section-11" id="sec-9ce6" data-image-width="1782" data-image-height="1080">
-		<div class="u-clearfix u-sheet u-sheet-1">
-			<div class="u-clearfix u-expanded-width u-gutter-10 u-layout-wrap u-layout-wrap-1">
-				<div class="u-layout" style="">
-					<div class="u-layout-row" style="">
-						<div class="u-align-center u-container-style u-effect-hover-zoom u-layout-cell u-left-cell u-size-30 u-size-xs-60 u-layout-cell-1" src="" data-image-width="1179" data-image-height="868" data-animation-name="flipIn" data-animation-duration="3000" data-animation-direction="X">
-							<div class="u-background-effect u-expanded">
-								<div class="u-background-effect-image u-expanded u-image u-image-1" data-image-width="1179" data-image-height="868"></div>
-							</div>
-							<div class="u-container-layout u-valign-middle u-container-layout-1" src=""></div>
-						</div>
-						<div class="u-container-style u-layout-cell u-right-cell u-size-30 u-size-xs-60 u-layout-cell-2" src="">
-							<div class="u-container-layout u-container-layout-2">
-								<h2 class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-1" data-animation-name="flipIn" data-animation-duration="3000" data-animation-direction="X">Diccionarios en Python</h2>
-								<p class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-2" data-animation-name="customAnimationIn" data-animation-duration="3000" data-animation-direction="Left">En Python, un&nbsp;diccionario&nbsp;es una colección no ordena de valores que son accedidos<br>a traves de keys (llaves o claves).
-								</p>
-								<a href="{% url 'usuarios:diccionarios'%}" class="u-border-none u-btn u-btn-round u-button-style u-hover-palette-4-base u-palette-2-base u-radius-50 u-btn-1">Aprende más</a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
 
 
-	</section>
-	<section class="u-clearfix u-image u-section-12" id="sec-4ba5" data-image-width="1782" data-image-height="1080">
-		<div class="u-clearfix u-sheet u-sheet-1">
-			<div class="u-clearfix u-expanded-width u-gutter-10 u-layout-wrap u-layout-wrap-1">
-				<div class="u-layout" style="">
-					<div class="u-layout-row" style="">
-						<div class="u-container-style u-layout-cell u-left-cell u-size-30 u-size-xs-60 u-layout-cell-1" src="">
-							<div class="u-container-layout u-valign-bottom u-container-layout-1">
-								<h2 class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-1" data-animation-name="flipIn" data-animation-duration="3000" data-animation-direction="X">Manejo de Errores</h2>
-								<p class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-2" data-animation-name="customAnimationIn" data-animation-duration="3000">En algunas ocasiones nuestros programas pueden fallar ocasionando su detención.Ya sea por&nbsp;errores de sintaxis o de lógica, tenemos que ser capaces de detectar esos<br>momentos y tratarlos debidamente para prevenirlos.
-								</p>
-								<a href="{% url 'usuarios:errores'%}" class="u-border-none u-btn u-btn-round u-button-style u-hover-palette-4-base u-palette-2-base u-radius-50 u-btn-1">Aprende más</a>
-							</div>
-						</div>
-						<div class="u-align-center u-container-style u-effect-hover-zoom u-layout-cell u-right-cell u-size-30 u-size-xs-60 u-layout-cell-2" src="" data-image-width="1366" data-image-height="768" data-animation-name="flipIn" data-animation-duration="3000" data-animation-direction="X">
-							<div class="u-background-effect u-expanded">
-								<div class="u-background-effect-image u-expanded u-image u-image-1" data-image-width="1366" data-image-height="768"></div>
-							</div>
-							<div class="u-container-layout u-valign-middle u-container-layout-2" src=""></div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
 
 
-	</section>
-	<section class="u-clearfix u-image u-section-13" id="sec-2061" data-image-width="1782" data-image-height="1080">
-		<div class="u-clearfix u-sheet u-sheet-1">
-			<div class="u-clearfix u-expanded-width u-gutter-10 u-layout-wrap u-layout-wrap-1">
-				<div class="u-layout" style="">
-					<div class="u-layout-row" style="">
-						<div class="u-align-center u-container-style u-effect-hover-zoom u-layout-cell u-left-cell u-size-30 u-size-xs-60 u-layout-cell-1" src="" data-image-width="1395" data-image-height="864" data-animation-name="flipIn" data-animation-duration="3000" data-animation-direction="X">
-							<div class="u-background-effect u-expanded">
-								<div class="u-background-effect-image u-expanded u-image u-image-1" data-image-width="1395" data-image-height="864"></div>
-							</div>
-							<div class="u-container-layout u-valign-middle u-container-layout-1" src=""></div>
-						</div>
-						<div class="u-container-style u-layout-cell u-right-cell u-size-30 u-size-xs-60 u-layout-cell-2" src="">
-							<div class="u-container-layout u-valign-bottom u-container-layout-2">
-								<h2 class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-default u-text-1" data-animation-name="flipIn" data-animation-duration="3000" data-animation-direction="X">Programacion Orientada a Objetos (POO)</h2>
-								<p class="u-align-center u-hover-feature u-text u-text-body-alt-color u-text-2" data-animation-name="customAnimationIn" data-animation-duration="3000">Un&nbsp;paradigma&nbsp;es el resultado de un proceso social en el cual un grupo<br>de personas desarrolla nuevas ideas y crea principios y prácticas alrededor de estas ideas.
-								</p>
-								<a href="{% url 'usuarios:poo'%}" class="u-border-none u-btn u-btn-round u-button-style u-hover-palette-4-base u-palette-2-base u-radius-50 u-btn-1">Aprende más</a>
-							</div>
-						</div>
-						<br><br><br><br>
-					</div>
-				</div>
-			</div>
-		</div>
-		<br><br><br><br>
-		<a href="{% url 'preguntas:test'%}" class="u-border-none u-btn u-btn-round u-button-style u-hover-palette-4-base u-palette-2-base u-radius-50 u-btn-1">Aprende más</a>
-		{% block test %}
-						
-		{% endblock test %}
+
+
+
+
+
+
+
+
+
+
 
 
 	</section>
@@ -430,7 +622,10 @@
 		<a class="u-link" href="" target="_blank">
 			<span>Website Builder Software</span>
 		</a>.
-	</section>
+	</section><span style="height: 64px; width: 64px; margin-left: 0px; margin-right: auto; margin-top: 0px; background-image: none; right: 20px; bottom: 20px; padding: 15px; box-shadow: 2px -2px 8px 0px rgba(128,128,128,1);" class="u-back-to-top u-icon u-icon-circle u-opacity u-opacity-85 u-white" data-href="#">
+        <svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 551.13 551.13"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-1d98"></use></svg>
+        <svg class="u-svg-content" enable-background="new 0 0 551.13 551.13" viewBox="0 0 551.13 551.13" xmlns="http://www.w3.org/2000/svg" id="svg-1d98"><path d="m275.565 189.451 223.897 223.897h51.668l-275.565-275.565-275.565 275.565h51.668z"></path></svg>
+    </span>
 
 </body>
 </html>

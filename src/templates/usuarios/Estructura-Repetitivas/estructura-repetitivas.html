@@ -53,7 +53,7 @@
 				</div>
 				<div class="u-custom-menu u-nav-container">
 					<ul class="u-nav u-spacing-20 u-unstyled u-nav-1">
-						% if not user.is_authenticated %}
+						{% if not user.is_authenticated %}
 						    <li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-white u-text-body-alt-color u-text-hover-palette-4-base" href="{% url 'login' %}" style="padding: 16px 28px;">Iniciar Sesion</a>
 						    </li>
                         {% else %}
