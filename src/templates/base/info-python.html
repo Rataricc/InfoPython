@@ -10,12 +10,12 @@
 	<meta name="keywords" content="Info-Python, Introducción a Python, Entorno de Desarrollo, Manejo de Variables y Tipos de Datos, Manejo de Variables, Condicionales, Repetitivas, Funciones en Python, Listas en Python, Tuplas, Diccionarios en Python, Manejo de Errores, Programacion Orientada a Objetos (POO)">
 	<meta name="description" content="">
 	<title>Info-Python 2.0</title>
-	<link rel="shortcut icon" href="../../static/img/ico/parablog6.jpg"><!--Ver tambien tema del icono de la pagina no carga-->
 	<link rel="stylesheet" href="../../static/css/nicepage.css" media="screen">
 	<link rel="stylesheet" href="../../static/css/inicio/inicio.css" media="screen"><!--direccion anterior ../../static/css/info-python/index.css-->
 	<script class="u-script" type="text/javascript" src="{% static 'js/jquery.js' %}" defer=""></script>
 	<script class="u-script" type="text/javascript" src="{% static 'js/nicepage.js' %}" defer=""></script>
-	<meta name="generator" content="Nicepage 5.5.0, nicepage.com">
+	<link rel="shortcut icon" href="../../static/img/icon/aInfo6.jpg"><!--Ver tambien tema del icono de la pagina no carga-->
+
 	<link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
 
 
@@ -25,7 +25,7 @@
 				"@context": "http://schema.org",
 				"@type": "Organization",
 				"name": "",
-				"logo": "images/aInfo6.jpg"
+				"logo": "../../static/img/icon/parablog6.jpg"
 		}
 	</script>
 	<meta name="theme-color" content="#232b79">
@@ -212,7 +212,7 @@
 									<div class="class u-list-icon"></div>Fuertemente Tipado
 								</li>
 							</ul>
-							<a href="https://nicepage.com" class="u-border-none u-btn u-btn-round u-button-style u-hover-palette-4-base u-palette-2-base u-radius-50 u-btn-1" data-animation-name="customAnimationIn" data-animation-duration="3000">Aprende más</a>
+							<a href="{% url 'usuarios:intro' %}" class="u-border-none u-btn u-btn-round u-button-style u-hover-palette-4-base u-palette-2-base u-radius-50 u-btn-1" data-animation-name="customAnimationIn" data-animation-duration="3000">Aprende más</a>
 						</div>
 					</div>
 					<div class="u-container-style u-shape-rectangle u-tab-pane u-tab-pane-2" id="tab-ee47" role="tabpanel" aria-labelledby="link-tab-ee47">
@@ -231,7 +231,7 @@
 									<div class="class u-list-icon"></div>Nuestro primer programa
 								</li>
 							</ul>
-							<a href="https://nicepage.com" class="u-border-none u-btn u-btn-round u-button-style u-hover-palette-4-base u-palette-2-base u-radius-50 u-btn-2" data-animation-name="customAnimationIn" data-animation-duration="3000">Aprende más</a>
+							<a href="{% url 'usuarios:entorno' %}" class="u-border-none u-btn u-btn-round u-button-style u-hover-palette-4-base u-palette-2-base u-radius-50 u-btn-2" data-animation-name="customAnimationIn" data-animation-duration="3000">Aprende más</a>
 						</div>
 					</div>
 					<div class="u-container-style u-shape-rectangle u-tab-pane u-tab-pane-3" id="tab-dd0d" role="tabpanel" aria-labelledby="link-tab-dd0d">
@@ -268,7 +268,7 @@
 									<div class="class u-list-icon"></div>Tipos de Datos en Python: (Números)<br>
 								</li>
 							</ul>
-							<a href="https://nicepage.com" class="u-border-none u-btn u-btn-round u-button-style u-hover-palette-4-base u-palette-2-base u-radius-50 u-btn-3" data-animation-name="customAnimationIn" data-animation-duration="3000">Aprende más</a>
+							<a href="{% url 'usuarios:variablesDatos' %}" class="u-border-none u-btn u-btn-round u-button-style u-hover-palette-4-base u-palette-2-base u-radius-50 u-btn-3" data-animation-name="customAnimationIn" data-animation-duration="3000">Aprende más</a>
 						</div>
 					</div>
 					<div class="u-container-style u-shape-rectangle u-tab-pane u-tab-pane-4" id="tab-5ae1" role="tabpanel" aria-labelledby="link-tab-5ae1">
@@ -308,7 +308,7 @@
 									<div class="class u-list-icon"></div>etc...
 								</li>
 							</ul>
-							<a href="https://nicepage.com" class="u-border-none u-btn u-btn-round u-button-style u-hover-palette-4-base u-palette-2-base u-radius-50 u-btn-4" data-animation-name="customAnimationIn" data-animation-duration="3000">Aprende más</a>
+							<a href="{% url 'usuarios:manejo' %}" class="u-border-none u-btn u-btn-round u-button-style u-hover-palette-4-base u-palette-2-base u-radius-50 u-btn-4" data-animation-name="customAnimationIn" data-animation-duration="3000">Aprende más</a>
 						</div>
 					</div>
 					<div class="u-container-style u-shape-rectangle u-tab-pane u-tab-pane-5" id="tab-81cb" role="tabpanel" aria-labelledby="link-tab-81cb">
@@ -336,7 +336,7 @@
 									<div class="class u-list-icon"></div>Condicional multiple: Sentencia elif (sino si)
 								</li>
 							</ul>
-							<a href="https://nicepage.com" class="u-border-none u-btn u-btn-round u-button-style u-hover-palette-4-base u-palette-2-base u-radius-50 u-btn-5" data-animation-name="customAnimationIn" data-animation-duration="3000">Aprende más</a>
+							<a href="{% url 'usuarios:condicionales' %}" class="u-border-none u-btn u-btn-round u-button-style u-hover-palette-4-base u-palette-2-base u-radius-50 u-btn-5" data-animation-name="customAnimationIn" data-animation-duration="3000">Aprende más</a>
 						</div>
 					</div>
 					<div class="u-container-style u-shape-rectangle u-tab-pane u-tab-pane-6" id="tab-3e1f" role="tabpanel" aria-labelledby="link-tab-3e1f">
@@ -373,7 +373,7 @@
 									<div class="class u-list-icon"></div>etc...
 								</li>
 							</ul>
-							<a href="https://nicepage.com" class="u-border-none u-btn u-btn-round u-button-style u-hover-palette-4-base u-palette-2-base u-radius-50 u-btn-6" data-animation-name="customAnimationIn" data-animation-duration="3000">Aprende más</a>
+							<a href="{% url 'usuarios:repetitivas' %}" class="u-border-none u-btn u-btn-round u-button-style u-hover-palette-4-base u-palette-2-base u-radius-50 u-btn-6" data-animation-name="customAnimationIn" data-animation-duration="3000">Aprende más</a>
 						</div>
 					</div>
 					<div class="u-container-style u-shape-rectangle u-tab-pane u-tab-pane-7" id="tab-a1e7" role="tabpanel" aria-labelledby="link-tab-a1e7">
@@ -412,7 +412,7 @@
 									<div class="class u-list-icon"></div>etc...
 								</li>
 							</ul>
-							<a href="https://nicepage.com" class="u-border-none u-btn u-btn-round u-button-style u-hover-palette-4-base u-palette-2-base u-radius-50 u-btn-7" data-animation-name="customAnimationIn" data-animation-duration="3000">Aprende más</a>
+							<a href="{% url 'usuarios:funciones' %}" class="u-border-none u-btn u-btn-round u-button-style u-hover-palette-4-base u-palette-2-base u-radius-50 u-btn-7" data-animation-name="customAnimationIn" data-animation-duration="3000">Aprende más</a>
 						</div>
 					</div>
 					<div class="u-container-style u-shape-rectangle u-tab-pane u-tab-pane-8" id="tab-aefb" role="tabpanel" aria-labelledby="link-tab-aefb">
@@ -442,7 +442,7 @@
 								</li>
 								<li>etc...</li>
 							</ul>
-							<a href="https://nicepage.com" class="u-border-none u-btn u-btn-round u-button-style u-hover-palette-4-base u-palette-2-base u-radius-50 u-btn-8" data-animation-name="customAnimationIn" data-animation-duration="3000">Aprende más</a>
+							<a href="{% url 'usuarios:listas' %}" class="u-border-none u-btn u-btn-round u-button-style u-hover-palette-4-base u-palette-2-base u-radius-50 u-btn-8" data-animation-name="customAnimationIn" data-animation-duration="3000">Aprende más</a>
 						</div>
 					</div>
 					<div class="u-container-style u-shape-rectangle u-tab-pane u-tab-pane-9" id="tab-1822" role="tabpanel" aria-labelledby="link-tab-1822">
@@ -464,7 +464,7 @@
 								</li>
 								<li>etc...</li>
 							</ul>
-							<a href="https://nicepage.com" class="u-border-none u-btn u-btn-round u-button-style u-hover-palette-4-base u-palette-2-base u-radius-50 u-btn-9" data-animation-name="customAnimationIn" data-animation-duration="3000">Aprende más</a>
+							<a href="{% url 'usuarios:tuplas' %}" class="u-border-none u-btn u-btn-round u-button-style u-hover-palette-4-base u-palette-2-base u-radius-50 u-btn-9" data-animation-name="customAnimationIn" data-animation-duration="3000">Aprende más</a>
 						</div>
 					</div>
 					<div class="u-container-style u-shape-rectangle u-tab-pane u-tab-pane-10" id="tab-328c" role="tabpanel" aria-labelledby="link-tab-328c">
@@ -489,7 +489,7 @@
 								</li>
 								<li>etc...</li>
 							</ul>
-							<a href="https://nicepage.com" class="u-border-none u-btn u-btn-round u-button-style u-hover-palette-4-base u-palette-2-base u-radius-50 u-btn-10" data-animation-name="customAnimationIn" data-animation-duration="3000">Aprende más</a>
+							<a href="{% url 'usuarios:diccionarios' %}" class="u-border-none u-btn u-btn-round u-button-style u-hover-palette-4-base u-palette-2-base u-radius-50 u-btn-10" data-animation-name="customAnimationIn" data-animation-duration="3000">Aprende más</a>
 						</div>
 					</div>
 					<div class="u-container-style u-shape-rectangle u-tab-pane u-tab-pane-11" id="tab-b5f5" role="tabpanel" aria-labelledby="link-tab-b5f5">
@@ -524,7 +524,7 @@
 								</li>
 								<li>etc...</li>
 							</ul>
-							<a href="https://nicepage.com" class="u-border-none u-btn u-btn-round u-button-style u-hover-palette-4-base u-palette-2-base u-radius-50 u-btn-11" data-animation-name="customAnimationIn" data-animation-duration="3000">Aprende más</a>
+							<a href="{% url 'usuarios:errores' %}" class="u-border-none u-btn u-btn-round u-button-style u-hover-palette-4-base u-palette-2-base u-radius-50 u-btn-11" data-animation-name="customAnimationIn" data-animation-duration="3000">Aprende más</a>
 						</div>
 					</div>
 					<div class="u-container-style u-shape-rectangle u-tab-pane u-tab-pane-12" id="tab-b00e" role="tabpanel" aria-labelledby="link-tab-b00e">
@@ -564,7 +564,7 @@
 								</li>
 								<li>etc...</li>
 							</ul>
-							<a href="https://nicepage.com" class="u-border-none u-btn u-btn-round u-button-style u-hover-palette-4-base u-palette-2-base u-radius-50 u-btn-12" data-animation-name="customAnimationIn" data-animation-duration="3000">Aprende más</a>
+							<a href="{% url 'usuarios:poo' %}" class="u-border-none u-btn u-btn-round u-button-style u-hover-palette-4-base u-palette-2-base u-radius-50 u-btn-12" data-animation-name="customAnimationIn" data-animation-duration="3000">Aprende más</a>
 						</div>
 					</div>
 				</div>
