@@ -23,6 +23,29 @@
 
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
+
+	<!--Más CDN-->
+	<!-- CSS de Bootstrap -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+	integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+	crossorigin="anonymous">
+
+	<!-- JS de jQuery -->
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+	integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+	crossorigin="anonymous"></script>
+
+	<!-- JS de Popper.js -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+	integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+	crossorigin="anonymous"></script>
+
+	<!-- JS de Bootstrap -->
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+	integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+	crossorigin="anonymous"></script>
+
+
 	<script type="application/ld+json">
 		{
 				"@context": "http://schema.org",
@@ -580,13 +603,16 @@
 						</div>
 					</div>
 				</div>
-			</div> <!--chatbot openai de prueba-->
+			</div>
+<!--################################################################################################################################################################################################################################################################################-->
+			<!--chatbot openai de prueba-->
 			<!-- Button trigger modal -->
 			<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-				Modal
+				ChatBot
 			</button>
 			
 			<!-- Modal -->
+			
 			<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
 				<div class="modal-dialog">
 					<div class="modal-content">
@@ -595,8 +621,7 @@
 							<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 							
 						</div>
-						<!--aca va el text-->
-							<div class="container">
+							<div class="container" style="height: 50%;">
 								<div class="row justify-content-center">
 									<div class="col-md-8">
 										<div class="card">
@@ -608,12 +633,12 @@
 												<form id="chat-form" method="POST">
 													{% csrf_token %}
 													<div class="form-group row">
-														<div class="col-md-10">
-															<input type="text" id="message-input" class="form-control" placeholder="Escribe tu mensaje...">
-														</div>
-														<div class="col-md-2">
-															<button id="send-button" class="btn btn-primary">Enviar</button>
-														</div>
+														
+														<input type="text" id="message-input" class="form-control" placeholder="Escribe tu mensaje...">
+														<br><br>
+													
+														<button id="send-button" class="btn btn-primary">Enviar</button>
+														
 													</div>
 												</form>
 											</div>
@@ -626,12 +651,52 @@
 					</div>
 				</div>
 			</div>
-			
+			<!-- Button trigger fullscreen modal -->
+			<!--<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#fullscreenModal">
+				ChatBot
+			</button>
+		
+		 Fullscreen modal 
+			<div class="modal fade" id="fullscreenModal" tabindex="-1" role="dialog" aria-labelledby="fullscreenModalLabel" aria-hidden="true">
+				<div class="modal-dialog modal-fullscreen" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h5 class="modal-title" id="fullscreenModalLabel">ChatBot</h5>
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+							</button>
+						</div>
+						<div class="modal-body">
+					
+							
+
+							<form id="chat-form" method="POST">
+								{% csrf_token %}
+								<div class="form-group row">
+									<div class="col-md-10">
+										<input type="text" id="message-input" class="form-control" placeholder="Escribe tu mensaje...">
+										<textarea class="form-control" id="message-input" rows="10" placeholder="Escribe tu mensaje..."></textarea>
+										
+									</div>
+									<button id="send-button" class="btn btn-outline-success">Success</button>
+									<div class="card-body">
+										<div id="chat-container" class="hljs" ></div>
+									</div>
+								</div>
+							</form>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+						</div>
+					</div>
+				</div>
+			</div>-->
 			<a href="{% url 'chatbot' %}" class="u-border-none u-btn u-btn-round u-button-style u-hover-palette-4-base u-palette-2-base u-radius-50 u-btn-7" data-animation-name="customAnimationIn" data-animation-duration="3000">chatbot</a>
 		</section>
 	{% endif %}
+<!--################################################################################################################################################################################################################################################################################-->
 
-
+<!--################################################################################################################################################################################################################################################################################-->
 	<footer class="u-align-center u-clearfix u-footer u-grey-80 u-footer" id="sec-b796">
 		<div class="u-clearfix u-sheet u-sheet-1">
 			<p class="u-small-text u-text u-text-variant u-text-1">Sample text. Click to select the text box. Click again or double click to start editing the text.</p>

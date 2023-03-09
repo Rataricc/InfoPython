@@ -34,11 +34,27 @@ def template_info_python(request):
 # chatbot openai API
 
 #openai.api_key = "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"
-openai.api_key = "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"
+openai.api_key = "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"
 
 #Detectar código ingresado por el usuario:
 
 chat_log = []
+
+def chatbot(request):
+    if request.method == "POST": 
+        message = request.POST.get("message", "")
+        response = openai.Completion.create(
+            engine="text-davinci-002",
+            prompt='El usuario dice: "' + message + '"',
+            max_tokens=1024,
+            n=1,
+            stop=None,
+            temperature=0.5, 
+        ).choices[0].text
+        chat_log.append({"user": message, "bot": response})
+        return HttpResponse(response)
+    else:
+        return render(request, "chatbot/chatbot.html", {"chat_log": chat_log})
 
 """
 Luego, podemos crear una función que reciba como parámetros el código y el lenguaje de programación, y que utilice Pygments para resaltar la sintaxis. 
@@ -60,11 +76,11 @@ def highlight_code(code, lang):
     return highlight(code, lexer, formatter)
 """
 
-
+"""
 def highlight_code(text):
-    """
-    Función que recibe un texto y devuelve una versión con código resaltado
-    """
+    
+    #Función que recibe un texto y devuelve una versión con código resaltado
+   
     # Expresión regular para detectar bloques de código
     code_regex = r"```(.+?)```"
     
@@ -74,7 +90,7 @@ def highlight_code(text):
         return f'<pre><code class="language-python">{code}</code></pre>'
     
     return re.sub(code_regex, replace_code, text, flags=re.DOTALL)
-
+"""
 
 """
 Este código utiliza la función detect_languagepara buscar palabras clave en el mensaje del usuario y detectar el lenguaje de programación que está pidiendo. 
@@ -83,7 +99,7 @@ Si no se encuentra un lenguaje, el bot responde con un mensaje de "No entiendo l
 Si se detecta un bloque de código en la respuesta del bot, el código se resalta con Pygments como antes. 
 Si no hay un bloque de código en la respuesta, el bot simplemente responde con texto plano.
 """
-
+"""
 def detect_language(text):
     # Diccionario que asocia palabras clave con lenguajes de programación
     language_map = {
@@ -104,6 +120,7 @@ def detect_language(text):
                 return lang
     # Si no se detecta ningún lenguaje, retornamos None
     return None
+"""
 
 #views chatbot
 """
@@ -171,7 +188,7 @@ def chatbot(request):
     
 """
 
-
+"""
 def chatbot(request):
     if request.method == "POST":
         message = request.POST.get("message", "")
@@ -194,25 +211,6 @@ def chatbot(request):
         chat_log.append({"user": message, "bot": response})
         print(chat_log)
         print(response)
-        return HttpResponse(response)
-    else:
-        return render(request, "chatbot/chatbot.html", {"chat_log": chat_log})
-
-
-
-"""
-def chatbot(request):
-    if request.method == "POST": 
-        message = request.POST.get("message", "")
-        response = openai.Completion.create(
-            engine="text-davinci-002",
-            prompt='El usuario dice: "' + message + '"',
-            max_tokens=1024,
-            n=1,
-            stop=None,
-            temperature=0.5, 
-        ).choices[0].text
-        chat_log.append({"user": message, "bot": response})
         return HttpResponse(response)
     else:
         return render(request, "chatbot/chatbot.html", {"chat_log": chat_log})
