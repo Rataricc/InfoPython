@@ -34,7 +34,7 @@ def template_info_python(request):
 # chatbot openai API
 
 #openai.api_key = "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"
-openai.api_key = "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"
+openai.api_key = "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"
 
 #Detectar código ingresado por el usuario:
 
@@ -54,7 +54,7 @@ def chatbot(request):
         chat_log.append({"user": message, "bot": response})
         return HttpResponse(response)
     else:
-        return render(request, "chatbot/chatbot.html", {"chat_log": chat_log})
+        return render(request, "chatbot-Chatty/chatbot-chatty.html", {"chat_log": chat_log})
 
 """
 Luego, podemos crear una función que reciba como parámetros el código y el lenguaje de programación, y que utilice Pygments para resaltar la sintaxis. 
