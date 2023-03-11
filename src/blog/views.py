@@ -1,14 +1,18 @@
 from django.shortcuts 				import render, HttpResponse
 from django.views.generic.base      import TemplateView
 from django.http 					import JsonResponse
-import openai
-from pygments import highlight
-from pygments.lexers import get_lexer_by_name
-from pygments.formatters import HtmlFormatter
+from pygments                       import highlight
+from pygments.lexers                import get_lexer_by_name
+from pygments                       import highlight
+from pygments.lexers                import get_lexer_by_name
+from pygments.formatters            import HtmlFormatter
+from dotenv                         import load_dotenv
 import re
 import json 
-from pygments import highlight
-from pygments.lexers import get_lexer_by_name
+import os
+import openai
+
+
 
 def inicio(request): 
 	template_name = "inicio.html"
@@ -33,8 +37,11 @@ def template_info_python(request):
 
 # chatbot openai API
 
-#openai.api_key = "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"
-openai.api_key = "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"
+openai.api_key = os.environ.get('OPENAI_API_KEY')
+
+#load_dotenv()
+#OPENAI_API_KEY = os.environ.get("OPENAI_API_KEY")
+#print(f"La clave API de OpenAI es: {OPENAI_API_KEY}")
 
 #Detectar código ingresado por el usuario:
 
