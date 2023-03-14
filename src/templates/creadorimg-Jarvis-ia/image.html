@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Imagen generada con Jarvis de DALL-E</title>
+</head>
+<body>
+    <h1>Imagen generada:</h1>
+    <img src="{{ image_url }}">
+    <br><br>
+    <form method="GET" action="{% url 'download_image' %}">
+        <input type="hidden" name="image_url" value="{{ image_url }}">
+        <button type="submit">Descargar imagen</button>
+   

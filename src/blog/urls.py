@@ -34,8 +34,14 @@ urlpatterns = [
     path('', views.template_info_python, name='principal'),  
     #path('templateNuevo/', views.template_info_python, name='prueba'), asi era antes la url de arriba.
 
-    #url chatbot openai
+    #url chatbot Chatty openai
     path('chatbot/', views.chatbot, name='chatbot'),
+    #url chatbot Alpha openai codex github
+    path('Alpha/', views.code_assistant, name='Alpha'),
+    #url DALL·E Openai
+    path('Jarvis/', views.generate_image, name='Jarvis'),
+    #Descargar imagenes
+    path('download_image/', views.download_image, name='download_image'),
 ]
 
 handler404 = Error404View.as_view()

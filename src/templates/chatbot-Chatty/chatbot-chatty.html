@@ -16,6 +16,17 @@
 	<meta name="referrer" content="origin">
 	<link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
 
+	<style>
+		.bot-image {
+			width: 50px;
+			height: 50px;
+			border-radius: 50%;
+			background-color: #ccc;
+			background-image: url('../../static/img/43efa79c47dcd9ed2b21331f3b124384201f52798dae686f1b3a5685b13ba37f28b28c474941c049ddd07cc5050e5eebf8a671e03bc5523f9364a1_1280.png');
+			background-position: center;
+			background-size: cover;
+		}
+	</style>
 
 	<script type="application/ld+json">
 		{
@@ -176,7 +187,7 @@
                 hljs.highlightAll();
             } else {
                 // Si la respuesta no es código, la agregamos al chat tal cual
-                chatContainer.innerHTML += `<p><strong>Bot:</strong> ${data}</p>`;
+                chatContainer.innerHTML += `<img src="{% static 'img/43efa79c47dcd9ed2b21331f3b124384201f52798dae686f1b3a5685b13ba37f28b28c474941c049ddd07cc5050e5eebf8a671e03bc5523f9364a1_1280.png' %}" alt="Bot" class="bot-image"> ${data}`;
             }
             })
             .catch(error => console.error(error));

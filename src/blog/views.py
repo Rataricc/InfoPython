@@ -1,4 +1,4 @@
-from django.shortcuts 				import render, HttpResponse
+from django.shortcuts 				import render, HttpResponse, redirect
 from django.views.generic.base      import TemplateView
 from django.http 					import JsonResponse
 from pygments                       import highlight
@@ -7,10 +7,16 @@ from pygments                       import highlight
 from pygments.lexers                import get_lexer_by_name
 from pygments.formatters            import HtmlFormatter
 from dotenv                         import load_dotenv
+from decouple                       import config
+from io                             import BytesIO
+from PIL                            import Image
+from urllib.parse                   import urlparse, unquote
 import re
 import json 
 import os
 import openai
+import requests
+
 
 
 
@@ -35,7 +41,7 @@ def template_info_python(request):
 	return render(request, template_name, ctx)
 
 
-# chatbot openai API
+# chatbot Chatty openai API
 
 openai.api_key = os.environ.get('OPENAI_API_KEY')
 
@@ -47,7 +53,7 @@ openai.api_key = os.environ.get('OPENAI_API_KEY')
 
 chat_log = []
 
-def chatbot(request):
+def chatbot(request): #Chatty
     if request.method == "POST": 
         message = request.POST.get("message", "")
         response = openai.Completion.create(
@@ -62,6 +68,69 @@ def chatbot(request):
         return HttpResponse(response)
     else:
         return render(request, "chatbot-Chatty/chatbot-chatty.html", {"chat_log": chat_log})
+    
+
+# Chatbot Alpha solamente responde a preguntas de código
+
+def code_assistant(request): #Alpha
+    if request.method == 'POST':
+        # Obtener la pregunta del usuario desde el formulario
+        user_question = request.POST['question']
+
+        # Inicializar el modelo de GPT-3
+        
+        model_engine = "code-cushman-001" #Antes davinci-codex
+        prompt = f"Q: {user_question}\nA:"
+
+        # Obtener la respuesta de la IA
+        response = openai.Completion.create(
+            engine=model_engine,
+            prompt=prompt,
+            max_tokens=1000, #1024 era antes.
+            n=1,
+            stop=None,
+            temperature=0.7,
+        )
+
+        # Devolver la respuesta en formato JSON
+        return JsonResponse({'response': response.choices[0].text})
+
+    return render(request, 'chatbot-Alpha/chatbot-alpha.html')
+
+
+# DALLE-E = Jarvis : Creador de imagenes
+
+def generate_image(request):
+    if request.method == 'POST':
+        text = request.POST['text']
+        response = openai.Image.create(
+            prompt=text,
+            n=1,
+            size="512x512"
+        )
+        image_url = response['data'][0]['url']
+        # Renderizamos el template para mostrar la imagen en el navegador
+        #return redirect('show_image', image_url=image_url)
+        return render(request, 'creadorimg-Jarvis-ia/image.html', {'image_url': image_url})
+
+    else:
+        return render(request, 'creadorimg-Jarvis-ia/creadorimg-Jarvis-ia.html')
+
+# Descargar imagen: 
+
+def download_image(request):
+    image_url = request.GET['image_url']
+    # Descargamos la imagen desde la URL y la guardamos en memoria
+    image_content = requests.get(image_url).content
+    # Abrimos la imagen con PIL
+    img = Image.open(BytesIO(image_content))
+    # Guardamos la imagen en formato PNG en memoria
+    buffer = BytesIO()
+    img.save(buffer, format='PNG')
+    # Construimos la respuesta HTTP con la imagen en memoria
+    response = HttpResponse(buffer.getvalue(), content_type='image/png')
+    response['Content-Disposition'] = 'attachment; filename="imagen.png"'
+    return response
 
 """
 Luego, podemos crear una función que reciba como parámetros el código y el lenguaje de programación, y que utilice Pygments para resaltar la sintaxis. 

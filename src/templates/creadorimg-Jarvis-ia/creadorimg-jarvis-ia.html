@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Jarvis</title>
+</head>
+<body>
+    <h1>Jarvis: Creador de imágenes</h1>
+    <form method="POST" action="{% url 'Jarvis' %}">
+        {% csrf_token %}
+        <label for="text">Introduce un texto:</label><br>
+        <input type="text" id="text" name="text" required><br>
+        <button type="submit">Generar imagen</button>
+    </form>
+</body>
+</html>

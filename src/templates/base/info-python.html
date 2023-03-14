@@ -14,7 +14,6 @@
 	<link rel="stylesheet" href="../../static/css/inicio/inicio.css" media="screen"><!--direccion anterior ../../static/css/info-python/index.css-->
 	<script class="u-script" type="text/javascript" src="{% static 'js/jquery.js' %}" defer=""></script>
 	<script class="u-script" type="text/javascript" src="{% static 'js/nicepage.js' %}" defer=""></script>
-	<link rel="shortcut icon" href="../../static/img/icon/aInfo6.jpg"><!--Ver tambien tema del icono de la pagina no carga-->
 
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
@@ -45,6 +44,7 @@
 	integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
 	crossorigin="anonymous"></script>
 
+	<link rel="shortcut icon" href="../../static/img/icon/aInfo6.jpg"><!--Ver tambien tema del icono de la pagina no carga-->
 
 	<script type="application/ld+json">
 		{
@@ -220,6 +220,7 @@
 							<a class="u-active-black u-border-6 u-border-active-black u-border-hover-black u-border-palette-1-dark-2 u-button-style u-radius-32 u-tab-link u-text-active-palette-2-base u-text-body-alt-color u-text-hover-white u-tab-link-12" id="link-tab-b00e" href="#tab-b00e" role="tab" aria-controls="tab-b00e" aria-selected="false">Programacion Orientada a Objetos (POO)</a>
 						</li>
 					</ul>
+					<br><br>
 					<div class="u-tab-content">
 						<div class="u-container-style u-shape-rectangle u-tab-active u-tab-pane" id="tab-0da5" role="tabpanel" aria-labelledby="link-tab-0da5">
 							<div class="u-container-layout u-container-layout-1">
@@ -691,7 +692,10 @@
 					</div>
 				</div>
 			</div>-->
-			<a href="{% url 'chatbot' %}" class="u-border-none u-btn u-btn-round u-button-style u-hover-palette-4-base u-palette-2-base u-radius-50 u-btn-7" data-animation-name="customAnimationIn" data-animation-duration="3000">chatbot</a>
+			<a href="{% url 'Alpha' %}" class="u-border-none u-btn u-btn-round u-button-style u-hover-palette-4-base u-palette-2-base u-radius-50 u-btn-7" data-animation-name="customAnimationIn" data-animation-duration="3000">chatbot-Alpha</a>
+			<a href="{% url 'Jarvis' %}" class="u-border-none u-btn u-btn-round u-button-style u-hover-palette-4-base u-palette-2-base u-radius-50 u-btn-7" data-animation-name="customAnimationIn" data-animation-duration="3000">chatbot-Jarvis</a>
+
+			<a href="{% url 'chatbot' %}" class="u-border-none u-btn u-btn-round u-button-style u-hover-palette-4-base u-palette-2-base u-radius-50 u-btn-7" data-animation-name="customAnimationIn" data-animation-duration="3000">chatbot-Chatty</a>
 		</section>
 	{% endif %}
 <!--################################################################################################################################################################################################################################################################################-->
