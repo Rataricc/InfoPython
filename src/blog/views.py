@@ -57,7 +57,7 @@ def chatbot(request): #Chatty
     if request.method == "POST": 
         message = request.POST.get("message", "")
         response = openai.Completion.create(
-            engine="text-davinci-002",
+            engine="text-davinci-002",     #gpt-3.5-turbo-0301 text-davinci-002
             prompt='El usuario dice: "' + message + '"',
             max_tokens=1024,
             n=1,
