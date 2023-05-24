@@ -78,6 +78,7 @@ DJANGO_APPS = [
     'allauth.socialaccount.providers.instagram', 
     'allauth.socialaccount.providers.twitter',
     'allauth.socialaccount.providers.twitter_oauth2',
+    'django_ace',
 
 ]
 # Aplicaciones que son creadas por mi en dicho sistema o software.

@@ -16,6 +16,9 @@ import json
 import os
 import openai
 import requests
+import subprocess
+import execjs
+
 
 
 
@@ -79,7 +82,7 @@ def code_assistant(request): #Alpha
 
         # Inicializar el modelo de GPT-3
         
-        model_engine = "code-cushman-001" #Antes davinci-codex
+        model_engine = "text-curie-001" #Antes davinci-codex, code-cushman-001
         prompt = f"Q: {user_question}\nA:"
 
         # Obtener la respuesta de la IA
@@ -132,162 +135,53 @@ def download_image(request):
     response['Content-Disposition'] = 'attachment; filename="imagen.png"'
     return response
 
-"""
-Luego, podemos crear una función que reciba como parámetros el código y el lenguaje de programación, y que utilice Pygments para resaltar la sintaxis. 
-Aquí te muestro un ejemplo de cómo podría ser la función:
+# Prueba code : view de editor de codigo online 0.1
 
-Esta función utiliza get_lexer_by_namepara obtener el lexer correspondiente al lenguaje de programación. 
-Si el lenguaje no es soportado por Pygments, utilizamos el lexer de texto plano. 
-Luego, creamos un objeto HtmlFormatterpara darle estilo al código resaltado, y finalmente utilizamos highlightpara resaltar el código utilizando el lexer y formatter correspondientes.
-"""
-
-"""
-def highlight_code(code, lang):
-    try:
-        lexer = get_lexer_by_name(lang)
-    except:
-        # Si el lenguaje de programación no es soportado por Pygments, utilizamos el lexer de texto plano
-        lexer = get_lexer_by_name("text")
-    formatter = HtmlFormatter(style='colorful')
-    return highlight(code, lexer, formatter)
-"""
-
-"""
-def highlight_code(text):
-    
-    #Función que recibe un texto y devuelve una versión con código resaltado
+def editor_codigo(request):
    
-    # Expresión regular para detectar bloques de código
-    code_regex = r"```(.+?)```"
-    
-    # Buscamos los bloques de código y los reemplazamos con una versión resaltada
-    def replace_code(match):
-        code = match.group(1)
-        return f'<pre><code class="language-python">{code}</code></pre>'
-    
-    return re.sub(code_regex, replace_code, text, flags=re.DOTALL)
-"""
-
-"""
-Este código utiliza la función detect_languagepara buscar palabras clave en el mensaje del usuario y detectar el lenguaje de programación que está pidiendo. 
-Si se encuentra un lenguaje, el bot responde con una solicitud para crear una función en ese lenguaje. 
-Si no se encuentra un lenguaje, el bot responde con un mensaje de "No entiendo lo que estás diciendo". 
-Si se detecta un bloque de código en la respuesta del bot, el código se resalta con Pygments como antes. 
-Si no hay un bloque de código en la respuesta, el bot simplemente responde con texto plano.
-"""
-"""
-def detect_language(text):
-    # Diccionario que asocia palabras clave con lenguajes de programación
-    language_map = {
-        "python": ["python", "py"],
-        "javascript": ["javascript", "js"],
-        "java": ["java"],
-        "c++": ["c++", "cpp"],
-        "c#": ["c#", "csharp"],
-        "php": ["php"],
-        "html": ["html"],
-        "css": ["css"],
-        "sql": ["sql"],
-    }
-    # Buscamos en el texto del mensaje palabras clave para detectar el lenguaje
-    for lang, keywords in language_map.items():
-        for keyword in keywords:
-            if keyword in text.lower():
-                return lang
-    # Si no se detecta ningún lenguaje, retornamos None
-    return None
-"""
-
-#views chatbot
-"""
-def chatbot(request):
+   
     if request.method == "POST":
-        message = request.POST.get("message", "")
-        response = openai.Completion.create(
-            engine="text-davinci-002",
-            prompt='El usuario dice: "' + message + '"',
-            max_tokens=1024,
-            n=1,
-            stop=None,
-            temperature=0.5,
-        ).choices[0].text.strip().replace('\n', ' ')
-
-        chat_log.append({"user": message, "bot": response})
-        return HttpResponse(response)
-        #return JsonResponse({"bot": response}, json_dumps_params={'ensure_ascii': False})
-        #return HttpResponse(json.dumps({"bot": response}), content_type="application/json")
+        code = request.POST.get("code", "")
+        try:
+            output = subprocess.check_output(["python", "-c", code], stderr=subprocess.STDOUT)
+            output = output.decode("utf-8")
+            ctx = {"output": output}
+        except subprocess.CalledProcessError as e:
+            output = e.output.decode("utf-8")
+            ctx = {"error": output}
     else:
-        return render(request, "chatbot/chatbot.html", {"chat_log": chat_log})
-"""
+        ctx = {}
+    template_name = 'editorCodigo/editorCodigo.html' 
+   
+    return render(request, template_name, ctx)
 
-"""
-def chatbot(request):
-    if request.method == "POST": 
-        message = request.POST.get("message", "")
-        #response =  ""
-        #if "programación" in message.lower():
-        response = openai.Completion.create(
-            engine="text-davinci-002",
-            prompt='El usuario dice: "' + message + '"',
-            max_tokens=1024,
-            n=1,
-            stop=None,
-            temperature=0.5, 
-        ).choices[0].text.strip().replace('\n', ' ')
-        # Detectamos el lenguaje de programación en la respuesta del bot utilizando una expresión regular
-        match = re.search(r"```(\w+)\n(.+)\n```", response, re.DOTALL)
-        if match:
-            lang = match.group(1)
-            code = match.group(2)
-            lexer = get_lexer_by_name(lang, stripall=True)
-            formatter = HtmlFormatter(full=True)
-            response = highlight_code(code, lang, lexer, formatter)
-        else:
-            # Si no se encuentra un bloque de código en la respuesta, detectamos el lenguaje en el mensaje del usuario
-            lang = detect_language(message)
-            if lang:
-                response = f"Hazme una función en {lang}"
-            else:
-                response = response
-       
-        chat_log.append({"user": message, "bot": response})
-        print(chat_log) 
-        print(response)
-        return HttpResponse(response)
-        #return JsonResponse({"bot": response})
-        #return JsonResponse({"bot": response}, json_dumps_params={'ensure_ascii': False})
-        #return HttpResponse(json.dumps({"bot": response}), content_type="application/json") 
-        #return HttpResponse(json.dumps({"bot": response}, ensure_ascii=False), content_type="application/json")      
-    else:
-        return render(request, "chatbot/chatbot.html", {"chat_log": chat_log})
-    #return HttpResponse({"chat_log": chat_log})
-    
+# Prueba code : view de editor de codigo online 1.1
+
+
+def editor_de_codigo(request): 
+    template_name = 'editcode/editcode.html'
+    ctx = {}
+    return render(request, template_name, ctx)
 """
 
-"""
-def chatbot(request):
-    if request.method == "POST":
-        message = request.POST.get("message", "")
-        response = openai.Completion.create(
-            engine="text-davinci-002",
-            prompt='El usuario dice: "' + message + '"',
-            max_tokens=1024,
-            n=1,
-            stop=None,
-            temperature=0.5,
-        ).choices[0].text.strip().replace('\n', ' ')
-        lang = detect_language(message)
-        if "```" in response:
-            response = response.replace("```", "'''")
-            response = f"```python\n{response}\n```"
-        elif lang:
-            response = f"Hazme una función en {lang}"
-        else:
-            response = response
-        chat_log.append({"user": message, "bot": response})
-        print(chat_log)
-        print(response)
-        return HttpResponse(response)
-    else:
-        return render(request, "chatbot/chatbot.html", {"chat_log": chat_log})
+def editor_de_codigo(request):
+    if request.method == 'POST':
+        code = request.POST.get('code', '')
+        output = execute_code(code)
+        return HttpResponse(output)
+
+    template_name = 'editcode/editcode.html'
+    ctx = {}
+    return render(request, template_name, ctx)
+
+
+def execute_code(code):
+    ctx = execjs.compile('''
+        function runCode() {
+            // Aquí se ejecuta el código
+            // Puedes hacer cualquier procesamiento adicional si es necesario
+            return eval(code);
+        }
+    ''')
+    return ctx.call('runCode')
 """

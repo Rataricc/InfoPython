@@ -42,6 +42,10 @@ urlpatterns = [
     path('Jarvis/', views.generate_image, name='Jarvis'),
     #Descargar imagenes
     path('download_image/', views.download_image, name='download_image'),
+    #url de editor de codigo
+    path('editorCode/', views.editor_codigo, name='editorCode'),
+    #editor codigo 1.1 
+    path('editcode/', views.editor_de_codigo, name='editcode'), 
 ]
 
 handler404 = Error404View.as_view()

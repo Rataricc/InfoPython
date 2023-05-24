@@ -1,0 +1,66 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'django_ace/css/ace.min.css' %}">
+    <title>Editor Code</title>
+    
+    
+    
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h1>Editor de Código</h1>
+            <form method="post" action="{% url 'editorCode' %}">
+              {% csrf_token %}
+              <div class="form-group">
+                <textarea id="code-editor" name="code"></textarea>
+              </div>
+              <div class="form-group">
+                <button type="submit" class="btn btn-primary">Ejecutar</button>
+              </div>
+            </form>
+          </div>
+        </div>
+        {% if output %}
+        <div class="row">
+          <div class="col-md-12">
+            <h2>Output:</h2>
+            <pre>{{ output }}</pre>
+          </div>
+        </div>
+        {% endif %}
+        {% if error %}
+        <div class="row">
+          <div class="col-md-12">
+            <h2>Error:</h2>
+            <pre>{{ error }}</pre>
+          </div>
+        </div>
+        {% endif %}
+    </div>
+
+    <script src="{% static 'js/ace/ace.js' %}"></script>
+    <script src="{% static 'js/ace/mode-python.js' %}"></script>
+    <script src="{% static 'js/ace/ext-language_tools.js' %}"></script>
+    <script src="{% static 'js/ace/theme-monokai.js' %}"></script>
+
+
+    <script>
+    var editor = ace.edit("editor");
+    editor.setTheme("ace/theme/monokai");
+    editor.session.setMode("ace/mode/python");
+    editor.setOptions({
+      enableBasicAutocompletion: true,
+      enableSnippets: true,
+      enableLiveAutocompletion: true
+    });
+  </script>
+</body>
+</html>
