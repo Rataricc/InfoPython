@@ -7,41 +7,48 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="{% static 'django_ace/css/ace.min.css' %}">
-    <title>Editor Code</title>
-    
-    
-    
+    <link rel="stylesheet" type="text/css" href="{% static 'css/editor.css' %}"> <!-- Agrega tu archivo de estilos personalizado -->
+
+
+    <!-- CSS de Bootstrap -->
+	  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+    crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+    <title>Editor de Código</title>
 </head>
 <body>
     <div class="container">
         <div class="row">
-          <div class="col-md-12">
-            <h1>Editor de Código</h1>
-            <form method="post" action="{% url 'editorCode' %}">
-              {% csrf_token %}
-              <div class="form-group">
-                <textarea id="code-editor" name="code"></textarea>
-              </div>
-              <div class="form-group">
-                <button type="submit" class="btn btn-primary">Ejecutar</button>
-              </div>
-            </form>
-          </div>
+            <div class="col-md-12">
+                <h1>Editor de Código</h1>
+                <form method="post" action="{% url 'editorCode' %}">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <textarea id="code-editor" name="code" class="code-editor"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-primary">Ejecutar</button>
+                    </div>
+                </form>
+            </div>
         </div>
         {% if output %}
         <div class="row">
-          <div class="col-md-12">
-            <h2>Output:</h2>
-            <pre>{{ output }}</pre>
-          </div>
+            <div class="col-md-12">
+                <h2>Output:</h2>
+                <pre>{{ output }}</pre>
+            </div>
         </div>
         {% endif %}
         {% if error %}
         <div class="row">
-          <div class="col-md-12">
-            <h2>Error:</h2>
-            <pre>{{ error }}</pre>
-          </div>
+            <div class="col-md-12">
+                <h2>Error:</h2>
+                <pre>{{ error }}</pre>
+            </div>
         </div>
         {% endif %}
     </div>
@@ -50,17 +57,15 @@
     <script src="{% static 'js/ace/mode-python.js' %}"></script>
     <script src="{% static 'js/ace/ext-language_tools.js' %}"></script>
     <script src="{% static 'js/ace/theme-monokai.js' %}"></script>
-
-
     <script>
-    var editor = ace.edit("editor");
-    editor.setTheme("ace/theme/monokai");
-    editor.session.setMode("ace/mode/python");
-    editor.setOptions({
-      enableBasicAutocompletion: true,
-      enableSnippets: true,
-      enableLiveAutocompletion: true
-    });
-  </script>
+        var editor = ace.edit("code-editor");
+        editor.setTheme("ace/theme/monokai");
+        editor.session.setMode("ace/mode/python");
+        editor.setOptions({
+            enableBasicAutocompletion: true,
+            enableSnippets: true,
+            enableLiveAutocompletion: true
+        });
+    </script>
 </body>
 </html>
