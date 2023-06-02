@@ -46,6 +46,8 @@ urlpatterns = [
     path('editorCode/', views.editor_codigo, name='editorCode'),
     #editor codigo 1.1 
     path('editcode/', views.editor_de_codigo, name='editcode'), 
+
+    #path('ejecutar-codigo/', views.ejecutar_codigo, name='ejecutarCodigo'), 
 ]
 
 handler404 = Error404View.as_view()

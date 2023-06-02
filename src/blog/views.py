@@ -138,7 +138,45 @@ def download_image(request):
 # Prueba code : view de editor de codigo online 0.1
 
 def editor_codigo(request):
-   
+    if request.method == "POST":
+        code = request.POST.get("code", "")
+        try:
+            output = subprocess.check_output(["python", "-c", code], stderr=subprocess.STDOUT)
+            output = output.decode("utf-8")
+            ctx = {"output": output}
+        except subprocess.CalledProcessError as e:
+            output = e.output.decode("utf-8")
+            ctx = {"error": output}
+    else:
+        ctx = {}
+    template_name = 'editorCodigo/editorCodigo.html' 
+    return render(request, template_name, ctx)
+"""
+def ejecutar_codigo(request):
+    if request.method == 'POST':
+        try:
+            code = request.POST.get('code', '')
+            result = eval(code)  # Ejecuta el código Python
+
+            # Devuelve el resultado como JSON
+            response = {
+                'success': True,
+                'output': str(result)
+            }
+        except Exception as e:
+            # Si ocurre un error, devuelve el mensaje de error como JSON
+            response = {
+                'success': False,
+                'error': str(e)
+            }
+
+        return JsonResponse(response)
+
+    return JsonResponse({'success': False, 'error': 'Método no permitido'})
+
+
+
+def editor_codigo(request):
    
     if request.method == "POST":
         code = request.POST.get("code", "")
@@ -155,7 +193,31 @@ def editor_codigo(request):
    
     return render(request, template_name, ctx)
 
-# Prueba code : view de editor de codigo online 1.1
+
+def ejecutar_codigo(request):
+    if request.method == 'POST':
+        try:
+            code = request.POST.get('code', '')
+            result = eval(code)  # Ejecuta el código Python
+
+            # Devuelve el resultado como JSON
+            response = {
+                'success': True,
+                'output': str(result)
+            }
+        except Exception as e:
+            # Si ocurre un error, devuelve el mensaje de error como JSON
+            response = {
+                'success': False,
+                'error': str(e)
+            }
+
+        return JsonResponse(response)
+
+    return JsonResponse({'success': False, 'error': 'Método no permitido'})
+"""
+
+# Prueba code : view de editor de codigo online 1.1-----------------------------------
 
 
 def editor_de_codigo(request): 
