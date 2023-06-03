@@ -11,6 +11,7 @@ from decouple                       import config
 from io                             import BytesIO
 from PIL                            import Image
 from urllib.parse                   import urlparse, unquote
+from .forms                         import EditorForm
 import re
 import json 
 import os
@@ -138,6 +139,29 @@ def download_image(request):
 # Prueba code : view de editor de codigo online 0.1
 
 def editor_codigo(request):
+    ctx = {}
+
+    if request.method == "POST":
+        form = EditorForm(request.POST)
+        if form.is_valid():
+            code = form.cleaned_data["text"]
+            try:
+                output = subprocess.check_output(["python", "-c", code], stderr=subprocess.STDOUT)
+                output = output.decode("utf-8")
+                ctx = {"output": output}
+            except subprocess.CalledProcessError as e:
+                output = e.output.decode("utf-8")
+                ctx = {"error": output}
+    else:
+        form = EditorForm()
+        ctx = {"form": form}
+    template_name = 'editorCodigo/editorCodigo.html'
+    return render(request, template_name, ctx)
+
+
+
+"""
+def editor_codigo(request):
     if request.method == "POST":
         code = request.POST.get("code", "")
         try:
@@ -151,7 +175,7 @@ def editor_codigo(request):
         ctx = {}
     template_name = 'editorCodigo/editorCodigo.html' 
     return render(request, template_name, ctx)
-"""
+
 def ejecutar_codigo(request):
     if request.method == 'POST':
         try:

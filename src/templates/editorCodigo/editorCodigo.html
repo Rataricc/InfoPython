@@ -2,22 +2,22 @@
 
 <!DOCTYPE html>
 <html lang="en">
+    <!--Probar el codigo de GPT-->
+    <!--
+        Esto todavia no funciona bien, seguir viendo a detalle. 
+        Ver codigo echo por la IA chatGPT para seguir viendo más funcionaliades. 
+        Con respecto al editor en cuestion.
+    -->
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   
-    <link rel="stylesheet" type="text/css" href="../../static/css/pruebaEditorAce/widget.css"> <!-- Agrega tu archivo de estilos personalizado -->
-
-
-    <!-- CSS de Bootstrap -->
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-    crossorigin="anonymous">
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-    crossorigin="anonymous"></script>
-    <title>Editor de Código</title>
+    <!-- ... -->
+    <link rel="stylesheet" href="../../static/css/pruebaEditorAce/widget.css">
+    <script src="{% static 'js/editcode/ace.js' %}"></script>
+    <script src="{% static 'js/editcode/mode-javascript.js' %}"></script>
+    <script src="{% static 'js/editcode/mode-python.js' %}"></script>
+    <script src="{% static 'js/editcode/theme-twilight.js' %}"></script>
+    <script src="{% static 'js/editcode/worker-javascript.js' %}"></script>
+    <script src="{% static 'js/editcode/snippets/python.js' %}"></script>
+    <!-- ... -->
 </head>
 <body>
     <div class="container">
@@ -26,58 +26,15 @@
                 <h1>Editor de Código</h1>
                 <form method="post" action="{% url 'editorCode' %}">
                     {% csrf_token %}
-                    <div class="form-group">
-                        <textarea id="areaNumeracion" cols="1" rows="25" readonly></textarea>
-                        <textarea id="code-editor" name="code" class="code-editor" rows="25" cols="70" onkeyup="numeracion(event);"></textarea>
-                        
-                        
-
-                    </div>
+                    {{ form.as_p }}
                     <div class="form-group">
                         <button type="submit" class="btn btn-primary">Ejecutar</button>
                     </div>
                 </form>
             </div>
         </div>
-        {% if output %}
-        <div class="row">
-            <div class="col-md-12">
-                <h2>Output:</h2>
-                <pre>{{ output }}</pre>
-            </div>
-        </div>
-        {% endif %}
-        {% if error %}
-        <div class="row">
-            <div class="col-md-12">
-                <h2>Error:</h2>
-                <pre>{{ error }}</pre>
-            </div>
-        </div>
-        {% endif %}
+        <!-- ... -->
     </div>
-
-    <script src="{% static 'js/editcode/ace.js'%}"></script>
-    
-    <script src="{% static 'js/editcode/mode-python.js' %}"></script>
-    <script src="{% static 'js/editcode/theme-twilight.js' %}"></script>
-
-    <script>
-        window.onload = function() {
-            numeracion();
-            }
-
-            function numeracion(e) {
-            let eArea = document.getElementById('areaNumeracion');
-            let eArea2 = document.getElementById('code-editor');
-            let numeros = eArea2.value.split("\n").length;
-            let msj = "";
-            for (let i = 0; i < numeros; i++) {
-                msj += (i + 1) + "\n";
-            }
-            eArea.value = msj;
-            }
-    </script>
-   
+    <!-- ... -->
 </body>
 </html>
