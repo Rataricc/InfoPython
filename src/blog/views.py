@@ -139,24 +139,21 @@ def download_image(request):
 # Prueba code : view de editor de codigo online 0.1
 
 def editor_codigo(request):
-    ctx = {}
-
     if request.method == "POST":
         form = EditorForm(request.POST)
         if form.is_valid():
-            code = form.cleaned_data["text"]
+            code = form.cleaned_data["code"]
             try:
                 output = subprocess.check_output(["python", "-c", code], stderr=subprocess.STDOUT)
                 output = output.decode("utf-8")
-                ctx = {"output": output}
+                ctx = {"form": form, "output": output}
             except subprocess.CalledProcessError as e:
                 output = e.output.decode("utf-8")
-                ctx = {"error": output}
+                ctx = {"form": form, "error": output}
     else:
         form = EditorForm()
         ctx = {"form": form}
-    template_name = 'editorCodigo/editorCodigo.html'
-    return render(request, template_name, ctx)
+    return render(request, 'editorCodigo/editorCodigo.html', ctx)
 
 
 

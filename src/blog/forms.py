@@ -3,7 +3,7 @@ from django_ace                 import AceWidget
 
 
 class EditorForm(forms.Form):
-    text = forms.CharField(widget=AceWidget(
+    code = forms.CharField(widget=AceWidget(
         mode='python',  # prueba por ejemplo "python"
         theme='twilight',  # prueba por ejemplo "crepúsculo"
         wordwrap=False,
