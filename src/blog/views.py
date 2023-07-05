@@ -19,6 +19,8 @@ import openai
 import requests
 import subprocess
 import execjs
+from django.views.decorators.csrf import csrf_exempt
+from django.http import JsonResponse
 
 
 
@@ -137,7 +139,7 @@ def download_image(request):
     return response
 
 # Prueba code : view de editor de codigo online 0.1
-
+"""
 def editor_codigo(request):
     if request.method == "POST":
         form = EditorForm(request.POST)
@@ -154,7 +156,69 @@ def editor_codigo(request):
         form = EditorForm()
         ctx = {"form": form}
     return render(request, 'editorCodigo/editorCodigo.html', ctx)
+"""
 
+
+def editor_codigo(request):
+    if request.method == "POST":
+        form = EditorForm(request.POST)
+        if form.is_valid():
+            language = form.cleaned_data['language']
+            code = form.cleaned_data['code']
+            try:
+                if language == 'python':
+                    output = subprocess.check_output(["python", "-c", code], stderr=subprocess.STDOUT)
+                elif language == 'javascript':
+                    output = subprocess.check_output(["node", "-e", code], stderr=subprocess.STDOUT)
+                # Agrega más condiciones según los lenguajes que desees admitir
+                else:
+                    output = 'Lenguaje no soportado'
+                
+                output = output.decode("utf-8")
+                ctx = {"form": form, "output": output}
+            except subprocess.CalledProcessError as e:
+                output = e.output.decode("utf-8")
+                ctx = {"form": form, "error": output}
+    else:
+        form = EditorForm()
+        ctx = {"form": form}
+    
+    return render(request, 'editorCodigo/editorCodigo.html', ctx)
+
+
+
+@csrf_exempt
+def execute_code(request):
+    if request.method == "POST":
+        code = request.POST.get("code", "")
+        language = request.POST.get("language", "")
+        try:
+            if language == "python":
+                output = subprocess.check_output(["python", "-c", code], stderr=subprocess.STDOUT)
+            elif language == "javascript":
+                output = subprocess.check_output(["node", "-e", code], stderr=subprocess.STDOUT)
+            elif language == "ruby":
+                output = subprocess.check_output(["ruby", "-e", code], stderr=subprocess.STDOUT)
+            # Agrega más bloques elif para otros lenguajes de programación
+
+            output = output.decode("utf-8")
+            return JsonResponse({"output": output})
+        except subprocess.CalledProcessError as e:
+            output = e.output.decode("utf-8")
+            return JsonResponse({"output": output})
+
+    return JsonResponse({"error": "Invalid request"})
+
+def editor_de_codigo(request):
+    if request.method == "POST":
+        code = request.POST.get("code", "")
+        language = request.POST.get("language", "")
+        response = execute_code(request)  # Llama a la vista execute_code como una vista
+        output = response.content.decode("utf-8")
+        ctx = {"output": output}
+    else:
+        ctx = {}
+    return render(request, "editcode/editcode.html", ctx)
 
 
 """
@@ -240,11 +304,14 @@ def ejecutar_codigo(request):
 
 # Prueba code : view de editor de codigo online 1.1-----------------------------------
 
-
+"""
 def editor_de_codigo(request): 
     template_name = 'editcode/editcode.html'
     ctx = {}
     return render(request, template_name, ctx)
+"""
+
+
 """
 
 def editor_de_codigo(request):

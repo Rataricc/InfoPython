@@ -3,12 +3,14 @@
 <html lang="en">
 <head>
     <title>ACE in Action</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <script src="{% static 'js/editcode/ace.js' %}" type="text/javascript" charset="utf-8"></script>
-    <script src="{% static 'js/editcode/mode-python.js' %}"  type="text/javascript" charset="utf-8"></script>
-    <script src="{% static 'js/editcode/snippets/python.js' %}"></script>
 
-    <script src="{% static 'js/editcode/Lib Brython/brython.js' %}"></script>
+    <script src="{% static 'js/editcode/ace.js' %}" type="text/javascript" charset="utf-8"></script>
+    <script src="{% static 'js/editcode/mode-python.js' %}" type="text/javascript" charset="utf-8"></script>
+    <script src="{% static 'js/editcode/theme-twilight.js' %}" type="text/javascript" charset="utf-8"></script>
+    <script src="{% static 'django_ace/widget.js' %}" type="text/javascript" charset="utf-8"></script>
 
     <style type="text/css" media="screen">
         body {
@@ -113,70 +115,39 @@
         <div id="console">
             <div id="console-header">Consola</div>
             <iframe id="console-frame" frameborder="0"></iframe>
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary" id="execute-btn">Ejecutar</button>
+            </div>
         </div>
     </div>
+
     <script>
         // Esperar a que se cargue la página completamente
         window.addEventListener('load', function() {
-            // Cargar Brython y ejecutar el código después de la carga
-            function loadBrython() {
-                var script = document.createElement('script');
-                script.src = "{% static 'js/editcode/Lib Brython/brython.js' %}";
-                script.onload = runCode;
-                document.body.appendChild(script);
+            var editor = ace.edit("editor");
+            editor.setTheme("ace/theme/twilight");
+            editor.session.setMode("ace/mode/python");
+            editor.setShowPrintMargin(false);
+
+            // Obtener los botones
+            var runCodeBtn = document.getElementById("run-code-btn");
+            var clearConsoleBtn = document.getElementById("clear-console-btn");
+            var executeBtn = document.getElementById("execute-btn");
+            var consoleFrame = document.getElementById("console-frame");
+
+            // Función para ejecutar el código en el editor
+            function executeCode() {
+                var code = editor.getValue();
+                var language = "python"; // Cambia el lenguaje según tus necesidades
+                consoleFrame.src = "/execute?code=" + encodeURIComponent(code) + "&language=" + language;
             }
 
-            // Ejecutar el código Brython una vez que se haya cargado
-            function runCode() {
-                // Configurar Brython
-                brython({debug: 1});
-
-                // Obtener el editor ACE
-                var editor = ace.edit("editor");
-                editor.setTheme("ace/theme/monokai");
-                editor.session.setMode("ace/mode/python");
-
-                // Obtener los botones
-                var runCodeBtn = document.getElementById("run-code-btn");
-                var clearConsoleBtn = document.getElementById("clear-console-btn");
-
-                // Obtener el iframe de la consola
-                var consoleFrame = document.getElementById("console-frame");
-
-                // Función para ejecutar el código
-                function executeCode(event) {
-                    event.preventDefault(); // Prevenir el comportamiento predeterminado del botón
-
-                    // Limpiar el contenido anterior en la consola
-                    consoleFrame.contentDocument.body.innerHTML = "";
-
-                    // Obtener el código del editor
-                    var code = editor.getValue();
-
-                    try {
-                        // Ejecutar el código en un entorno seguro
-                        brython(1);
-                        brython(0, consoleFrame.contentWindow);
-
-                        eval(code);
-                    } catch (error) {
-                        // Mostrar el error en la consola
-                        consoleFrame.contentDocument.body.innerHTML = "<span style='color: red;'>Error: " + error + "</span>";
-                    }
-                }
-
-                // Función para limpiar la consola
-                function clearConsole() {
-                    consoleFrame.contentDocument.body.innerHTML = "";
-                }
-
-                // Asignar los eventos de clic a los botones
-                runCodeBtn.addEventListener("click", executeCode);
-                clearConsoleBtn.addEventListener("click", clearConsole);
-            }
-
-            // Cargar Brython y ejecutar el código
-            loadBrython();
+            // Asignar eventos de clic a los botones
+            runCodeBtn.addEventListener("click", executeCode);
+            clearConsoleBtn.addEventListener("click", function() {
+                consoleFrame.src = "about:blank";
+            });
+            executeBtn.addEventListener("click", executeCode);
         });
     </script>
 </body>

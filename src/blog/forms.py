@@ -2,7 +2,16 @@ from django 					import forms
 from django_ace                 import AceWidget
 
 
+LANGUAGE_CHOICES = [
+    ('python', 'Python'),
+    ('javascript', 'JavaScript'),
+    ('java', 'Java'),
+    # Agrega más opciones de lenguajes según sea necesario
+]
+
 class EditorForm(forms.Form):
+    language = forms.ChoiceField(choices=LANGUAGE_CHOICES)
+
     code = forms.CharField(widget=AceWidget(
         mode='python',  # prueba por ejemplo "python"
         theme='twilight',  # prueba por ejemplo "crepúsculo"

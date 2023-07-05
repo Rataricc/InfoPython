@@ -2,32 +2,27 @@
 
 <!DOCTYPE html>
 <html lang="en">
-    <!--Probar el codigo de GPT-->
-    <!--
-        Esto todavia no funciona bien, seguir viendo a detalle. 
-        Ver codigo echo por la IA chatGPT para seguir viendo más funcionaliades. 
-        Con respecto al editor en cuestion.
-    -->
 <head>
     <!-- ... -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
 
     <link rel="stylesheet" href="../../static/css/pruebaEditorAce/widget.css">
-    
+
     <script src="{% static 'js/editcode/ace.js' %}"></script>
-    <script src="{% static 'js/editcode/mode-javascript.js' %}"></script>
-    <script src="{% static 'js/editcode/mode-python.js' %}"></script>
     <script src="{% static 'js/editcode/theme-twilight.js' %}"></script>
     <script src="{% static 'js/editcode/worker-javascript.js' %}"></script>
     <script src="{% static 'js/editcode/snippets/python.js' %}"></script>
     <script src="{% static 'django_ace/widget.js' %}"></script>
-    <script src="{% static 'django_ace/ace/mode-abc.js' %}"></script>
     <script src="{% static 'django_ace/ace/ace.js' %}"></script>
+
     <script src="{% static 'django_ace/ace/mode-python.js' %}"></script>
+    <script src="{% static 'django_ace/ace/mode-javascript.js' %}"></script>
+    <!-- Agrega más scripts para los modos de lenguaje adicionales -->
+
     <script src="{% static 'django_ace/ace/worker-javascript.js' %}"></script>
-    <script src="{% static 'django_ace/ace/mode-abc.js' %}"></script>
-    <script src="{% static 'django_ace/ace/snippets/python.js' %}"></script>
+    <script src="{% static 'django_ace/ace/worker-base.js' %}"></script>
+    <!-- Agrega más scripts para los trabajadores de lenguaje adicionales -->
     <!-- ... -->
 </head>
 <body>
@@ -37,7 +32,14 @@
                 <h1>Editor de Código</h1>
                 <form method="post" action="{% url 'editorCode' %}">
                     {% csrf_token %}
-                    {{ form.as_p }}
+                    {{ form.media }}
+                    <div class="form-group">
+                        {{ form.language.label_tag }}
+                        {{ form.language }}
+                    </div>
+                    <div class="form-group">
+                        {{ form.code }}
+                    </div>
                     <div class="form-group">
                         <button type="submit" class="btn btn-primary">Ejecutar</button>
                     </div>

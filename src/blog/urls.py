@@ -47,6 +47,9 @@ urlpatterns = [
     #editor codigo 1.1 
     path('editcode/', views.editor_de_codigo, name='editcode'), 
 
+   
+
+    path('execute', views.execute_code, name='execute_code'),
     #path('ejecutar-codigo/', views.ejecutar_codigo, name='ejecutarCodigo'), 
 ]
 
